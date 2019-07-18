@@ -1,0 +1,25 @@
+.potager-header {
+
+  position: relative;
+
+  .header-title {
+    @include center-img(50%, 50%);
+    width:60%;
+    padding:20px 15px;
+
+    text-align: center;
+    border-top:1px solid $yellow;
+    border-bottom:1px solid $yellow;
+    //z-index: 20;
+    h2 {
+      font-size: 35px;
+      color:white;
+      @media (min-width: $screen-lg-min) {
+          font-size: 70px;
+      }
+    }
+  }
+  img {
+    width:100%;
+  }
+}

@@ -1,0 +1,165 @@
+/* STRUCTURE */
+
+
+html, body {
+  //overflow-x: hidden;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+#global-container {
+  max-width:1920px;
+  margin:auto;
+}
+
+header {
+  position: relative;
+}
+
+.default-padding {
+  padding-left:5%;
+  padding-right:5%;
+}
+
+.section-content {
+  @extend .default-padding;
+  padding-top:45px;
+  padding-bottom:45px;
+  //text-align: center;
+  background-color: $light-grey;
+
+  @media (min-width: $screen-md-min) {
+    padding-top:125px;
+    padding-bottom:150px;
+  }
+}
+
+.content-ctn {
+  max-width:1180px;
+  margin:0 auto;
+}
+
+.content-text {
+
+  max-width:940px;
+  margin: 0 auto;
+  color:$grey;
+  text-align: center;
+}
+
+.content-rect-text {
+  color:$grey;
+  text-align: center;
+  padding:30px;
+  width:75%;
+  max-width: 640px;
+  margin:0 auto;
+  background-color: white;
+  @media (min-width: $screen-lg-min) {
+    padding:50px 40px;
+  }
+}
+
+/* STYLE */
+
+.bold {
+  font-weight: 700;
+}
+
+input:focus, textarea:focus {
+  //outline: 1px solid $yellow;
+}
+
+a {
+  text-decoration: none;
+}
+
+.menu-item a {
+  //color:white;
+  text-transform: uppercase;
+}
+
+.page-title {
+  text-align: center;
+  //color: $grey;
+}
+
+.full-link {
+  position: absolute;
+  width:100%;
+  height:100%;
+  left:0;
+  top:0;
+  z-index:50;
+}
+
+/*** ELEMENTS ***/
+
+.discover-ctn {
+
+  margin-top:35px;
+  text-align: center;
+
+  @media (min-width: 640px) {
+    @include flexbox();
+    @include justify-content(center);
+  }
+
+  .link-ctn {
+    @include flexbox();
+    @include justify-content(space-around);
+    margin-top:5px;
+
+    @media (min-width: 640px) {
+      margin-top:-1px;
+
+      @include justify-content(flex-start);
+      a:first-of-type {
+        margin:0 30px;
+      }
+    }
+    @media (min-width: $screen-lg-min) {
+      margin-top:0px;
+    }
+  }
+
+  span, a {
+    color: $grey;
+  }
+  .icon {
+    //color: $icon;
+    //font-size: 16px;
+    position: relative;
+    top:-2px;
+  }
+}
+
+#wdi_feed_0 {
+  background-color:transparent!important;
+
+}
+
+//Enlever la petite bare blanche sous les images du instagram feed
+.sbi_owl-theme .sbi_owl-controls {
+  margin-top: 0px;
+}
+
+.cta, input[type="submit"] {
+
+
+  display: block;
+  width:200px;
+  margin:auto;
+  text-align: center;
+  padding: 15px 40px;
+  @include transition(all 0.6s ease);
+  &:last-of-type {
+    margin-top:25px;
+  }
+  &:hover {
+    border: 1px solid white;
+  }
+}
+

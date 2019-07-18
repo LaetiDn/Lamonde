@@ -1,0 +1,26 @@
+@import "utilities/reset";
+@import "utilities/variables";
+@import "utilities/flex";
+@import "utilities/mixins";
+@import "utilities/helpers";
+
+
+//LAYOUTS
+@import "layouts/typography";
+@import "layouts/elements";
+@import "layouts/page-loader";
+@import "layouts/header";
+@import "layouts/footer";
+@import "layouts/form";
+
+//TEMPLATES
+
+//PAGES
+@import "pages/home";
+@import "pages/menu";
+@import "pages/news";
+@import "pages/gallery";
+@import "pages/contact";
+
+//BLOCKS
+@import "blocks/blocks";

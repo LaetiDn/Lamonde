@@ -1,0 +1,29 @@
+.block-logo-text {
+  position: relative;
+  .content-ctn {
+    @media(min-width: $screen-lg-min){
+      @include flexbox();
+      @include align-items(center);
+      @include justify-content(space-between);
+      &  > div {
+        @include flex-basis(50%);
+      }
+    }
+
+
+    .logo-ctn {
+      text-align: center;
+      margin-bottom: 30px;
+      @media(min-width: $screen-lg-min){
+        margin-bottom: 0;
+      }
+      img {
+        width:100%;
+        max-width:100px;
+      }
+    }
+    .wysywyg-ctn {
+      max-width:700px;
+    }
+  }
+}

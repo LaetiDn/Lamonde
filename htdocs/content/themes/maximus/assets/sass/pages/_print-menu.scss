@@ -1,0 +1,88 @@
+@media print {
+
+  #header, #footer {
+    display: none!important;
+  }
+
+}
+
+#print-menu-content {
+  background-color: $light-grey;
+  padding: 20pt;
+  height:92vh;
+  //border: 1px solid blue;
+
+  .page-title {
+    text-align: center;
+    img {
+      width:150pt;
+    }
+  }
+
+  .service-outer {
+   // border: 1px solid red;
+    height:98%;
+    @include flexbox();
+    @include align-items(center);
+  }
+  .service-inner {
+    @include flexbox();
+    @include justify-content(space-between);
+    @include align-items(center);
+   // border: 1px solid black;
+    width:100%;
+  }
+
+
+  .service-lang, .special-menu {
+
+    @include flex-basis(48%);
+    margin-top: 10pt;
+    h2 {
+      margin-bottom: 15pt;
+      font-size: 9pt;
+
+    }
+
+    p {
+      font-size: 7pt;
+      font-weight: 300;
+    }
+
+    .service-ctn {
+      margin-bottom: 20pt;
+      color: black;
+
+      .service-name {
+        font-weight: 700;
+        margin-bottom: 10pt;
+      }
+
+      .plate-ctn {
+        margin-bottom: 2.5pt;
+        .dish-name {
+          padding-right:8pt;
+        }
+        .top-info {
+          @include flexbox();
+          @include justify-content(space-between);
+        }
+      }
+    }
+  }
+
+  .special-menu {
+    margin-top:0;
+
+    .plate-ctn {
+      margin-bottom: 2.5pt;
+    }
+
+    .top-info {
+      @include flexbox();
+      @include justify-content(space-between);
+    }
+  }
+}
+
+

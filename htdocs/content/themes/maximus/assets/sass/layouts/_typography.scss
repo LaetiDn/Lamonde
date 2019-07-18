@@ -1,0 +1,75 @@
+@font-face {
+  font-family: 'Noto Sans', sans-serif;
+  //@import url('https://fonts.googleapis.com/css?family=Noto+Sans: 400,400i,700');
+}
+
+@function get-vw($target) {
+  $vw-context: ($fullwidth * 0.01) * 1px;
+  @return ($target / $vw-context) * 1vw;
+}
+$fullwidth : 1920;
+$noto : 'Noto Sans', sans-serif;
+
+html, body {
+  font-size: 18px;
+  @media (min-width: $screen-lg-min) {
+    font-size: 21px;
+  }
+}
+//Font size VAR
+
+body {
+  //font-family: $noto;
+}
+
+
+/* NAVIGATION */
+
+.menu-item a  {
+  @media (min-width: $screen-lg-min) {
+    font-size: 14px;
+  }
+}
+
+.lang {
+  font-size: 12px;
+}
+
+/* GENERAL CONTENT */
+
+.content-text {
+  @media (min-width: $screen-lg-min) {
+
+  }
+}
+
+.content-rect-text  {
+}
+
+.rect-text {
+}
+
+/* FOOTER */
+
+.info-ctn p, .info-ctn a {
+
+  @media (min-width: $screen-lg-min) {
+  }
+}
+
+.footer-bottom-link {
+}
+
+/* HOME */
+
+
+
+//MENU (services)
+.service-name, .dish-section-title, .dish-name, .dish-price {
+}
+
+.dish-ingredients{
+}
+a {
+  @include transition(all 0.6s ease);
+}
