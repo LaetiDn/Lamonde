@@ -1442,11 +1442,6 @@ input[type=submit]:hover {
   bottom: 0;
 }
 
-.info-top,
-.info-bottom {
-  border: 1px solid red;
-}
-
 @media (min-width: 768px) {
   .info-top,
   .info-bottom {

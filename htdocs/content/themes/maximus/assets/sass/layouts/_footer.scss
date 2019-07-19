@@ -212,7 +212,6 @@
 
 
 .info-top, .info-bottom {
-  border: 1px solid red;
 
   @media (min-width: $screen-md-min) {
     @include flexbox();
