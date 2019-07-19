@@ -1692,18 +1692,25 @@ input[type=submit]:hover {
 .form-main-ctn .form-ctn ::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
   font-size: 16px;
+  color: white;
 }
 
 .form-main-ctn .form-ctn ::-moz-placeholder {
   /* Firefox 19+ */
+  font-size: 16px;
+  color: white;
 }
 
 .form-main-ctn .form-ctn :-ms-input-placeholder {
   /* IE 10+ */
+  font-size: 16px;
+  color: white;
 }
 
 .form-main-ctn .form-ctn :-moz-placeholder {
   /* Firefox 18- */
+  font-size: 16px;
+  color: white;
 }
 
 @media (min-width: 768px) {
@@ -1719,7 +1726,6 @@ input[type=submit]:hover {
 .form-main-ctn .form-ctn .input-ctn .form-input {
   padding-left: 10px;
   padding-bottom: 20px;
-  border-bottom: 1px solid #efcd13;
   margin-bottom: 25px;
 }
 
@@ -1788,7 +1794,6 @@ input[type=submit]:hover {
   content: "";
   width: 8px;
   height: 8px;
-  background: #efcd13;
   position: absolute;
   top: 6px;
   right: 19px;

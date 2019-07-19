@@ -144,6 +144,10 @@
         border:1px solid {{ get_field('span_grp','option')['color'] }};
     }
 
+    .form-input {
+        border-bottom: 1px solid {{ get_field('span_grp','option')['color'] }};
+    }
+
     .form-title h2 {
         color: {{ get_field('form_title_color','option') }};
     }

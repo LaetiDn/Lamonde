@@ -6,4 +6,4 @@
 //Route::get('/', function () {
 //    return view('welcome');
 //});
-Route::get('/', ['custom-template', 'uses' => 'PageController@custom_template']);
+Route::get('page', ['uses' => 'PageController@custom_template']);
