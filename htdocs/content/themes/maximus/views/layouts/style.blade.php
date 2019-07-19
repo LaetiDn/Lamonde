@@ -158,6 +158,11 @@
         border-color: {{ get_field('form_border_color','option') }};
     }
 
+    [type="checkbox"]:checked + .wpcf7-list-item-label:after,
+    [type="checkbox"]:not(:checked) + .wpcf7-list-item-label:after {
+        background: {{ get_field('span_grp','option')['color'] }};
+    }
+
 
     /*
         - rond du lang switcher
