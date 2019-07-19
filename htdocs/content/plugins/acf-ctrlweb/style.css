@@ -1,0 +1,157 @@
+
+/** ACF FIELD & ELEMENTS CUSTOMIZATION **/
+
+
+/** First row repeater field **/
+/* Corners */
+.acf-row-handle {
+    /*background-color: red!important;*/
+}
+/* Mid bar */
+.acf-th {
+    /*background-color: purple!important;*/
+}
+
+/* BARRE gauche d'un repeater*/
+.acf-repeater .acf-row:nth-child(even) .acf-row-handle.order {
+    /*background-color: steelblue!important;*/
+    /*color:white!important;*/
+}
+/* BARRE droite repeater */
+.acf-repeater .acf-row:nth-child(even) .acf-row-handle.remove {
+    /*background-color: steelblue!important;*/
+    /*color:white!important;*/
+}
+
+/* BARRE gauche repeater */
+.acf-repeater .acf-row:nth-child(odd) .acf-row-handle.order {
+    /*background-color: cornflowerblue!important;*/
+    /*color:white!important;*/
+}
+
+/* BARRE droite repeater */
+.acf-repeater .acf-row:nth-child(odd) .acf-row-handle.remove {
+    /*background-color: cornflowerblue!important;*/
+    /*color:white!important;*/
+}
+
+/* LABEL PRIMARY */
+.acf-postbox h2 {
+    background-color: steelblue!important;
+    color:white!important;
+}
+
+
+/* LABEL DE CHAQUE FIELD */
+.acf-label label {
+    /*background-color: red!important;*/
+    /*padding:10px 5px!important;*/
+    /*color:white!important;*/
+}
+
+/** ELEMENTS **/
+
+/** BUTTONS : Add row and Update **/
+.button-primary {
+    /*background-color: #1a1a1a!important;*/
+    /*text-shadow: none!important;*/
+    /*box-shadow: none!important;*/
+    /*border:none!important;*/
+}
+
+/** BUTTON GROUP **/
+.acf-button-group label {
+    /*color:red;*/
+    /*background-color: black;*/
+    /*border:red;*/
+    /*transition: all 0.3s ease-in;*/
+}
+.acf-button-group label:hover {
+    /*color:white;*/
+    /*background-color: steelblue;*/
+    /*border:blue;*/
+}
+.acf-button-group .selected {
+    /*color:red!important;*/
+    /*background-color: black!important;*/
+    /*border:red!important;*/
+}
+/** BUTTON GROUP END **/
+
+/** ALL BTN (except primary)**/
+.acf-field .button {
+    /*-webkit-appearance: none;*/
+    /*color:white;*/
+    /*background-color: steelblue;*/
+    /*border:none;*/
+    /*box-shadow: none;*/
+    /*transition: all 0.3s ease-in;*/
+}
+.acf-field .button:hover {
+    /*color:red!important;*/
+    /*background-color: black!important;*/
+    /*border:blue!important;*/
+}
+/** ALL BTN (except primary)**/
+div.mce-toolbar-grp {
+    /*background-color: #1a1a1a!important;*/
+}
+
+
+.mce-toolbar .mce-ico {
+    /*background-color: steelblue!important;*/
+    /*color:white!important;*/
+}
+
+/** INPUT FIELD **/
+.mce-edit-area,
+.acf-input input[type="email"],
+.acf-input input[type="text"],
+.acf-input input[type="password"],
+.acf-input textarea,
+.acf-input select{
+    /*border: 1px solid cornflowerblue!important;*/
+}
+
+/** WYSYWYG **/
+.acf-input .quicktags-toolbar {
+    /*background-color: #0b0b0b;*/
+}
+
+/** SWITCH TABS **/
+.acf-input .wp-switch-editor {
+    /*background-color: #0b0b0b;*/
+    /*color:white;*/
+}
+/** SWITCH TABS ACTIVE **/
+.tmce-active .switch-tmce {
+    /*background-color: red!important;*/
+    /*color: white!important;*/
+}
+
+/** ADD MEDIA ICON **/
+.wp-media-buttons-icon:before {
+    /*color: red!important;*/
+}
+
+/** Relationship / taxonomy select field **/
+.acf-field .filters {
+    /*background-color: red;*/
+}
+.acf-field .selection .choices {
+    /*background-color: red;*/
+    /*color:white;*/
+}
+.acf-field .selection .values {
+    /*background-color: red;*/
+    /*color:white;*/
+}
+
+/* TAB FIELD */
+.acf-tab-button {
+    /*background: yellow!important;*/
+}
+/* TAB FIELD : Active */
+.active .acf-tab-button {
+    /*background: green!important;*/
+}
