@@ -9,8 +9,8 @@
 @endforeach
 
 @if(!$disable)
-<footer id="footer">
-    @include('layouts.footer.map')
-    @include('layouts.footer.info')
-</footer>
+    <footer id="footer">
+        @include('layouts.footer.map')
+        @include('layouts.footer.info')
+    </footer>
 @endif

@@ -38,6 +38,6 @@
     @endwhile
 
 @else
-    {{ "no layouts found" }}
+    {{ "no layouts found." }}
 @endif
 

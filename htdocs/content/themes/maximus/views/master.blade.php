@@ -32,17 +32,18 @@
 		<div id="global-outer">
 			<div id="global-inner">
 
-                @if(!is_404())
+				@if(!is_404())
 					@include('layouts.header')
 				@endif
-				<main>
+
+					<main>
 					@yield ('main')
 				</main>
-				@include('layouts.footer')
+				@if(!is_404())
+					@include('layouts.footer')
+				@endif
 			</div>
 		</div>
-
-
 		<?php wp_footer(); ?>
 	</body>
 </html>
