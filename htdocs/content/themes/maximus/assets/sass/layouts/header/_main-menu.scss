@@ -14,12 +14,9 @@
 }
 
 .top-bar-outer {
-  //background-color: rgba(0,0,0,0.2);
-
   @media (min-width: $screen-lg-min) {
     display: none;
   }
-
   .top-bar-inner {
     @include flexbox();
     @include justify-content(space-between);
@@ -61,7 +58,6 @@
 
 .lang {
 
-  //border: 1px solid $yellow;
   z-index: 2;
   @include border-radius(100%);
   padding:10px 9px;
@@ -107,7 +103,6 @@
     position: relative;
     left:auto;
     top:auto;
-    //background-color: rgba(0,0,0,0.2);
   }
 
   .nav-wrapper {
@@ -168,14 +163,45 @@
   .menu-item {
     padding:10px 0;
     list-style: none;
-
+    position: relative;
+    cursor: pointer;
     @media (min-width: $screen-lg-min) {
       padding:25px 0;
       margin: 0 20px;
     }
     @media (min-width: $screen-xxl-min) {
-      margin: 0 30px;
+      margin: 0 35px;
     }
+
+    &.current-menu-item  {
+      &:before {
+        bottom:15px;
+        width:100%;
+      }
+    }
+    @media (min-width: $screen-lg-min) {
+      &:before {
+        content:"";
+        display: block;
+        position: absolute;
+        width: 0;
+        height: 2px;
+        background-color:red;
+        bottom:15px;
+        transition:width 0.6s ease;
+
+      }
+      &:hover:before {
+        bottom:15px;
+        width:100%;
+      }
+    }
+
+
+    a {
+      display: block;
+    }
+
   }
 
   .nav-logo {
@@ -224,8 +250,6 @@
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
   animation-timing-function: ease;
-
-
 
   .top-bar-outer {
     opacity:1!important;
@@ -293,7 +317,7 @@
 .menu {
 
   a {
-    margin-right: 10px;
+    //margin-right: 10px;
   }
   .menu-item-has-children {
     display: block;
@@ -376,25 +400,15 @@
         padding:0;
         border-bottom: none;
         transition: all 0.3s ease;
-        //color:white!important;
-        &:hover {
-          //color: $yellow!important;
-          @media (min-width: $screen-lg-min) {
-            //color: black!important;
-          }
-        }
         &:after {
           display: none!important;
         }
       }
     }
     .menu-item {
-      //opacity: 0;
-
       @include transition(opacity 0.3s ease);
     }
     .menu-item:first-of-type {
-      //border:none;
       @media (min-width:$screen-lg-min){
         margin-top:0;
         border:none!important;

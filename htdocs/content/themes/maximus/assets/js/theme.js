@@ -225,6 +225,20 @@
             $('.form-main-ctn').fadeIn(600);
         });
 
+        //Scroll spy
+        $('.animate').each(function(i) {
+            var position = $(this).position();
+            $(this).scrollspy({
+                min: position.top - ( $( window ).height() /  2) ,
+                max: position.top + $(this).height(),
+                onEnter: function(element, position) {
+                    $(element).find('.css-animation').addClass('do-animation');
+                },
+                onLeave: function(element, position) {
+                }
+            });
+        });
+
 
     });
 }(jQuery));

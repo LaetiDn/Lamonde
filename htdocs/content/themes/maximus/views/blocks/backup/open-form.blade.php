@@ -1,5 +1,5 @@
-<section class="block-open-form section-content animate" style="background-color: {{ get_sub_field('bg_color') }}">
-    <div class="content-ctn css-animation">
+<section class="block-open-form section-content" style="background-color: {{ get_sub_field('bg_color') }}">
+    <div class="content-ctn">
         <div class="wysywyg-ctn">
             {!! get_sub_field("wysywyg") !!}
         </div>
@@ -27,8 +27,8 @@
         </div>
 
         <?php
-        $form = get_sub_field("form_shortcode");
-        echo do_shortcode( ''.$form.'' );
+            $form = get_sub_field("form_shortcode");
+            echo do_shortcode( ''.$form.'' );
         ?>
     </div>
 </div>

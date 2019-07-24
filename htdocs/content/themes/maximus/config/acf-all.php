@@ -729,6 +729,9 @@ if( function_exists('acf_add_local_field_group') ):
                 ),
                 'choices' => array(
                     'Poppins' => 'Poppins',
+                    'Roboto' => 'Roboto',
+                    'Lato' => 'Lato',
+                    'Montserrat' => 'Montserrat',
                 ),
                 'default_value' => array(
                     0 => 'Poppins',

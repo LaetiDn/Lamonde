@@ -1,11 +1,17 @@
 @if( get_field('font_family','option')["value"] == "Poppins")
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
+@elseif(get_field('font_family','option')["value"] == "Roboto")
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+@elseif(get_field('font_family','option')["value"] == "Lato")
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+@elseif(get_field('font_family','option')["value"] == "Montserrat")
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap" rel="stylesheet">
 @endif
 
 
 <style>
-    body {
-        font-family: 'Poppins', sans-serif!important;
+    * {
+        font-family: {{ get_field('font_family','option')["value"] }}, sans-serif!important;
     }
     h1 {
         color: {{ get_field('h1_grp','option')['color'] }};
@@ -26,6 +32,9 @@
         color: {{ get_field('paragraph_grp','option')['color'] }};
         font-size: {{ get_field('paragraph_grp','option')['fz_phone'] }}px!important;
     }
+    a {
+        color: {{ get_field('link_grp','option')['color'] }};
+    }
 
     @media(min-width: 1200px){
         h1 {
@@ -43,9 +52,6 @@
         p {
             font-size: {{ get_field('paragraph_grp','option')['fz_desktop'] }}px!important;
         }
-        a {
-            font-size: {{ get_field('link_grp','option')['fz_desktop'] }}px!important;
-        }
     }
 
     /*** MENU ***/
@@ -54,16 +60,18 @@
         background-color:{{ get_field('span_grp','option')['color'] }};
     }
 
-    a, input[type='submit'] {
+    .menu a, input[type='submit'] {
         color: {{ get_field('link_grp','option')['color'] }};
         font-size: {{ get_field('link_grp','option')['fz_phone'] }}px!important;
     }
-    a:hover, a:focus {
-        color: {{ get_field('link_grp','option')['color_hover'] }};
-    }
+
 
     .nav .menu-item a {
         color: {{ get_field('menu_grp','option')['color'] }};
+    }
+
+    .nav .menu-item:hover a, a:focus {
+        color: {{ get_field('link_grp','option')['color_hover'] }}!important;
     }
 
     .menu .sub-menu .menu-item:first-of-type{
@@ -76,20 +84,22 @@
         border:1px solid {{ get_field('link_grp','option')['color'] }};
     }
 
-    .nav .menu-item a:hover {
-        color: {{ get_field('menu_grp','option')['color_hover'] }};
-    }
+
+
+
+
     .sticky .nav .menu-item a {
         color: {{ get_field('menu_grp','option')['color_sticky'] }};
     }
-    .sticky .nav .menu-item a:hover {
-        color: {{ get_field('menu_grp','option')['color_sticky_hover'] }};
+    .sticky .nav .menu-item:hover a {
+        color: {{ get_field('menu_grp','option')['color_sticky_hover'] }}!important;
     }
 
     span {
         color: {{ get_field('span_grp','option')['color'] }};
         font-size: {{ get_field('span_grp','option')['fz_phone'] }}px!important;
     }
+
 
     /** FOOTER **/
 
@@ -144,6 +154,7 @@
         border:1px solid {{ get_field('span_grp','option')['color'] }};
     }
 
+
     .form-input {
         border-bottom: 1px solid {{ get_field('span_grp','option')['color'] }};
     }
@@ -161,6 +172,19 @@
     [type="checkbox"]:checked + .wpcf7-list-item-label:after,
     [type="checkbox"]:not(:checked) + .wpcf7-list-item-label:after {
         background: {{ get_field('span_grp','option')['color'] }};
+    }
+
+    /* nouveau */
+    .menu .current-menu-item a {
+        color: {{ get_field('menu_grp','option')['color_hover'] }};
+    }
+    .menu .menu-item:before {
+        color: {{ get_field('span_grp','option')['color'] }};
+    }
+    /** ANIMATIONS **/
+    .block-background-title .title-ctn:before, .block-background-title .title-ctn:after {
+        height: 2px;
+        background-color: {{ get_field('span_grp','option')['color'] }};
     }
 
 

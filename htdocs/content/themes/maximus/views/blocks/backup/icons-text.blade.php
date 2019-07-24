@@ -1,6 +1,5 @@
-<section class="block-icons-text section-content animate" data-section="{{ get_sub_field('section_id') }}" style="background-color: {{ get_sub_field('bg_color') }}">
-    {{--<span id="{{ get_sub_field('section_id') }}" class="anchor"></span>--}}
-    <div class="content-ctn css-animation">
+<section class="block-icons-text section-content" style="background-color: {{ get_sub_field('bg_color') }}">
+    <div class="content-ctn">
         <div class="all-logo-ctn">
             @if(!empty(get_sub_field("icon01_grp")))
                 <div class="icon-wrapper">

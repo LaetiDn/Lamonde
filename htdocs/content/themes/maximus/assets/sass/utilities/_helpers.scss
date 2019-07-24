@@ -76,3 +76,9 @@
 $easeInOutExpo : cubic-bezier(1, 0, 0, 1);
 $easeInExpo : cubic-bezier(0.95, 0.05, 0.795, 0.035);
 $easeOutExpo : cubic-bezier(0.19, 1, 0.22, 1);
+
+$fullwidth : 1920;
+@function get-vw($target) {
+  $vw-context: ($fullwidth * 0.01) * 1px;
+  @return ($target / $vw-context) * 1vw;
+}
