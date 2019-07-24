@@ -9,7 +9,7 @@ class PageController extends Controller
 
     public function index()
     {
-        Asset::add('slider', 'js/slider.js', ['jquery_js'], '1.0', true)->to();
+
         return view('pages.custom-page', $this->defaultContent, [
 
         ]);

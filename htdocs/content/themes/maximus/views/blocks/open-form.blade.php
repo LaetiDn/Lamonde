@@ -6,7 +6,7 @@
         <div class="link-ctn">
             <a class="cta open-form" href="#">{{ get_sub_field("link_text") }}</a>
             @if(!empty( get_sub_field("link")))
-                <a class="cta" href="{{ get_sub_field("link")["url"] }}">{{ get_sub_field("link")["title"] }}</a>
+                <a class="cta" href="{{ get_sub_field("link")["url"] }}" target="{{ get_sub_field("link")["target"] }}">{{ get_sub_field("link")["title"] }}</a>
             @endif
         </div>
     </div>

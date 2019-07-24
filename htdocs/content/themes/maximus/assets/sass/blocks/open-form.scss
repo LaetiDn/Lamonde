@@ -1,6 +1,5 @@
 .block-open-form {
   position: relative;
-  //background-color: $light-grey;
 
     .content-ctn {
       @media (min-width: $screen-md-min) {
@@ -33,18 +32,14 @@
 
     display: block;
     width:200px;
-    //color:$grey;
     margin:auto;
     text-align: center;
     padding: 15px 40px;
-    //border: 1px solid $icon;
     @include transition(all 0.6s ease);
     &:last-of-type {
       margin-top:25px;
     }
     &:hover {
-      //color:white;
-      //background-color: $icon;
       border: 1px solid white;
     }
   }

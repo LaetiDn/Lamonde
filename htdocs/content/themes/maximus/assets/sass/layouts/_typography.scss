@@ -10,12 +10,6 @@
 $fullwidth : 1920;
 $noto : 'Noto Sans', sans-serif;
 
-html, body {
-  font-size: 18px;
-  @media (min-width: $screen-lg-min) {
-    font-size: 21px;
-  }
-}
 //Font size VAR
 
 body {

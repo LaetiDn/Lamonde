@@ -1,0 +1,16 @@
+.block-instagram {
+  .hashtag-title {
+    padding-top:12px;
+    padding-bottom: 8px;
+    @media (min-width: $screen-lg-min) {
+      padding-top:24px;
+      padding-bottom: 16px;
+    }
+  }
+}
+
+
+.sb_instagram_header {
+  padding-right: 0!important;
+  padding-left: 0!important;
+}
