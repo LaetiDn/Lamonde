@@ -55,7 +55,6 @@
     }
 
     /*** MENU ***/
-
     #menu-btn span {
         background-color:{{ get_field('span_grp','option')['color'] }};
     }
@@ -65,13 +64,19 @@
         font-size: {{ get_field('link_grp','option')['fz_phone'] }}px!important;
     }
 
-
     .nav .menu-item a {
         color: {{ get_field('menu_grp','option')['color'] }};
     }
 
     .nav .menu-item:hover > a, a:focus {
         color: {{ get_field('link_grp','option')['color_hover'] }}!important;
+    }
+
+    .menu .current-menu-item a {
+        color: {{ get_field('menu_grp','option')['color_hover'] }};
+    }
+    .menu .menu-item:before {
+        color: {{ get_field('span_grp','option')['color'] }};
     }
 
     .menu .sub-menu .menu-item:first-of-type{
@@ -85,9 +90,7 @@
     }
 
 
-
-
-
+    /** MENU STICKY **/
     .sticky .nav .menu-item a {
         color: {{ get_field('menu_grp','option')['color_sticky'] }};
     }
@@ -102,7 +105,6 @@
 
 
     /** FOOTER **/
-
     .book-bottom-sticky a{
         background-color: {{ get_field('footer_bottom_link_bg_color_lr','option') }};
     }
@@ -132,12 +134,12 @@
     .
 
     /*** HERO ***/
-
     .hero .overlay {
         background-color: {{ get_field('hero','option')['overlay_color'] }};
         opacity:{{ get_field('hero','option')['overlay_opacity'] }};
 
     }
+
     /*** SLIDER ***/
     .slider-progress .progress {
         background: {{ get_field('span_grp','option')['color'] }};
@@ -151,6 +153,7 @@
     }
 
 
+    /** ELEMENTS **/
     .icon {
         color: {{ get_field('span_grp','option')['color'] }};
     }
@@ -159,6 +162,7 @@
     }
 
 
+    /** FORM **/
     .form-input {
         border-bottom: 1px solid {{ get_field('span_grp','option')['color'] }};
     }
@@ -178,25 +182,9 @@
         background: {{ get_field('span_grp','option')['color'] }};
     }
 
-    /* nouveau */
-    block-background-title .title-ctn {
-        border-top: 1px solid {{ get_field('span_grp','option')['color'] }};
-        border-bottom: 1px solid {{ get_field('span_grp','option')['color'] }};
-    }
-
-    .menu .current-menu-item a {
-        color: {{ get_field('menu_grp','option')['color_hover'] }};
-    }
-    .menu .menu-item:before {
-        color: {{ get_field('span_grp','option')['color'] }};
-    }
-
-    /* SLIDER */
-
 
     /** ANIMATIONS **/
     .block-background-title .title-ctn:before, .block-background-title .title-ctn:after {
-        height: 2px;
         background-color: {{ get_field('span_grp','option')['color'] }};
     }
 

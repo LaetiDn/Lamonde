@@ -11,6 +11,7 @@
   }
   .wysywyg-ctn {
     @include center-img(50%, 50%);
+    z-index: 5;
   }
 
 }
