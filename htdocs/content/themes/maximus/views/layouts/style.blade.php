@@ -70,7 +70,7 @@
         color: {{ get_field('menu_grp','option')['color'] }};
     }
 
-    .nav .menu-item:hover a, a:focus {
+    .nav .menu-item:hover > a, a:focus {
         color: {{ get_field('link_grp','option')['color_hover'] }}!important;
     }
 
