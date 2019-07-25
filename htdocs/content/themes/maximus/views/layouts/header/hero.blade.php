@@ -1,7 +1,8 @@
 @if(!is_single())
 <div id="hero "class="hero @if(!get_field("use_a_slider", get_the_ID())){{ 'page' }} @endif">
+    <div class="overlay"></div>
     @if(get_field("use_a_slider", get_the_ID()))
-        <div class="overlay">
+        <div class="logo-ctn">
             <img class="big-logo" src="{{ get_field("header_logo", get_the_ID())["url"] }}" alt="logo">
         </div>
         <div class="header-slider">
@@ -19,6 +20,5 @@
             <h1>{{ get_field("header_image_title"), get_the_ID() }}</h1>
         </div>
     @endif
-
 </div>
 @endif

@@ -82,3 +82,9 @@ $fullwidth : 1920;
   $vw-context: ($fullwidth * 0.01) * 1px;
   @return ($target / $vw-context) * 1vw;
 }
+
+
+@mixin background-opacity($color, $opacity: 0.3) {
+  background: $color; /* The Fallback */
+  background: rgba($color, $opacity);
+}

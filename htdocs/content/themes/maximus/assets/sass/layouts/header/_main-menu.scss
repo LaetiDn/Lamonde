@@ -23,6 +23,7 @@
     @include align-items(center);
     padding-top:10px;
     padding-bottom:10px;
+    //width:100%;
     @media(min-width: $screen-xl-min){
       padding-top:20px;
       padding-bottom:20px;
@@ -45,7 +46,7 @@
     a {
       display: block;
       position:relative;
-      width:30px;
+      //width:30px;
       height: 100%;
 
     }
@@ -56,36 +57,36 @@
 
 }
 
-.lang {
+//.lang {
+//
+//  z-index: 2;
+//  @include border-radius(100%);
+//  padding:10px 9px;
+//
+//  li {
+//    list-style: none;
+//  }
+//  a {
+//    color:white;
+//    font-size: 12px;
+//    text-decoration: none;
+//    text-transform: uppercase;
+//  }
+//}
 
-  z-index: 2;
-  @include border-radius(100%);
-  padding:10px 9px;
-
-  li {
-    list-style: none;
-  }
-  a {
-    color:white;
-    font-size: 12px;
-    text-decoration: none;
-    text-transform: uppercase;
-  }
-}
-
-.lang-desktop {
-  display: none;
-  @media (min-width: $screen-lg-min) {
-    display: block;
-    position: absolute;
-    right:30px;
-    width:20px;
-    height:20px;
-    li {
-      @include center-img(50%, 50%);
-    }
-  }
-}
+//.lang-desktop, .lang-item {
+//  display: none;
+//  @media (min-width: $screen-lg-min) {
+//    display: block;
+//    position: absolute;
+//    right:30px;
+//    width:20px;
+//    height:20px;
+//    li {
+//      @include center-img(50%, 50%);
+//    }
+//  }
+//}
 
 
 .nav {
@@ -126,7 +127,7 @@
           display: block;
       }
     }
-    .menu-main-nav-container, .menu-main-nav-en-container, .menu-main-nav-fr-container {
+    .menu-main-nav-container, .menu-main-nav-en-container, .menu-main-nav-fr-container, .nav .menu {
       position: relative;
       z-index: 2;
     }
@@ -134,23 +135,21 @@
 
       @media (min-width: $screen-lg-min) {
         @include flexbox();
-        @include flex-basis(100%);
-        @include justify-content(space-between);
+        @include flex-basis(80%);
+        @include justify-content(center);
       }
     }
-    .logo-h {
+    .logo-ctn {
       display: none;
       z-index: 2;
       @media (min-width: $screen-lg-min) {
         display: block;
-        width:50px;
         position: absolute;
         left:30px;
         top:16px;
         a {
           display: block;
           position:relative;
-          width:30px;
           height: 100%;
         }
         img {
@@ -196,8 +195,6 @@
         width:100%;
       }
     }
-
-
     a {
       display: block;
     }
@@ -304,9 +301,6 @@
     }
   }
 
-  .lang a {
-    //color:black;
-  }
 }
 
 @-webkit-keyframes moveIn {
@@ -442,7 +436,7 @@
 }
 
 
-.menu-main-nav-container, .menu-main-nav-en-container, .menu-main-nav-fr-container {
+.menu-main-nav-container, .menu-main-nav-en-container, .menu-main-nav-fr-container, .nav .menu {
   position: relative;
   z-index: 2;
 }

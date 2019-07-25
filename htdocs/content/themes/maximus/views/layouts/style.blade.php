@@ -129,21 +129,25 @@
         border: 1px solid {{ get_field('button_grp', 'option')['border_color_transition'] }};
     }
 
-    .block-background-title .title-ctn {
-        border-top: 1px solid {{ get_field('span_grp','option')['color'] }};
-        border-bottom: 1px solid {{ get_field('span_grp','option')['color'] }};
-    }
+    .
 
+    /*** HERO ***/
+
+    .hero .overlay {
+        background-color: {{ get_field('hero','option')['overlay_color'] }};
+        opacity:{{ get_field('hero','option')['overlay_opacity'] }};
+
+    }
     /*** SLIDER ***/
     .slider-progress .progress {
         background: {{ get_field('span_grp','option')['color'] }};
     }
 
     .slick-prev:before{
-        content: url("{{ get_field('header_slider_arrows','option')['arrow_left']['url'] }}")!important;
+        content: url("{{ get_field('hero','option')['arrow_left']['url'] }}")!important;
     }
     .slick-next:before{
-        content: url("{{ get_field('header_slider_arrows','option')['arrow_right']['url'] }}")!important;
+        content: url("{{ get_field('hero','option')['arrow_right']['url'] }}")!important;
     }
 
 
@@ -175,12 +179,21 @@
     }
 
     /* nouveau */
+    block-background-title .title-ctn {
+        border-top: 1px solid {{ get_field('span_grp','option')['color'] }};
+        border-bottom: 1px solid {{ get_field('span_grp','option')['color'] }};
+    }
+
     .menu .current-menu-item a {
         color: {{ get_field('menu_grp','option')['color_hover'] }};
     }
     .menu .menu-item:before {
         color: {{ get_field('span_grp','option')['color'] }};
     }
+
+    /* SLIDER */
+
+
     /** ANIMATIONS **/
     .block-background-title .title-ctn:before, .block-background-title .title-ctn:after {
         height: 2px;
@@ -188,12 +201,5 @@
     }
 
 
-    /*
-        - rond du lang switcher
-        - slider progress bar
-        - les lignes pour le block background title
-        - fleche font awesome des discovers
-        - en mobile la barre en bas
 
-    */
 </style>

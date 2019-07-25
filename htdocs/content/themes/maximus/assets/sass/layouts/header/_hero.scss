@@ -3,19 +3,24 @@
   position: relative;
 
   .overlay {
-    @include center-img(50%, 50%);
+
+    position: absolute;
+    left:0;
+    top:0;
     z-index: 10;
     width:100%;
-    text-align: center;
-    .big-logo {
-      width: 160px;
-      @media (min-width: $screen-md-min) {
-        width:34%;
-        max-width:550px;
-      }
+    height:100%;
+
+  }
+  .big-logo {
+    width: 160px;
+    @include center-img(50%, 50%);
+    z-index: 11;
+    @media (min-width: $screen-md-min) {
+      width:34%;
+      max-width:550px;
     }
   }
-
   .slide {
     height:100vh;
     background-size: cover;
@@ -33,24 +38,16 @@
       width:20%;
     }
   }
-  .slick-prev:before, .slick-next:before {
-  }
   .slick-prev {
     left:20px;
     @media (min-width: $screen-md-min) {
       left:6%;
-    }
-    &:before {
-      content: url($assets + "/images/slider-left-white-arrow.svg");
     }
   }
   .slick-next {
     right:20px;
     @media (min-width: $screen-md-min) {
       right:6%;
-    }
-    &:before {
-      content: url($assets + "/images/slider-right-white-arrow.svg");
     }
   }
 
@@ -87,7 +84,6 @@
 .slider-progress .progress {
   width: 0%;
   height: 3px;
-  //background: $yellow;
 }
 
 .content-logo {

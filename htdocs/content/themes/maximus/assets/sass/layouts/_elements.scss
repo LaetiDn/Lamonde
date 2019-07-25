@@ -2,7 +2,7 @@
 
 
 html, body {
-  //overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 .overflow-hidden {
@@ -68,22 +68,17 @@ header {
   font-weight: 700;
 }
 
-input:focus, textarea:focus {
-  //outline: 1px solid $yellow;
-}
 
 a {
   text-decoration: none;
 }
 
 .menu-item a {
-  //color:white;
   text-transform: uppercase;
 }
 
 .page-title {
   text-align: center;
-  //color: $grey;
 }
 
 .full-link {
@@ -129,8 +124,6 @@ a {
     color: $grey;
   }
   .icon {
-    //color: $icon;
-    //font-size: 16px;
     position: relative;
     top:-2px;
   }
@@ -163,3 +156,62 @@ a {
   }
 }
 
+.lang {
+
+  position: relative;
+  z-index: 2;
+  width:35px;
+  height:35px;
+  @include border-radius(100%);
+    li {
+      list-style: none;
+      width:100%;
+      height:100%;
+      position: relative;
+    }
+    a {
+      @include center-img(50%, 50%);
+      color:white;
+      display: block;
+      font-size: 12px;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  @media (min-width: $screen-xl-min) {
+    position: absolute;
+    right:15px;
+
+  }
+
+}
+
+//.lang-item {
+//
+//
+//  @include border-radius(100%);
+//  padding:10px 9px;
+//
+//  li {
+//    list-style: none;
+//  }
+//  a {
+//    color:white;
+//    font-size: 12px;
+//    text-decoration: none;
+//    text-transform: uppercase;
+//  }
+//}
+//.lang-item {
+//  //display: none;
+//  position: absolute!important;
+//  @media (min-width: $screen-lg-min) {
+//    display: block;
+//    position: absolute!important;
+//    right:30px;
+//    width:20px;
+//    height:20px;
+//    li {
+//      @include center-img(50%, 50%);
+//    }
+//  }
+//}
