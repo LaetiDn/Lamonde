@@ -100,3 +100,13 @@
     transform: scale(1.2);
   }
 }
+
+
+@-webkit-keyframes moveIn {
+  0% {transform:translate3d(0, -500px, 0)}
+  100% {transform:translate3d(0, 0, 0)}
+}
+@-webkit-keyframes moveOut {
+  0% {transform:translate3d(0, 0, 0)}
+  100% {transform:translate3d(0, -500px, 0)}
+}

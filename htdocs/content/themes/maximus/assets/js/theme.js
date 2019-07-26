@@ -2,7 +2,6 @@
     $(document).ready(function() {
 
         var screenWidth = $( window ).width();
-        var heroheight = $('#hero').outerHeight(true);
         var heroHeight = $('.hero').outerHeight(true);
 
 
@@ -26,6 +25,7 @@
             }
         });
 
+        //Pour le page loader?
         if( $('body').hasClass('overflow-hidden') ) {
             setTimeout(function(){
                 $('body').removeClass('overflow-hidden');
@@ -83,11 +83,15 @@
         var $window = $(window);
         $window.scroll(function () {
             if ($window.scrollTop() >= heroHeight){
+                //$('.main-nav-outer').removeClass('moveOut');
                 $('.main-nav-outer').addClass('sticky');
+                //$('.main-nav-outer').addClass('moveIn');
                 $('.book-bottom').addClass('book-bottom-sticky');
             }else{
                 $('.main-nav-outer').removeClass('sticky');
                 $('.book-bottom').removeClass('book-bottom-sticky');
+                //$('.main-nav-outer').removeClass('moveIn');
+                //$('.main-nav-outer').addClass('moveOut');
             }
         });
 

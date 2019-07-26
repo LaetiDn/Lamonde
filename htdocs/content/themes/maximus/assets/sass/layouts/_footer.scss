@@ -28,9 +28,6 @@
         position: relative;
       }
 
-      @media (min-width: $screen-lg-min) {
-        //margin:0 25px;
-      }
     }
 
     p {
@@ -240,6 +237,11 @@
       }
 
     }
+
+  }
+
+  .copyrights {
+    text-align: center;
 
   }
 }

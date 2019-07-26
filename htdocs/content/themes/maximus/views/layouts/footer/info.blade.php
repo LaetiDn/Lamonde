@@ -44,9 +44,10 @@
                 </div>
             @endif
         </div>
+        <div class="copyrights">
+            <span>{{ date('Y') }} {{ get_field('copyrights_' . $lang, 'option') }}</span>
+        </div>
     </div>
-
-
 
 
 </div>

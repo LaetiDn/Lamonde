@@ -10,7 +10,9 @@
 
 @if(!$disable)
     <footer id="footer">
-        @include('layouts.footer.map')
+        @if(!empty(get_field('google_map_key', 'option')))
+            @include('layouts.footer.map')
+        @endif
         @include('layouts.footer.info')
     </footer>
 @endif
