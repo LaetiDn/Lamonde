@@ -24,7 +24,13 @@ if( function_exists('acf_add_options_page') ) {
         'parent_slug'	=> 'theme-options',
         'icon_url' => 'dashicons-info',
     ));
-
+    acf_add_options_sub_page(array(
+        'page_title'=>'Google map',
+        'menu_title'=>'Goole map',
+        'menu_slug'=>'google-map',
+        'parent_slug'	=> 'theme-options',
+        'icon_url' => 'dashicons-flag',
+    ));
     acf_add_options_sub_page(array(
         'page_title'=>'Page 404',
         'menu_title'=>'Page 404',
@@ -39,13 +45,13 @@ if( function_exists('acf_add_options_page') ) {
         'parent_slug'	=> 'theme-options',
         'icon_url' => 'dashicons-flag',
     ));
-    acf_add_options_sub_page(array(
-        'page_title'=>'Add Scripts',
-        'menu_title'=>'Add Scripts',
-        'menu_slug'=>'add-scripts',
-        'parent_slug'	=> 'theme-options',
-        'icon_url' => 'dashicons-chart-area',
-    ));
+//    acf_add_options_sub_page(array(
+//        'page_title'=>'Add Scripts',
+//        'menu_title'=>'Add Scripts',
+//        'menu_slug'=>'add-scripts',
+//        'parent_slug'	=> 'theme-options',
+//        'icon_url' => 'dashicons-chart-area',
+//    ));
 
 }
 

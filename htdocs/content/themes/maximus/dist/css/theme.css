@@ -240,20 +240,26 @@ table {
   background-position: center;
 }
 
-/* NAVIGATION */
-
-@media (min-width: 992px) {
-  .menu-item a {
-    font-size: 14px;
-  }
+.bold {
+  font-weight: 700;
 }
 
-.lang {
-  font-size: 12px;
+.full-link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 50;
 }
 
-a {
-  transition: all 0.6s ease;
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
 }
 
 /* STRUCTURE */
@@ -285,7 +291,6 @@ header {
 .section-content {
   padding-top: 45px;
   padding-bottom: 45px;
-  background-color: #f2f2f2;
 }
 
 @media (min-width: 768px) {
@@ -323,120 +328,10 @@ header {
   }
 }
 
-/* STYLE */
-
-.bold {
-  font-weight: 700;
-}
+/* NAVIGATION */
 
 a {
-  text-decoration: none;
-}
-
-.menu-item a {
-  text-transform: uppercase;
-}
-
-.page-title {
-  text-align: center;
-}
-
-.full-link {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  z-index: 50;
-}
-
-/*** ELEMENTS ***/
-
-.discover-ctn {
-  margin-top: 35px;
-  text-align: center;
-}
-
-@media (min-width: 640px) {
-  .discover-ctn {
-    display: -moz-flex;
-    display: flex;
-    -moz-justify-content: center;
-    justify-content: center;
-  }
-}
-
-.discover-ctn .link-ctn {
-  display: -moz-flex;
-  display: flex;
-  -moz-justify-content: space-around;
-  justify-content: space-around;
-  margin-top: 5px;
-}
-
-@media (min-width: 640px) {
-  .discover-ctn .link-ctn {
-    margin-top: -1px;
-    -moz-justify-content: flex-start;
-    justify-content: flex-start;
-  }
-
-  .discover-ctn .link-ctn a:first-of-type {
-    margin: 0 30px;
-  }
-}
-
-@media (min-width: 992px) {
-  .discover-ctn .link-ctn {
-    margin-top: 0px;
-  }
-}
-
-.discover-ctn span,
-.discover-ctn a {
-  color: #636060;
-}
-
-.discover-ctn .icon {
-  position: relative;
-  top: -2px;
-}
-
-#wdi_feed_0 {
-  background-color: transparent !important;
-}
-
-.sbi_owl-theme .sbi_owl-controls {
-  margin-top: 0px;
-}
-
-.cta,
-input[type=submit] {
-  display: block;
-  width: 200px;
-  margin: auto;
-  text-align: center;
-  padding: 15px 40px;
   transition: all 0.6s ease;
-}
-
-.cta:last-of-type,
-input[type=submit]:last-of-type {
-  margin-top: 25px;
-}
-
-.cta:hover,
-input[type=submit]:hover {
-  border: 1px solid white;
-}
-
-.overlay {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 2;
-  width: 100%;
-  height: 100%;
 }
 
 .loader {
@@ -552,6 +447,7 @@ input[type=submit]:hover {
   align-items: center;
   padding-top: 10px;
   padding-bottom: 10px;
+  position: relative;
 }
 
 @media (min-width: 1200px) {
@@ -790,9 +686,15 @@ input[type=submit]:hover {
 
 .open-nav .logo-ctn {
   display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
 }
 
-.open-nav .logo-ctn .logo.white {
+.open-nav .logo-ctn .logo {
   display: block;
 }
 
@@ -1053,10 +955,6 @@ input[type=submit]:hover {
 
 #menu-btn.open {
   z-index: 999;
-}
-
-#menu-btn.open span {
-  background: #fbe552;
 }
 
 #menu-btn.open span:nth-child(1) {
@@ -1405,13 +1303,12 @@ input[type=submit]:hover {
 
 @media (min-width: 768px) {
   #footer .newsletter-ctn {
-    margin-top: 25px;
+    margin-top: 0;
   }
 }
 
 @media (min-width: 992px) {
   #footer .newsletter-ctn {
-    margin-top: 0;
     text-align: left;
   }
 }
@@ -1419,18 +1316,6 @@ input[type=submit]:hover {
 #footer .newsletter-ctn label {
   display: block;
   font-size: 0.7rem;
-}
-
-@media (min-width: 992px) {
-  #footer .newsletter-ctn .mc4wp-form-fields {
-    width: 250px;
-    margin-left: auto;
-    margin-right: 172px;
-    display: -moz-flex;
-    display: flex;
-    -moz-align-items: flex-end;
-    align-items: flex-end;
-  }
 }
 
 #footer .newsletter-ctn input[type=text],
@@ -2614,9 +2499,13 @@ input[type=submit]:hover {
   margin: 15px 0;
 }
 
+.block-discover .links-ctn .link-ctn a {
+  line-height: normal;
+}
+
 @media (min-width: 640px) {
   .block-discover .links-ctn .link-ctn {
-    margin-top: -1px;
+    margin: 0;
     -moz-justify-content: flex-start;
     justify-content: flex-start;
   }
@@ -2933,6 +2822,14 @@ input[type=submit]:hover {
     padding-top: 24px;
     padding-bottom: 16px;
   }
+}
+
+#wdi_feed_0 {
+  background-color: transparent !important;
+}
+
+.sbi_owl-theme .sbi_owl-controls {
+  margin-top: 0;
 }
 
 .sb_instagram_header {

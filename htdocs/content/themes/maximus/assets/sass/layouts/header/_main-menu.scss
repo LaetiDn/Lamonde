@@ -23,6 +23,7 @@
     @include align-items(center);
     padding-top:10px;
     padding-bottom:10px;
+    position: relative;
     @media(min-width: $screen-xl-min){
       padding-top:20px;
       padding-bottom:20px;
@@ -45,7 +46,6 @@
     a {
       display: block;
       position:relative;
-      //width:30px;
       height: 100%;
 
     }
@@ -223,7 +223,8 @@
   }
   .logo-ctn {
     display: block;
-    .logo.white {
+    @include center-img(50%, 50%);
+    .logo {
       display: block;
     }
   }
@@ -298,12 +299,6 @@
   }
 
 }
-
-//@-webkit-keyframes moveIn {
-//  0% {top:-500px}
-//  100% {top:0;}
-//}
-
 
 .menu {
 

@@ -1,5 +1,5 @@
 <section id="services-content">
-    <div class="page-title">
+    <div class="page-title alignCenter">
         <h1>{{ get_field("menu_title") }}</h1>
     </div>
     <div class="content-rect-text">

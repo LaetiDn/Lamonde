@@ -1,0 +1,62 @@
+/* STRUCTURE */
+
+
+html, body {
+  overflow-x: hidden;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+#global-container {
+  max-width:1920px;
+  margin:auto;
+}
+
+header {
+  position: relative;
+}
+
+.default-padding {
+  padding-left:5%;
+  padding-right:5%;
+}
+
+.section-content {
+  @extend .default-padding;
+  padding-top:45px;
+  padding-bottom:45px;
+
+  @media (min-width: $screen-md-min) {
+    padding-top:125px;
+    padding-bottom:150px;
+  }
+}
+
+.content-ctn {
+  max-width:1180px;
+  margin:0 auto;
+}
+
+.content-text {
+
+  max-width:940px;
+  margin: 0 auto;
+  color:$grey;
+  text-align: center;
+}
+
+.content-rect-text {
+  color:$grey;
+  text-align: center;
+  padding:30px;
+  width:75%;
+  max-width: 640px;
+  margin:0 auto;
+  background-color: white;
+  @media (min-width: $screen-lg-min) {
+    padding:50px 40px;
+  }
+}
+

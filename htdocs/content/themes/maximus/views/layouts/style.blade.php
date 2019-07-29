@@ -33,7 +33,13 @@
         font-size: {{ get_field('paragraph_grp','option')['fz_phone'] }}px!important;
     }
     a {
+        text-decoration: none;
         color: {{ get_field('link_grp','option')['color'] }};
+        transition: color 0.6s ease;
+    }
+
+    a:focus, a:hover {
+        color: {{ get_field('link_grp','option')['color_hover'] }}!important;
     }
 
     @media(min-width: 1200px){
@@ -68,7 +74,7 @@
         color: {{ get_field('menu_grp','option')['color'] }};
     }
 
-    .nav .menu-item:hover > a, a:focus {
+    .nav .menu-item:hover > a a:focus, a:hover {
         color: {{ get_field('link_grp','option')['color_hover'] }}!important;
     }
 
@@ -119,19 +125,27 @@
         color: {{ get_field('footer_text_color','option') }};
     }
 
-    .cta, input[type="submit"] {
+    .cta, input[type="submit"], .yikes-easy-mc-submit-button {
         color: {{ get_field('button_grp', 'option')['text_color'] }};
         background-color: {{ get_field('button_grp', 'option')['bg_color'] }};
         border: 1px solid {{ get_field('button_grp', 'option')['border_color'] }};
         transition: all 0.6s ease;
     }
-    .cta:hover, input[type="submit"]:hover{
+
+
+    .cta:hover, input[type="submit"]:hover, .yikes-easy-mc-submit-button:hover{
         color: {{ get_field('button_grp', 'option')['text_color_transition'] }};
         background-color: {{ get_field('button_grp', 'option')['bg_color_transition'] }};
         border: 1px solid {{ get_field('button_grp', 'option')['border_color_transition'] }};
     }
 
-    .
+    .yikes-mailchimp-submit-button-span-text {
+        color: {{ get_field('button_grp', 'option')['text_color'] }};
+        transition: color 0.6s ease;
+    }
+    .yikes-easy-mc-submit-button:hover .yikes-mailchimp-submit-button-span-text{
+        color: {{ get_field('button_grp', 'option')['text_color_transition'] }};
+    }
 
     /*** HERO ***/
     .hero .overlay {

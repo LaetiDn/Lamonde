@@ -1,17 +1,15 @@
 
 
-
 /* NAVIGATION */
-
-.menu-item a  {
-  @media (min-width: $screen-lg-min) {
-    font-size: 14px;
-  }
-}
-
-.lang {
-  font-size: 12px;
-}
+//.menu-item a  {
+//  @media (min-width: $screen-lg-min) {
+//    font-size: 14px;
+//  }
+//}
+//
+//.lang {
+//  font-size: 12px;
+//}
 
 a {
   @include transition(all 0.6s ease);

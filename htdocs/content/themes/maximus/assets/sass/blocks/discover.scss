@@ -30,10 +30,11 @@
       @include flexbox();
       @include justify-content(space-around);
       margin:15px 0;
-
+      a {
+        line-height: normal;
+      }
       @media (min-width: 640px) {
-        margin-top:-1px;
-
+        margin:0;
         @include justify-content(flex-start);
         a:first-of-type {
           margin:0 30px;

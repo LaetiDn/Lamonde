@@ -43,9 +43,7 @@
                     {{ 'no existing menu' }}
                 @endif
 
-                <div class="lang">
-                    <?php pll_the_languages( array('display_names_as'=>'slug', 'hide_current'=>1)); ?>
-                </div>
+
             </div>
         </nav>
 

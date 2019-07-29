@@ -168,10 +168,10 @@
     //padding:0 20px;
     margin-top:15px;
     @media (min-width: $screen-md-min) {
-      margin-top:25px;
+      margin-top:0;
     }
     @media (min-width: $screen-lg-min) {
-      margin-top:0;
+
       text-align: left;
     }
     label {
@@ -179,21 +179,11 @@
       font-size:0.70rem;
     }
 
-    .mc4wp-form-fields {
-      @media (min-width: $screen-lg-min) {
-        width:250px;
-        margin-left:auto;
-        margin-right: 172px;
-        @include flexbox();
-        @include align-items(flex-end);
-      }
-    }
 
     input[type="text"], input[type="email"] {
       -webkit-appearance: none;
       border:none;
       width:calc(100% - 10px);
-      //border: 2px solid black;
       padding:10px 5px;
       margin:10px 0;
       font-size: 16px;
