@@ -13,6 +13,7 @@ Route::get('front', ['uses' => 'PageController@index']);
 Route::any('page', ['uses' => 'PageController@custom_template']);
 
 Route::any('template', ['post-archive', 'uses' => 'PageController@post_archive']);
+Route::any('single', ['uses' => 'PageController@single_news']);
 //Route::any('archive', ['uses' => 'PagesController@post_archive']);
 
 

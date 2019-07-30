@@ -575,10 +575,7 @@ a {
   }
 }
 
-.nav .nav-wrapper .menu-main-nav-container,
-.nav .nav-wrapper .menu-main-nav-en-container,
-.nav .nav-wrapper .menu-main-nav-fr-container,
-.nav .nav-wrapper .nav .menu {
+.nav .nav-wrapper .menu {
   position: relative;
   z-index: 2;
 }
@@ -838,12 +835,6 @@ a {
   }
 }
 
-@media (min-width: 992px) {
-  .menu .sub-menu:hover + a {
-    border-bottom: 1px solid white;
-  }
-}
-
 .menu .sub-menu .menu-item {
   padding: 10px;
 }
@@ -908,14 +899,6 @@ a {
 
 .open-sub-menu .menu-item:last-of-type {
   border-bottom: 1px solid transparent;
-}
-
-.menu-main-nav-container,
-.menu-main-nav-en-container,
-.menu-main-nav-fr-container,
-.nav .menu {
-  position: relative;
-  z-index: 2;
 }
 
 #menu-btn {
