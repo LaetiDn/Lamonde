@@ -84,4 +84,13 @@ return [
     //    'admin-head-callback' => '',
     //    'admin-preview-callback' => '',
     //]
+
+    /* ----------------------------------------------------------------------------------------------- */
+    // Woocommerce
+    // @see https://developer.wordpress.org/themes/functionality/custom-headers/
+    /* ----------------------------------------------------------------------------------------------- */
+    'woocommerce',
+    'wc-product-gallery-zoom',
+    'wc-product-gallery-lightbox',
+    'wc-product-gallery-slider'
 ];

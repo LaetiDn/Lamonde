@@ -43,7 +43,8 @@ class AssetServiceProvider extends ServiceProvider
 
         Asset::add('theme_woo', 'css/woocommerce.css', ['theme_styles'], $theme->getHeader('version'))->to('front');
 
-        Asset::add('font-awesome', '/css/font-awesome/all.css', [], $theme->getHeader('5.10.0'))->to('front');
+        //Asset::add('font-awesome', '/css/font-awesome/all.css', [], $theme->getHeader('5.10.0'))->to('front');
+        Asset::add('font-awesome', '//use.fontawesome.com/releases/v5.6.1/css/all.css', [], $theme->getHeader('5.6.1'))->to('front');
 
     }
 

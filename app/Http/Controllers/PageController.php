@@ -5,6 +5,7 @@ use App\Post;
 use App\ServiceModel;
 use Illuminate\Http\Request;
 use Themosis\Support\Facades\Asset;
+use Themosis\Support\Facades\Filter;
 class PageController extends Controller
 {
 
@@ -42,6 +43,29 @@ class PageController extends Controller
             'single_news' => Post::get_single_news(get_the_ID()),
         ]);
     }
+    public function shop()
+    {
+        return view('shop.archive', $this->defaultContent, [
+
+        ]);
+    }
+
+    public function product()
+    {
+        Filter::add('comments_template', ['WC_Template_Loader', 'comments_template_loader']);
+        return view('shop.single', $this->defaultContent, [
+
+        ]);
+    }
+
+    public function cart()
+    {
+        //Filter::add('comments_template', ['WC_Template_Loader', 'comments_template_loader']);
+        return view('shop.cart', $this->defaultContent, [
+
+        ]);
+    }
+
 
     public function page_404()
     {

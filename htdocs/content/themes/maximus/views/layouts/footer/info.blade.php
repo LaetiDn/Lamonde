@@ -25,11 +25,11 @@
             <div class="info-ctn">
                 <p class="bold">{{ pll__("follow-us") }} :</p>
                 <div class="link-ctn">
-                    @if(!empty($social['facebook'])) <a href="{{ $social['facebook'] }}" target="_blank"><i class="icon fa fa-facebook" aria-hidden="true"></i></a>  @endif
-                    @if(!empty($social['twitter'])) <a href="{{ $social['twitter'] }}" target="_blank"><i class="icon fa fa-instagram" aria-hidden="true"></i></a>  @endif
-                    @if(!empty($social['instagram'])) <a href="{{ $social['instagram'] }}" target="_blank"><i class="icon fa fa-yelp" aria-hidden="true"></i></a> @endif
-                    @if(!empty($social['trip_advisor'])) <a href="{{ $social['trip_advisor'] }}" target="_blank"><i class="icon fa fa-tripadvisor" aria-hidden="true"></i></a>  @endif
-                    @if(!empty($social['youtube'])) <a href="{{ $social['youtube'] }}" target="_blank"><i class="icon fa fa-youtube" aria-hidden="true"></i></a>  @endif
+                    @if(!empty($social['facebook'])) <a href="{{ $social['facebook'] }}" target="_blank"><i class="icon fas fa-facebook-f"></i></a>  @endif
+                    @if(!empty($social['twitter'])) <a href="{{ $social['twitter'] }}" target="_blank"><i class="icon fab fa-instagram" aria-hidden="true"></i></a>  @endif
+                    @if(!empty($social['instagram'])) <a href="{{ $social['instagram'] }}" target="_blank"><i class="icon fab fa-yelp" aria-hidden="true"></i></a> @endif
+                    @if(!empty($social['trip_advisor'])) <a href="{{ $social['trip_advisor'] }}" target="_blank"><i class="icon fab fa-tripadvisor" aria-hidden="true"></i></a>  @endif
+                    @if(!empty($social['youtube'])) <a href="{{ $social['youtube'] }}" target="_blank"><i class="icon fab fa-youtube" aria-hidden="true"></i></a>  @endif
                 </div>
             </div>
             @if(get_field("footer_newsletter_".$lang, "option"))

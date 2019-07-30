@@ -22,27 +22,28 @@ function cc_mime_types($mimes) {
 }
 add_filter('upload_mimes', 'cc_mime_types');
 
+// File stored in inc/woocommerce.php (for example)
+Action::remove('init', ['WC_Template_Loader', 'init'], 10);
 
-
-function custom_recaptcha_enqueue_scripts() {
-
-    if(pll_current_language() == 'en'){
-        $lang = 'en';
-    }else{
-        $lang = 'fr-CA';
-    }
-    wp_deregister_script( 'google-recaptcha' );
-
-    $url = 'https://www.google.com/recaptcha/api.js';
-    $url = add_query_arg( array(
-        'onload' => 'recaptchaCallback',
-        'render' => 'explicit',
-        'hl' => $lang ), $url );
-
-    wp_register_script( 'google-recaptcha', $url, array(), '2.0', true );
-}
-
-add_action( 'wpcf7_enqueue_scripts', 'custom_recaptcha_enqueue_scripts', 11 );
+//function custom_recaptcha_enqueue_scripts() {
+//
+//    if(pll_current_language() == 'en'){
+//        $lang = 'en';
+//    }else{
+//        $lang = 'fr-CA';
+//    }
+//    wp_deregister_script( 'google-recaptcha' );
+//
+//    $url = 'https://www.google.com/recaptcha/api.js';
+//    $url = add_query_arg( array(
+//        'onload' => 'recaptchaCallback',
+//        'render' => 'explicit',
+//        'hl' => $lang ), $url );
+//
+//    wp_register_script( 'google-recaptcha', $url, array(), '2.0', true );
+//}
+//
+//add_action( 'wpcf7_enqueue_scripts', 'custom_recaptcha_enqueue_scripts', 11 );
 
 
 function get_excerpt($post){
