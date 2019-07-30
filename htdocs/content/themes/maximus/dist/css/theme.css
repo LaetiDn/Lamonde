@@ -494,6 +494,16 @@ a {
   -o-border-radius: 100%;
 }
 
+.lang.desktop {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .lang.desktop {
+    display: block;
+  }
+}
+
 .lang li {
   list-style: none;
   width: 100%;

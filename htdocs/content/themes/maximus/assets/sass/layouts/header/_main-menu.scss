@@ -57,12 +57,17 @@
 }
 
 .lang {
-
   position: relative;
   z-index: 2;
   width:35px;
   height:35px;
   @include border-radius(100%);
+  &.desktop {
+    display: none;
+    @media(min-width: $screen-xl-min){
+      display: block;
+    }
+  }
   li {
     list-style: none;
     width:100%;
