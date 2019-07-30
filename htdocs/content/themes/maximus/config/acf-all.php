@@ -568,47 +568,47 @@ if( function_exists('acf_add_local_field_group') ):
     ));
 
 
-
-    acf_add_local_field_group(array(
-        'key' => 'group_5bf3448ad0b6d',
-        'title' => 'Page Booking',
-        'fields' => array(
-            array(
-                'key' => 'field_5bf422a2387d5',
-                'label' => 'Iframe URL',
-                'name' => 'booking_iframe_url',
-                'type' => 'url',
-                'instructions' => '',
-                'required' => 0,
-                'conditional_logic' => 0,
-                'wrapper' => array(
-                    'width' => '',
-                    'class' => '',
-                    'id' => '',
-                ),
-                'default_value' => '',
-                'placeholder' => '',
-            ),
-        ),
-        'location' => array(
-            array(
-                array(
-                    'param' => 'post_template',
-                    'operator' => '==',
-                    'value' => 'booking',
-                ),
-            ),
-        ),
-        'menu_order' => 1,
-        'position' => 'normal',
-        'style' => 'default',
-        'label_placement' => 'top',
-        'instruction_placement' => 'label',
-        'hide_on_screen' => array(
-            0 => 'the_content',
-        ),
-        'active' => 1,
-        'description' => '',
-    ));
+//
+//    acf_add_local_field_group(array(
+//        'key' => 'group_5bf3448ad0b6d',
+//        'title' => 'Page Booking',
+//        'fields' => array(
+//            array(
+//                'key' => 'field_5bf422a2387d5',
+//                'label' => 'Iframe URL',
+//                'name' => 'booking_iframe_url',
+//                'type' => 'url',
+//                'instructions' => '',
+//                'required' => 0,
+//                'conditional_logic' => 0,
+//                'wrapper' => array(
+//                    'width' => '',
+//                    'class' => '',
+//                    'id' => '',
+//                ),
+//                'default_value' => '',
+//                'placeholder' => '',
+//            ),
+//        ),
+//        'location' => array(
+//            array(
+//                array(
+//                    'param' => 'post_template',
+//                    'operator' => '==',
+//                    'value' => 'booking',
+//                ),
+//            ),
+//        ),
+//        'menu_order' => 1,
+//        'position' => 'normal',
+//        'style' => 'default',
+//        'label_placement' => 'top',
+//        'instruction_placement' => 'label',
+//        'hide_on_screen' => array(
+//            0 => 'the_content',
+//        ),
+//        'active' => 1,
+//        'description' => '',
+//    ));
 
 endif;

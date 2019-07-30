@@ -33,6 +33,8 @@
             @include ("blocks.text")
         @elseif( get_row_layout() == 'block_instagram' )
             @include ("blocks.instagram-feed")
+        @elseif( get_row_layout() == 'block_iframe' )
+            @include ("blocks.iframe")
         @endif
 
     @endwhile

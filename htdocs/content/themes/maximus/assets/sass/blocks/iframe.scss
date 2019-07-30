@@ -1,0 +1,19 @@
+.block-iframe {
+
+
+  .content-ctn {
+    position: relative;
+    .iframe-ctn {
+      padding: 25px 0;
+      @media (min-width: $screen-lg-min) {
+        padding: 50px 0;
+      }
+      iframe {
+        height:100%;
+        overflow: visible;
+      }
+    }
+
+  }
+
+}

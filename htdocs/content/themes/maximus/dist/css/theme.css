@@ -2836,3 +2836,22 @@ a {
   padding-left: 0 !important;
 }
 
+.block-iframe .content-ctn {
+  position: relative;
+}
+
+.block-iframe .content-ctn .iframe-ctn {
+  padding: 25px 0;
+}
+
+@media (min-width: 992px) {
+  .block-iframe .content-ctn .iframe-ctn {
+    padding: 50px 0;
+  }
+}
+
+.block-iframe .content-ctn .iframe-ctn iframe {
+  height: 100%;
+  overflow: visible;
+}
+
