@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 use App\Post;
-use App\PostModel;
 use Illuminate\Http\Request;
 use Themosis\Support\Facades\Asset;
 class PageController extends Controller
@@ -27,11 +26,13 @@ class PageController extends Controller
 
     }
 
+
+
     public function single_news()
     {
-        return view('templates.single-news', array_merge($this->getDefaultContent(), [
-            'single_news' => PostModel::get_single_news(get_the_ID()),
-        ]));
+        return view('templates.single-news', $this->defaultContent, [
+            'single_news' => Post::get_single_news(get_the_ID()),
+        ]);
     }
 
     public function page_404()

@@ -73,9 +73,11 @@
 }
 
 .single-news-inner, .single-event-inner {
-  margin-top:150px;
-  padding:25px 15px;
 
+  padding:25px 15px;
+  @media (min-width: $screen-md-min) {
+    padding:50px 15px;
+  }
   .news-content {
     @media (min-width: $screen-md-min) {
       margin:auto;
