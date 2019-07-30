@@ -16,12 +16,15 @@ class PageController extends Controller
     }
     public function custom_template()
     {
-        if(get_page_template_slug( get_the_ID() ) === ''){
-            return view('pages.custom-page', $this->defaultContent);
-        }else if(get_page_template_slug( get_the_ID() ) === 'post-archive'){
+        if(get_page_template_slug( get_the_ID() ) === 'post-archive'){
             return view('pages.post-archive', $this->defaultContent, [
                 'news' => Post::get_all_news(),
             ]);
+        }else if(get_page_template_slug( get_the_ID() ) === 'contact'){
+            return view('pages.contact', $this->defaultContent, [
+            ]);
+        }else{
+            return view('pages.custom-page', $this->defaultContent);
         }
 
     }
