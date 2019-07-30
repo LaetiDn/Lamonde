@@ -42,6 +42,9 @@ class AssetServiceProvider extends ServiceProvider
         Asset::add('lity_styles', 'css/lity.min.css', [], $theme->getHeader('version'))->to('front');
 
         Asset::add('theme_woo', 'css/woocommerce.css', ['theme_styles'], $theme->getHeader('version'))->to('front');
+
+        Asset::add('font-awesome', '/css/font-awesome/all.css', [], $theme->getHeader('5.10.0'))->to('front');
+
     }
 
 
