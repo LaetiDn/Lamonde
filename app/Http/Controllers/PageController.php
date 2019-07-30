@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Post;
+use App\ServiceModel;
 use Illuminate\Http\Request;
 use Themosis\Support\Facades\Asset;
 class PageController extends Controller
@@ -22,6 +23,10 @@ class PageController extends Controller
             ]);
         }else if(get_page_template_slug( get_the_ID() ) === 'contact'){
             return view('pages.contact', $this->defaultContent, [
+            ]);
+        }else if(get_page_template_slug( get_the_ID() ) === 'menu'){
+            return view('pages.menu', $this->defaultContent, [
+                'services' => ServiceModel::all(),
             ]);
         }else{
             return view('pages.custom-page', $this->defaultContent);

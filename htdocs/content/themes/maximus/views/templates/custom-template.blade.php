@@ -38,8 +38,5 @@
         @endif
 
     @endwhile
-
-@else
-    {{ "no layouts found." }}
 @endif
 
