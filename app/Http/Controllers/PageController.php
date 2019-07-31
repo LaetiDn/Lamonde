@@ -18,6 +18,8 @@ class PageController extends Controller
     }
     public function custom_template()
     {
+        $disable_header = false;
+
         if(get_page_template_slug( get_the_ID() ) === 'post-archive'){
             return view('pages.post-archive', $this->defaultContent, [
                 'news' => Post::get_all_news(),
@@ -29,6 +31,16 @@ class PageController extends Controller
             return view('pages.menu', $this->defaultContent, [
                 'services' => ServiceModel::all(),
             ]);
+        }else if( is_cart() ) {
+            return view('shop.cart', $this->defaultContent, [
+                'disable_hero' => true
+            ]);
+        }else if( is_checkout() ){
+                return view('shop.cart', $this->defaultContent);
+        }else if( is_account_page() ){
+            return view('shop.cart', $this->defaultContent);
+        }else if( is_checkout() ){
+            return view('shop.cart', $this->defaultContent);
         }else{
             return view('pages.custom-page', $this->defaultContent);
         }
@@ -39,6 +51,7 @@ class PageController extends Controller
 
     public function single_news()
     {
+        Filter::add('comments_template', ['WC_Template_Loader', 'comments_template_loader']);
         return view('templates.single-news', $this->defaultContent, [
             'single_news' => Post::get_single_news(get_the_ID()),
         ]);
@@ -53,14 +66,14 @@ class PageController extends Controller
     public function product()
     {
         Filter::add('comments_template', ['WC_Template_Loader', 'comments_template_loader']);
-        return view('shop.single', $this->defaultContent, [
+        return view('shop.product', $this->defaultContent, [
 
         ]);
     }
 
     public function cart()
     {
-        //Filter::add('comments_template', ['WC_Template_Loader', 'comments_template_loader']);
+
         return view('shop.cart', $this->defaultContent, [
 
         ]);

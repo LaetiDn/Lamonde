@@ -15,6 +15,7 @@ class Application extends Hookable
 
     public function register()
     {
+
         /*
         |--------------------------------------------------------------------------
         | Application locale
@@ -110,6 +111,7 @@ class Application extends Hookable
         |
         */
         try {
+            
             Action::add('admin_enqueue_scripts', function () {
                 wp_enqueue_editor();
                 wp_enqueue_media();
@@ -122,5 +124,9 @@ class Application extends Hookable
         } catch (AssetException $e) {
             logger($e->getMessage());
         }
+
+
+
+
     }
 }

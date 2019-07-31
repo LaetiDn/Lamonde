@@ -1,5 +1,5 @@
 @if(!is_single())
-<div id="hero "class="hero @if(!get_field("use_a_slider", get_the_ID())){{ 'page' }} @endif">
+<div id="hero" class="hero @if(!get_field("use_a_slider", get_the_ID())){{ 'page' }} @endif">
     <div class="overlay"></div>
     @if(get_field("use_a_slider", get_the_ID()))
         <div class="logo-ctn">

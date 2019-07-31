@@ -1,20 +1,18 @@
 @extends('master')
 
 @section('main')
-    <section>
-        {{--@php(do_action('woocommerce_before_main_content'))--}}
-        <div class="content-ctn">
+    <section class="woo-page">
+
+        <div class="content-ctn default-padding">
+
+            @php(do_action('woocommerce_before_main_content'))
             <div class="woocommerce-products-header">
-                {{--@if(apply_filters('woocommerce_show_page_title', true))--}}
-                    {{--<h1 class="woocommerce-products-header__title page-title">{{ woocommerce_page_title(false) }}</h1>--}}
-                {{--@endif--}}
+                @if(apply_filters('woocommerce_show_page_title', true))
+                    <h1 class="woocommerce-products-header__title page-title">{{ woocommerce_page_title(false) }}</h1>
+                @endif
                 @php(do_action('woocommerce_archive_description'))
             </div>
-        </div>
-    </section>
 
-    <section>
-        <div class="content-ctn">
             @if(woocommerce_product_loop())
                 @php(do_action('woocommerce_before_shop_loop'))
 
@@ -36,7 +34,10 @@
                 @php(do_action('woocommerce_no_products_found'))
             @endif
         </div>
+
+
     </section>
+
 
 
     @php(do_action('woocommerce_after_main_content'))

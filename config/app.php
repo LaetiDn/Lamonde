@@ -255,5 +255,8 @@ return [
         'is_product_category' => 'product_category',
         'is_product_tag' => 'product_tag',
         'is_wc_endpoint_url' => 'wc_endpoint'
-    ]
+    ],
+
+
+
 ];

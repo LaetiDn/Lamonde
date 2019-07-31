@@ -1,11 +1,16 @@
 @extends('master')
 
 @section('main')
-    @loop
-    @template('parts.content', 'page')
+    <section class="woo-page">
+        <div class="content-ctn default-padding">
 
-    @if(comments_open() || get_comments_number())
-        @php(comments_template('/views/comments/template.php'))
-    @endif
-    @endloop
+
+        @loop
+        @include('shop.parts.content')
+        @if(comments_open() || get_comments_number())
+            @php(comments_template('/views/comments/template.php'))
+        @endif
+        @endloop
+        </div>
+    </section>
 @endsection

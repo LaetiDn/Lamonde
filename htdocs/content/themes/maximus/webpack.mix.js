@@ -19,5 +19,8 @@ mix.js('assets/js/theme.js', 'dist/js/theme.min.js')
 
 mix.browserSync({
     proxy: 'https://maximus.test',
-    files: "dist/css/theme.css"
+    files: [
+        "dist/css/theme.css",
+        "dist/css/woocommerce.css",
+    ]
 });

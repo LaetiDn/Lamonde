@@ -11,6 +11,12 @@ $woocommerce__color-error: #e2401c;
 $woocommerce__color-success: #0f834d;
 $woocommerce__color-info: #3D9CD2;
 
+@import "utilities/reset";
+@import "utilities/variables";
+@import "utilities/flex";
+@import "utilities/mixins";
+@import "utilities/helpers";
+
 /**
  * Imports
  */
@@ -46,3 +52,9 @@ $woocommerce__color-info: #3D9CD2;
  * WooCommerce widgets
  */
 @import "woocommerce/shop/widgets";
+
+
+/**
+ * WooCommerce Overrides
+ */
+@import "woocommerce/shop/shop-overrides";

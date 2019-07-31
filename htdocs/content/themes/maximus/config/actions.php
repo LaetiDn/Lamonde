@@ -7,6 +7,7 @@
  * https://developer.wordpress.org/reference/hooks/
  *
  */
+use Themosis\Support\Facades\Action;
 
 // Move Yoast Meta Box to bottom
 function yoasttobottom() {
@@ -22,8 +23,7 @@ function cc_mime_types($mimes) {
 }
 add_filter('upload_mimes', 'cc_mime_types');
 
-// File stored in inc/woocommerce.php (for example)
-Action::remove('init', ['WC_Template_Loader', 'init'], 10);
+
 
 //function custom_recaptcha_enqueue_scripts() {
 //
@@ -65,3 +65,7 @@ function sb_instagram_scripts_force_enqueue() {
     //Enqueue the script to make it available on every page
     wp_enqueue_script( 'sb_instagram_scripts' );
 }
+
+
+Action::remove('init', ['WC_Template_Loader', 'init'], 10);
+
