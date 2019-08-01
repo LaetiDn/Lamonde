@@ -1712,6 +1712,10 @@ a {
   opacity: 0;
 }
 
+.animate.block-image-text {
+  opacity: 1;
+}
+
 .do-animation.sft {
   -webkit-animation-name: sft;
           animation-name: sft;
