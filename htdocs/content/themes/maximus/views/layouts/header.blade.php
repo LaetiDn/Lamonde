@@ -1,7 +1,9 @@
-@if(is_shop() || is_product() || is_cart() || is_woocommerce() || is_checkout() || is_checkout_pay_page() || is_account_page() || is_edit_account_page() )
-    @php
-        $disable_hero = true;
-    @endphp
+@if ( class_exists( 'WooCommerce' ) )
+    @if(is_shop() || is_product() || is_cart() || is_woocommerce() || is_checkout() || is_checkout_pay_page() || is_account_page() || is_edit_account_page() )
+        @php
+            $disable_hero = true;
+        @endphp
+    @endif
 @else
     @php
         $disable_hero = false;
