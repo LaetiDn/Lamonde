@@ -31,6 +31,8 @@ class PageController extends Controller
             return view('pages.menu', $this->defaultContent, [
                 'services' => ServiceModel::all(),
             ]);
+        }else if(get_page_template_slug( get_the_ID() ) === ''){
+            return view('pages.custom-page', $this->defaultContent);
         }else if( is_cart() ) {
             return view('shop.cart', $this->defaultContent, [
                 'disable_hero' => true
@@ -42,7 +44,7 @@ class PageController extends Controller
         }else if( is_checkout() ){
             return view('shop.cart', $this->defaultContent);
         }else{
-            return view('pages.custom-page', $this->defaultContent);
+            return "no route found";
         }
 
     }
