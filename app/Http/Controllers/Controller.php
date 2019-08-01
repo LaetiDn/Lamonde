@@ -6,6 +6,7 @@ use Illuminate\Routing\Controller as BaseController;
 use Themosis\Core\Forms\FormHelper;
 use Themosis\Core\Validation\ValidatesRequests;
 use App\CompanyInfoModel;
+use App\CustomizeModel;
 
 class Controller extends BaseController
 {
@@ -27,6 +28,7 @@ class Controller extends BaseController
             $this->defaultContent = [
                 'contact' => CompanyInfoModel::contact(),
                 'social' => CompanyInfoModel::social(),
+                'animation' => CustomizeModel::animation(),
                 'lang' => $lang,
                 'strip' => array(" ", "(", ")","-", "."),
             ];

@@ -1,4 +1,4 @@
-<section class="block-icons-text section-content animate" data-section="{{ get_sub_field('section_id') }}" style="background-color: {{ get_sub_field('bg_color') }}">
+<section class="block-icons-text section-content @if(get_sub_field("animation") != 'none'){{ 'animate' }}@endif" data-section="{{ get_sub_field('section_id') }}" style="background-color: {{ get_sub_field('bg_color') }}">
     {{--<span id="{{ get_sub_field('section_id') }}" class="anchor"></span>--}}
     <div class="content-ctn css-animation">
         <div class="all-logo-ctn">

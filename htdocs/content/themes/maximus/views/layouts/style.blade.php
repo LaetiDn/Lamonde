@@ -8,7 +8,6 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap" rel="stylesheet">
 @endif
 
-
 <style>
     * {
         font-family: {{ get_field('font_family','option')["value"] }}, sans-serif!important;
@@ -209,8 +208,37 @@
 
 
     /** ANIMATIONS **/
+
+
+    .do-animation {
+        transition-duration: {{ $animation['gen_duration'] }}s;
+        transition-timing-function: {{ $animation['gen_effect'] }};
+
+        animation-duration: {{ $animation['gen_duration'] }}s;
+        animation-timing-function: {{ $animation['gen_effect'] }};
+    }
+
+    .content-ctn.do-animation, .txt.do-animation {
+        animation-name: {{ $animation['content_animation'] }};
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+    }
+
+    .content-ctn.do-animation{
+        animation-name: {{ $animation['content_animation'] }};
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+    }
+
     .block-background-title .title-ctn:before, .block-background-title .title-ctn:after {
         background-color: {{ get_field('span_grp','option')['color'] }};
+    }
+    .block-background-title .title-ctn.do-animation:before, .block-background-title .title-ctn.do-animation:after {
+        transition-duration: {{ get_field('animation_all', 'option')['duration'] }}s;
+        transition-timing-function: {{ get_field('animation_all', 'option')['effect'] }};
+
+        animation-duration: {{ get_field('animation_all', 'option')['duration'] }}s;
+        animation-timing-function: {{ get_field('animation_all', 'option')['effect'] }};
     }
 
 

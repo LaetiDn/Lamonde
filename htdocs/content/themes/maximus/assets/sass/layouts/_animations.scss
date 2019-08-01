@@ -1,19 +1,77 @@
 
-.content-ctn.css-animation {
+.animate .content-ctn, .animate .content-rect-text {
   opacity: 0;
 }
-.content-ctn.do-animation {
-  animation: slide-top 1s ease forwards;
+//.content-ctn.do-animation {
+//  animation-name: slide-top;
+//  animation-fill-mode: forwards;
+//}
+
+.do-animation.sft{
+  animation-name: sft;
+}
+.do-animation.sfr{
+  animation-name: sfr;
+}
+.do-animation.sfb{
+  animation-name: sfb;
+}
+.do-animation.sfl{
+  animation-name: sfl;
 }
 
-@keyframes slide-top {
+.do-animation.fadein{
+  animation-name: fadeIn;
+}
+
+@keyframes sfb {
   from {
     opacity:0;
-    transform:translate3d(0, 100px, 0);
+    transform:translate3d(0, 50px, 0);
   }
   to {
     opacity:1;
     transform:translate3d(0, 0, 0);
+  }
+}
+@keyframes sft {
+  from {
+    opacity:0;
+    transform:translate3d(0, -50px, 0);
+  }
+  to {
+    opacity:1;
+    transform:translate3d(0, 0, 0);
+  }
+}
+
+@keyframes sfr {
+  from {
+    opacity:0;
+    transform:translate3d(50px, 0, 0);
+  }
+  to {
+    opacity:1;
+    transform:translate3d(0, 0, 0);
+  }
+}
+@keyframes sfl {
+  from {
+    opacity:0;
+    transform:translate3d(-50px, 0, 0);
+  }
+  to {
+    opacity:1;
+    transform:translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity:0;
+  }
+  to {
+    opacity:1;
   }
 }
 
@@ -28,7 +86,8 @@
     height: 3px;
 
     position: absolute;
-    transition: width 1.5s ease 0.6s;
+    transition-property: width;
+    //transition: width 1.5s ease 0.6s;
   }
   &:before {
     left:0;
@@ -42,62 +101,6 @@
     &:before, &:after {
       width:100%!important;
     }
-  }
-}
-
-.content-rect-text {
-  opacity:0;
-  transition: opacity 1s ease;
-  &.do-animation {
-    opacity:1;
-  }
-}
-
-.block-image-text .txt{
-  opacity: 0;
-}
-
-.reverse .txt.do-animation{
-  animation: slide-right 1s ease forwards;
-}
-.normal .txt.do-animation{
-  animation: slide-left 1s ease forwards;
-}
-
-@keyframes slide-right {
-  from {
-    opacity:0;
-    transform:translate3d(-100px, 0, 0);
-  }
-  to {
-    opacity:1;
-    transform:translate3d(0, 0, 0);
-  }
-}
-
-@keyframes slide-left {
-  from {
-    opacity:0;
-    transform:translate3d(100px, 0, 0);
-  }
-  to {
-    opacity:1;
-    transform:translate3d(0, 0, 0);
-  }
-}
-
-
-.bgFixed.do-animation {
-  //animation: bg-slide 3s linear infinite;
-
-}
-
-@keyframes bg-slide {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.2);
   }
 }
 

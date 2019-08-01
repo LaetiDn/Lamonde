@@ -1,4 +1,4 @@
-<section class="section-content block-discover animate" data-section="{{ get_sub_field('section_id') }}" style="background-color: {{ get_sub_field('bg_color') }}">
+<section class="section-content block-discover @if(get_sub_field("animation") != 'none'){{ 'animate' }}@endif" data-section="{{ get_sub_field('section_id') }}" style="background-color: {{ get_sub_field('bg_color') }}">
     {{--<span id="{{ get_sub_field('section_id') }}" class="anchor"></span>--}}
     <div class="content-ctn wysywig-ctn css-animation">
         @if(!empty(get_sub_field("logo")))

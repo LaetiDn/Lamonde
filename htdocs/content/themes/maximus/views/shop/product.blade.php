@@ -1,5 +1,3 @@
-
-
 <section class="woo-page">
     <div class="content-ctn default-padding">
         @php(do_action('woocommerce_before_main_content'))

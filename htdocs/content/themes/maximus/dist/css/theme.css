@@ -1707,19 +1707,40 @@ a {
   padding: 10px 0;
 }
 
-.content-ctn.css-animation {
+.animate .content-ctn,
+.animate .content-rect-text {
   opacity: 0;
 }
 
-.content-ctn.do-animation {
-  -webkit-animation: slide-top 1s ease forwards;
-          animation: slide-top 1s ease forwards;
+.do-animation.sft {
+  -webkit-animation-name: sft;
+          animation-name: sft;
 }
 
-@-webkit-keyframes slide-top {
+.do-animation.sfr {
+  -webkit-animation-name: sfr;
+          animation-name: sfr;
+}
+
+.do-animation.sfb {
+  -webkit-animation-name: sfb;
+          animation-name: sfb;
+}
+
+.do-animation.sfl {
+  -webkit-animation-name: sfl;
+          animation-name: sfl;
+}
+
+.do-animation.fadein {
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+}
+
+@-webkit-keyframes sfb {
   from {
     opacity: 0;
-    transform: translate3d(0, 100px, 0);
+    transform: translate3d(0, 50px, 0);
   }
 
   to {
@@ -1728,15 +1749,107 @@ a {
   }
 }
 
-@keyframes slide-top {
+@keyframes sfb {
   from {
     opacity: 0;
-    transform: translate3d(0, 100px, 0);
+    transform: translate3d(0, 50px, 0);
   }
 
   to {
     opacity: 1;
     transform: translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes sft {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -50px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes sft {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -50px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes sfr {
+  from {
+    opacity: 0;
+    transform: translate3d(50px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes sfr {
+  from {
+    opacity: 0;
+    transform: translate3d(50px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes sfl {
+  from {
+    opacity: 0;
+    transform: translate3d(-50px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes sfl {
+  from {
+    opacity: 0;
+    transform: translate3d(-50px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
 
@@ -1752,7 +1865,7 @@ a {
   width: 0;
   height: 3px;
   position: absolute;
-  transition: width 1.5s ease 0.6s;
+  transition-property: width;
 }
 
 .block-background-title .title-ctn:before {
@@ -1768,97 +1881,6 @@ a {
 .block-background-title .title-ctn.do-animation:before,
 .block-background-title .title-ctn.do-animation:after {
   width: 100% !important;
-}
-
-.content-rect-text {
-  opacity: 0;
-  transition: opacity 1s ease;
-}
-
-.content-rect-text.do-animation {
-  opacity: 1;
-}
-
-.block-image-text .txt {
-  opacity: 0;
-}
-
-.reverse .txt.do-animation {
-  -webkit-animation: slide-right 1s ease forwards;
-          animation: slide-right 1s ease forwards;
-}
-
-.normal .txt.do-animation {
-  -webkit-animation: slide-left 1s ease forwards;
-          animation: slide-left 1s ease forwards;
-}
-
-@-webkit-keyframes slide-right {
-  from {
-    opacity: 0;
-    transform: translate3d(-100px, 0, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@keyframes slide-right {
-  from {
-    opacity: 0;
-    transform: translate3d(-100px, 0, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@-webkit-keyframes slide-left {
-  from {
-    opacity: 0;
-    transform: translate3d(100px, 0, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@keyframes slide-left {
-  from {
-    opacity: 0;
-    transform: translate3d(100px, 0, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@-webkit-keyframes bg-slide {
-  from {
-    transform: scale(1);
-  }
-
-  to {
-    transform: scale(1.2);
-  }
-}
-
-@keyframes bg-slide {
-  from {
-    transform: scale(1);
-  }
-
-  to {
-    transform: scale(1.2);
-  }
 }
 
 @-webkit-keyframes moveIn {
@@ -2702,6 +2724,10 @@ a {
 
 .block-image-text .content-ctn > div {
   flex-basis: 50%;
+}
+
+.block-image-text .content-ctn.image-75 {
+  text-align: right;
 }
 
 .block-image-text .content-ctn.image-75 > div:first-of-type {

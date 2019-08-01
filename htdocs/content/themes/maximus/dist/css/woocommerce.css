@@ -908,6 +908,7 @@ p.no-comments {
 .woo-page .button {
   margin: 10px 0;
   display: block;
+  cursor: pointer;
 }
 
 .woo-page table.shop_table_responsive tr td.product-remove a {

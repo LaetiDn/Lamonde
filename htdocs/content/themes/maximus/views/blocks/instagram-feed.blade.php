@@ -1,4 +1,4 @@
-<section class="block-instagram">
+<section class="block-instagram @if(get_sub_field("animation") != 'none'){{ 'animate' }}@endif">
     <div class="hashtag-title">
         {!! get_sub_field("text")  !!}
     </div>

@@ -9,11 +9,13 @@
     }
     &.reverse {
       @include flex-direction(row-reverse);
+
     }
     &  > div {
       @include flex-basis(50%);
     }
     &.image-75 {
+      text-align: right;
       & > div:first-of-type {
         @include flex-basis(60%);
       }
