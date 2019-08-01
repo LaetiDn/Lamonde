@@ -9,6 +9,11 @@
     background-color: steelblue!important;
     color:white!important;
 }
+
+.acf-postbox > .hndle .acf-hndle-cog, .toggle-indicator  {
+    color:white!important;
+}
+
 /** First row repeater field **/
 /* Corners */
 .acf-row-handle {

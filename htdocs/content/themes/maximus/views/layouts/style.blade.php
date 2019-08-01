@@ -81,8 +81,9 @@
         color: {{ get_field('menu_grp','option')['color_hover'] }};
     }
     .menu .menu-item:before {
-        color: {{ get_field('span_grp','option')['color'] }};
-    }
+        {{--color: {{ get_field('span_grp','option')['color'] }};--}}
+        background-color: {{ get_field('link_grp','option')['color_hover'] }}
+}
 
     .menu .sub-menu .menu-item:first-of-type{
         border-top-color:{{ get_field('span_grp','option')['color'] }}!important;
@@ -96,12 +97,12 @@
 
 
     /** MENU STICKY **/
-    .sticky .nav .menu-item a {
-        color: {{ get_field('menu_grp','option')['color_sticky'] }};
-    }
-    .sticky .nav .menu-item:hover a {
-        color: {{ get_field('menu_grp','option')['color_sticky_hover'] }}!important;
-    }
+    {{--.sticky .nav .menu-item a {--}}
+        {{--color: {{ get_field('menu_grp','option')['color_sticky'] }};--}}
+    {{--}--}}
+    {{--.sticky .nav .menu-item:hover a {--}}
+        {{--color: {{ get_field('menu_grp','option')['color_sticky_hover'] }}!important;--}}
+    {{--}--}}
 
     span {
         color: {{ get_field('span_grp','option')['color'] }};
@@ -208,25 +209,23 @@
 
 
     /** ANIMATIONS **/
-
-
     .do-animation {
         transition-duration: {{ $animation['prop_duration'] }}s;
         transition-timing-function: {{ $animation['prop_easing'] }};
 
         animation-duration: {{ $animation['prop_duration'] }}s;
         animation-timing-function: {{ $animation['prop_easing'] }};
+
+        animation-fill-mode: forwards;
+        /*animation-iteration-count: infinite;*/
     }
 
-    .content-ctn.do-animation, .txt.do-animation {
+    /* txt container  */
+    .content-ctn.do-animation, .txt.do-animation, .content-rect-text.do-animation {
         animation-name: {{ $animation['content_animation'] }};
-        animation-fill-mode: forwards;
+
     }
 
-    .content-ctn.do-animation{
-        animation-name: {{ $animation['content_animation'] }};
-        animation-fill-mode: forwards;
-    }
 
     .block-background-title .title-ctn:before, .block-background-title .title-ctn:after {
         background-color: {{ get_field('span_grp','option')['color'] }};

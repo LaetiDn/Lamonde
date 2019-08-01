@@ -2,15 +2,24 @@
   position: relative;
 
   .background-ctn {
-    height:850px;
+
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(center);
+
+    height:450px;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     z-index: 1;
+    @media(min-width: $screen-md-min) {
+      height:850px;
+    }
+
   }
   .wysywyg-ctn {
-    @include center-img(50%, 50%);
+    display: inline-block;
     z-index: 5;
   }
 

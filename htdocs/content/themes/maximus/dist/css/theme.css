@@ -2592,7 +2592,13 @@ a {
 }
 
 .block-background-text .background-ctn {
-  height: 850px;
+  display: -moz-flex;
+  display: flex;
+  -moz-justify-content: center;
+  justify-content: center;
+  -moz-align-items: center;
+  align-items: center;
+  height: 450px;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2600,13 +2606,14 @@ a {
   z-index: 1;
 }
 
+@media (min-width: 768px) {
+  .block-background-text .background-ctn {
+    height: 850px;
+  }
+}
+
 .block-background-text .wysywyg-ctn {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+  display: inline-block;
   z-index: 5;
 }
 

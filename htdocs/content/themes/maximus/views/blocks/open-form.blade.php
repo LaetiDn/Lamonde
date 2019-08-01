@@ -1,5 +1,5 @@
-<section class="block-open-form section-content animate" style="background-color: {{ get_sub_field('bg_color') }}">
-    <div class="content-ctn css-animation">
+<section class="block-open-form section-content @if(get_sub_field("animation") != 'none'){{ 'animate' }}@endif" style="background-color: {{ get_sub_field('bg_color') }}">
+    <div class="content-ctn css-animation {!! get_sub_field("animation")!!}">
         <div class="wysywyg-ctn">
             {!! get_sub_field("wysywyg") !!}
         </div>
