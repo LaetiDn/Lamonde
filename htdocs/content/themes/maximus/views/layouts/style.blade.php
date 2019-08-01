@@ -227,7 +227,6 @@
     .content-ctn.do-animation{
         animation-name: {{ $animation['content_animation'] }};
         animation-fill-mode: forwards;
-        animation-iteration-count: infinite;
     }
 
     .block-background-title .title-ctn:before, .block-background-title .title-ctn:after {
