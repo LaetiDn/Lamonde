@@ -46,16 +46,16 @@ class CustomizeModel extends Model
 
     public static function animation(){
 
-        if(get_field('animation_all', 'option')['effect'] === 'custom'){
-           $effect = get_field('animation_all', 'option')['effect_custom'];
+        if(get_field('animation_props', 'option')['easing'] === 'custom'){
+           $easing = get_field('animation_props', 'option')['easing_custom'];
         }else{
-            $effect = get_field('animation_all', 'option')['effect'];
+            $easing= get_field('animation_props', 'option')['easing'];
         }
 
         $animation = [
-            'gen_duration' => get_field('animation_all', 'option')['duration'],
-            'gen_delay' => get_field('animation_all', 'option')['delay'],
-            'gen_effect' => $effect,
+            'prop_duration' => get_field('animation_props', 'option')['duration'],
+            'prop_delay' => get_field('animation_props', 'option')['delay'],
+            'prop_easing' => $easing,
             'content_animation' => get_field('content_animation', 'option')['animation'],
         ];
 

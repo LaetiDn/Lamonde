@@ -211,11 +211,11 @@
 
 
     .do-animation {
-        transition-duration: {{ $animation['gen_duration'] }}s;
-        transition-timing-function: {{ $animation['gen_effect'] }};
+        transition-duration: {{ $animation['prop_duration'] }}s;
+        transition-timing-function: {{ $animation['prop_easing'] }};
 
-        animation-duration: {{ $animation['gen_duration'] }}s;
-        animation-timing-function: {{ $animation['gen_effect'] }};
+        animation-duration: {{ $animation['prop_duration'] }}s;
+        animation-timing-function: {{ $animation['prop_easing'] }};
     }
 
     .content-ctn.do-animation, .txt.do-animation {
@@ -232,11 +232,11 @@
         background-color: {{ get_field('span_grp','option')['color'] }};
     }
     .block-background-title .title-ctn.do-animation:before, .block-background-title .title-ctn.do-animation:after {
-        transition-duration: {{ get_field('animation_all', 'option')['duration'] }}s;
-        transition-timing-function: {{ get_field('animation_all', 'option')['effect'] }};
+        transition-duration: {{ get_field('animation_props', 'option')['duration'] }}s;
+        transition-timing-function: {{ get_field('animation_props', 'option')['easing'] }};
 
-        animation-duration: {{ get_field('animation_all', 'option')['duration'] }}s;
-        animation-timing-function: {{ get_field('animation_all', 'option')['effect'] }};
+        animation-duration: {{ get_field('animation_props', 'option')['duration'] }}s;
+        animation-timing-function: {{ get_field('animation_props', 'option')['easing'] }};
     }
 
 
