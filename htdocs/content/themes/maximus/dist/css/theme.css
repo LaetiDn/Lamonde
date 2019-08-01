@@ -1712,7 +1712,7 @@ a {
   opacity: 0;
 }
 
-.animate.block-image-text .content-ctn {
+.block-image-text.animate .content-ctn {
   opacity: 1;
 }
 
