@@ -24,7 +24,7 @@
 	</head>
 	<body class="@if(is_front_page() && get_field('activate_page_loader')) {{ 'overflow-hidden' }}@endif">
 
-	@if(is_front_page() && get_field('activate_page_loader'))
+	@if(is_front_page() && get_field('activate_page_loader', 'option'))
 		@include('layouts.loader')
 	@endif
 
