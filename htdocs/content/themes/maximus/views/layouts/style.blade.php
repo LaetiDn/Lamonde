@@ -221,7 +221,6 @@
     .content-ctn.do-animation, .txt.do-animation {
         animation-name: {{ $animation['content_animation'] }};
         animation-fill-mode: forwards;
-        animation-iteration-count: infinite;
     }
 
     .content-ctn.do-animation{
