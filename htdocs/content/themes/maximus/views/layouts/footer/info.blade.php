@@ -32,17 +32,7 @@
                     @if(!empty($social['youtube'])) <a href="{{ $social['youtube'] }}" target="_blank"><i class="icon fa fa-youtube" aria-hidden="true"></i></a>  @endif
                 </div>
             </div>
-            @if(get_field("footer_newsletter_".$lang, "option"))
-                <div class="info-ctn">
-                    <div class="newsletter-ctn">
-                        <p class="bold">{!! pll__("_newsletter")  !!}</p>
-                        <?php
-                        $form = get_field("footer_newsletter_".$lang, "option");
-                        echo do_shortcode( ''.$form.'' );
-                        ?>
-                    </div>
-                </div>
-            @endif
+
         </div>
         <div class="copyrights">
             <span>{{ date('Y') }} {{ get_field('copyrights_' . $lang, 'option') }}</span>

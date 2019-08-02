@@ -220,7 +220,7 @@
         /*animation-iteration-count: infinite;*/
     }
 
-    /* txt container  */
+    /* Content Container Animation  */
     .content-ctn.do-animation, .txt.do-animation, .content-rect-text.do-animation {
         animation-name: {{ $animation['content_animation'] }};
 

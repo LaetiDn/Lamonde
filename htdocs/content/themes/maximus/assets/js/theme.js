@@ -26,12 +26,17 @@
         });
 
         //Pour le page loader?
-        if( $('body').hasClass('overflow-hidden') ) {
+        if($('.loader').length) {
+            $('body').addClass('overflow-hidden');
             setTimeout(function(){
                 $('body').removeClass('overflow-hidden');
             }, 3000);
         }
 
+        $('body').on('click', '#open-newsletter', function (e) {
+            console.log('plop');
+            $('.sticky-newsletter').toggleClass('show-newsletter');
+        });
         //Toggle open/close le burger menu
         // $('#menu-btn').on('click', function () {
         //     $(this).toggleClass('open');

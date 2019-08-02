@@ -34,6 +34,9 @@
 
 		<div id="global-outer">
 			<div id="global-inner">
+				@if(get_field("footer_newsletter_".$lang, "option"))
+					@include('layouts.sticky-newsletter')
+				@endif
 				@if(!is_404())
 					@include('layouts.header')
 				@endif
