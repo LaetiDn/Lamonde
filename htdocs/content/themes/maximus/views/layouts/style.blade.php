@@ -9,8 +9,8 @@
 @endif
 
 <style>
-    * {
-        font-family: {{ get_field('font_family','option')["value"] }}, sans-serif!important;
+    body {
+        font-family: {{ get_field('font_family','option')["value"] }}, sans-serif;
     }
     h1 {
         color: {{ get_field('h1_grp','option')['color'] }};

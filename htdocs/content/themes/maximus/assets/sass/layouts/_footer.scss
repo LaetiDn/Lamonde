@@ -108,7 +108,7 @@
     .menu-item {
       position: relative;
       list-style: none;
-      width:calc(100%/3);
+      width:50%;
       text-align: center;
     }
     a {
@@ -232,6 +232,6 @@
 
   .copyrights {
     text-align: center;
-
+    padding-bottom: 50px;
   }
 }

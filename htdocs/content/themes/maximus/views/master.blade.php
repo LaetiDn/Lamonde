@@ -16,11 +16,10 @@
 	{{--<link rel="stylesheet" type="text/css" href ="/content/themes/maximus/dist/css/woocommerce.css" />--}}
 
 
-
-	<!-- Dynamic CSS with ACF -->
-	@include ('layouts.style')
-
     <?php wp_head(); ?>
+
+<!-- Dynamic CSS with ACF -->
+	@include ('layouts.style')
 	</head>
 	<body class="@if(is_front_page() && get_field('activate_page_loader')) {{ 'overflow-hidden' }}@endif">
 
@@ -32,6 +31,7 @@
 	{{--@if( function_exists('acf_add_options_page') )--}}
 		{{--<script>{{ get_field('add_script_body') }}</script>--}}
 	{{--@endif--}}
+
 		<div id="global-outer">
 			<div id="global-inner">
 				@if(!is_404())
