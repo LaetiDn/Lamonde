@@ -234,10 +234,16 @@ table {
 }
 
 .bgFixed {
-  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-attachment: scroll;
+}
+
+@media (min-width: 992px) {
+  .bgFixed {
+    background-attachment: fixed;
+  }
 }
 
 .bold {
@@ -279,8 +285,8 @@ header {
 
 .default-padding,
 .section-content {
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 6.5%;
+  padding-right: 6.5%;
 }
 
 .section-content {
@@ -330,6 +336,12 @@ header {
   z-index: 100;
   transition: right 0.6s ease;
   width: 250px;
+}
+
+@media (min-width: 768px) {
+  .sticky-newsletter {
+    top: 44%;
+  }
 }
 
 .sticky-newsletter.show-newsletter {
@@ -403,8 +415,6 @@ a {
   width: 100%;
   height: 100%;
   z-index: 101;
-  -webkit-animation: hideloader 1s 3.3s forwards ease;
-          animation: hideloader 1s 3.3s forwards ease;
 }
 
 .loader .logo-wrapper {
@@ -475,6 +485,50 @@ a {
   to {
     transform: translate3d(0, 100%, 0);
   }
+}
+
+.split-animation.loader .loader-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.split-animation.loader .left,
+.split-animation.loader .right {
+  position: absolute;
+  top: 0;
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.split-animation.loader .left .bg,
+.split-animation.loader .right .bg {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.split-animation.loader .left {
+  left: 0;
+  background: red;
+}
+
+.split-animation.loader .left .bg {
+  background-position: 0% 50%;
+}
+
+.split-animation.loader .right {
+  right: 0;
+  background: blue;
+}
+
+.split-animation.loader .right .bg {
+  background-position: 0% 50%;
 }
 
 .main-nav-outer {
@@ -2590,6 +2644,7 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-attachment: scroll;
   z-index: 1;
 }
 
@@ -2725,8 +2780,10 @@ a {
   flex-basis: 50%;
 }
 
-.block-image-text .content-ctn.image-75 {
-  text-align: right;
+@media (min-width: 992px) {
+  .block-image-text .content-ctn.image-75 {
+    text-align: right;
+  }
 }
 
 .block-image-text .content-ctn.image-75 > div:first-of-type {

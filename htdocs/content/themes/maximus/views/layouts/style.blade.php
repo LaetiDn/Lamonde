@@ -70,19 +70,20 @@
     }
 
     .nav .menu-item a {
-        color: {{ get_field('menu_grp','option')['color'] }};
+        color: {{ get_field('menu_grp','option')['color'] }}!important;
     }
 
-    .nav .menu-item:hover > a a:focus, a:hover {
-        color: {{ get_field('link_grp','option')['color_hover'] }}!important;
+    .nav .menu-item:hover > a,  a:focus, a:hover {
+        color: {{ get_field('menu_grp','option')['color_hover'] }}!important;
     }
 
     .menu .current-menu-item a {
-        color: {{ get_field('menu_grp','option')['color_hover'] }};
+        color: {{ get_field('menu_grp','option')['color_hover'] }}!important;
     }
     .menu .menu-item:before {
         {{--color: {{ get_field('span_grp','option')['color'] }};--}}
-        background-color: {{ get_field('link_grp','option')['color_hover'] }}
+        {{--background-color: {{ get_field('link_grp','option')['color_hover'] }}--}}
+        background-color: {{ get_field('menu_grp','option')['color_hover'] }}!important;
 }
 
     .menu .sub-menu .menu-item:first-of-type{
@@ -96,14 +97,7 @@
     }
 
 
-    /** MENU STICKY **/
-    {{--.sticky .nav .menu-item a {--}}
-        {{--color: {{ get_field('menu_grp','option')['color_sticky'] }};--}}
-    {{--}--}}
-    {{--.sticky .nav .menu-item:hover a {--}}
-        {{--color: {{ get_field('menu_grp','option')['color_sticky_hover'] }}!important;--}}
-    {{--}--}}
-
+    /* SPANS */
     span {
         color: {{ get_field('span_grp','option')['color'] }};
         font-size: {{ get_field('span_grp','option')['fz_phone'] }}px!important;
@@ -137,26 +131,7 @@
         border: 1px solid {{ get_field('button_grp', 'option')['border_color_transition'] }};
     }
 
-    input[type="submit"], .yikes-easy-mc-submit-button {
-        color: {{ get_field('button_grp', 'option')['text_color'] }};
-        background-color: {{ get_field('button_grp', 'option')['bg_color'] }};
-        border: 1px solid {{ get_field('button_grp', 'option')['border_color'] }};
-        transition: all 0.6s ease;
-    }
 
-    input[type="submit"]:hover, .yikes-easy-mc-submit-button:hover{
-        color: {{ get_field('button_grp', 'option')['text_color_transition'] }};
-        background-color: {{ get_field('button_grp', 'option')['bg_color_transition'] }};
-        border: 1px solid {{ get_field('button_grp', 'option')['border_color_transition'] }};
-    }
-
-    .yikes-mailchimp-submit-button-span-text {
-        color: {{ get_field('button_grp', 'option')['text_color'] }};
-        transition: color 0.6s ease;
-    }
-    .yikes-easy-mc-submit-button:hover .yikes-mailchimp-submit-button-span-text{
-        color: {{ get_field('button_grp', 'option')['text_color_transition'] }};
-    }
 
     /*** HERO ***/
     .hero .overlay {
@@ -205,6 +180,27 @@
     [type="checkbox"]:checked + .wpcf7-list-item-label:after,
     [type="checkbox"]:not(:checked) + .wpcf7-list-item-label:after {
         background: {{ get_field('span_grp','option')['color'] }};
+    }
+
+    input[type="submit"], .yikes-easy-mc-submit-button {
+        color: {{ get_field('button_grp', 'option')['text_color'] }};
+        background-color: {{ get_field('button_grp', 'option')['bg_color'] }};
+        border: 1px solid {{ get_field('button_grp', 'option')['border_color'] }};
+        transition: all 0.6s ease;
+    }
+
+    input[type="submit"]:hover, .yikes-easy-mc-submit-button:hover{
+        color: {{ get_field('button_grp', 'option')['text_color_transition'] }};
+        background-color: {{ get_field('button_grp', 'option')['bg_color_transition'] }};
+        border: 1px solid {{ get_field('button_grp', 'option')['border_color_transition'] }};
+    }
+
+    .yikes-mailchimp-submit-button-span-text {
+        color: {{ get_field('button_grp', 'option')['text_color'] }};
+        transition: color 0.6s ease;
+    }
+    .yikes-easy-mc-submit-button:hover .yikes-mailchimp-submit-button-span-text{
+        color: {{ get_field('button_grp', 'option')['text_color_transition'] }};
     }
 
 

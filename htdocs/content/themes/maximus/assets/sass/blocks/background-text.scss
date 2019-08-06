@@ -12,6 +12,9 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
+    background-attachment:scroll;
+
     z-index: 1;
     @media(min-width: $screen-md-min) {
       height:850px;

@@ -8,6 +8,33 @@ if( function_exists('acf_add_local_field_group') ):
         'fields' => array(
 
             array(
+                'key' => 'field_5d496ba40e2bc',
+                'label' => 'Animations',
+                'name' => 'pl_animations',
+                'type' => 'select',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '75',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'choices' => array(
+                    1 => '1',
+                    2 => '2',
+                    3 => '3',
+                ),
+                'default_value' => array(
+                ),
+                'allow_null' => 0,
+                'multiple' => 0,
+                'ui' => 0,
+                'return_format' => 'value',
+                'ajax' => 0,
+                'placeholder' => '',
+            ),
+            array(
                 'key' => 'field_5d13b126921c8',
                 'label' => 'Activate page loader',
                 'name' => 'activate_page_loader',
@@ -16,7 +43,7 @@ if( function_exists('acf_add_local_field_group') ):
                 'required' => 0,
                 'conditional_logic' => 0,
                 'wrapper' => array(
-                    'width' => '',
+                    'width' => '25',
                     'class' => '',
                     'id' => '',
                 ),

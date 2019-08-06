@@ -15,7 +15,10 @@
       @include flex-basis(50%);
     }
     &.image-75 {
-      text-align: right;
+
+      @media(min-width: $screen-lg-min){
+        text-align: right;
+      }
       & > div:first-of-type {
         @include flex-basis(60%);
       }
