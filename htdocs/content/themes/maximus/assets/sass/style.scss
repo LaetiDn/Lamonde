@@ -8,7 +8,7 @@
 //LAYOUTS
 @import "layouts/structure";
 @import "layouts/typography";
-@import "layouts/page-loader";
+
 @import "layouts/header";
 @import "layouts/footer";
 @import "layouts/form";
@@ -23,6 +23,9 @@
 @import "pages/news";
 @import "pages/gallery";
 @import "pages/contact";
+
+//PAGE LOADER
+@import "page-loader/page-loader";
 
 //BLOCKS
 @import "blocks/blocks";

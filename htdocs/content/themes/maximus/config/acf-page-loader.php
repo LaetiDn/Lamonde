@@ -21,9 +21,9 @@ if( function_exists('acf_add_local_field_group') ):
                     'id' => '',
                 ),
                 'choices' => array(
-                    1 => '1',
-                    2 => '2',
-                    3 => '3',
+                    'false' => 'Inactive',
+                    'default' => 'Default',
+                    'split' => 'Split',
                 ),
                 'default_value' => array(
                 ),
@@ -35,23 +35,40 @@ if( function_exists('acf_add_local_field_group') ):
                 'placeholder' => '',
             ),
             array(
-                'key' => 'field_5d13b126921c8',
-                'label' => 'Activate page loader',
-                'name' => 'activate_page_loader',
-                'type' => 'true_false',
+                'key' => 'field_5d4abe2734208',
+                'label' => 'Preview : Default Animation',
+                'name' => '',
+                'type' => 'message',
                 'instructions' => '',
                 'required' => 0,
-                'conditional_logic' => 0,
+                'conditional_logic' => array(
+                    array(
+                        array(
+                            'field' => 'field_5d496ba40e2bc',
+                            'operator' => '==',
+                            'value' => 'default',
+                        ),
+                    ),
+                ),
                 'wrapper' => array(
-                    'width' => '25',
-                    'class' => '',
+                    'width' => '',
+                    'class' => 'preview-animation',
                     'id' => '',
                 ),
-                'message' => '',
-                'default_value' => 1,
-                'ui' => 0,
-                'ui_on_text' => '',
-                'ui_off_text' => '',
+                'message' => '<button class="play" data-time="5000">Play</button>
+<div class="loader default css-animation-step2" style="background-color: grey;" >
+
+		<div class="logo-wrapper css-animation-step1 ">
+		        
+				<div class="logo"></div>
+				<div class="txt-ctn">
+						<h1 class="slogan" style="color:blue">Slogan</h1>
+						<p class="subtitle" style="color:blue">Subtitle</p>
+				</div>
+		</div>
+</div>',
+                'new_lines' => 'wpautop',
+                'esc_html' => 0,
             ),
             array(
                 'key' => 'field_5d0bc943d6daa',
@@ -154,6 +171,7 @@ if( function_exists('acf_add_local_field_group') ):
                 'media_upload' => 0,
                 'delay' => 0,
             ),
+
         ),
         'location' => array(
             array(

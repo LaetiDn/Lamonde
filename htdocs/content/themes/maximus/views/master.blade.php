@@ -23,10 +23,7 @@
 	</head>
 	<body class="@if(is_front_page() && get_field('activate_page_loader')) {{ 'overflow-hidden' }}@endif">
 
-	@if(is_front_page() && get_field('activate_page_loader', 'option'))
-		@include('layouts.loader')
-	@endif
-
+	@include('page-loader.page-loader')
 
 	{{--@if( function_exists('acf_add_options_page') )--}}
 		{{--<script>{{ get_field('add_script_body') }}</script>--}}

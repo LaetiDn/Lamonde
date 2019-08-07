@@ -26,11 +26,15 @@
         });
 
         //Pour le page loader?
-        if($('.loader').length) {
+        var pageLoader = $('.loader');
+        if(pageLoader.length) {
+            var time = pageLoader.data('time');
+            console.log(time);
             $('body').addClass('overflow-hidden');
             setTimeout(function(){
                 $('body').removeClass('overflow-hidden');
-            }, 3000);
+                pageLoader.remove();
+            }, time);
         }
 
         $('body').on('click', '#open-newsletter', function (e) {
@@ -48,7 +52,7 @@
         $('#menu-btn').on('click', function () {
             $(this).toggleClass('open');
             $('.main-nav-outer').toggleClass('open-nav');
-            $('body').toggleClass('body-no-overflow');
+            $('html, body').toggleClass('body-no-overflow');;
         });
 
 
