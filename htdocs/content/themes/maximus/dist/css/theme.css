@@ -2411,6 +2411,12 @@ a {
   z-index: 101;
 }
 
+.loader .loader-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
 .loader .content-wrapper {
   width: 100%;
   display: block;
@@ -2548,6 +2554,80 @@ a {
   }
 }
 
+@-webkit-keyframes growLine {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes growLine {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes scaleOutfadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+}
+
+@keyframes scaleOutfadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+}
+
 .default.loader {
   -webkit-animation: hideloader 1s 3.3s forwards ease;
           animation: hideloader 1s 3.3s forwards ease;
@@ -2607,6 +2687,126 @@ a {
           animation: sideSlideRight 2s ease forwards;
   -webkit-animation-delay: 5s;
           animation-delay: 5s;
+}
+
+.logo-fill.anim .fill {
+  -webkit-animation: fill 5s ease;
+          animation: fill 5s ease;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.logo-fill .content-wrapper {
+  opacity: 1;
+  transform: translate3d(-50%, -50%, 0);
+  overflow: hidden;
+}
+
+.logo-fill .content-wrapper .logo-ctn {
+  position: relative;
+  overflow: hidden;
+}
+
+.logo-fill .content-wrapper .logo-ctn .ctn.fill {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  -webkit-animation: fill 5s ease;
+          animation: fill 5s ease;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.logo-fill .content-wrapper .txt-ctn {
+  overflow: hidden;
+}
+
+.text-clip {
+  -webkit-animation: fadeOut 1s ease-out forwards;
+          animation: fadeOut 1s ease-out forwards;
+  -webkit-animation-delay: 6.5s;
+          animation-delay: 6.5s;
+  background: black;
+}
+
+.text-clip .overlay {
+  opacity: 0;
+  background-color: black;
+  -webkit-animation: fadeOut 4s ease-out forwards;
+          animation: fadeOut 4s ease-out forwards;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.text-clip .content-wrapper {
+  opacity: 1;
+  transform: translate3d(-50%, -50%, 0);
+  background-image: none;
+  /* let's assume that one day it's supported */
+  overflow: visible;
+  max-width: none;
+}
+
+.text-clip .content-wrapper:before,
+.text-clip .content-wrapper:after {
+  content: "";
+  background: brown;
+  height: 10px;
+  border-radius: 4px;
+  width: 0;
+  display: block;
+  position: absolute;
+  -webkit-animation: growLine 4s ease-out forwards;
+          animation: growLine 4s ease-out forwards;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.text-clip .content-wrapper:before {
+  top: 0;
+  left: 0;
+}
+
+.text-clip .content-wrapper:after {
+  bottom: 0;
+  left: 0;
+}
+
+.text-clip .content-wrapper .txt-ctn {
+  padding: 25px;
+  opacity: 0;
+  -webkit-animation: fadeIn 4s ease-out forwards;
+          animation: fadeIn 4s ease-out forwards;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.text-clip .content-wrapper .logo {
+  display: none;
+}
+
+.text-clip .content-wrapper h1.slogan {
+  font-size: 9.375vw;
+  line-height: 9.8958333333vw;
+}
+
+.text-clip .content-wrapper .subtitle {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@media (min-width: 1200px) {
+  .text-clip .content-wrapper .subtitle {
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
+
+.text-clip .content-wrapper .slogan,
+.text-clip .content-wrapper .subtitle {
+  font-weight: 700;
 }
 
 .block-discover .logo-ctn {

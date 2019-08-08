@@ -14,22 +14,22 @@
     }
     h1 {
         color: {{ get_field('h1_grp','option')['color'] }};
-        font-size: {{ get_field('h1_grp','option')['fz_phone'] }}px!important;
-        line-height: {{ get_field('h1_grp','option')['fz_phone'] }}px!important;
+        font-size: {{ get_field('h1_grp','option')['fz_phone'] }}px;
+        line-height: {{ get_field('h1_grp','option')['fz_phone'] }}px;
     }
     h2 {
         color: {{ get_field('h2_grp','option')['color'] }};
-        font-size: {{ get_field('h2_grp','option')['fz_phone'] }}px!important;
-        line-height: {{ get_field('h2_grp','option')['fz_phone'] }}px!important;
+        font-size: {{ get_field('h2_grp','option')['fz_phone'] }}px;
+        line-height: {{ get_field('h2_grp','option')['fz_phone'] }}px;
     }
     h3 {
         color: {{ get_field('h3_grp','option')['color'] }};
-        font-size: {{ get_field('h3_grp','option')['fz_phone'] }}px!important;
-        line-height: {{ get_field('h3_grp','option')['fz_phone'] }}px!important;
+        font-size: {{ get_field('h3_grp','option')['fz_phone'] }}px;
+        line-height: {{ get_field('h3_grp','option')['fz_phone'] }}px;
     }
     p {
         color: {{ get_field('paragraph_grp','option')['color'] }};
-        font-size: {{ get_field('paragraph_grp','option')['fz_phone'] }}px!important;
+        font-size: {{ get_field('paragraph_grp','option')['fz_phone'] }}px;
     }
     a {
         text-decoration: none;
@@ -43,19 +43,19 @@
 
     @media(min-width: 1200px){
         h1 {
-            font-size: {{ get_field('h1_grp','option')['fz_desktop'] }}px!important;
-            line-height: {{ get_field('h1_grp','option')['fz_desktop'] }}px!important;
+            font-size: {{ get_field('h1_grp','option')['fz_desktop'] }}px;
+            line-height: {{ get_field('h1_grp','option')['fz_desktop'] }}px;
         }
         h2 {
-            font-size: {{ get_field('h2_grp','option')['fz_desktop'] }}px!important;
-            line-height: {{ get_field('h2_grp','option')['fz_desktop'] }}px!important;
+            font-size: {{ get_field('h2_grp','option')['fz_desktop'] }}px;
+            line-height: {{ get_field('h2_grp','option')['fz_desktop'] }}px;
         }
         h3 {
-            font-size: {{ get_field('h3_grp','option')['fz_desktop'] }}px!important;
-            line-height: {{ get_field('h3_grp','option')['fz_desktop'] }}px!important;
+            font-size: {{ get_field('h3_grp','option')['fz_desktop'] }}px;
+            line-height: {{ get_field('h3_grp','option')['fz_desktop'] }}px;
         }
         p {
-            font-size: {{ get_field('paragraph_grp','option')['fz_desktop'] }}px!important;
+            font-size: {{ get_field('paragraph_grp','option')['fz_desktop'] }}px;
         }
     }
 

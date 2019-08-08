@@ -1,0 +1,81 @@
+.text-clip {
+
+
+  animation: fadeOut 1s ease-out forwards;
+  animation-delay: 6.5s;
+  background: black;
+
+
+  .overlay {
+    opacity:0;
+    background-color: black;
+    animation: fadeOut 4s ease-out forwards;
+    animation-delay: 0.3s;
+  }
+  .content-wrapper {
+    opacity:1;
+    transform:translate3d(-50%,-50%,0);
+    background-image: none;
+    //@extend .bgCover;
+    //background-position: center;
+    //-webkit-text-fill-color: whitesmoke;
+    //-webkit-background-clip: text;
+    /* let's assume that one day it's supported */
+    //-moz-background-clip: text;
+    //background-clip: text;
+    overflow: visible;
+    max-width:none;
+
+    &:before, &:after {
+      content:"";
+      background: brown;
+      height:10px;
+      border-radius:4px;
+      width:0;
+      display: block;
+      position: absolute;
+      animation: growLine 4s ease-out forwards;
+      animation-delay: 2s;
+      //animation-iteration-count: infinite;
+    }
+    &:before {
+      top:0;
+      left:0;
+    }
+    &:after {
+      bottom:0;
+      left:0;
+    }
+    .txt-ctn {
+      padding: 25px;
+      opacity:0;
+      animation: fadeIn 4s ease-out forwards;
+      animation-delay: 2s;
+    }
+    .logo {
+      display: none;
+    }
+    h1.slogan {
+      font-size: get-vw(180px);
+      line-height: get-vw(190px);
+
+    }
+    .subtitle {
+      //@include scaleFontSize(40px, 50px, 140px, 150px);
+      font-size: 16px;
+      line-height: 20px;
+      @media(min-width: $desktop-min){
+        font-size: 40px;
+        line-height: 50px;
+      }
+    }
+    .slogan, .subtitle {
+      font-weight: 700;
+
+
+    }
+
+  }
+}
+
+
