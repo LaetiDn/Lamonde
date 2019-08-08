@@ -1,7 +1,7 @@
 
 .split-animation.loader {
 
-  .logo-wrapper {
+  .content-wrapper {
     animation: reveal 2s $easeOutExpo;
     animation-delay: 0.6s;
     animation-iteration-count: 2;
@@ -13,7 +13,7 @@
     width:100%;
     height:100%;
   }
-  .left, .right {
+  .side {
     position: absolute;
     top:0;
     display: inline-block;
@@ -21,28 +21,17 @@
     height:100%;
     background-repeat: no-repeat;
     background-size: cover;
-    overflow: hidden;
-    .bg {
-      width:100%;
-      height:100%;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
+    background-position: center;
   }
   .left {
     left:0;
+    overflow: hidden;
     animation: sideSlideLeft 2s ease forwards;
     animation-delay: 5s;
-    .bg {
-      background-position: 0% 50%;
-    }
   }
   .right {
     right:0;
     animation: sideSlideRight 2s ease forwards;
     animation-delay: 5s;
-    .bg {
-      background-position: 0% 50%;
-    }
   }
 }

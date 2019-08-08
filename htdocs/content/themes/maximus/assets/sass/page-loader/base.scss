@@ -7,7 +7,7 @@
   height:100%;
   z-index: 101;
 
-  .logo-wrapper {
+  .content-wrapper {
     width:100%;
     display: block;
     position: absolute;
@@ -17,6 +17,7 @@
     max-width:500px;
     opacity:0;
     text-align: center;
+    z-index: 2;
     .logo {
       width:100%;
     }

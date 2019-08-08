@@ -29,7 +29,6 @@
         var pageLoader = $('.loader');
         if(pageLoader.length) {
             var time = pageLoader.data('time');
-            console.log(time);
             $('body').addClass('overflow-hidden');
             setTimeout(function(){
                 $('body').removeClass('overflow-hidden');
