@@ -32,6 +32,13 @@
             $('body').addClass('overflow-hidden');
             setTimeout(function(){
                 $('body').removeClass('overflow-hidden');
+                $('.header-slider').slick({
+                    draggable: true,
+                    adaptiveHeight: false,
+                    mobileFirst: true,
+                    pauseOnDotsHover: true,
+
+                });
                 pageLoader.remove();
             }, time);
         }

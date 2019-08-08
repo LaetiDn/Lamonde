@@ -2790,11 +2790,19 @@ a {
 .text-clip .content-wrapper h1.slogan {
   font-size: 9.375vw;
   line-height: 9.8958333333vw;
+  -webkit-animation: sideSlideLeft 1s ease forwards;
+          animation: sideSlideLeft 1s ease forwards;
+  -webkit-animation-delay: 5.5s;
+          animation-delay: 5.5s;
 }
 
 .text-clip .content-wrapper .subtitle {
   font-size: 16px;
   line-height: 20px;
+  -webkit-animation: sideSlideRight 1s ease forwards;
+          animation: sideSlideRight 1s ease forwards;
+  -webkit-animation-delay: 5.5s;
+          animation-delay: 5.5s;
 }
 
 @media (min-width: 1200px) {

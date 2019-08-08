@@ -58,12 +58,15 @@
     h1.slogan {
       font-size: get-vw(180px);
       line-height: get-vw(190px);
-
+      animation: sideSlideLeft 1s ease forwards;
+      animation-delay: 5.5s;
     }
     .subtitle {
       //@include scaleFontSize(40px, 50px, 140px, 150px);
       font-size: 16px;
       line-height: 20px;
+      animation: sideSlideRight 1s ease forwards;
+      animation-delay: 5.5s;
       @media(min-width: $desktop-min){
         font-size: 40px;
         line-height: 50px;

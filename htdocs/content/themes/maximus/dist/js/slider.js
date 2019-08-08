@@ -14,13 +14,13 @@
 
 
             $slick = $('.header-slider');
-            $slick.slick({
-                draggable: true,
-                adaptiveHeight: false,
-                mobileFirst: true,
-                pauseOnDotsHover: true,
-
-            });
+            // $slick.slick({
+            //     draggable: true,
+            //     adaptiveHeight: false,
+            //     mobileFirst: true,
+            //     pauseOnDotsHover: true,
+            //
+            // });
 
             $bar = $('.slider-progress .progress');
 
