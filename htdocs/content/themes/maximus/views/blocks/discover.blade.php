@@ -15,13 +15,13 @@
         <span class="bold">{{ pll__('discover') }} :</span>
         <div class="link-ctn">
             @if(!empty(get_sub_field('link_left')))
-            <a href="{!! get_sub_field('link_left')['url'] !!} ">
+            <a class="cta" href="{!! get_sub_field('link_left')['url'] !!} ">
                 {{ get_sub_field('link_left')["title"] }}
                 <i class="icon fa fa-arrow-right" aria-hidden="true"></i>
             </a>
             @endif
             @if(!empty(get_sub_field('link_right')))
-            <a href="{{ get_sub_field('link_right')['url'] }}">
+            <a class="cta" href="{{ get_sub_field('link_right')['url'] }}">
                 {{ get_sub_field('link_right')["title"] }}
                 <i class="icon fa fa-arrow-right" aria-hidden="true"></i>
             </a>
@@ -31,5 +31,3 @@
     @endif
     </div>
 </section>
-
-

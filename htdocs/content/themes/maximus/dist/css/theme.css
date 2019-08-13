@@ -2734,8 +2734,8 @@ a {
 .text-clip .overlay {
   opacity: 0;
   background-color: black;
-  -webkit-animation: fadeOut 4s ease-out forwards;
-          animation: fadeOut 4s ease-out forwards;
+  -webkit-animation: fadeOut 6s ease-out forwards;
+          animation: fadeOut 6s ease-out forwards;
   -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s;
 }
@@ -2779,8 +2779,8 @@ a {
   opacity: 0;
   -webkit-animation: fadeIn 4s ease-out forwards;
           animation: fadeIn 4s ease-out forwards;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 .text-clip .content-wrapper .logo {
@@ -2839,36 +2839,17 @@ a {
   text-align: center;
 }
 
-@media (min-width: 640px) {
-  .block-discover .links-ctn {
+.block-discover .links-ctn .link-ctn {
+  margin: 15px 0;
+}
+
+@media (min-width: 768px) {
+  .block-discover .links-ctn .link-ctn {
     display: -moz-flex;
     display: flex;
     -moz-justify-content: center;
     justify-content: center;
-  }
-}
-
-.block-discover .links-ctn .link-ctn {
-  display: -moz-flex;
-  display: flex;
-  -moz-justify-content: space-around;
-  justify-content: space-around;
-  margin: 15px 0;
-}
-
-.block-discover .links-ctn .link-ctn a {
-  line-height: normal;
-}
-
-@media (min-width: 640px) {
-  .block-discover .links-ctn .link-ctn {
-    margin: 0;
-    -moz-justify-content: flex-start;
-    justify-content: flex-start;
-  }
-
-  .block-discover .links-ctn .link-ctn a:first-of-type {
-    margin: 0 30px;
+    margin: 15px 0 0 0;
   }
 }
 
@@ -2876,6 +2857,29 @@ a {
   .block-discover .links-ctn .link-ctn {
     margin-top: 0px;
   }
+}
+
+.block-discover .links-ctn .link-ctn .cta {
+  display: block;
+  width: 150px;
+  margin: auto;
+  text-align: center;
+  padding: 10px 20px;
+  transition: all 0.6s ease;
+  margin-top: 12px;
+}
+
+@media (min-width: 768px) {
+  .block-discover .links-ctn .link-ctn .cta {
+    width: 200px;
+    padding: 15px 40px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+.block-discover .links-ctn .link-ctn a {
+  line-height: normal;
 }
 
 .block-discover .links-ctn .icon {

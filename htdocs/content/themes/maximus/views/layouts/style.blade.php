@@ -37,7 +37,7 @@
         transition: color 0.6s ease;
     }
 
-    a:focus, a:hover {
+    a:not(.cta):focus, a:not(.cta):hover {
         color: {{ get_field('link_grp','option')['color_hover'] }}!important;
     }
 
@@ -73,7 +73,7 @@
         color: {{ get_field('menu_grp','option')['color'] }}!important;
     }
 
-    .nav .menu-item:hover > a,  a:focus, a:hover {
+    .nav .menu-item:hover > a,  a:not(.cta):focus, a:not(.cta):hover {
         color: {{ get_field('menu_grp','option')['color_hover'] }}!important;
     }
 
@@ -124,12 +124,24 @@
         border: 1px solid {{ get_field('button_grp', 'option')['border_color'] }};
         transition: all 0.6s ease;
     }
-
     .cta:hover{
         color: {{ get_field('button_grp', 'option')['text_color_transition'] }};
         background-color: {{ get_field('button_grp', 'option')['bg_color_transition'] }};
         border: 1px solid {{ get_field('button_grp', 'option')['border_color_transition'] }};
     }
+    .block-discover .cta {
+      background-color: {{ get_field('button_grp', 'option')['bg_color'] }};
+    }
+    .block-discover .cta i{
+        color: {{ get_field('button_grp', 'option')['text_color'] }};
+        transition: all 0.6s ease;
+    }
+    .block-discover .cta:hover i{
+        color: {{ get_field('button_grp', 'option')['text_color_transition'] }};
+    }
+
+
+
 
 
 

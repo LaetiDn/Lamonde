@@ -32,13 +32,72 @@
             $('body').addClass('overflow-hidden');
             setTimeout(function(){
                 $('body').removeClass('overflow-hidden');
-                $('.header-slider').slick({
-                    draggable: true,
-                    adaptiveHeight: false,
-                    mobileFirst: true,
-                    pauseOnDotsHover: true,
+                var time = 8;
+                var $bar,
+                    $slick,
+                    isPause,
+                    tick,
+                    percentTime;
 
-                });
+                if($('.header-slider').length){
+
+
+                    $slick = $('.header-slider');
+                    $slick.slick({
+                        draggable: true,
+                        adaptiveHeight: false,
+                        mobileFirst: true,
+                        pauseOnDotsHover: true,
+
+                    });
+
+                    $bar = $('.slider-progress .progress');
+
+                    $('.slider-wrapper').on({
+                        mouseenter: function() {
+                            isPause = true;
+                        },
+                        mouseleave: function() {
+                            isPause = false;
+                        }
+                    })
+
+                    function startProgressbar() {
+                        resetProgressbar();
+                        percentTime = 0;
+                        isPause = false;
+                        tick = setInterval(interval, 10);
+                    }
+
+                    function interval() {
+                        if(isPause === false) {
+                            percentTime += 1 / (time+0.1);
+                            $bar.css({
+                                width: percentTime+"%"
+                            });
+                            if(percentTime >= 100)
+                            {
+                                $slick.slick('slickNext');
+                                startProgressbar();
+                            }
+                        }
+                    }
+
+
+                    function resetProgressbar() {
+                        $bar.css({
+                            width: 0+'%'
+                        });
+                        clearTimeout(tick);
+                    }
+
+                    $('.slick-arrow').click(function(){
+                        resetProgressbar();
+                        startProgressbar();
+                    });
+
+                    startProgressbar();
+                }
                 pageLoader.remove();
             }, time);
         }
@@ -47,12 +106,6 @@
             console.log('plop');
             $('.sticky-newsletter').toggleClass('show-newsletter');
         });
-        //Toggle open/close le burger menu
-        // $('#menu-btn').on('click', function () {
-        //     $(this).toggleClass('open');
-        //     $('#main-nav').toggleClass('open-menu');
-        //     $('html, body').toggleClass('body-no-overflow');
-        // });
 
 
         $('#menu-btn').on('click', function () {
