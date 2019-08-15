@@ -31,7 +31,7 @@
             var time = pageLoader.data('time');
             $('body').addClass('overflow-hidden');
             setTimeout(function(){
-                
+                $('body').removeClass('overflow-hidden');
                 pageLoader.remove();
             }, time);
         }
