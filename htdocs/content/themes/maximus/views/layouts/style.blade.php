@@ -64,7 +64,7 @@
         background-color:{{ get_field('span_grp','option')['color'] }};
     }
 
-    .menu a, input[type='submit'] {
+    .menu a{
         color: {{ get_field('link_grp','option')['color'] }};
         font-size: {{ get_field('link_grp','option')['fz_phone'] }}px!important;
     }
@@ -121,6 +121,7 @@
 
     .cta{
         color: {{ get_field('button_grp', 'option')['text_color'] }};
+        background-color: {{ get_field('button_grp', 'option')['bg_color'] }};
         border: 1px solid {{ get_field('button_grp', 'option')['border_color'] }};
         transition: all 0.6s ease;
     }
@@ -139,11 +140,6 @@
     .block-discover .cta:hover i{
         color: {{ get_field('button_grp', 'option')['text_color_transition'] }};
     }
-
-
-
-
-
 
     /*** HERO ***/
     .hero .overlay {
@@ -175,33 +171,16 @@
 
 
     /** FORM **/
-    .form-input {
-        border-bottom: 1px solid {{ get_field('span_grp','option')['color'] }};
-    }
 
-    .form-title h2 {
-        color: {{ get_field('form_title_color','option') }};
-    }
-    .wpcf7 label, .wpcf7-list-item-label{
-        color: {{ get_field('form_label_color','option') }};
-    }
-    .wpcf7 input[type="text"], .wpcf7 input[type="email"], .wpcf7 textarea {
-        border-color: {{ get_field('form_border_color','option') }};
-    }
 
-    [type="checkbox"]:checked + .wpcf7-list-item-label:after,
-    [type="checkbox"]:not(:checked) + .wpcf7-list-item-label:after {
-        background: {{ get_field('span_grp','option')['color'] }};
-    }
-
-    input[type="submit"], .yikes-easy-mc-submit-button {
+    .yikes-easy-mc-submit-button {
         color: {{ get_field('button_grp', 'option')['text_color'] }};
         background-color: {{ get_field('button_grp', 'option')['bg_color'] }};
         border: 1px solid {{ get_field('button_grp', 'option')['border_color'] }};
         transition: all 0.6s ease;
     }
 
-    input[type="submit"]:hover, .yikes-easy-mc-submit-button:hover{
+    .yikes-easy-mc-submit-button:hover{
         color: {{ get_field('button_grp', 'option')['text_color_transition'] }};
         background-color: {{ get_field('button_grp', 'option')['bg_color_transition'] }};
         border: 1px solid {{ get_field('button_grp', 'option')['border_color_transition'] }};
@@ -214,6 +193,96 @@
     .yikes-easy-mc-submit-button:hover .yikes-mailchimp-submit-button-span-text{
         color: {{ get_field('button_grp', 'option')['text_color_transition'] }};
     }
+
+    #contact-content .form-title h2 {
+        color: {{ get_field('contact_form_grp','option')['form_title_color'] }};
+    }
+    #contact-content .wpcf7 label, #contact-content .wpcf7-list-item-label{
+      color: {{ get_field('contact_form_grp','option')['form_label_color'] }};
+    }
+
+    #contact-content .wpcf7 input[type="text"], #contact-content .wpcf7 input[type="email"], .wpcf7 textarea {
+        border-color: {{ get_field('contact_form_grp','option')['form_border_color'] }};
+    }
+
+    #contact-content input[type="submit"] {
+      border:none;
+      color: {{ get_field('contact_form_grp', 'option')['text_color'] }};
+      background-color: {{ get_field('contact_form_grp', 'option')['bg_color'] }};
+      transition: all 0.6s ease;
+    }
+    #contact-content input[type="submit"]:hover{
+        color: {{ get_field('contact_form_grp', 'option')['text_color_transition'] }};
+        background-color: {{ get_field('contact_form_grp', 'option')['bg_color_transition'] }};
+    }
+
+
+    #modal-form, #modal-form .form-ctn{
+          background-color: {{ get_field('modal_form_grp','option')['background_color'] }};
+    }
+
+    #modal-form .form-input {
+        border-bottom: 1px solid {{ get_field('modal_form_grp','option')['form_border_color'] }};
+    }
+
+    #modal-form .wpcf7 label, #modal-form .wpcf7-list-item-label{
+        color: {{ get_field('modal_form_grp','option')['form_label_color'] }};
+    }
+
+    #modal-form .wpcf7 input[type="text"], #modal-form .wpcf7 input[type="email"], #modal-form .msg {
+        border-color: {{ get_field('modal_form_grp','option')['form_border_color'] }};
+    }
+    #modal-form [type="checkbox"]:checked + .wpcf7-list-item-label:after,
+    #modal-form [type="checkbox"]:not(:checked) + .wpcf7-list-item-label:after  {
+        background: {{ get_field('modal_form_grp','option')['form_border_color'] }};
+    }
+    #modal-form [type="checkbox"]:checked + .wpcf7-list-item-label:before,
+    #modal-form [type="checkbox"]:not(:checked) + .wpcf7-list-item-label:before {
+      border:1px solid {{ get_field('modal_form_grp','option')['form_border_color'] }};
+    }
+    #modal-form svg line{
+      stroke: {{ get_field('modal_form_grp','option')['form_border_color'] }}!important;
+    }
+    #modal-form textarea,
+    #modal-form select,
+    #modal-form input[type="text"],
+    #modal-form input[type="email"],
+    #modal-form input[type="tel"],
+    #modal-form input[type="number"] {
+      outline-color: {{ get_field('modal_form_grp','option')['form_border_color'] }};
+    }
+
+    #modal-form input[type="submit"] {
+      border:none;
+      color: {{ get_field('modal_form_grp', 'option')['text_color'] }};
+      background-color: {{ get_field('modal_form_grp', 'option')['bg_color'] }};
+      transition: all 0.6s ease;
+  }
+  #modal-form input[type="submit"]:hover{
+      color: {{ get_field('modal_form_grp', 'option')['text_color_transition'] }};
+      background-color: {{ get_field('modal_form_grp', 'option')['bg_color_transition'] }};
+  }
+
+  #modal-form ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-size: 16px;
+    color: {{ get_field('modal_form_grp','option')['placeholder_color'] }}
+  }
+  #modal-form ::-moz-placeholder { /* Firefox 19+ */
+    font-size: 16px;
+    color: {{ get_field('modal_form_grp','option')['placeholder_color'] }}
+  }
+  #modal-form :-ms-input-placeholder { /* IE 10+ */
+    font-size: 16px;
+    color: {{ get_field('modal_form_grp','option')['placeholder_color'] }}
+  }
+  #modal-form :-moz-placeholder { /* Firefox 18- */
+    font-size: 16px;
+    color: {{ get_field('modal_form_grp','option')['placeholder_color'] }}
+  }
+  #modal-form select { /* Firefox 18- */
+    font-size: 16px;
+    color: {{ get_field('modal_form_grp','option')['placeholder_color'] }}
+  }
 
 
     /** ANIMATIONS **/
