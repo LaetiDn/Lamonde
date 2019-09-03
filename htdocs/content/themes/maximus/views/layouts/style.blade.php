@@ -57,7 +57,7 @@
         }
         p {
             font-size: {{ get_field('paragraph_grp','option')['fz_desktop'] }}px;
-            line-height: {{ get_field('paragraph_grp','option')['lh_desktop'] }}px!important;
+            line-height: {{ get_field('paragraph_grp','option')['lh_desktop'] }}px;
         }
     }
 
@@ -68,7 +68,7 @@
 
     .menu a{
         color: {{ get_field('link_grp','option')['color'] }};
-        font-size: {{ get_field('link_grp','option')['fz_phone'] }}px!important;
+        font-size: {{ get_field('link_grp','option')['fz_phone'] }}px;
     }
 
     .nav .menu-item a {
