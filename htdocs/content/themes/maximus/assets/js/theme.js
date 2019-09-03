@@ -4,6 +4,8 @@
         var screenWidth = $( window ).width();
         var heroHeight = $('.hero').outerHeight(true);
 
+        //Force trigger animations when loading page
+        $(window).scrollTop($(window).scrollTop()+1);
 
         if(screenWidth <= 1200) {
             $('body').addClass('in-mobile');
@@ -204,12 +206,16 @@
         });
 
         //Open and close form reservation
-        $('.btn-close-form').on('click', function (e) {
+        $("body").on("click", ".btn-close-form", function (e) {
             e.preventDefault();
             $('.form-main-ctn').fadeOut(600);
         });
 
-        $('.open-form').on('click', function (e) {
+        $("body").on("click", ".close-lightbox", function (e) {
+            e.preventDefault();
+            $('.form-main-ctn').fadeOut(600);
+        });
+        $("body").on("click", ".open-form", function (e) {
             e.preventDefault();
             $('.form-main-ctn').fadeIn(600);
         });

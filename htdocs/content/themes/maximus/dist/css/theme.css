@@ -240,7 +240,7 @@ table {
   background-attachment: scroll;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .bgFixed {
     background-attachment: fixed;
   }
@@ -3144,7 +3144,7 @@ a {
   margin-bottom: 25px;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .block-open-form .wysywyg-ctn {
     margin-bottom: 0;
     margin-right: 25px;

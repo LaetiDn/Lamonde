@@ -71,7 +71,7 @@
   background-size: cover;
   background-position: center;
   background-attachment:scroll;
-  @media(min-width: $screen-lg-min){
+  @media(min-width: $screen-xl-min){
     background-attachment: fixed;
   }
 }

@@ -30,6 +30,7 @@
     p {
         color: {{ get_field('paragraph_grp','option')['color'] }};
         font-size: {{ get_field('paragraph_grp','option')['fz_phone'] }}px;
+        line-height: {{ get_field('paragraph_grp','option')['lh_phone'] }}px!important;
     }
     a {
         text-decoration: none;
@@ -56,6 +57,7 @@
         }
         p {
             font-size: {{ get_field('paragraph_grp','option')['fz_desktop'] }}px;
+            line-height: {{ get_field('paragraph_grp','option')['lh_desktop'] }}px!important;
         }
     }
 

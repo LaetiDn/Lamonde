@@ -13,7 +13,7 @@
 </section>
 
 <div id="modal-form" class="form-main-ctn lightBox">
-    <a class="close-lightbox" href="#"></a>
+    <a class="btn-close-form" href="#"></a>
     <div class="form-ctn">
         <div class="close">
             <a class="btn-close-form" href="#">
