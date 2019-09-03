@@ -1,7 +1,7 @@
-@if(is_product())
+{{-- @if(is_product())
 
     @include('shop.product')
-@else
+@else --}}
     <div class="hero page">
         <div class="bg-img" style="background-image: url('{{ $single_news->thumbnail["url"] }}')"></div>
     </div>
@@ -26,5 +26,4 @@
 
         </div>
     </section>
-@endif
-
+{{-- @endif --}}

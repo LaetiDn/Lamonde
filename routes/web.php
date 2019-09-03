@@ -17,4 +17,4 @@ Route::get('404', ['uses' => 'PageController@page_404']);
 
 
 //WOOCOMERCE
-Route::any('shop', ['uses' => 'PageController@shop']);
+//Route::any('shop', ['uses' => 'PageController@shop']);

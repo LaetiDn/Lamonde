@@ -58,32 +58,32 @@ class PageController extends Controller
             'single_news' => Post::get_single_news(get_the_ID()),
         ]);
     }
-    public function shop()
-    {
-        return view('shop.archive', $this->defaultContent, [
-
-        ]);
-    }
-
-    public function product()
-    {
-        Filter::add('comments_template', ['WC_Template_Loader', 'comments_template_loader']);
-        return view('shop.product', $this->defaultContent, [
-
-        ]);
-    }
-
-    public function cart()
-    {
-
-        return view('shop.cart', $this->defaultContent, [
-
-        ]);
-    }
-
-
-    public function page_404()
-    {
-        return view('pages.page-404', $this->defaultContent);
-    }
+    // public function shop()
+    // {
+    //     return view('shop.archive', $this->defaultContent, [
+    //
+    //     ]);
+    // }
+    //
+    // public function product()
+    // {
+    //     Filter::add('comments_template', ['WC_Template_Loader', 'comments_template_loader']);
+    //     return view('shop.product', $this->defaultContent, [
+    //
+    //     ]);
+    // }
+    //
+    // public function cart()
+    // {
+    //
+    //     return view('shop.cart', $this->defaultContent, [
+    //
+    //     ]);
+    // }
+    //
+    //
+    // public function page_404()
+    // {
+    //     return view('pages.page-404', $this->defaultContent);
+    // }
 }
