@@ -131,24 +131,26 @@
           display: block;
       }
     }
-    //.menu-main-nav-container, .menu-main-nav-en-container, .menu-main-nav-fr-container, .nav .menu {
-    //  position: relative;
-    //  z-index: 2;
-    //}
 
     .menu {
-      position: relative;
-      z-index: 2;
-
-    }
-
-    .menu {
-
+        position: relative;
+        z-index: 2;
       @media (min-width: $screen-lg-min) {
         @include flexbox();
         @include flex-basis(80%);
         @include justify-content(center);
       }
+
+      a {
+        @media (min-width: $screen-md-min) {
+           font-size: 2rem;
+        }
+        @media (min-width: $screen-lg-min) {
+          font-size: 1rem;
+
+        }
+    }
+
     }
     .logo-ctn {
       display: none;
