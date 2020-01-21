@@ -13,7 +13,7 @@
                 <p><a href="mailto:{{ $contact["email"] }}" class="info-email">{{ $contact["email"] }}</a></p>
             </div>
             <div class="info-ctn">
-                <p class="info bold">{{ pll__("opening-hours") }}</p>
+                <p class="info bold">{{ pll__("_opening-hours") }}</p>
                 @foreach($contact['opening_list_' . $lang] as $day)
                     <p class="opening-list"><span class="day">{{ $day['day'] }}</span>&nbsp;&nbsp;<span>{{ $day['time'] }}</span></p>
                 @endforeach
@@ -23,7 +23,7 @@
 
         <div class="info-bottom">
             <div class="info-ctn">
-                <p class="bold">{{ pll__("follow-us") }} :</p>
+                <p class="bold">{{ pll__("_follow-us") }} :</p>
                 <div class="link-ctn">
                     @if(!empty($social['facebook'])) <a href="{{ $social['facebook'] }}" target="_blank"><i class="icon fa fa-facebook" aria-hidden="true"></i></a>  @endif
                     @if(!empty($social['twitter'])) <a href="{{ $social['twitter'] }}" target="_blank"><i class="icon fa fa-twitter" aria-hidden="true"></i></a>  @endif

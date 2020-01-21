@@ -20,9 +20,15 @@ class Controller extends BaseController
             //Si polylang est activer, set la variable $lang
             if( function_exists('pll_current_language') ) {
                 $lang = pll_current_language();
-            }
-            else {
+                $default_lang = pll_default_language();
+            }else {
                 $lang = '';
+            }
+
+            if($default_lang == 'en'){
+                ($lang == 'en' ? $home_url = '/' : $home_url = '/fr/accueil');
+            }else{
+                ($lang == 'fr' ? $home_url = '/' : $home_url = '/en/home' );
             }
 
             $this->defaultContent = [
@@ -30,6 +36,7 @@ class Controller extends BaseController
                 'social' => CompanyInfoModel::social(),
                 'animation' => CustomizeModel::animation(),
                 'lang' => $lang,
+                'home_url' => $home_url,
                 'strip' => array(" ", "(", ")","-", "."),
             ];
         }else{

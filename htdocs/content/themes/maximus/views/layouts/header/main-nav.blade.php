@@ -15,7 +15,7 @@
                     </div>
                 </div>
                 <div class="logo-ctn">
-                    <a href="{{ home_url() }}" style="width: {{ get_field("menu_grp", "option")["logo_width"] }}px"><img class="logo black" src="{{ get_field("menu_grp", "option")["logo"]["url"]  }}" alt="logo"></a>
+                    <a href="{{ $home_url }}" style="width: {{ get_field("menu_grp", "option")["logo_width"] }}px"><img class="logo black" src="{{ get_field("menu_grp", "option")["logo"]["url"]  }}" alt="logo"></a>
                 </div>
                 <div class="lang">
                     <?php pll_the_languages( array('display_names_as'=>'slug', 'hide_current'=>1)); ?>
@@ -27,7 +27,7 @@
             <div class="nav-wrapper">
                 <div class="bg-color" style="background-color: {{ get_field("menu_grp", "option")["top_bar_color"] }}; opacity: {{ get_field("menu_grp", "option")["top_bar_opacity"] }}"></div>
                 <div class="logo-ctn">
-                    <a href="{{ home_url() }}" style="width: {{ get_field("menu_grp", "option")["logo_width"] }}px"><img class="logo black" src="{{ get_field("menu_grp", "option")["logo"]["url"]  }}" alt="logo"></a>
+                    <a href="{{ $home_url }}" style="width: {{ get_field("menu_grp", "option")["logo_width"] }}px"><img class="logo black" src="{{ get_field("menu_grp", "option")["logo"]["url"]  }}" alt="logo"></a>
                 </div>
                 @if(is_nav_menu( 'main-nav-' . pll_current_language() ))
                     {{
@@ -51,4 +51,3 @@
 
     </div>
 </div>
-

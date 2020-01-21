@@ -47,12 +47,11 @@
                 src="https://maps.googleapis.com/maps/api/js?key={{ get_field('google_map_key', 'option') }}&callback=initMap">
         </script>
 
-
     </div>
     <a href="{{ $mapLoc }}" class="map-link" target="_blank"></a>
 </div>
 
-
+@if(!empty(get_field('footer_cta_' . $lang, 'option')['url']))
 <nav class="bottom-nav">
 
     <ul class="menu">
@@ -66,6 +65,7 @@
         <li class="menu-item"><a href="tel:+1{{ $contact['phone01'] }}"><i class="icon fa fa-phone" aria-hidden="true"></i> {{ pll__('contact') }}</a></li>
     </ul>
 </nav>
+@endif
 
 @if(!empty(get_field('footer_cta_' . $lang, 'option')))
 <div class="book-bottom @if(get_page_template_slug( get_the_ID() ) == "booking" || get_page_template_slug( get_the_ID() ) == "contact") {{ 'hideMe' }} @endif">

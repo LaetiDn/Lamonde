@@ -10,22 +10,14 @@
                         <div class="excerpt">
                             {{ get_excerpt($single_news->content) }}
                         </div>
+                        <a href="{{ the_permalink($single_news->ID) }}" class="link">{!! pll__('_read-more') !!}</a>
 
-                        @if( ICL_LANGUAGE_CODE == "fr")
-                            <a href="{{ the_permalink($single_news->ID) }}" class="link">Lire la suite</a>
-                        @else
-                            <a href="{{ the_permalink($single_news->ID) }}" class="link">Read More</a>
-                        @endif
                     </div>
                     <div class="thumbnail-ctn">
-                        <figure class="img-ctn" style="background-image: url(' {{ $single_news->thumbnail['url'] }} ')">
-                            <!-- <img src="{{ $single_news->thumbnail['url'] }}" alt="{{ $single_news->thumbnail['alt'] }}"> -->
-                        </figure>
-
+                        <div class="img-ctn" style="background-image: url(' {{ $single_news->thumbnail['url'] }} ')"></div>
                     </div>
                 </div>
             </div>
         @endforeach
-
     </div>
 </section>

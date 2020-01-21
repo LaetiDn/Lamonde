@@ -14,7 +14,3 @@ Route::any('single', ['uses' => 'PageController@single_news']);
 
 
 Route::get('404', ['uses' => 'PageController@page_404']);
-
-
-//WOOCOMERCE
-//Route::any('shop', ['uses' => 'PageController@shop']);
