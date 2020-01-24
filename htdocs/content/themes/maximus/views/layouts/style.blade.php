@@ -83,10 +83,8 @@
         color: {{ get_field('menu_grp','option')['color_hover'] }}!important;
     }
     .menu .menu-item:before {
-        {{--color: {{ get_field('span_grp','option')['color'] }};--}}
-        {{--background-color: {{ get_field('link_grp','option')['color_hover'] }}--}}
         background-color: {{ get_field('menu_grp','option')['color_hover'] }}!important;
-}
+    }
 
     .menu .sub-menu .menu-item:first-of-type{
         border-top-color:{{ get_field('span_grp','option')['color'] }}!important;
@@ -173,8 +171,6 @@
 
 
     /** FORM **/
-
-
     .yikes-easy-mc-submit-button {
         color: {{ get_field('button_grp', 'option')['text_color'] }};
         background-color: {{ get_field('button_grp', 'option')['bg_color'] }};

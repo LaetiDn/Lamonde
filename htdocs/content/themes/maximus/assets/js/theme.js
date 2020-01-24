@@ -220,20 +220,28 @@
             $('.form-main-ctn').fadeIn(600);
         });
 
-        //Scroll spy
-        $('.animate').each(function(i) {
-            var position = $(this).position();
-            $(this).scrollspy({
-                min: position.top - ( $( window ).height() /  2) ,
-                max: position.top + $(this).height(),
-                onEnter: function(element, position) {
-                    $(element).find('.css-animation').addClass('do-animation');
-                },
-                onLeave: function(element, position) {
-                }
-            });
-        });
-
-
     });
 }(jQuery));
+
+const animation = [...document.querySelectorAll('.animate')];
+
+const optionsAnimation = {
+    rootMargin: '0px',
+    threshold: 0.50
+}
+
+const callbackAnimation = (entries) => {
+    entries.forEach((entry) => {
+        if (entry.intersectionRatio >= optionsAnimation.threshold) {
+            //var animation = entry.target.dataset.animation;
+            if(animation){
+              entry.target.querySelector('.css-animation').classList.add('do-animation');
+            }
+        }
+    })
+}
+
+const observerAnimation = new IntersectionObserver(callbackAnimation, optionsAnimation)
+animation.forEach((animation, index) => {
+    observerAnimation.observe(animation)
+})
