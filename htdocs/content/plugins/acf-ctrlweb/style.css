@@ -243,3 +243,15 @@ div.mce-toolbar-grp {
     }
 }
 
+.button-preview .cta{
+    text-decoration:none;
+    display: inline-block;
+    width:150px;
+    margin:auto;
+    text-align: center;
+    padding: 10px 20px;
+    border:1px solid black;
+    color: black;
+    transition: all .6s ease;
+
+}

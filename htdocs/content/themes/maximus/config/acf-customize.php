@@ -1090,8 +1090,24 @@ acf_add_local_field_group(array(
             'layout' => 'block',
             'sub_fields' => array(
                 array(
+                    'key' => 'field_5d42e113e8d43',
+                    'label' => 'Preview',
+                    'name' => '',
+                    'type' => 'message',
+                    'instructions' => '',
+                    'required' => 0,
+                    'wrapper' => array(
+                        'width' => '',
+                        'class' => 'button-preview',
+                        'id' => '',
+                    ),
+                    'message' => '<a href="#" class="cta">Call to action</a>',
+                    'new_lines' => 'wpautop',
+                    'esc_html' => 0,
+                ),
+                array(
                     'key' => 'field_5c07d71c1611a',
-                    'label' => 'Text : color',
+                    'label' => 'Text : Color',
                     'name' => 'text_color',
                     'type' => 'color_picker',
                     'instructions' => '',

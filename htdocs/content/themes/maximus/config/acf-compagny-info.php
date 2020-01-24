@@ -478,74 +478,74 @@ if( function_exists('acf_add_local_field_group') ):
                 'default_value' => '',
                 'placeholder' => '',
             ),
-            array(
-                'key' => 'field_5b218e87e3482',
-                'label' => 'For developers',
-                'name' => '',
-                'type' => 'tab',
-                'instructions' => '',
-                'required' => 0,
-                'conditional_logic' => 0,
-                'wrapper' => array(
-                    'width' => '',
-                    'class' => '',
-                    'id' => '',
-                ),
-                'placement' => 'left',
-                'endpoint' => 0,
-            ),
-            array(
-                'key' => 'field_5b218e98e3483',
-                'label' => 'Click to copy code in clipboard',
-                'name' => '',
-                'type' => 'message',
-                'instructions' => '',
-                'required' => 0,
-                'conditional_logic' => 0,
-                'wrapper' => array(
-                    'width' => '',
-                    'class' => '',
-                    'id' => 'instruction-main-ctn',
-                ),
-                'message' => '<h1></h1>
-<div class="sections-main-ctn">
-	 
-	 <div class="section-ctn">
-				<h2>Contact information </h2>
-				<ul class="section">
-						 <li><input type="text" value="$contact[\'phone01\']"></li>
-						 <li>Use for href <input type="text" value="$contact[\'phone01_href\']"></li>
-						 <li><input type="text" value="$contact[\'phone02\']"></li>
-						 <li>Use for href<input type="text" value="$contact[\'phone02_href\']"></li>
-						 <li><input type="text" value="$contact[\'email\']"></li>
-						 <li><input type="text" value="$contact[\'fax\']"></li>
-						 <li><input type="text" value="$contact[\'adress_fr\']"></li>
-						 <li><input type="text" value="$contact[\'adress_en\']"></li>
-						 <li><input type="text" value="$contact[\'town_fr\']"></li>
-						 <li><input type="text" value="$contact[\'town_en\']"></li>
-						 <li><input type="text" value="$contact[\'province_fr\']"></li>
-						 <li><input type="text" value="$contact[\'province_en\']"></li>
-						 <li><input type="text" value="$contact[\'postal_code\']"></li>
-						 <li><input type="text" value="$contact[\'opening_fr\']"></li>
-						 <li><input type="text" value="$contact[\'opening_en\']"></li>
-						 <li><input type="text" value="$contact[\'opening_list_fr\']"></li>
-						 <li><input type="text" value="$contact[\'opening_list_en\']"></li>
-						 <li><input type="text" value="$contact[\'google_map\']"></li>
-				</ul>
-	 </div>
-<div class="section-ctn">
-				<h2>Social media </h2>
-				<ul class="section">
-						 <li><input type="text" value="$social[\'facebook\']"></li>
-						 <li><input type="text" value="$social[\'twitter\']"></li>
-						 <li><input type="text" value="$social[\'instagram\']"></li>
-						 <li><input type="text" value="$social[\'trip_advisor\']"></li>
-				</ul>
-	 </div>
-</div>',
-                'new_lines' => 'wpautop',
-                'esc_html' => 0,
-            ),
+            // array(
+            //     'key' => 'field_5b218e87e3482',
+            //     'label' => 'For developers',
+            //     'name' => '',
+            //     'type' => 'tab',
+            //     'instructions' => '',
+            //     'required' => 0,
+            //     'conditional_logic' => 0,
+            //     'wrapper' => array(
+            //         'width' => '',
+            //         'class' => '',
+            //         'id' => '',
+            //     ),
+            //     'placement' => 'left',
+            //     'endpoint' => 0,
+            // ),
+//             array(
+//                 'key' => 'field_5b218e98e3483',
+//                 'label' => 'Click to copy code in clipboard',
+//                 'name' => '',
+//                 'type' => 'message',
+//                 'instructions' => '',
+//                 'required' => 0,
+//                 'conditional_logic' => 0,
+//                 'wrapper' => array(
+//                     'width' => '',
+//                     'class' => '',
+//                     'id' => 'instruction-main-ctn',
+//                 ),
+//                 'message' => '<h1></h1>
+// <div class="sections-main-ctn">
+//
+// 	 <div class="section-ctn">
+// 				<h2>Contact information </h2>
+// 				<ul class="section">
+// 						 <li><input type="text" value="$contact[\'phone01\']"></li>
+// 						 <li>Use for href <input type="text" value="$contact[\'phone01_href\']"></li>
+// 						 <li><input type="text" value="$contact[\'phone02\']"></li>
+// 						 <li>Use for href<input type="text" value="$contact[\'phone02_href\']"></li>
+// 						 <li><input type="text" value="$contact[\'email\']"></li>
+// 						 <li><input type="text" value="$contact[\'fax\']"></li>
+// 						 <li><input type="text" value="$contact[\'adress_fr\']"></li>
+// 						 <li><input type="text" value="$contact[\'adress_en\']"></li>
+// 						 <li><input type="text" value="$contact[\'town_fr\']"></li>
+// 						 <li><input type="text" value="$contact[\'town_en\']"></li>
+// 						 <li><input type="text" value="$contact[\'province_fr\']"></li>
+// 						 <li><input type="text" value="$contact[\'province_en\']"></li>
+// 						 <li><input type="text" value="$contact[\'postal_code\']"></li>
+// 						 <li><input type="text" value="$contact[\'opening_fr\']"></li>
+// 						 <li><input type="text" value="$contact[\'opening_en\']"></li>
+// 						 <li><input type="text" value="$contact[\'opening_list_fr\']"></li>
+// 						 <li><input type="text" value="$contact[\'opening_list_en\']"></li>
+// 						 <li><input type="text" value="$contact[\'google_map\']"></li>
+// 				</ul>
+// 	 </div>
+// <div class="section-ctn">
+// 				<h2>Social media </h2>
+// 				<ul class="section">
+// 						 <li><input type="text" value="$social[\'facebook\']"></li>
+// 						 <li><input type="text" value="$social[\'twitter\']"></li>
+// 						 <li><input type="text" value="$social[\'instagram\']"></li>
+// 						 <li><input type="text" value="$social[\'trip_advisor\']"></li>
+// 				</ul>
+// 	 </div>
+// </div>',
+//                 'new_lines' => 'wpautop',
+//                 'esc_html' => 0,
+//             ),
         ),
         'location' => array(
             array(
@@ -566,46 +566,46 @@ if( function_exists('acf_add_local_field_group') ):
         'description' => '',
     ));
 
-    acf_add_local_field_group(array(
-        'key' => 'group_5bf3448ad0b6d',
-        'title' => 'Page Booking',
-        'fields' => array(
-            array(
-                'key' => 'field_5bf422a2387d5',
-                'label' => 'Iframe URL',
-                'name' => 'booking_iframe_url',
-                'type' => 'url',
-                'instructions' => '',
-                'required' => 0,
-                'conditional_logic' => 0,
-                'wrapper' => array(
-                    'width' => '',
-                    'class' => '',
-                    'id' => '',
-                ),
-                'default_value' => '',
-                'placeholder' => '',
-            ),
-        ),
-        'location' => array(
-            array(
-                array(
-                    'param' => 'post_template',
-                    'operator' => '==',
-                    'value' => 'booking',
-                ),
-            ),
-        ),
-        'menu_order' => 1,
-        'position' => 'normal',
-        'style' => 'default',
-        'label_placement' => 'top',
-        'instruction_placement' => 'label',
-        'hide_on_screen' => array(
-            0 => 'the_content',
-        ),
-        'active' => 1,
-        'description' => '',
-    ));
+    // acf_add_local_field_group(array(
+    //     'key' => 'group_5bf3448ad0b6d',
+    //     'title' => 'Page Booking',
+    //     'fields' => array(
+    //         array(
+    //             'key' => 'field_5bf422a2387d5',
+    //             'label' => 'Iframe URL',
+    //             'name' => 'booking_iframe_url',
+    //             'type' => 'url',
+    //             'instructions' => '',
+    //             'required' => 0,
+    //             'conditional_logic' => 0,
+    //             'wrapper' => array(
+    //                 'width' => '',
+    //                 'class' => '',
+    //                 'id' => '',
+    //             ),
+    //             'default_value' => '',
+    //             'placeholder' => '',
+    //         ),
+    //     ),
+    //     'location' => array(
+    //         array(
+    //             array(
+    //                 'param' => 'post_template',
+    //                 'operator' => '==',
+    //                 'value' => 'booking',
+    //             ),
+    //         ),
+    //     ),
+    //     'menu_order' => 1,
+    //     'position' => 'normal',
+    //     'style' => 'default',
+    //     'label_placement' => 'top',
+    //     'instruction_placement' => 'label',
+    //     'hide_on_screen' => array(
+    //         0 => 'the_content',
+    //     ),
+    //     'active' => 1,
+    //     'description' => '',
+    // ));
 
 endif;

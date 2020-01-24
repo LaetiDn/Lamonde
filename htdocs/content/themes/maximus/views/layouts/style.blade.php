@@ -131,7 +131,7 @@
         border: 1px solid {{ get_field('button_grp', 'option')['border_color_transition'] }};
     }
     .block-discover .cta {
-      background-color: {{ get_field('button_grp', 'option')['bg_color'] }};
+      /* background-color: {{ get_field('button_grp', 'option')['bg_color'] }}; */
     }
     .block-discover .cta i{
         color: {{ get_field('button_grp', 'option')['text_color'] }};
