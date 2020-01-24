@@ -3060,12 +3060,9 @@ a {
 
 @media (min-width: 992px) {
   .block-image-text .content-ctn {
-    display: -moz-flex;
     display: flex;
-    -moz-align-items: center;
-    align-items: center;
-    -moz-justify-content: space-between;
     justify-content: space-between;
+    align-items: center;
   }
 }
 
