@@ -244,6 +244,7 @@ div.mce-toolbar-grp {
 }
 
 .button-preview .cta{
+    font-family: 'Lato', sans-serif;
     text-decoration:none;
     display: inline-block;
     width:150px;

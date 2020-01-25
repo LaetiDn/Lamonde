@@ -1090,7 +1090,7 @@ acf_add_local_field_group(array(
             'layout' => 'block',
             'sub_fields' => array(
                 array(
-                    'key' => 'field_5d42e113e8d43',
+                    'key' => 'field_5d42x113e8d43',
                     'label' => 'Preview',
                     'name' => '',
                     'type' => 'message',
@@ -1101,7 +1101,7 @@ acf_add_local_field_group(array(
                         'class' => 'button-preview',
                         'id' => '',
                     ),
-                    'message' => '<a href="#" class="cta">Call to action</a>',
+                    'message' => '<a href="#" class="cta default">Button</a> <a href="#" class="cta hover">Button : hover</a>',
                     'new_lines' => 'wpautop',
                     'esc_html' => 0,
                 ),
