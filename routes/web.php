@@ -4,12 +4,13 @@
  * Application routes.
  */
 
-Route::get('front', ['uses' => 'PageController@index']);
-Route::any('page', ['uses' => 'PageController@custom_template']);
 
+Route::any('page', ['uses' => 'PageController@custom_template']);
 Route::any('template', ['menu', 'uses' => 'PageController@menu']);
 
-Route::get('template', ['post-archive', 'uses' => 'PageController@post_archive']);
+//ARCHIVE PAGES
+//Route::get('template', ['post-archive', 'uses' => 'PageController@archive_news']);
+
 Route::any('single', ['uses' => 'PageController@single_news']);
 
 

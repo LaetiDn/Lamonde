@@ -1,0 +1,46 @@
+.block-open-form {
+  position: relative;
+
+    .content-ctn {
+      @include breakpoint(tab-portrait) {
+        display:flex;
+        @include justify-content(space-between);
+        @include align-items(center);
+        max-width:1080px;
+        margin:auto;
+      }
+    }
+
+    .wysywyg-ctn {
+
+      margin-bottom:25px;
+
+      @include breakpoint(tab-portrait) {
+        margin-bottom:0;
+        margin-right: 25px;
+
+      }
+    }
+    .link-ctn {
+      @include breakpoint(tab-landscape) {
+        a {
+          margin:0;
+        }
+      }
+    }
+  .cta {
+
+    display: block;
+    width:200px;
+    margin:auto;
+    text-align: center;
+    padding: 15px 40px;
+    @include transition(all 0.6s ease);
+    &:last-of-type {
+      margin-top:25px;
+    }
+    &:hover {
+      border: 1px solid white;
+    }
+  }
+}

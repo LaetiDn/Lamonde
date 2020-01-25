@@ -20,7 +20,7 @@ class PageController extends Controller
         $disable_header = false;
 
         if(get_page_template_slug( get_the_ID() ) === 'post-archive'){
-            return view('pages.post-archive', $this->defaultContent, [
+            return view('archives.news', $this->defaultContent, [
                 'news' => Post::get_all_news(),
             ]);
         }else if(get_page_template_slug( get_the_ID() ) === 'contact'){

@@ -6,15 +6,15 @@
 
     .info-inner {
       text-align: center;
-      @media (min-width: $screen-lg-min) {
+      @include breakpoint(tab-landscape) {
         text-align: left;
         padding:90px 0 25px;
       }
     }
     .info-top, .info-bottom {
       margin:0 25px;
-      @media (min-width: $screen-md-min) {
-        @include flexbox();
+      @include breakpoint(tab-portrait) {
+        display:flex;
         @include justify-content(space-between);
 
       }
@@ -52,11 +52,11 @@
 
 
   .link-ctn {
-    @include flexbox();
+    display:flex;
     @include justify-content(center);
     max-width:300px;
     margin:10px auto;
-    @media (min-width: $screen-lg-min) {
+    @include breakpoint(tab-landscape) {
       margin:8px auto;
       max-width: none;
       @include justify-content(flex-start);
@@ -71,7 +71,7 @@
   .logo-ctn {
     margin: 35px auto 0;
     width: 180px;
-    @media (min-width: $screen-lg-min) {
+    @include breakpoint(tab-landscape) {
 
     }
     img {
@@ -102,11 +102,11 @@
     bottom:0;
     width:100%;
     z-index: 90;
-    @media (min-width: $screen-lg-min) {
+    @include breakpoint(tab-landscape) {
       display: none;
     }
     .menu {
-      @include flexbox();
+      display:flex;
       @include justify-content(center);
     }
 
@@ -122,7 +122,7 @@
       display: block;
       width:100%;
       padding: 5px 0px;
-      @media (min-width: $screen-md-min) {
+      @include breakpoint(tab-portrait) {
         padding: 15px 0px;
       }
     }
@@ -140,8 +140,8 @@
 
   .book-bottom {
     display: none;
-    @media (min-width: $screen-lg-min) {
-      @include flexbox();
+    @include breakpoint(tab-landscape) {
+      display:flex;
       @include align-items(center);
       @include justify-content(center);
       position: fixed;

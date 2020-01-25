@@ -13,4 +13,5 @@ return [
     'post-archive' => [__('Post Archive', THEME_TD), ['page']],
     'contact' => [__('Contact', THEME_TD), ['page']],
     'menu' => [__('Menu', THEME_TD), ['page']],
+
 ];

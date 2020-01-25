@@ -2,7 +2,7 @@
 .form-ctn {
   margin:50px auto;
   width:80%;
-  @media (min-width: $screen-lg-min) {
+  @include breakpoint(tab-landscape) {
     width:52%;
   }
   input[type="text"], input[type="email"] {
@@ -91,11 +91,11 @@
     margin-top: 45px;
     background-color: black;
     @media (min-width: 768px) {
-      @include flexbox();
+      display:flex;
       @include justify-content(center);
       margin-top: 65px;
     }
-    @media (min-width: $screen-lg-min) {
+    @include breakpoint(tab-landscape) {
       width:55%;
     }
 
@@ -153,7 +153,7 @@
 
 
       @media (min-width:768px){
-        @include flexbox();
+        display:flex;
         @include justify-content(space-between);
         margin-bottom: 30px;
       }
@@ -179,7 +179,7 @@
       }
 
       .form-input.input-radio {
-        @include flexbox();
+        display:flex;
         @include align-items(center);
         border-bottom: none;
         padding: 20px 0 20px 10px;

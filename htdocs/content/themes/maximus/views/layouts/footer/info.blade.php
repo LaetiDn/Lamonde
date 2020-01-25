@@ -25,11 +25,16 @@
             <div class="info-ctn">
                 <p class="bold">{{ pll__("_follow-us") }} :</p>
                 <div class="link-ctn">
+
+                    {{-- @foreach ($social as $name => $url)
+                        <a href="{{ $url }}" target="_blank"><i class="icon fa fa-{{ $name }}" aria-hidden="true"></i></a>
+                    @endforeach --}}
                     @if(!empty($social['facebook'])) <a href="{{ $social['facebook'] }}" target="_blank"><i class="icon fa fa-facebook" aria-hidden="true"></i></a>  @endif
                     @if(!empty($social['twitter'])) <a href="{{ $social['twitter'] }}" target="_blank"><i class="icon fa fa-twitter" aria-hidden="true"></i></a>  @endif
                     @if(!empty($social['instagram'])) <a href="{{ $social['instagram'] }}" target="_blank"><i class="icon fa fa-instagram" aria-hidden="true"></i></a> @endif
                     @if(!empty($social['trip_advisor'])) <a href="{{ $social['trip_advisor'] }}" target="_blank"><i class="icon fa fa-tripadvisor" aria-hidden="true"></i></a>  @endif
                     @if(!empty($social['youtube'])) <a href="{{ $social['youtube'] }}" target="_blank"><i class="icon fa fa-youtube" aria-hidden="true"></i></a>  @endif
+
                 </div>
             </div>
 

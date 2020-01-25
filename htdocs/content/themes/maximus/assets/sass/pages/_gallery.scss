@@ -4,8 +4,8 @@
 
 
     margin:150px 0 100px 0;
-   @media (min-width: $screen-md-min) {
-     @include flexbox();
+   @include breakpoint(tab-portrait) {
+     display:flex;
      @include justify-content(space-between);
      @include flex-wrap(wrap);
    }
@@ -19,10 +19,10 @@
      background-position: center;
      background-repeat: no-repeat;
 
-     @media (min-width: $screen-md-min) {
+     @include breakpoint(tab-portrait) {
        @include flex-basis(49%);
      }
-     @media (min-width: $screen-lg-min) {
+     @include breakpoint(tab-landscape) {
        @include flex-basis(33%);
      }
 
@@ -52,7 +52,7 @@
        border-bottom:1px solid $yellow;
        font-size: 20px;
         z-index: 60;
-       @media (min-width: $screen-md-min) {
+       @include breakpoint(tab-portrait) {
          font-size: 30px;
        }
 
@@ -78,7 +78,7 @@
 
   .album-lightbox-inner-ctn {
 
-    @include flexbox();
+    display:flex;
     @include flex-direction(column);
     @include justify-content(center);
     @include align-items(center);
@@ -95,10 +95,10 @@
       position: absolute;
       top: 85%;
       z-index: 20000;
-      @media (min-width: $screen-md-min) {
+      @include breakpoint(tab-portrait) {
         width:40px;
       }
-      @media (min-width: $screen-md-min) {
+      @include breakpoint(tab-portrait) {
         top: 50%;
       }
 
@@ -118,7 +118,7 @@
     width:100%;
     height:480px;
 
-    @media (min-width: $screen-md-min) {
+    @include breakpoint(tab-portrait) {
       width:90%;
       height:740px;
     }
@@ -133,7 +133,7 @@
       border-bottom:1px solid $yellow;
       font-size: 20px;
       z-index: 60;
-      @media (min-width: $screen-md-min) {
+      @include breakpoint(tab-portrait) {
         font-size: 30px;
       }
     }
@@ -159,14 +159,14 @@
 
           max-height:300px;
 
-          @media (min-width: $screen-md-min) {
+          @include breakpoint(tab-portrait) {
             max-height:630px;
           }
         }
       }
 
       .photo-desc-ctn {
-        @include flexbox();
+        display:flex;
         @include justify-content(flex-end);
         @include align-items(center);
         padding:0 2%;
@@ -192,7 +192,7 @@
     height:20px;
     position: relative;
     z-index: 999;
-    @media (min-width: $screen-md-min) {
+    @include breakpoint(tab-portrait) {
       position: absolute;
       top:15px;
 
@@ -203,7 +203,7 @@
      // top:15px;
       width: 20px;
       z-index: 10;
-      @media (min-width: $screen-md-min) {
+      @include breakpoint(tab-portrait) {
         right:30px;
         top:10px;
         width: 30px;

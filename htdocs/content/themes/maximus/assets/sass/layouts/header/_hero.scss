@@ -20,7 +20,7 @@
 
 
 
-    @media (min-width: $screen-md-min) {
+    @include breakpoint(tab-portrait) {
       width:34%;
       max-width:550px;
     }
@@ -37,20 +37,20 @@
   .slick-arrow{
     z-index: 50;
     width:35px;
-    @media (min-width: $screen-md-min) {
+    @include breakpoint(tab-portrait) {
       max-width:60px;
       width:20%;
     }
   }
   .slick-prev {
     left:20px;
-    @media (min-width: $screen-md-min) {
+    @include breakpoint(tab-portrait) {
       left:6%;
     }
   }
   .slick-next {
     right:20px;
-    @media (min-width: $screen-md-min) {
+    @include breakpoint(tab-portrait) {
       right:6%;
     }
   }
@@ -92,7 +92,7 @@
 
 .content-logo {
   display: none;
-  @media (min-width: $screen-md-min) {
+  @include breakpoint(tab-portrait) {
     display: block;
   }
   text-align: center;

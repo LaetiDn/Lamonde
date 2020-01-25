@@ -14,11 +14,11 @@
 }
 
 .top-bar-outer {
-  @media (min-width: $screen-lg-min) {
+  @include breakpoint(tab-landscape) {
     display: none;
   }
   .top-bar-inner {
-    @include flexbox();
+    display:flex;
     @include justify-content(space-between);
     @include align-items(center);
     padding-top:10px;
@@ -85,7 +85,7 @@
     text-transform: uppercase;
 
   }
-  @media (min-width: $screen-xl-min) {
+  @include breakpoint(desktop) {
     position: absolute;
     right:15px;
 
@@ -103,8 +103,8 @@
   text-align: center;
   @include transition(left 0.6s ease);
 
-  @media (min-width: $screen-lg-min) {
-    @include flexbox();
+  @include breakpoint(tab-landscape) {
+    display:flex;
     position: relative;
     left:auto;
     top:auto;
@@ -112,9 +112,9 @@
 
   .nav-wrapper {
     position: relative;
-    @media (min-width: $screen-lg-min) {
+    @include breakpoint(tab-landscape) {
 
-      @include flexbox();
+      display:flex;
       @include justify-content(center);
       @include flex-basis(100%);
       @include align-items(center);
@@ -135,17 +135,17 @@
     .menu {
         position: relative;
         z-index: 2;
-      @media (min-width: $screen-lg-min) {
-        @include flexbox();
+      @include breakpoint(tab-landscape) {
+        display:flex;
         @include flex-basis(80%);
         @include justify-content(center);
       }
 
       a {
-        @media (min-width: $screen-md-min) {
+        @include breakpoint(tab-portrait) {
            font-size: 2rem;
         }
-        @media (min-width: $screen-lg-min) {
+        @include breakpoint(tab-landscape) {
           font-size: 1rem;
 
         }
@@ -155,7 +155,7 @@
     .logo-ctn {
       display: none;
       z-index: 2;
-      @media (min-width: $screen-lg-min) {
+      @include breakpoint(tab-landscape) {
         display: block;
         position: absolute;
         left:30px;
@@ -177,7 +177,7 @@
     list-style: none;
     position: relative;
     cursor: pointer;
-    @media (min-width: $screen-lg-min) {
+    @include breakpoint(tab-landscape) {
       padding:25px 0;
       margin: 0 20px;
     }
@@ -191,7 +191,7 @@
         width:100%;
       }
     }
-    @media (min-width: $screen-lg-min) {
+    @include breakpoint(tab-landscape) {
       &:before {
         content:"";
         display: block;
@@ -227,7 +227,7 @@
 }
 
 .open-nav {
-  background-color: $dark-grey;
+  //background-color: $dark-grey;
   z-index:100;
   height:100vh;
   @include transition(height 0.8s ease);
@@ -270,7 +270,7 @@
   }
 
   .nav {
-    @media (min-width: $screen-lg-min) {
+    @include breakpoint(tab-landscape) {
       background-color: white;
       @include box-shadow(0px, 2px, 12px, 0px, rgba(0,0,0,0.2));
       .nav-logo {
@@ -279,7 +279,7 @@
       }
       .menu-item {
 
-        @media (min-width: $screen-lg-min) {
+        @include breakpoint(tab-landscape) {
           margin:0 20px;
         }
         @media (min-width: $screen-xxl-min) {
@@ -293,7 +293,7 @@
   }
 
   .menu-main-nav-left-container, .menu-main-nav-left-en-container {
-    @media (min-width: $screen-lg-min) {
+    @include breakpoint(tab-landscape) {
       margin-right:0!important;
     }
 
@@ -326,7 +326,7 @@
       border-radius: 50%;
       padding:2px 5px;
 
-      @media (min-width: $screen-lg-min) {
+      @include breakpoint(tab-landscape) {
         display: none!important;
 
       }

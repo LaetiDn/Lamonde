@@ -1,27 +1,27 @@
-@import "utilities/reset";
-@import "utilities/variables";
 @import "utilities/flex";
-@import "utilities/mixins";
-@import "utilities/helpers";
+
+@import "abstracts/mixins";
+@import "abstracts/variables";
+@import "abstracts/functions";
+
+
+@import "base/reset";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+@import "base/animations";
 
 
 //LAYOUTS
-@import "layouts/structure";
-@import "layouts/typography";
-
 @import "layouts/header";
 @import "layouts/footer";
 @import "layouts/form";
-@import "layouts/animations";
-
-
-//TEMPLATES
 
 //PAGES
-@import "pages/home";
+//@import "pages/home";
 @import "pages/menu";
 @import "pages/news";
-@import "pages/gallery";
+//@import "pages/gallery";
 @import "pages/contact";
 
 //PAGE LOADER

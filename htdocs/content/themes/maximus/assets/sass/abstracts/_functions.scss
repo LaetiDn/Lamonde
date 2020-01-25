@@ -1,0 +1,5 @@
+$fullwidth : 1920;
+@function get-vw($target) {
+  $vw-context: ($fullwidth * 0.01) * 1px;
+  @return ($target / $vw-context) * 1vw;
+}
