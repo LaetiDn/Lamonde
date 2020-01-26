@@ -301,17 +301,12 @@
 
     }
 
-
-    .block-background-title .title-ctn:before, .block-background-title .title-ctn:after {
+    /* BLOCKS special animations  */
+    .block-background__title:before, .block-background__title:after {
         background-color: {{ get_field('span_grp','option')['color'] }};
-    }
-    .block-background-title .title-ctn.do-animation:before, .block-background-title .title-ctn.do-animation:after {
-        transition-duration: {{ get_field('animation_props', 'option')['duration'] }}s;
         transition-timing-function: {{ get_field('animation_props', 'option')['easing'] }};
-
-        animation-duration: {{ get_field('animation_props', 'option')['duration'] }}s;
-        animation-timing-function: {{ get_field('animation_props', 'option')['easing'] }};
     }
+
 
 
 

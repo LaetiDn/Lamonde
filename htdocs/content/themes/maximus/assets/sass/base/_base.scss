@@ -49,7 +49,12 @@ body {
   }
 }
 
+.is-mobile {
+    .content {
+        background-attachment: scroll!important;    
+    }
 
+}
 
 ::selection{
 

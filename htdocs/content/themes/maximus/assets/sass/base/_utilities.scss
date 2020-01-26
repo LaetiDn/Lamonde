@@ -2,6 +2,13 @@
   display:none!important;
 }
 
+.is-parallax {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
 .body-no-overflow {
   overflow:hidden;
 }
@@ -67,16 +74,6 @@
   background-position: center;
 }
 
-.bgFixed {
-
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment:scroll;
-  @include breakpoint(desktop){
-    background-attachment: fixed;
-  }
-}
 
 .bold {
   font-weight: 700;

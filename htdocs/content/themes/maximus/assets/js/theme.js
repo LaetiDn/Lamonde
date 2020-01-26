@@ -1,3 +1,4 @@
+
 (function($) {
     $(document).ready(function() {
 
@@ -16,6 +17,11 @@
         function isMobileDevice() {
             return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
         };
+
+
+        if(isMobileDevice()){
+            $('body').addClass('is-mobile');
+        }
 
         $( window ).resize(function() {
             var screenWidth = $( window ).width();
@@ -125,9 +131,9 @@ const callbackAnimation = (entries) => {
     entries.forEach((entry) => {
         if (entry.intersectionRatio >= optionsAnimation.threshold) {
             //var animation = entry.target.dataset.animation;
-            if(animation){
+            //if(animation){
               entry.target.querySelector('.css-animation').classList.add('do-animation');
-            }
+            //}
         }
     })
 }

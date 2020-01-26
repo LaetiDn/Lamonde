@@ -164,6 +164,15 @@
   -ms-transform: translate(-$posX,-$posY);
 }
 
+@mixin center-element($posX,$posY){
+  position:absolute;
+  left:50%;
+  top: 50%;
+
+  transform: translate(-$posX,-$posY);
+  -webkit-transform: translate(-$posX,-$posY);
+  -ms-transform: translate(-$posX,-$posY);
+}
 
 @mixin linear-gradient-horizontal($firstColor, $secondColor) {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e69758+1,f0d131+100 */
