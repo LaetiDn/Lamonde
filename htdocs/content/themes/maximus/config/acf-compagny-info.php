@@ -156,7 +156,7 @@ if( function_exists('acf_add_local_field_group') ):
             array(
                 'key' => 'field_5b2185dd9d825',
                 'label' => 'City',
-                'name' => 'contact_town_en',
+                'name' => 'contact_city_en',
                 'type' => 'text',
                 'instructions' => '',
                 'required' => 0,

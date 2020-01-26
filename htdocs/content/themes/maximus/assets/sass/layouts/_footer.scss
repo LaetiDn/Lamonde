@@ -1,89 +1,48 @@
-#footer {
-  .info-outer {
+
+  .footer {
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 35px 0;
-
-    .info-inner {
-      text-align: center;
-      @include breakpoint(tab-landscape) {
-        text-align: left;
-        padding:90px 0 25px;
-      }
+    padding: 70px 0 35px 0;
+    &__logo {
+        max-width:180px;
+        margin:0 auto;
     }
-    .info-top, .info-bottom {
-      margin:0 25px;
+    &__info{
+      text-align: center;
       @include breakpoint(tab-portrait) {
         display:flex;
-        @include justify-content(space-between);
-
+        justify-content: space-between;
+      }
+      @include breakpoint(tab-landscape) {
+        text-align: left;
       }
     }
-
-    .info-bottom {
-      text-align: center;
-      @include justify-content(center);
-    }
-    .info-ctn {
-      margin: 30px 0;
-    }
-
-    .info-ctn, .logo-ctn {
-      .info, a {
-        position: relative;
+    &__info-container {
+      padding: 30px 0;
+      border-top: 1px solid;
+      a {
+          display: block;
+          margin-bottom: 8px;
+      }
+      h3 {
+          margin-bottom: 8px;
+      }
+      .opening {
+          margin-bottom: 16px;
       }
 
+      @include breakpoint(tab-portrait) {
+        margin: 30px 0 45px 0;
+      }
+      @include breakpoint(tab-landscape) {
+          margin: 30px 0;
+      }
     }
-
-    p {
-      line-height: 29px;
-    }
-
-
-    a {
-      display: block;
-      line-height:32px;
-    }
-
-    .info .icon, a .icon{
-      margin-right:8px;
-    }
-  }
-
-
-  .link-ctn {
-    display:flex;
-    @include justify-content(center);
-    max-width:300px;
-    margin:10px auto;
-    @include breakpoint(tab-landscape) {
-      margin:8px auto;
-      max-width: none;
-      @include justify-content(flex-start);
-    }
-  }
-
-  .icon {
-    font-size: 30px;
-    padding: 10px;
-  }
-
-  .logo-ctn {
-    margin: 35px auto 0;
-    width: 180px;
-    @include breakpoint(tab-landscape) {
-
-    }
-    img {
-      width:100%;
-    }
-  }
-
+//ICI
   .map-ctn {
     position: relative;
 
     .map-link {
-
       position: absolute;
       width:100%;
       height:100%;
@@ -142,8 +101,8 @@
     display: none;
     @include breakpoint(tab-landscape) {
       display:flex;
-      @include align-items(center);
-      @include justify-content(center);
+      align-items: center;
+      justify-content: center;
       position: fixed;
       width:160px;
       bottom:-50px;
@@ -151,7 +110,7 @@
       transform: translate(-50%);
       z-index: 100;
 
-      @include transition(bottom 0.6s ease);
+      transition: bottom 0.6s ease;
       a {
         display: block;
         font-size: 16px;
@@ -164,11 +123,6 @@
   .book-bottom-sticky {
     bottom:0;
   }
-
-
-
-
-
 
   .copyrights {
     text-align: center;

@@ -5,7 +5,7 @@
     <meta charset="{{ get_bloginfo('charset') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
-
+     <script src="https://kit.fontawesome.com/84bd0438ad.js" crossorigin="anonymous"></script>
     <!-- Dynamic CSS with ACF -->
     @include ('layouts.style')
     {{--@if( function_exists('acf_add_options_page') )--}}

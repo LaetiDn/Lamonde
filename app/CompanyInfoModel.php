@@ -23,8 +23,8 @@ class CompanyInfoModel extends Model
             'adress_fr' => get_field('contact_adress_fr','option'),
             'adress_en' => get_field('contact_adress_en','option'),
 
-            'town_fr' => get_field('contact_city_fr','option'),
-            'town_en' => get_field('contact_city_en','option'),
+            'city_fr' => get_field('contact_city_fr','option'),
+            'city_en' => get_field('contact_city_en','option'),
 
             'province' => get_field('contact_province','option'),
 

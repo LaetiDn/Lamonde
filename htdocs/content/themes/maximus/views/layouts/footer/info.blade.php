@@ -1,48 +1,33 @@
-
-<div class="info-outer" style="background-color: {{ get_field('footer_bg_color', 'option') }}; background-image: url('{{ get_field('footer_bg_image', 'option')['url'] }}')">
-
-    <div class="info-inner content-ctn">
-        <div class="info-top">
-            <div class="info-ctn">
-                <p class="info"></i>{{ $contact["adress_" . $lang] }}</p>
-                <p class="info"> {{ $contact["town_".$lang] }} ({{ $contact["province"] }}) {{ $contact["postal_code"] }}</p>
-
-            </div>
-            <div class="info-ctn">
-                <p><a href="tel:+1{{ $contact['phone01_href'] }}" class="info phone">{{ $contact['phone01'] }}</a></p>
-                <p><a href="mailto:{{ $contact["email"] }}" class="info-email">{{ $contact["email"] }}</a></p>
-            </div>
-            <div class="info-ctn">
-                <p class="info bold">{{ pll__("_opening-hours") }}</p>
-                @foreach($contact['opening_list_' . $lang] as $day)
-                    <p class="opening-list"><span class="day">{{ $day['day'] }}</span>&nbsp;&nbsp;<span>{{ $day['time'] }}</span></p>
-                @endforeach
-            </div>
-
-        </div>
-
-        <div class="info-bottom">
-            <div class="info-ctn">
-                <p class="bold">{{ pll__("_follow-us") }} :</p>
-                <div class="link-ctn">
-
-                    {{-- @foreach ($social as $name => $url)
-                        <a href="{{ $url }}" target="_blank"><i class="icon fa fa-{{ $name }}" aria-hidden="true"></i></a>
-                    @endforeach --}}
-                    @if(!empty($social['facebook'])) <a href="{{ $social['facebook'] }}" target="_blank"><i class="icon fa fa-facebook" aria-hidden="true"></i></a>  @endif
-                    @if(!empty($social['twitter'])) <a href="{{ $social['twitter'] }}" target="_blank"><i class="icon fa fa-twitter" aria-hidden="true"></i></a>  @endif
-                    @if(!empty($social['instagram'])) <a href="{{ $social['instagram'] }}" target="_blank"><i class="icon fa fa-instagram" aria-hidden="true"></i></a> @endif
-                    @if(!empty($social['trip_advisor'])) <a href="{{ $social['trip_advisor'] }}" target="_blank"><i class="icon fa fa-tripadvisor" aria-hidden="true"></i></a>  @endif
-                    @if(!empty($social['youtube'])) <a href="{{ $social['youtube'] }}" target="_blank"><i class="icon fa fa-youtube" aria-hidden="true"></i></a>  @endif
-
-                </div>
-            </div>
-
-        </div>
-        <div class="copyrights">
-            <span>{{ date('Y') }} {{ get_field('copyrights_' . $lang, 'option') }}</span>
-        </div>
+<div class="footer" style="background-color: {{ get_field('footer_bg_color', 'option') }}; background-image: url('{{ get_field('footer_bg_image', 'option')['url'] }}')">
+    <div class="footer__logo logo-ctn">
+        <a href="{{ $home_url }}"><img class="logo" src="{{ get_field("footer_logo", "option")["url"]  }}" alt="logo"></a>
     </div>
 
+    <div class="footer__info content default-padding">
+        <div class="footer__info-container">
+            <a class="info" href="{{ get_field('footer_google_map_url', 'option') }}" target="_blank">
+                {{ $contact["adress_" . $lang] }}<br>
+                {{ $contact["city_" . $lang] }} ({{ $contact["province"] }}) {{ $contact["postal_code"] }}
+            </a>
+            <a href="tel:+1{{ $contact['phone01_href'] }}" class="info phone">{{ $contact['phone01'] }}</a>
+            <a href="mailto:{{ $contact["email"] }}" class="info-email">{{ $contact["email"] }}</a>
+        </div>
+        <div class="footer__info-container">
+            <div class="opening">
+                <h3 class="info bold">{{ pll__("opening-hours") }}</h3>
+                <ul class="opening-list">
+                @foreach($contact['opening_list_' . $lang] as $day)
+                    <li class="opening-list__item">{{ $day['day'] }}&nbsp;&nbsp;{{ $day['time'] }}</li>
+                @endforeach
+                </ul>
+            </div>
+            <div class="socials">
+                <h3 class="socials__title bold mt-small">{{ pll__("follow-us") }} :</h3>
+                <div class="socials__wrapper">
+                    @include('components.socials')
+                </div>
+            </div>
+        </div>
 
+    </div>
 </div>

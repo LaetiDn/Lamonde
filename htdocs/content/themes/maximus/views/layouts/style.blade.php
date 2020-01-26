@@ -114,10 +114,13 @@
     .bottom-nav li:nth-child(even) {
         background-color: {{ get_field('footer_bottom_link_bg_color_mid','option') }};
     }
-
-    #footer p {
+    #footer .footer__info-container{
+        border-top-color: {{ get_field('footer_text_color','option') }};
+    }
+    #footer p, li, h3 {
         color: {{ get_field('footer_text_color','option') }};
     }
+
 
     .cta{
         color: {{ get_field('button_grp', 'option')['text_color'] }};
@@ -130,9 +133,7 @@
         background-color: {{ get_field('button_grp', 'option')['bg_color_transition'] }};
         border: 1px solid {{ get_field('button_grp', 'option')['border_color_transition'] }};
     }
-    .block-discover .cta {
-      /* background-color: {{ get_field('button_grp', 'option')['bg_color'] }}; */
-    }
+
     .block-discover .cta i{
         color: {{ get_field('button_grp', 'option')['text_color'] }};
         transition: all 0.6s ease;
@@ -152,7 +153,6 @@
     .slider-progress .progress {
         background: {{ get_field('span_grp','option')['color'] }};
     }
-
     .slick-prev:before{
         content: url("{{ get_field('hero','option')['arrow_left']['url'] }}")!important;
     }
