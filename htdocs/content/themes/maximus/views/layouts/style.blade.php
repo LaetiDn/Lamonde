@@ -292,7 +292,7 @@
         animation-timing-function: {{ $animation['prop_easing'] }};
 
         animation-fill-mode: forwards;
-        /*animation-iteration-count: infinite;*/
+
     }
 
     /* Content Container Animation  */

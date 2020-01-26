@@ -403,14 +403,12 @@ html {
   z-index: 50;
 }
 
-.animate .content-ctn,
-.animate .content-rect-text,
-.block-image-text.animate .txt {
+.sft,
+.sfr,
+.sfb,
+.sfl,
+.fadein {
   opacity: 0;
-}
-
-.block-image-text.animate .content-ctn {
-  opacity: 1;
 }
 
 .do-animation.sft {
@@ -2714,72 +2712,71 @@ header {
   position: relative;
 }
 
-.block-image-text .content-ctn {
+.block-image-text .content {
   max-width: none;
 }
 
 @media (min-width: 992px) {
-  .block-image-text .content-ctn {
+  .block-image-text .content {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 }
 
-.block-image-text .content-ctn.reverse {
-  -moz-flex-direction: row-reverse;
+.block-image-text .content.reverse {
   flex-direction: row-reverse;
 }
 
-.block-image-text .content-ctn > div {
-  flex-basis: 50%;
+.block-image-text .content > div {
+  flex: 0 1 50%;
 }
 
 @media (min-width: 992px) {
-  .block-image-text .content-ctn.image-75 {
+  .block-image-text .content.image-75 {
     text-align: right;
   }
 }
 
-.block-image-text .content-ctn.image-75 > div:first-of-type {
-  flex-basis: 60%;
+.block-image-text .content.image-75 > div:first-of-type {
+  flex: 0 1 60%;
 }
 
-.block-image-text .content-ctn.image-75 > div:last-of-type {
-  flex-basis: 40%;
+.block-image-text .content.image-75 > div:last-of-type {
+  flex: 0 1 40%;
 }
 
-.block-image-text .content-ctn.text-75 > div:first-of-type {
-  flex-basis: 40%;
+.block-image-text .content.text-75 > div:first-of-type {
+  flex: 0 1 40%;
 }
 
-.block-image-text .content-ctn.text-75 > div:last-of-type {
-  flex-basis: 60%;
+.block-image-text .content.text-75 > div:last-of-type {
+  flex: 0 1 60%;
 }
 
-.block-image-text .content-ctn .image-ctn {
+.block-image-text .content .image-ctn {
   height: 400px;
   width: 100%;
 }
 
 @media (min-width: 992px) {
-  .block-image-text .content-ctn .image-ctn {
+  .block-image-text .content .image-ctn {
     width: 50%;
-    height: 650px;
+    height: 500px;
   }
 }
 
-.block-image-text .content-ctn .wysywyg-ctn {
+.block-image-text .content .wysywyg-ctn {
   background-color: transparent;
 }
 
 @media (min-width: 992px) {
-  .block-image-text .content-ctn .wysywyg-ctn {
+  .block-image-text .content .wysywyg-ctn {
     padding: 0;
   }
 }
 
-.block-image-text .content-ctn .wysywyg-ctn .txt {
+.block-image-text .content .wysywyg-ctn .txt {
   padding: 5% 8%;
 }
 

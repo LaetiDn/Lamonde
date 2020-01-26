@@ -1,11 +1,8 @@
 
-.animate .content-ctn, .animate .content-rect-text, .block-image-text.animate .txt {
+.sft, .sfr, .sfb, .sfl, .fadein {
   opacity: 0;
 }
 
-.block-image-text.animate .content-ctn{
-  opacity:1;
-}
 
 .do-animation.sft{
   animation-name: sft;

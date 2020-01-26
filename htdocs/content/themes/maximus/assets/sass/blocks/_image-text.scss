@@ -1,52 +1,53 @@
 .block-image-text {
   position: relative;
-  .content-ctn {
+  .content {
     max-width:none;
-    @media(min-width: $screen-lg-min){
+    @include breakpoint(tab-landscape){
         display: flex;
         justify-content: space-between;
         align-items:center;
 
     }
     &.reverse {
-      @include flex-direction(row-reverse);
 
+      flex-direction: row-reverse;
     }
     &  > div {
-      @include flex-basis(50%);
+      flex: 0 1 50%;
     }
-    
+
     &.image-75 {
 
-      @media(min-width: $screen-lg-min){
+      @include breakpoint(tab-landscape){
         text-align: right;
       }
       & > div:first-of-type {
-        @include flex-basis(60%);
+        flex: 0 1 60%;
       }
       & > div:last-of-type {
-        @include flex-basis(40%);
+          flex: 0 1 40%;
       }
     }
     &.text-75 {
       & > div:first-of-type {
-        @include flex-basis(40%);
+        flex: 0 1 40%;
       }
       & > div:last-of-type {
-        @include flex-basis(60%);
+        flex: 0 1 60%;
       }
     }
     .image-ctn {
       height:400px;
       width:100%;
-      @media(min-width: $screen-lg-min){
+
+      @include breakpoint(tab-landscape){
         width:50%;
-        height:650px;
+        height:500px;
       }
     }
     .wysywyg-ctn {
       background-color: transparent;
-      @media(min-width: $screen-lg-min){
+      @include breakpoint(tab-landscape){
         padding:0;
       }
       .txt {

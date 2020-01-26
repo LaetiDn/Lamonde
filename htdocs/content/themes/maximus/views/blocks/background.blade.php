@@ -7,10 +7,12 @@
         <div class="block-background__title css-animation">
             <h2>{{ get_sub_field("title") }}</h2>
         </div>
-        @else
+        @elseif(get_sub_field('block_options') === 'bg-text' || get_sub_field('block_options') === 'bgColor-text')
         <div class="block-background__text css-animation {!! get_sub_field("animation") !!}" style="background-color: {{ get_sub_field('text_background_color') }}">
             {!! get_sub_field('text') !!}
         </div>
+        @else
+
         @endif
     </div>
 </section>
