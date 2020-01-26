@@ -1,7 +1,7 @@
 <section id="{{ get_sub_field('section_id') }}" class="block-background {{ get_sub_field('block_options') }} @if(get_sub_field("animation") != 'none'){{ 'animate' }}@endif">
     <div class="block-background__background content @if(get_sub_field('parallax')){{ 'is-parallax' }}@endif" style="background-image: url('{{ get_sub_field('background')['url'] }}'); background-color: {{ get_sub_field('background_color') }}">
 
-        <div class="block-background__overlay" style="background-color: {{ get_sub_field('overlay_color') }}; opacity: {{ get_sub_field('overlay_opacity') }}"></div>
+        <div class="is-overlay" style="background-color: {{ get_sub_field('overlay_color') }}; opacity: {{ get_sub_field('overlay_opacity') }}"></div>
 
         @if(get_sub_field('block_options') === 'bg-title' || get_sub_field('block_options') === 'bgColor-title')
         <div class="block-background__title css-animation">
