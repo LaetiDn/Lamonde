@@ -2754,29 +2754,84 @@ header {
   flex: 0 1 60%;
 }
 
-.block-image-text .content .image-ctn {
-  height: 400px;
+.block-image-text__slider {
+  position: relative;
+  height: 300px;
   width: 100%;
+  background-size: cover;
 }
 
 @media (min-width: 992px) {
-  .block-image-text .content .image-ctn {
+  .block-image-text__slider {
     width: 50%;
-    height: 500px;
+    height: 450px;
   }
 }
 
-.block-image-text .content .wysywyg-ctn {
-  background-color: transparent;
+.block-image-text__slider-slide {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 0.6s ease-out;
+}
+
+.block-image-text__slider-slide.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.block-image-text .carrousel-nav {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  width: 90%;
+}
+
+.block-image-text .carrousel-nav__menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.block-image-text .carrousel-nav__item {
+  position: relative;
+  list-style: none;
+  margin: 0 5px;
+}
+
+.block-image-text .carrousel-nav__button {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  opacity: 0.5;
+  border: none;
+  border-radius: 3px;
+}
+
+.block-image-text .carrousel-nav__item.active button {
+  opacity: 1;
+}
+
+.block-image-text__text {
+  height: 100%;
 }
 
 @media (min-width: 992px) {
-  .block-image-text .content .wysywyg-ctn {
+  .block-image-text__text {
     padding: 0;
   }
 }
 
-.block-image-text .content .wysywyg-ctn .txt {
+.block-image-text__text .txt {
   padding: 5% 8%;
 }
 

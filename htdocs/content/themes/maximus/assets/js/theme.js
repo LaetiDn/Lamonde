@@ -117,6 +117,12 @@
             $('.form-main-ctn').fadeIn(600);
         });
 
+        $("body").on("click", ".carrousel-nav__button", function (e) {
+            var index = $(this).data('index');
+            $(this).parent().addClass('active').siblings().removeClass('active');
+            $(this).parents('.image-ctn').find('.slide0' + index).addClass('active').siblings().removeClass('active');
+        });
+
     });
 }(jQuery));
 
