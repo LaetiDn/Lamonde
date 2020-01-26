@@ -48,13 +48,13 @@
             var name = $(this).parent().parent().parent().data('name');
             switch(name) {
               case 'text_color':
-                $('.button-preview .cta').css('color', color);
+                $('.button-preview .cta').not('.hover').css('color', color);
                 break;
               case 'bg_color':
-                $('.button-preview .cta').css('background-color', color);
+                $('.button-preview .cta').not('.hover').css('background-color', color);
                 break;
               case 'border_color':
-              $('.button-preview .cta').css('border-color', color);
+              $('.button-preview .cta').not('.hover').css('border-color', color);
               break;
               case 'text_color_transition':
                   $('.button-preview .cta').not('.default').css("color", color)
