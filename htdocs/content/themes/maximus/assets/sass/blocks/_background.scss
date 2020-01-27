@@ -9,7 +9,7 @@
         }
     }
 
-    .content {
+    &__background {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -48,6 +48,7 @@
     &__text {
         z-index: 2;
         width: 75%;
+        max-width:900px;
         padding: 40px 25px;
     }
 }
