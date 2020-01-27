@@ -14,7 +14,7 @@
         </div>
         <div class="footer__info-container">
             <div class="opening">
-                <h3 class="info bold">{{ pll__("opening-hours") }}</h3>
+                <h3 class="info bold">{{ pll__("_opening-hours") }}</h3>
                 <ul class="opening-list">
                 @foreach($contact['opening_list_' . $lang] as $day)
                     <li class="opening-list__item">{{ $day['day'] }}&nbsp;&nbsp;{{ $day['time'] }}</li>
@@ -22,12 +22,33 @@
                 </ul>
             </div>
             <div class="socials">
-                <h3 class="socials__title bold mt-small">{{ pll__("follow-us") }} :</h3>
+                <h3 class="socials__title bold mt-small">{{ pll__("_follow-us") }} :</h3>
                 <div class="socials__wrapper">
                     @include('components.socials')
                 </div>
             </div>
         </div>
-
     </div>
+    <div class="copyrights">
+        <span>{{ get_field('copyrights_' . $lang, 'option')}}</span>
+    </div>
+    @if(!empty(get_field('footer_cta_' . $lang, 'option')['url']))
+    <nav class="bottom-nav">
+        <ul class="menu">
+            @if(!empty(get_field('footer_cta', 'option')))
+            <li class="menu-item center">
+                <a href="{{ get_field('footer_cta_' . $lang, 'option')['url'] }}" target="{{ get_field('footer_cta_' . $lang, 'option')['target'] }}">
+                    <i class="icon fa fa-bell" aria-hidden="true"></i>{{ get_field('footer_cta_' . $lang, 'option')['title'] }}
+                </a>
+            </li>@endif
+            <li class="menu-item"><a href="tel:+1{{ $contact['phone01'] }}"><i class="icon fa fa-phone" aria-hidden="true"></i> {{ pll__('contact') }}</a></li>
+        </ul>
+    </nav>
+    @endif
+
+    @if(!empty(get_field('footer_cta_' . $lang, 'option')))
+    <div class="book-bottom @if(get_page_template_slug( get_the_ID() ) == "booking" || get_page_template_slug( get_the_ID() ) == "contact") {{ 'hideMe' }} @endif">
+        <a href="{{ get_field('footer_cta_' . $lang, 'option')['url'] }}" target="{{ get_field('footer_cta_' . $lang, 'option')['target'] }}">{{ get_field('footer_cta_' . $lang, 'option')['title'] }}</a>
+    </div>
+    @endif
 </div>

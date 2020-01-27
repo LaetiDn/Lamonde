@@ -210,60 +210,7 @@ if( function_exists('acf_add_local_field_group') ):
                 'append' => '',
                 'maxlength' => '',
             ),
-//            array(
-//                'key' => 'field_5b2185dd9dbbc',
-//                'label' => 'Heures d\'ouverture[FR]',
-//                'name' => 'contact_opening_fr',
-//                'type' => 'text',
-//                'instructions' => '',
-//                'required' => 0,
-//                'conditional_logic' => array(
-//                    array(
-//                        array(
-//                            'field' => 'field_5b2185dd9d211',
-//                            'operator' => '==',
-//                            'value' => 'Opening hours',
-//                        ),
-//                    ),
-//                ),
-//                'wrapper' => array(
-//                    'width' => '50',
-//                    'class' => '',
-//                    'id' => '',
-//                ),
-//                'default_value' => '',
-//                'placeholder' => '',
-//                'prepend' => '',
-//                'append' => '',
-//                'maxlength' => '',
-//            ),
-//            array(
-//                'key' => 'field_5b2185dd9dcdb',
-//                'label' => 'Opening hours[EN]',
-//                'name' => 'contact_opening_en',
-//                'type' => 'text',
-//                'instructions' => '',
-//                'required' => 0,
-//                'conditional_logic' => array(
-//                    array(
-//                        array(
-//                            'field' => 'field_5b2185dd9d211',
-//                            'operator' => '==',
-//                            'value' => 'Opening hours',
-//                        ),
-//                    ),
-//                ),
-//                'wrapper' => array(
-//                    'width' => '50',
-//                    'class' => '',
-//                    'id' => '',
-//                ),
-//                'default_value' => '',
-//                'placeholder' => '',
-//                'prepend' => '',
-//                'append' => '',
-//                'maxlength' => '',
-//            ),
+
             array(
                 'key' => 'field_5b2185dd9ddc0',
                 'label' => 'Heures d\'ouvertures[FR]',

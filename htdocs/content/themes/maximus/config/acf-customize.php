@@ -1,5 +1,5 @@
 <?php
-
+if( function_exists('acf_add_local_field_group') ):
 acf_add_local_field_group(array(
     'key' => 'group_5bf476dcd74ed',
     'title' => 'Customize',
@@ -1680,11 +1680,11 @@ acf_add_local_field_group(array(
                     'label' => 'Easing',
                     'name' => 'easing',
                     'type' => 'select',
-                    'instructions' => 'To visualize : https://easings.net/',
+                    'instructions' => 'https://easings.net/',
                     'required' => 0,
                     'conditional_logic' => 0,
                     'wrapper' => array(
-                        'width' => '50',
+                        'width' => '33',
                         'class' => '',
                         'id' => '',
                     ),
@@ -1693,7 +1693,7 @@ acf_add_local_field_group(array(
                         'ease' => 'Ease',
                         'ease-in' => 'Ease-in',
                         'ease-out' => 'Ease-out',
-                        'custom' => 'Custom',
+                        // 'custom' => 'Custom',
                     ),
                     'default_value' => array(
                     ),
@@ -1705,33 +1705,6 @@ acf_add_local_field_group(array(
                     'placeholder' => '',
                 ),
                 array(
-                    'key' => 'field_5d4201825ca48',
-                    'label' => 'Easing custom',
-                    'name' => 'easing_custom',
-                    'type' => 'text',
-                    'instructions' => 'https://easings.net/',
-                    'required' => 0,
-                    'conditional_logic' => array(
-                        array(
-                            array(
-                                'field' => 'field_5d4200ed5ca47',
-                                'operator' => '==',
-                                'value' => 'custom',
-                            ),
-                        ),
-                    ),
-                    'wrapper' => array(
-                        'width' => '50',
-                        'class' => '',
-                        'id' => '',
-                    ),
-                    'default_value' => '',
-                    'placeholder' => 'cubic-bezier(0.55, 0.085, 0.68, 0.53)',
-                    'prepend' => '',
-                    'append' => '',
-                    'maxlength' => '',
-                ),
-                array(
                     'key' => 'field_5d4200cf5ca46',
                     'label' => 'Duration',
                     'name' => 'duration',
@@ -1740,7 +1713,7 @@ acf_add_local_field_group(array(
                     'required' => 0,
                     'conditional_logic' => 0,
                     'wrapper' => array(
-                        'width' => '50',
+                        'width' => '33',
                         'class' => '',
                         'id' => '',
                     ),
@@ -1761,7 +1734,7 @@ acf_add_local_field_group(array(
                     'required' => 0,
                     'conditional_logic' => 0,
                     'wrapper' => array(
-                        'width' => '50',
+                        'width' => '33',
                         'class' => '',
                         'id' => '',
                     ),
@@ -1796,3 +1769,5 @@ acf_add_local_field_group(array(
     'active' => 1,
     'description' => '',
 ));
+
+endif;

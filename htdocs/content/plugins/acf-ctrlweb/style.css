@@ -173,28 +173,32 @@ div.mce-toolbar-grp {
 }
 
 
-
+/* CUSTOMIZER ANIMATION  */
 .do-animation {
     height:200px;
 }
-.do-animation.sfb h1{
-    animation:sfb 2s linear infinite;
+.do-animation h1{
+    animation-iteration-count: infinite;
 }
-.do-animation.sft h1{
-    animation:sft 2s linear infinite;
+.sfb h1{
+    animation-name:sfb;
 }
-
-.do-animation.sfr h1{
-    animation:sfr 2s linear infinite;
-
-}
-.do-animation.sfl h1{
-    animation:sfl 2s linear infinite;
+.sft h1{
+    animation-name:sft;
 }
 
-.do-animation.fadein h1{
-    animation:fadeIn 2s linear infinite;
+.sfr h1{
+    animation-name:sfr;
+
 }
+.sfl h1{
+    animation-name:sfl;
+}
+
+.fadein h1{
+    animation-name:fadeIn;
+}
+
 
 @keyframes sfb {
     from {

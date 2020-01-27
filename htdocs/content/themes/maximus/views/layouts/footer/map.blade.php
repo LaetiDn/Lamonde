@@ -50,25 +50,3 @@
     </div>
     <a href="{{ $mapLoc }}" class="map-link" target="_blank"></a>
 </div>
-
-@if(!empty(get_field('footer_cta_' . $lang, 'option')['url']))
-<nav class="bottom-nav">
-
-    <ul class="menu">
-        {{--<li class="menu-item"><a href="{{ $mapLoc }}" target="_blank"><i class="icon fa fa-map-marker" aria-hidden="true"></i> {{ pll__('direction') }}</a></li>--}}
-        @if(!empty(get_field('footer_cta', 'option')))
-        <li class="menu-item center">
-            <a href="{{ get_field('footer_cta_' . $lang, 'option')['url'] }}" target="{{ get_field('footer_cta_' . $lang, 'option')['target'] }}">
-                <i class="icon fa fa-bell" aria-hidden="true"></i>{{ get_field('footer_cta_' . $lang, 'option')['title'] }}
-            </a>
-        </li>@endif
-        <li class="menu-item"><a href="tel:+1{{ $contact['phone01'] }}"><i class="icon fa fa-phone" aria-hidden="true"></i> {{ pll__('contact') }}</a></li>
-    </ul>
-</nav>
-@endif
-
-@if(!empty(get_field('footer_cta_' . $lang, 'option')))
-<div class="book-bottom @if(get_page_template_slug( get_the_ID() ) == "booking" || get_page_template_slug( get_the_ID() ) == "contact") {{ 'hideMe' }} @endif">
-    <a href="{{ get_field('footer_cta_' . $lang, 'option')['url'] }}" target="{{ get_field('footer_cta_' . $lang, 'option')['target'] }}">{{ get_field('footer_cta_' . $lang, 'option')['title'] }}</a>
-</div>
-@endif

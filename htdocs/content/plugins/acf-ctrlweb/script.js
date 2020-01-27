@@ -2,7 +2,6 @@
     $(document).ready(function() {
 
         $('body').on('click', '.preview-animation .acf-input .play', function (e) {
-            console.log('click');
             e.preventDefault();
             var time = $(this).data('time');
             $(this).parents('.acf-input').toggleClass('play');
@@ -13,8 +12,20 @@
         });
 
 
+        var duration = $("*[data-name='duration'] input").val();
+        var easing = $("*[data-name='easing'] select").val();
+        var delay = $("*[data-name='delay'] input").val();
+
+        $('.do-animation h1').each(function( index ) {
+            $(this).css({
+                'animation-duration' : duration+'s',
+                'animation-timing-function' : easing,
+                'animation-delay' : delay+'s',
+            })
+        });
+
         $("*[data-name='button_grp'] .acf-color-picker input").each(function( index ) {
-            console.log(index);
+
             var color = $(this).val();
             var name = $(this).parent().parent().parent().data('name');
             switch(name) {
@@ -43,7 +54,7 @@
         });
 
 
-        $( ".acf-color-picker input" ).change(function() {
+        $( "*[data-name='button_grp'] .acf-color-picker input" ).change(function() {
             var color = $(this).val();
             var name = $(this).parent().parent().parent().data('name');
             switch(name) {

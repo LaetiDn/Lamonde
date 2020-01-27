@@ -39,7 +39,7 @@ class PageController extends Controller
     }
     public function single_news()
     {
-        return view('templates.single-news', $this->defaultContent, [
+        return view('singles.single-news', $this->defaultContent, [
             'single_news' => Post::get_single_news(get_the_ID()),
         ]);
     }
