@@ -20,7 +20,7 @@
             </div>
         @endif
 
-        <div class="block-image-text__text wysywyg-ctn section-content">
+        <div class="block-image-text__text">
             <div class="txt css-animation {!! get_sub_field("animation")!!}">
                 {!! get_sub_field('text') !!}
             </div>

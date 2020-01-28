@@ -9,14 +9,11 @@
                 @if( get_row_layout() == 'block_discover' )
                     @include ("blocks.discover")
 
-                @elseif( get_row_layout() == 'block_background_title' )
-                    @include ("blocks.background-title")
 
                 @elseif( get_row_layout() == 'block_background' )
                     @include ("blocks.background")
 
-                @elseif( get_row_layout() == 'block_background_text' )
-                    @include ("blocks.background-text")
+                
 
                 @elseif( get_row_layout() == 'block_logo_text' )
                     @include ("blocks.logo-text")
@@ -42,5 +39,5 @@
 
             @endwhile
         @endif
-    
+
 @endsection

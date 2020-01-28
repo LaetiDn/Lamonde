@@ -21,11 +21,18 @@
 @import "components/socials";
 
 //PAGES
-//@import "pages/home";
 @import "pages/menu";
+@import "pages/contact";
 @import "pages/news";
 //@import "pages/gallery";
-@import "pages/contact";
+//@import "pages/home";
+
+//ARCHIVES
+
+//SINGLES
+@import "singles/news";
+
+
 
 //PAGE LOADER
 @import "page-loader/page-loader";

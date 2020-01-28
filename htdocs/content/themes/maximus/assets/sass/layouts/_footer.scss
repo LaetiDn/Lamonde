@@ -88,10 +88,12 @@
 
     i {
       display: block;
+      font-size: 14px;
+      margin-right: 8px;
       @media (min-width: 400px) {
         display: inline-block;
       }
-      font-size: 14px;
+
     }
 
   }
