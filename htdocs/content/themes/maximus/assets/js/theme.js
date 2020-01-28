@@ -8,11 +8,11 @@
         //Force trigger animations when loading page
         $(window).scrollTop($(window).scrollTop()+1);
 
-        // if(screenWidth <= 1200) {
-        //     $('body').addClass('in-mobile');
-        // }else {
-        //     $('body').removeClass('in-mobile');
-        // }
+        if(screenWidth <= 992) {
+            $('body').addClass('width-mobile');
+        }else {
+            $('body').removeClass('width-mobile');
+        }
 
         function isMobileDevice() {
             return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
@@ -23,15 +23,15 @@
             $('body').addClass('is-mobile');
         }
 
-        // $( window ).resize(function() {
-        //     var screenWidth = $( window ).width();
-        //     if(screenWidth <= 1200) {
-        //         $('body').addClass('in-mobile');
-        //     }else {
-        //         $('body').removeClass('in-mobile');
-        //     }
-        //
-        // });
+        $( window ).resize(function() {
+            var screenWidth = $( window ).width();
+            if(screenWidth <= 992) {
+                $('body').addClass('width-mobile');
+            }else {
+                $('body').removeClass('width-mobile');
+            }
+
+        });
 
         //Pour le page loader?
         var pageLoader = $('.loader');
@@ -68,7 +68,7 @@
 
         //Ouvre le sous menu quand on click sur un lien parent
         $('.menu-item-has-children').on('click', function () {
-            if( $('body').hasClass('is-mobile') ){
+            if( $('body').hasClass('width-mobile') ){
                 $(this).find('.sub-menu').toggleClass('open-menu');
             }
         });
