@@ -7,6 +7,7 @@
             {{
                 wp_nav_menu(
                 [
+                    'menu' => 'main-nav-' . pll_current_language(),
                     'theme_location' => 'primary',
                     'container' => false,
                     'walker'         => new Aria_Walker_Nav_Menu(),
