@@ -14,11 +14,13 @@
 
 //LAYOUTS
 @import "layouts/header";
+@import "layouts/hero";
 @import "layouts/footer";
 @import "layouts/form";
 
 //COMPONENTS
 @import "components/socials";
+@import "components/menu-btn";
 
 //PAGES
 @import "pages/menu";
