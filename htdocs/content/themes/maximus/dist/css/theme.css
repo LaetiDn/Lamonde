@@ -635,7 +635,7 @@ html {
   transition: all 0.6s ease;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .header {
     height: 72px;
   }
@@ -644,6 +644,11 @@ html {
 .header.open {
   height: 100vh;
   opacity: 0.9 !important;
+}
+
+.header__logo {
+  position: relative;
+  z-index: 2;
 }
 
 .header__top-bar {
@@ -711,22 +716,11 @@ html {
 
 @media (min-width: 992px) {
   .site-navigation .menu {
+    height: 72px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex: 0 1 100%;
-  }
-}
-
-@media (min-width: 768px) {
-  .site-navigation .menu a {
-    font-size: 24px;
-  }
-}
-
-@media (min-width: 992px) {
-  .site-navigation .menu a {
-    font-size: 16px;
   }
 }
 
@@ -757,14 +751,12 @@ html {
   }
 }
 
-.site-navigation .menu .lang-item a {
-  margin-top: 6px;
+.site-navigation .menu .lang-item:before {
+  display: none;
 }
 
-@media (min-width: 768px) {
-  .site-navigation .menu .lang-item a {
-    margin-top: 8px;
-  }
+.site-navigation .menu .lang-item a {
+  padding: 0;
 }
 
 .site-navigation .menu-item {
@@ -787,7 +779,7 @@ html {
 }
 
 .site-navigation .menu-item.current-menu-item:before {
-  bottom: -5px;
+  bottom: 15px;
   width: 100%;
 }
 
@@ -798,18 +790,34 @@ html {
     position: absolute;
     width: 0;
     height: 2px;
-    bottom: -5px;
+    bottom: 15px;
     transition: width 0.6s ease;
   }
 
   .site-navigation .menu-item:hover:before {
-    bottom: -5px;
+    bottom: 15px;
     width: 100%;
   }
 }
 
 .site-navigation .menu-item a {
+  margin-top: 6px;
   display: block;
+}
+
+@media (min-width: 768px) {
+  .site-navigation .menu-item a {
+    font-size: 24px;
+    margin-top: 8px;
+  }
+}
+
+@media (min-width: 992px) {
+  .site-navigation .menu-item a {
+    font-size: 16px;
+    display: block;
+    padding: 20px 0;
+  }
 }
 
 .menu .menu-item-has-children {
@@ -854,7 +862,6 @@ html {
   overflow: hidden;
   padding: 0;
   z-index: 10;
-  transition: opacity 0.2s ease;
 }
 
 @media (min-width: 992px) {
@@ -876,7 +883,6 @@ html {
   .menu .sub-menu:hover {
     visibility: visible !important;
     opacity: 1 !important;
-    max-height: 100px !important;
   }
 }
 
