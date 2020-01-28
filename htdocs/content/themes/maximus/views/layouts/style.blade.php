@@ -79,22 +79,27 @@
         color: {{ get_field('menu_grp','option')['color_hover'] }}!important;
     }
 
-    .menu .current-menu-item a {
+    .site-navigation .menu .current-menu-item a {
         color: {{ get_field('menu_grp','option')['color_hover'] }}!important;
     }
-    .menu .menu-item:before {
+    .site-navigation .menu .menu-item:before {
         background-color: {{ get_field('menu_grp','option')['color_hover'] }}!important;
     }
 
-    .menu .sub-menu .menu-item:first-of-type{
+    .site-navigation .menu .sub-menu .menu-item:first-of-type{
         border-top-color:{{ get_field('span_grp','option')['color'] }}!important;
     }
-    .menu .sub-menu .menu-item:last-of-type{
+    .site-navigation .menu .sub-menu .menu-item:last-of-type{
         border-bottom-color:{{ get_field('span_grp','option')['color'] }}!important;
     }
-    .menu-item-has-children a:after {
+    .site-navigation .menu-item-has-children a:after {
         border:1px solid {{ get_field('link_grp','option')['color'] }};
     }
+    .site-navigation .menu .sub-menu {
+        background-color:{{ get_field("menu_grp", "option")["top_bar_color"] }};
+        opacity: {{ get_field("menu_grp", "option")["top_bar_opacity"] }}
+    }
+
 
 
     /* SPANS */

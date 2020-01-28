@@ -854,7 +854,7 @@ html {
   overflow: hidden;
   padding: 0;
   z-index: 10;
-  transition: all 0.6s linear;
+  transition: opacity 0.2s ease;
 }
 
 @media (min-width: 992px) {
@@ -865,9 +865,9 @@ html {
     visibility: hidden;
     opacity: 0;
     left: -15px;
-    top: 65px;
+    top: 48px;
     min-width: 270px;
-    padding: 25px 0;
+    padding: 12px 0;
     border-bottom: none;
   }
 }
@@ -899,7 +899,6 @@ html {
 .menu .sub-menu .menu-item a {
   padding: 10px;
   border-bottom: none;
-  transition: all 0.3s ease;
 }
 
 .menu .sub-menu .menu-item a:after {
