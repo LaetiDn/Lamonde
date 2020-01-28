@@ -52,8 +52,17 @@
 
         $('#menu-btn').on('click', function () {
             $(this).toggleClass('open');
-            $('.main-nav-outer').toggleClass('open-nav');
-            $('html, body').toggleClass('body-no-overflow');;
+            if($('.header').hasClass('open')){
+                setTimeout(function(){
+                    $('.header').removeClass('open');
+                }, 400);
+                $('.site-navigation').removeClass('show');
+            }else{
+                $('.header').addClass('open');
+                $('.site-navigation').addClass('show');
+            }
+
+            $('html, body').toggleClass('body-no-overflow');
         });
 
 

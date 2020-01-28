@@ -71,11 +71,11 @@
         font-size: {{ get_field('link_grp','option')['fz_phone'] }}px;
     }
 
-    .nav .menu-item a {
+    .site-navigation .menu-item a {
         color: {{ get_field('menu_grp','option')['color'] }}!important;
     }
 
-    .nav .menu-item:hover > a,  a:not(.cta):focus, a:not(.cta):hover {
+    .site-navigation .menu-item:hover > a,  a:not(.cta):focus, a:not(.cta):hover {
         color: {{ get_field('menu_grp','option')['color_hover'] }}!important;
     }
 
@@ -165,7 +165,7 @@
     .icon {
         color: {{ get_field('span_grp','option')['color'] }};
     }
-    .lang {
+    .lang-item {
         border:1px solid {{ get_field('span_grp','option')['color'] }};
     }
 

@@ -1,0 +1,103 @@
+.hero {
+  height:100vh;
+  position: relative;
+
+  .overlay {
+
+    position: absolute;
+    left:0;
+    top:0;
+    z-index: 10;
+    width:100%;
+    height:100%;
+
+  }
+
+  .big-logo {
+    width: 160px;
+    @include center-img(50%, 50%);
+    z-index: 11;
+
+
+
+    @include breakpoint(tab-portrait) {
+      width:34%;
+      max-width:550px;
+    }
+  }
+  .slide {
+    height:100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+  }
+
+
+  .slick-arrow{
+    z-index: 50;
+    width:35px;
+    @include breakpoint(tab-portrait) {
+      max-width:60px;
+      width:20%;
+    }
+  }
+  .slick-prev {
+    left:20px;
+    @include breakpoint(tab-portrait) {
+      left:6%;
+    }
+  }
+  .slick-next {
+    right:20px;
+    @include breakpoint(tab-portrait) {
+      right:6%;
+    }
+  }
+
+}
+
+.hero.page {
+  height: 60vh;
+  @media(min-width: $screen-lg-min){
+      min-height:500px;
+  }
+  .bg-img {
+
+    position: relative;
+    height:100%;
+    width:100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    h1 {
+      @include center-img(50%, 50%);
+    }
+  }
+}
+
+
+
+.slider-progress {
+  position: absolute;
+  bottom:0;
+  width: 100%;
+  height: 3px;
+  background: transparent;
+}
+.slider-progress .progress {
+  width: 0%;
+  height: 3px;
+}
+
+.content-logo {
+  display: none;
+  @include breakpoint(tab-portrait) {
+    display: block;
+  }
+  text-align: center;
+  margin-bottom: 40px;
+  img {
+    width:40px;
+  }
+}

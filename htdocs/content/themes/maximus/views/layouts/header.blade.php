@@ -1,6 +1,7 @@
-<header id="header">
-    @include('layouts.header.main-nav')
+<header id="header" class="header" style="background-color: {{ get_field("menu_grp", "option")["top_bar_color"] }}; opacity: {{ get_field("menu_grp", "option")["top_bar_opacity"] }}">
+    @include('layouts.header.site-navigation')
 </header>
+
 @if(!is_single())
 <div id="hero" class="hero @if(!get_field("use_a_slider", get_the_ID())){{ 'page' }} @endif">
     <div class="overlay"></div>

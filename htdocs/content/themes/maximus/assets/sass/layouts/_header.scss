@@ -1,437 +1,298 @@
-header {
+.header {
     position: fixed;
-    height:60px;
-    width:100%;
-    left:0;
-    top:0;
-    z-index:100;
-    transition: all .6s ease;
-    @include breakpoint(desktop){
-      height:80px;
-    }
-}
-
-
-  .top-bar-inner {
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top:10px;
-    padding-bottom:10px;
-    position: relative;
-    @include breakpoint(desktop){
-      padding-top:20px;
-      padding-bottom:20px;
-    }
-
-  }
-
-  .bg-color {
-    position: absolute;
-    left:0;
-    top:0;
-    width:100%;
-    height:100%;
-    z-index: 1;
-  }
-
-  .logo-ctn {
-    display: none;
-    z-index: 5;
-    max-height:50px;
-    a {
-      display: block;
-      position:relative;
-      height: 100%;
-
-    }
-    .logo {
-      width:100%;
-    }
-  }
-
-
-
-.lang {
-  position: relative;
-  z-index: 2;
-  width:35px;
-  height:35px;
-
-  border-radius:50%;
-  &.desktop {
-    display: none;
-    @include breakpoint(desktop){
-      display: block;
-    }
-  }
-  li {
-    list-style: none;
-    width:100%;
-    height:100%;
-    position: relative;
-
-  }
-  a {
-    padding:10px;
-    @include center-element(50%, 50%);
-    color:white;
-    display: block;
-    font-size: 12px;
-    text-decoration: none;
-    text-transform: uppercase;
-
-  }
-  @include breakpoint(desktop) {
-    position: absolute;
-    right:15px;
-
-  }
-
-}
-
-
-.nav {
-  position: absolute;
-  left:-2000px;
-  top:100px;
-  z-index: 100;
-  width:100%;
-  text-align: center;
-  transition: left 0.6s ease;
-
-
-  @include breakpoint(tab-landscape) {
-    display:flex;
-    position: relative;
-    left:auto;
-    top:auto;
-  }
-
-  .nav-wrapper {
-    position: relative;
+    height: 60px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    transition: all 0.6s ease;
     @include breakpoint(tab-landscape) {
+        height: 72px;
+    }
+    &.open {
+        height:100vh;
+        opacity:.9!important;
+        .header__top-bar{
 
-      display:flex;
-      justify-content: center;
-      align-items: center;
-      flex: 0 1 100%;
+        }
+    }
 
+    &__top-bar {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 72px;
+        z-index: 2;
+
+        .menu-btn-ctn {
+            position: absolute;
+            right:0;
+            top:50%;
+            backface-visibility: hidden;
+            padding: 12px 24px 12px;
+            transform: translateY(-50%);
+            z-index: 2;
+            @include breakpoint(tab-landscape){
+                display: none;
+            }
+        }
+    }
+}
+
+
+.site-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: -2000px;
+    top:0;
+    z-index: 100;
+    width: 100%;
+    height:100vh;
+
+    text-align: center;
+    transition: opacity 0.6s ease;
+    z-index: 1;
+    opacity:0;
+    &.show {
+        left:0;
+        opacity:1;
+    }
+    @include breakpoint(tab-landscape) {
+        height:auto;
+        opacity:1;
+
+        display: flex;
+        position: relative;
+        left: auto;
+        top: auto;
 
     }
-    .bg-color {
-      display: none;
-      position: absolute;
-      left:0;
-      top:0;
-      width:100%;
-      height:100%;
-      z-index: 1;
-      @media(min-width: $screen-lg-min){
-          display: block;
-      }
-    }
+
 
     .menu {
         position: relative;
         z-index: 2;
-      @include breakpoint(tab-landscape) {
-        display:flex;
-        @include flex-basis(80%);
-        @include justify-content(center);
-      }
-
-      a {
-        @include breakpoint(tab-portrait) {
-           font-size: 2rem;
-        }
         @include breakpoint(tab-landscape) {
-          font-size: 1rem;
-
-        }
-    }
-
-    }
-    .logo-ctn {
-      display: none;
-      z-index: 2;
-      @include breakpoint(tab-landscape) {
-        display: block;
-        position: absolute;
-        left:30px;
-        top:16px;
-        a {
-          display: block;
-          position:relative;
-          height: 100%;
-        }
-        img {
-          width:100%;
-        }
-      }
-
-    }
-  }
-  .menu-item {
-    padding:10px 0;
-    list-style: none;
-    position: relative;
-    cursor: pointer;
-    @include breakpoint(tab-landscape) {
-      padding:25px 0;
-      margin: 0 20px;
-    }
-    @media (min-width: $screen-xxl-min) {
-      margin: 0 35px;
-    }
-
-    &.current-menu-item  {
-      &:before {
-        bottom:15px;
-        width:100%;
-      }
-    }
-    @include breakpoint(tab-landscape) {
-      &:before {
-        content:"";
-        display: block;
-        position: absolute;
-        width: 0;
-        height: 2px;
-        bottom:15px;
-        transition:width 0.6s ease;
-
-      }
-      &:hover:before {
-        bottom:15px;
-        width:100%;
-      }
-    }
-    a {
-      display: block;
-    }
-
-  }
-
-  .nav-logo {
-    .logo {
-      display: none;
-      margin:auto;
-    }
-  }
-
-  .link-reservation {
-    font-weight: 700;
-  }
-}
-
-.open-nav {
-  z-index:100;
-  height:100vh;
-  transition: height 0.8s ease;
-
-  .top-bar-outer {
-    background-color: rgba(0, 0, 0, 0);
-  }
-  .logo-ctn {
-    display: block;
-    @include center-element(50%, 50%);
-    .logo {
-      display: block;
-    }
-  }
-
-  .nav {
-    left: 0!important;
-  }
-}
-.moveIn {
-  animation: moveIn 0.6s ease forwards;
-}
-.moveOut {
-  animation: moveOut 0.6s ease forwards;
-}
-.sticky {
-
-  position: fixed;
-  top:0;
-  left:0;
-  width:100%;
-  animation: moveIn 0.6s ease forwards;
-
-
-  .top-bar-outer {
-    opacity:1!important;
-    box-shadow: 0px, 2px, 12px, 0px, rgba(0,0,0,0.2);
-
-  }
-  .bg-color {
-    opacity:1!important;
-  }
-
-  .nav {
-    @include breakpoint(tab-landscape) {
-
-      box-shadow: 0px, 2px, 12px, 0px, rgba(0,0,0,0.2);
-      .nav-logo {
-        display: block;
-
-      }
-      .menu-item {
-
-        @include breakpoint(tab-landscape) {
-          margin:0 20px;
-        }
-        @include breakpoint(desktop-large){
-            margin:0 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex:0 1 100%;
         }
         a {
-            transition: color .25s ease;
-
+            @include breakpoint(tab-portrait) {
+                font-size: 24px;
+            }
+            @include breakpoint(tab-landscape) {
+                font-size: 16px;
+            }
         }
-      }
-    }
-  }
+        .lang-item {
+            display: inline-block;
+            border-radius:50%;
+            padding:0;
+            width:35px;
+            height:35px;
+            margin-top: 12px;
+            @include breakpoint(tab-portrait){
+                width:55px;
+                height:55px;
+                margin-top: 18px;
+            }
+            @include breakpoint(tab-landscape){
+                margin: 0;
+                width:45px;
+                height:45px;
+                position: absolute;
+                right:0;
 
-  .menu-main-nav-left-container, .menu-main-nav-left-en-container {
-    @include breakpoint(tab-landscape) {
-      margin-right:0!important;
+            }
+            a {
+                margin-top: 6px;
+                @include breakpoint(tab-portrait){
+                    margin-top: 8px;
+                }
+            }
+        }
     }
 
-  }
 
+    .menu-item {
+        padding: 10px 0;
+        list-style: none;
+        position: relative;
 
-  .logo-ctn {
-    display: block;
-    .logo.black {
-      display: block;
-      max-width:70px;
+        @include breakpoint(tab-portrait){
+            padding: 20px 0;
+        }
+        @include breakpoint(tab-landscape) {
+            padding: 0;
+            margin: 0 20px;
+        }
+
+        &.current-menu-item {
+            &:before {
+                bottom: -5px;
+                width: 100%;
+            }
+        }
+        @include breakpoint(tab-landscape) {
+            &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 0;
+                height: 2px;
+                bottom: -5px;
+                transition: width 0.6s ease;
+            }
+
+            &:hover:before {
+                bottom: -5px;
+                width: 100%;
+            }
+        }
+
+        a {
+            display: block;
+        }
     }
-    .logo.white {
-      display: none;
-    }
-  }
 
 }
+//
+// .moveIn {
+//     animation: moveIn 0.6s ease forwards;
+// }
+//
+// .moveOut {
+//     animation: moveOut 0.6s ease forwards;
+// }
+
 
 .menu {
+    .menu-item-has-children {
+        display: block;
+        position: relative;
 
-  .menu-item-has-children {
-    display: block;
-    position: relative;
-
-    & a:after {
-      content:"+";
-      position: absolute;
-      right:15%;
-      border-radius: 50%;
-      padding:2px 5px;
-
-      @include breakpoint(tab-landscape) {
-        display: none!important;
-
-      }
-
-    }
-    &:hover > .sub-menu {
-
-      @include breakpoint(tab-landscape) {
-        visibility: visible!important;
-        opacity: 1!important;
-        max-height: 1000px!important;
-      }
-
-    }
-  }
-
-  .sub-menu {
-    max-height:0;
-    overflow: hidden;
-    padding:0;
-    z-index: 10000;
-    transition: all 0.6s ease;
-
-
-    @include breakpoint(tab-landscape) {
-      //background-color: rgba(0,0,0,.6);
-      max-height:none;
-      overflow: visible;
-      position: absolute;
-      visibility: hidden;
-      opacity: 0;
-      left: -15px;
-      top: 65px;
-      min-width: 270px;
-      padding: 25px 0;
-      border-bottom: none;
-    }
-
-    &:hover {
-      @include breakpoint(tab-landscape) {
-        visibility: visible!important;
-        opacity: 1!important;
-        max-height: 1000px!important;
-      }
-    }
-    &:hover + a {
-
-    }
-    .menu-item {
-      padding:10px;
-      &:before {
-        display: none;
-      }
-      @include breakpoint(tab-landscape) {
-        text-align: left;
-        padding-left:30px;
-        margin:0;
-      }
-
-      &:after {
-        content:"";
-      }
-
-      a {
-        padding:0;
-        border-bottom: none;
-        transition: all 0.3s ease;
-        &:after {
-          display: none!important;
+        & a:after {
+            content: "+";
+            position: absolute;
+            right: -40px;
+            border-radius: 50%;
+            width:25px;
+            height:25px;
+            padding-top: 1px;
+            @include breakpoint(tab-portrait){
+                width:35px;
+                height:35px;
+                padding-top: 0;
+            }
+            @include breakpoint(tab-landscape) {
+                display: none!important;
+            }
         }
-      }
-    }
-    .menu-item {
-        transition: opacity .3s ease;
 
-    }
-    .menu-item:first-of-type {
-      @include breakpoint(tab-landscape) {
-        margin-top:0;
-        border:none!important;
-      }
-    }
-    .menu-item:last-of-type {
-      @include breakpoint(tab-landscape) {
-        border:none!important;
-      }
+        &:hover > .sub-menu {
+            @include breakpoint(tab-landscape) {
+                visibility: visible!important;
+                opacity: 1!important;
+                max-height: 1000px!important;
+            }
+        }
     }
 
-  }
+    .sub-menu {
+        max-height: 0;
+        overflow: hidden;
+        padding: 0;
+        z-index: 10;
+        transition: all 0.6s linear;
+        @include breakpoint(tab-landscape) {
+            max-height: none;
+            overflow: visible;
+            position: absolute;
+            visibility: hidden;
+            opacity: 0;
+            left: -15px;
+            top: 65px;
+            min-width: 270px;
+            padding: 25px 0;
+            border-bottom: none;
+        }
+
+        &:hover {
+            @include breakpoint(tab-landscape) {
+                visibility: visible!important;
+                opacity: 1!important;
+                max-height: 100px!important;
+            }
+        }
+
+
+
+        .menu-item {
+
+
+            &:before {
+                display: none;
+            }
+            @include breakpoint(tab-landscape) {
+                text-align: left;
+                padding-left: 30px;
+                margin: 0;
+            }
+
+            &:after {
+                content: "";
+            }
+
+            a {
+                padding: 10px;
+                border-bottom: none;
+                transition: all 0.3s ease;
+
+                &:after {
+                    display: none!important;
+                }
+            }
+        }
+
+        .menu-item {
+            transition: opacity 0.3s ease;
+        }
+
+        .menu-item:first-of-type {
+            @include breakpoint(tab-landscape) {
+                margin-top: 0;
+                border: none!important;
+            }
+        }
+
+        .menu-item:last-of-type {
+            @include breakpoint(tab-landscape) {
+                border: none!important;
+            }
+        }
+    }
 }
 
-
 .open-sub-menu {
-  max-height:1000px!important;
-  opacity:1!important;
-  visibility: visible!important;
-  margin-top:15px;
-  .menu-item {
+    max-height: 1000px!important;
     opacity: 1!important;
-  }
-  .menu-item:first-of-type {
-    border-top: 1px solid transparent;
-  }
-  .menu-item:last-of-type {
-    border-bottom: 1px solid transparent;
-  }
+    visibility: visible!important;
+    margin-top: 15px;
+
+    .menu-item {
+        opacity: 1!important;
+    }
+
+    .menu-item:first-of-type {
+        border-top: 1px solid transparent;
+    }
+
+    .menu-item:last-of-type {
+        border-bottom: 1px solid transparent;
+    }
 }

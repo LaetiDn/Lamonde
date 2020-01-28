@@ -1,6 +1,9 @@
 @extends('master')
 
 @section('main')
+    <?php
+use Illuminate\Support\Str;
+?>
     <section id="news-content">
         <div class="news-inner">
             @foreach($news as $single_news)
@@ -10,7 +13,8 @@
                             <span class="date">{!! $single_news->date !!}</span>
                             <h2><a href="{{ the_permalink($single_news->ID) }}">{!! $single_news->post_title !!}</a></h2>
                             <div class="excerpt">
-                                {{ get_excerpt($single_news->content) }}
+                                
+                                {!! Str::limit($single_news->content, 150) !!}
                             </div>
                             <a href="{{ the_permalink($single_news->ID) }}" class="link">{!! pll__('_read-more') !!}</a>
 
