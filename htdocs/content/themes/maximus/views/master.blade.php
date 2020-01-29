@@ -18,6 +18,7 @@
 	{{--@if( function_exists('acf_add_options_page') )--}}
 		{{--<script>{{ get_field('add_script_body') }}</script>--}}
 	{{--@endif--}}
+        @include('page-loader.page-loader')
         <div id="page" class="site">
 
 			@if(!is_404())

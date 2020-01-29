@@ -37,9 +37,9 @@
         var pageLoader = $('.loader');
         if(pageLoader.length) {
             var time = pageLoader.data('time');
-            $('body').addClass('overflow-hidden');
+            $('body').addClass('body-no-overflow');
             setTimeout(function(){
-                $('body').removeClass('overflow-hidden');
+                $('body').removeClass('body-no-overflow');
                 pageLoader.remove();
             }, time);
         }

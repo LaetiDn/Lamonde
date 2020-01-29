@@ -24,8 +24,8 @@ if( function_exists('acf_add_local_field_group') ):
                     'false' => 'Inactive',
                     'default' => 'Default',
                     'split' => 'Split',
-                    'text-clip' => 'Text Clip',
-                    'fill' => 'Logo fill',
+                    // 'text-clip' => 'Text Clip',
+                    // 'fill' => 'Logo fill',
                 ),
                 'default_value' => array(
                 ),
@@ -139,7 +139,7 @@ if( function_exists('acf_add_local_field_group') ):
                     ),
                 ),
                 'wrapper' => array(
-                    'width' => '50',
+                    'width' => '33',
                     'class' => '',
                     'id' => '',
                 ),
@@ -227,7 +227,7 @@ if( function_exists('acf_add_local_field_group') ):
                 'required' => 0,
                 'conditional_logic' => 0,
                 'wrapper' => array(
-                    'width' => '50',
+                    'width' => '33',
                     'class' => '',
                     'id' => '',
                 ),
@@ -252,7 +252,7 @@ if( function_exists('acf_add_local_field_group') ):
                 'required' => 0,
                 'conditional_logic' => 0,
                 'wrapper' => array(
-                    'width' => '50',
+                    'width' => '33',
                     'class' => '',
                     'id' => '',
                 ),
@@ -308,7 +308,7 @@ if( function_exists('acf_add_local_field_group') ):
                 'required' => 0,
                 'conditional_logic' => 0,
                 'wrapper' => array(
-                    'width' => '75',
+                    'width' => '50',
                     'class' => '',
                     'id' => '',
                 ),
@@ -328,7 +328,7 @@ if( function_exists('acf_add_local_field_group') ):
                 'required' => 0,
                 'conditional_logic' => 0,
                 'wrapper' => array(
-                    'width' => '25',
+                    'width' => '50',
                     'class' => '',
                     'id' => '',
                 ),
