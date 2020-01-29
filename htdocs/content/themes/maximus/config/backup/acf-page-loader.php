@@ -61,7 +61,7 @@ if( function_exists('acf_add_local_field_group') ):
 <div class="loader default css-animation-step2" style="background-color: grey;" >
 
 		<div class="logo-wrapper css-animation-step1 ">
-		        
+
 				<div class="logo"></div>
 				<div class="txt-ctn">
 						<h1 class="slogan" style="color:blue">Slogan</h1>
@@ -242,30 +242,7 @@ if( function_exists('acf_add_local_field_group') ):
                 'max_size' => '',
                 'mime_types' => '',
             ),
-//            array(
-//                'key' => 'field_5d0bc99adcddac',
-//                'label' => 'Logo Fill',
-//                'name' => 'pl_logo_fill',
-//                'type' => 'image',
-//                'instructions' => '',
-//                'required' => 0,
-//                'conditional_logic' => 0,
-//                'wrapper' => array(
-//                    'width' => '50',
-//                    'class' => '',
-//                    'id' => '',
-//                ),
-//                'return_format' => 'array',
-//                'preview_size' => 'medium',
-//                'library' => 'all',
-//                'min_width' => '',
-//                'min_height' => '',
-//                'min_size' => '',
-//                'max_width' => '',
-//                'max_height' => '',
-//                'max_size' => '',
-//                'mime_types' => '',
-//            ),
+
             array(
                 'key' => 'field_5bf7265vx6680d',
                 'label' => 'Logo : size',
@@ -287,25 +264,7 @@ if( function_exists('acf_add_local_field_group') ):
                 'max' => '',
                 'step' => '',
             ),
-//            array(
-//                'key' => 'field_5d0bc9bdc6dae',
-//                'label' => 'svg',
-//                'name' => 'pl_svg',
-//                'type' => 'textarea',
-//                'instructions' => '',
-//                'required' => 0,
-//                'conditional_logic' => 0,
-//                'wrapper' => array(
-//                    'width' => '',
-//                    'class' => '',
-//                    'id' => '',
-//                ),
-//                'default_value' => '',
-//                'placeholder' => '',
-//                'prepend' => '',
-//                'append' => '',
-//                'maxlength' => '',
-//            ),
+
             array(
                 'key' => 'field_5d0bc9aad6dad',
                 'label' => 'Titre',
