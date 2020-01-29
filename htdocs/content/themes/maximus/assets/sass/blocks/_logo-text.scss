@@ -1,28 +1,23 @@
 .block-logo-text {
   position: relative;
-  .content-ctn {
-    @media(min-width: $screen-lg-min){
-      display:flex;
-      @include align-items(center);
-      @include justify-content(space-between);
-      &  > div {
-        @include flex-basis(50%);
-      }
+  .content-ctn, .content {
+    @include breakpoint(tab-landscape){
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        &  > div {
+          flex: 0 1 46%;
+        }
     }
-
 
     .logo-ctn {
       text-align: center;
       margin-bottom: 30px;
-      @media(min-width: $screen-lg-min){
+      @include breakpoint(tab-landscape){
         margin-bottom: 0;
       }
-      img {
-        width:100%;
-        max-width:100px;
-      }
     }
-    .wysywyg-ctn {
+    .text {
       max-width:700px;
     }
   }

@@ -13,7 +13,7 @@
                 @elseif( get_row_layout() == 'block_background' )
                     @include ("blocks.background")
 
-                
+
 
                 @elseif( get_row_layout() == 'block_logo_text' )
                     @include ("blocks.logo-text")

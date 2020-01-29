@@ -13,7 +13,7 @@
 
         @if(!empty(get_sub_field('link_left')) || !empty(get_sub_field('link_right')))
             <div class="links-ctn">
-                <span class="bold">{{ pll__('discover') }} :</span>
+                <h3 class="bold">{{ pll__('discover') }} :</h3>
                 <div class="link-ctn">
                     @if(!empty(get_sub_field('link_left')))
                     <a class="cta" href="{!! get_sub_field('link_left')['url'] !!}" target="{{ get_sub_field('link_left')['target'] }}">

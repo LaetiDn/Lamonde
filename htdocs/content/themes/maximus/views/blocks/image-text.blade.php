@@ -1,6 +1,9 @@
 
-<section id="{{ get_sub_field('section_id') }}" class="block-image-text {{ get_sub_field('block_options') }} @if(get_sub_field("animation") != 'none'){{ 'animate' }}@endif">
-    <div class="content noPadding @if(get_sub_field('reverse')) {{ 'reverse' }} @else {{ 'normal' }}@endif {{ get_sub_field('layout') }}" style="background-color: {{ get_sub_field('bg_color') }}">
+<section id="{{ get_sub_field('section_id') }}"
+        class="block-image-text @if(get_sub_field("animation") != 'none'){{ 'animate' }}@endif"
+        style="background-color: {{ get_sub_field('bg_color') }}">
+
+    <div class="content  @if(get_sub_field('reverse')) {{ 'reverse' }} @else {{ 'normal' }}@endif {{ get_sub_field('layout') }}" >
         @if(!empty(get_sub_field("images")))
             <div class="block-image-text__slider image-ctn">
                 @foreach (get_sub_field("images") as $i => $image_url)
@@ -20,8 +23,8 @@
             </div>
         @endif
 
-        <div class="block-image-text__text">
-            <div class="txt css-animation {!! get_sub_field("animation")!!}">
+        <div class="block-image-text__text css-animation {!! get_sub_field("animation")!!}" style="background-color: {{ get_sub_field('text_bg_color') }}">
+            <div class="txt">
                 {!! get_sub_field('text') !!}
             </div>
         </div>

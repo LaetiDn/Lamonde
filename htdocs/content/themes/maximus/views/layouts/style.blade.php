@@ -105,26 +105,27 @@
     /* SPANS */
     span {
         color: {{ get_field('span_grp','option')['color'] }};
-        font-size: {{ get_field('span_grp','option')['fz_phone'] }}px!important;
+        font-size: {{ get_field('span_grp','option')['fz_phone'] }}px;
     }
 
 
     /** FOOTER **/
-    .book-bottom-sticky a{
+    #footer .book-bottom-sticky a{
         background-color: {{ get_field('footer_bottom_link_bg_color_lr','option') }};
     }
-    .bottom-nav li:nth-child(odd) {
+    #footer .bottom-nav li:nth-child(odd) {
         background-color: {{ get_field('footer_bottom_link_bg_color_lr','option') }};
     }
-    .bottom-nav li:nth-child(even) {
+    #footer .bottom-nav li:nth-child(even) {
         background-color: {{ get_field('footer_bottom_link_bg_color_mid','option') }};
     }
     #footer .footer__info-container{
         border-top-color: {{ get_field('footer_text_color','option') }};
     }
-    #footer p, li, h3 {
+    #footer p, li, h3, .copyrights span {
         color: {{ get_field('footer_text_color','option') }};
     }
+
 
 
     .cta{
@@ -139,19 +140,12 @@
         border: 1px solid {{ get_field('button_grp', 'option')['border_color_transition'] }};
     }
 
-    .block-discover .cta i{
-        color: {{ get_field('button_grp', 'option')['text_color'] }};
-        transition: all 0.6s ease;
-    }
-    .block-discover .cta:hover i{
-        color: {{ get_field('button_grp', 'option')['text_color_transition'] }};
-    }
+
 
     /*** HERO ***/
     .hero .overlay {
         background-color: {{ get_field('hero','option')['overlay_color'] }};
         opacity:{{ get_field('hero','option')['overlay_opacity'] }};
-
     }
 
     /*** SLIDER ***/
@@ -306,10 +300,18 @@
 
     }
 
-    /* BLOCKS special animations  */
+    /* BLOCKS  */
     .block-background__title:before, .block-background__title:after {
         background-color: {{ get_field('span_grp','option')['color'] }};
         transition-timing-function: {{ get_field('animation_props', 'option')['easing'] }};
+    }
+
+    .block-discover .cta i{
+        color: {{ get_field('button_grp', 'option')['text_color'] }};
+        transition: all 0.6s ease;
+    }
+    .block-discover .cta:hover i{
+        color: {{ get_field('button_grp', 'option')['text_color_transition'] }};
     }
 
 

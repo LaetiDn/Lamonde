@@ -30,7 +30,8 @@
         </div>
     </div>
     <div class="copyrights">
-        <span>{{ get_field('copyrights_' . $lang, 'option')}}</span>
+        @if(get_privacy_policy_url())<a href="{{ get_privacy_policy_url() }}">{!! pll__('_policy') !!}</span> | @endif
+        <span>{{ get_field('copyrights_' . $lang, 'option')}}</span>                 
     </div>
     @if(!empty(get_field('footer_cta_' . $lang, 'option')['url']))
     <nav class="bottom-nav">

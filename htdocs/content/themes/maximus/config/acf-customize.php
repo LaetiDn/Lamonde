@@ -289,31 +289,7 @@ acf_add_local_field_group(array(
             'placement' => 'left',
             'endpoint' => 0,
         ),
-        array(
-            'key' => 'field_5bf876dd7d582',
-            'label' => 'Disable footer',
-            'name' => 'footer_disable',
-            'type' => 'relationship',
-            'instructions' => '',
-            'required' => 0,
-            'conditional_logic' => 0,
-            'wrapper' => array(
-                'width' => '',
-                'class' => '',
-                'id' => '',
-            ),
-            'post_type' => array(
-                0 => 'page',
-            ),
-            'taxonomy' => '',
-            'filters' => array(
-                0 => 'post_type',
-            ),
-            'elements' => '',
-            'min' => '',
-            'max' => '',
-            'return_format' => 'object',
-        ),
+
 
 
         array(
@@ -357,7 +333,7 @@ acf_add_local_field_group(array(
         ),
         array(
             'key' => 'field_5c41da8f8681d',
-            'label' => 'Text : color',
+            'label' => 'Title : color',
             'name' => 'footer_text_color',
             'type' => 'color_picker',
             'instructions' => '',
@@ -509,6 +485,31 @@ acf_add_local_field_group(array(
             'prepend' => '',
             'append' => '',
             'maxlength' => '',
+        ),
+        array(
+            'key' => 'field_5bf876dd7d582',
+            'label' => 'Disable footer',
+            'name' => 'footer_disable',
+            'type' => 'relationship',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+            'post_type' => array(
+                0 => 'page',
+            ),
+            'taxonomy' => '',
+            'filters' => array(
+                0 => 'post_type',
+            ),
+            'elements' => '',
+            'min' => '',
+            'max' => '',
+            'return_format' => 'object',
         ),
         array(
             'key' => 'field_5bf476f1d7db6',

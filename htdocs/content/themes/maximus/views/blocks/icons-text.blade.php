@@ -1,6 +1,5 @@
-<section class="block-icons-text section-content @if(get_sub_field("animation") != 'none'){{ 'animate' }}@endif" data-section="{{ get_sub_field('section_id') }}" style="background-color: {{ get_sub_field('bg_color') }}">
-    {{--<span id="{{ get_sub_field('section_id') }}" class="anchor"></span>--}}
-    <div class="content-ctn css-animation {!! get_sub_field("animation")!!}">
+<section id="{{ get_sub_field('section_id') }}" class="block-icons-text section-content @if(get_sub_field("animation") != 'none'){{ 'animate' }}@endif"  style="background-color: {{ get_sub_field('bg_color') }}">
+    <div class="content css-animation {!! get_sub_field("animation")!!}">
         <div class="all-logo-ctn">
             @if(!empty(get_sub_field("icon01_grp")))
                 <div class="icon-wrapper">
@@ -35,14 +34,14 @@
                 </div>
             @endif
         </div>
-        @if(!empty(get_sub_field("wysywyg")))
-        <div class="wysywyg-ctn">
-            {!! get_sub_field("wysywyg")!!}
+        @if(!empty(get_sub_field("text")))
+        <div class="text wysywyg-ctn">
+            {!! get_sub_field("text")!!}
         </div>
         @endif
         @if(!empty( get_sub_field("cta")))
         <div class="link-ctn">
-            <a class="cta" href="{{ get_sub_field("cta")["url"] }}">{{ get_sub_field("cta")["title"] }}</a>
+            <a class="cta" href="{{ get_sub_field("cta")["url"] }}" target="{{ get_sub_field("cta")["target"] }}">{{ get_sub_field("cta")["title"] }}</a>
         </div>
         @endif
     </div>

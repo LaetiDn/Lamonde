@@ -3,6 +3,7 @@
 
     .content {
         max-width: none;
+        min-height:300px;
         @include breakpoint(tab-landscape) {
             display: flex;
             justify-content: space-between;
@@ -16,7 +17,30 @@
         & > div {
             flex: 0 1 50%;
         }
+        &.boxed {
+            max-width:1080px;
+            @include breakpoint(tab-landscape){
+                padding-top: 8%;
+                padding-bottom: 8%;
+                justify-content: center;
+            }
 
+            .block-image-text__text {
+
+                @include breakpoint(tab-landscape){
+                    opacity:.9;
+                    z-index: 2;
+                    margin-left: -5%;
+                }
+            }
+        }
+        &.boxed.reverse {
+            .block-image-text__text {
+                @include breakpoint(tab-landscape){
+                    margin-right: -5%;
+                }
+            }
+        }
         &.image-75 {
             @include breakpoint(tab-landscape) {
                 text-align: right;
@@ -47,9 +71,12 @@
         height: 300px;
         width: 100%;
         background-size: cover;
+        height: 50vh;
+        min-height:300px;
         @include breakpoint(tab-landscape) {
             width: 50%;
-            height: 500px;
+            height: 70vh;
+            min-height:500px;
         }
 
         &-slide {
