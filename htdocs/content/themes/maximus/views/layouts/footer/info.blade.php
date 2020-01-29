@@ -1,7 +1,9 @@
 <div class="footer" style="background-color: {{ get_field('footer_bg_color', 'option') }}; background-image: url('{{ get_field('footer_bg_image', 'option')['url'] }}')">
+    @if(!empty(get_field("footer_logo", "option")["url"]))
     <div class="footer__logo logo-ctn">
         <a href="{{ $home_url }}"><img class="logo" src="{{ get_field("footer_logo", "option")["url"]  }}" alt="logo"></a>
     </div>
+    @endif
 
     <div class="footer__info content default-padding">
         <div class="footer__info-container">
@@ -31,7 +33,7 @@
     </div>
     <div class="copyrights">
         @if(get_privacy_policy_url())<a href="{{ get_privacy_policy_url() }}">{!! pll__('_policy') !!}</span> | @endif
-        <span>{{ get_field('copyrights_' . $lang, 'option')}}</span>                 
+        <span>{{ get_field('copyrights_' . $lang, 'option')}}</span> 
     </div>
     @if(!empty(get_field('footer_cta_' . $lang, 'option')['url']))
     <nav class="bottom-nav">
