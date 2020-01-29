@@ -126,8 +126,6 @@
         color: {{ get_field('footer_text_color','option') }};
     }
 
-
-
     .cta{
         color: {{ get_field('button_grp', 'option')['text_color'] }};
         background-color: {{ get_field('button_grp', 'option')['bg_color'] }};
@@ -141,8 +139,13 @@
     }
 
 
-
     /*** HERO ***/
+    .hero .slide{
+        height: {{ get_field('hero','option')['slider_height'] }}vh;
+    }
+    .hero.page {
+        height: {{ get_field('hero','option')['normal_height'] }}vh;
+    }
     .hero .overlay {
         background-color: {{ get_field('hero','option')['overlay_color'] }};
         opacity:{{ get_field('hero','option')['overlay_opacity'] }};

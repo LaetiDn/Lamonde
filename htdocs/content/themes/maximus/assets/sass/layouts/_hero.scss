@@ -1,5 +1,5 @@
 .hero {
-  height:100vh;
+  //height:100vh;
   position: relative;
 
   .overlay {
@@ -26,7 +26,7 @@
     }
   }
   .slide {
-    height:100vh;
+    //height:100vh;    
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -58,8 +58,8 @@
 }
 
 .hero.page {
-  height: 60vh;
-  @media(min-width: $screen-lg-min){
+  //height: 60vh;
+  @include breakpoint(tab-landscape) {
       min-height:500px;
   }
   .bg-img {
