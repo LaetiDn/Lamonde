@@ -14,10 +14,6 @@
                     @include ("blocks.background")
 
 
-
-                @elseif( get_row_layout() == 'block_logo_text' )
-                    @include ("blocks.logo-text")
-
                 @elseif( get_row_layout() == 'block_image_text' )
                     @include ("blocks.image-text")
 
@@ -27,8 +23,6 @@
                 @elseif( get_row_layout() == 'block_open_form' )
                     @include ("blocks.open-form")
 
-                @elseif( get_row_layout() == 'block_text' )
-                    @include ("blocks.text")
 
                 @elseif( get_row_layout() == 'block_instagram' )
                     @include ("blocks.instagram-feed")
