@@ -66,6 +66,17 @@
         left:0;
         opacity:1;
     }
+    &.grow-mid {
+        .menu-item:after {
+            margin:auto;
+        }
+
+    }
+    &.grow-right {
+        .menu-item:after {
+            margin-left:auto;
+        }
+    }
     @include breakpoint(tab-landscape) {
         height:auto;
         opacity:1;
@@ -84,7 +95,6 @@
         @include breakpoint(tab-landscape) {
 
             height:72px;
-
             display: flex;
             justify-content: center;
             align-items: center;
@@ -136,24 +146,23 @@
         }
 
         &.current-menu-item {
-            &:before {
+            &:after {
                 bottom: 15px;
                 width: 100%;
             }
         }
         @include breakpoint(tab-landscape) {
-            &:before {
+            &:after {
                 content: "";
                 display: block;
-                position: absolute;
+                position: relative;
                 width: 0;
                 height: 2px;
                 bottom: 15px;
                 transition: width 0.6s ease;
             }
 
-            &:hover:before {
-                bottom: 15px;
+            &:hover:after {
                 width: 100%;
             }
         }

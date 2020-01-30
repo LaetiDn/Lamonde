@@ -3,7 +3,7 @@
         <a class="header__logo" href="{{ $home_url }}" style="width: {{ get_field("menu_grp", "option")["logo_width"] }}px">
             <img class="logo black" src="{{ get_field("menu_grp", "option")["logo"]["url"]  }}" alt="logo">
         </a>
-        <nav class="site-navigation">
+        <nav class="site-navigation {{ get_field("menu_grp", "option")["links_animation"] }}">
             {{
                 wp_nav_menu(
                 [

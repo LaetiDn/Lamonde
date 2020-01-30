@@ -38,7 +38,7 @@ acf_add_local_field_group(array(
                 //TOP BAR
                 array(
                     'key' => 'field_5bf72e9b0a4fa',
-                    'label' => 'Top bar : background color',
+                    'label' => 'Background color',
                     'name' => 'top_bar_color',
                     'type' => 'color_picker',
                     'instructions' => '',
@@ -53,7 +53,7 @@ acf_add_local_field_group(array(
                 ),
                 array(
                     'key' => 'field_5bf72f160ac58',
-                    'label' => 'Top bar : opacity',
+                    'label' => 'Opacity',
                     'name' => 'top_bar_opacity',
                     'type' => 'range',
                     'instructions' => '',
@@ -101,6 +101,29 @@ acf_add_local_field_group(array(
                     ),
                     'default_value' => '',
                 ),
+                array(
+        			'key' => 'field_5e2fxx0dc83ae7',
+        			'label' => 'Links : animation',
+        			'name' => 'links_animation',
+        			'type' => 'button_group',
+        			'instructions' => '',
+        			'required' => 0,
+        			'conditional_logic' => 0,
+        			'wrapper' => array(
+        				'width' => '',
+        				'class' => '',
+        				'id' => '',
+        			),
+        			'choices' => array(
+        				'grow-left' => 'Left to right',
+        				'grow-mid' => 'From middle',
+                        'grow-right' => 'Right to left',
+        			),
+        			'allow_null' => 0,
+        			'default_value' => '',
+        			'layout' => 'horizontal',
+        			'return_format' => 'value',
+        		),
                 array(
                     'key' => 'field_5bf5a75f8c0d6',
                     'label' => 'Logo',

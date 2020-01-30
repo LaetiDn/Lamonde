@@ -82,7 +82,7 @@
     .site-navigation .menu .current-menu-item a {
         color: {{ get_field('menu_grp','option')['color_hover'] }}!important;
     }
-    .site-navigation .menu .menu-item:before {
+    .site-navigation .menu .menu-item:before, .site-navigation .menu .menu-item:after {
         background-color: {{ get_field('menu_grp','option')['color_hover'] }}!important;
     }
 

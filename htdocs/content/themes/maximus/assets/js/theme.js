@@ -97,9 +97,6 @@
             }
         });
 
-
-
-
         $('.menu-item-has-children').on('click', function () {
             if( $('body').hasClass('is-mobile') ){
                 $(this).find('.sub-menu').toggleClass('open-sub-menu');

@@ -16,8 +16,7 @@ class PageController extends Controller
         ]);
     }
     public function custom_template()
-    {
-        $disable_header = false;
+    {    
 
         if(get_page_template_slug( get_the_ID() ) === 'post-archive'){
             return view('archives.news', $this->defaultContent, [
