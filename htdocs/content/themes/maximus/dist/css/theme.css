@@ -2343,13 +2343,13 @@ article .content .link {
 
 .block-background {
   position: relative;
-  height: 90vh;
-  min-height: 500px;
+  height: 60vh;
+  min-height: 400px;
 }
 
 @media (min-width: 768px) {
   .block-background {
-    height: 60vh;
+    min-height: 500px;
   }
 }
 
@@ -2550,14 +2550,11 @@ article .content .link {
 }
 
 .block-icons-text .all-logo-ctn .icon-wrapper .icon-ctn {
+  display: flex;
+  align-items: center;
   position: relative;
   height: 100px;
   margin-bottom: 24px;
-}
-
-.block-icons-text .all-logo-ctn .icon-wrapper .icon-ctn .icon {
-  width: 100%;
-  height: 100%;
 }
 
 .block-icons-text .link-ctn {

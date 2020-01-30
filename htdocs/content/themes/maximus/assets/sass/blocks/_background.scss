@@ -1,9 +1,10 @@
 .block-background {
     position: relative;
-    height: 90vh;
-    min-height:500px;
+    height: 60vh;
+    min-height:400px;
     @include breakpoint(tab-portrait){
-        height: 60vh;
+        min-height:500px;
+        //height: 60vh;
     }
 
 

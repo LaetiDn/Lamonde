@@ -25,14 +25,11 @@
             }
 
             .icon-ctn {
+                display: flex;
+                align-items: center;
                 position: relative;
-                height: 100px;
+                height:100px;
                 margin-bottom: 24px;
-
-                .icon {
-                    width: 100%;
-                    height: 100%;
-                }
             }
         }
     }

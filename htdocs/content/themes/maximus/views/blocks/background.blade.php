@@ -1,4 +1,4 @@
-<section id="{{ get_sub_field('section_id') }}" class="block-background {{ get_sub_field('block_options') }} @if(get_sub_field("animation") != 'none'){{ 'animate' }}@endif">
+<section id="{{ get_sub_field('section_id') }}" class="block-background {{ get_sub_field('block_options') }} @if(get_sub_field("animation") != 'none'){{ 'animate' }}@endif" style="height: {{ get_sub_field('height') }}vh">
     <div class="block-background__background @if(get_sub_field('parallax')){{ 'is-parallax' }}@endif" style="background-image: url('{{ get_sub_field('background')['url'] }}'); background-color: {{ get_sub_field('background_color') }}">
 
         <div class="is-overlay" style="background-color: {{ get_sub_field('overlay_color') }}; opacity: {{ get_sub_field('overlay_opacity') }}"></div>

@@ -303,6 +303,10 @@
 
     }
 
+    .block-background {
+        height: 100vh;
+    }
+
     /* BLOCKS  */
     .block-background__title:before, .block-background__title:after {
         background-color: {{ get_field('span_grp','option')['color'] }};
