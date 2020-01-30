@@ -436,12 +436,13 @@ html {
   z-index: 50;
 }
 
+.css-animation,
 .sft,
 .sfr,
 .sfb,
 .sfl,
 .fadein {
-  opacity: 0;
+  opacity: 0 !important;
 }
 
 .do-animation.sft {
