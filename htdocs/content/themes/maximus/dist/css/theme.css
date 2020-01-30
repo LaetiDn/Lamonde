@@ -766,6 +766,8 @@ html {
 
 .site-navigation .menu .lang-item a {
   padding: 0;
+  display: block;
+  height: 100%;
 }
 
 .site-navigation .menu-item {
