@@ -8,7 +8,7 @@
                     </div>
                     <span>{{ get_sub_field("icon01_grp")['title'] }}</span>
                 </div>
-            @endif
+            @endif            
             @if(!empty(get_sub_field("icon02_grp")))
                 <div class="icon-wrapper">
                     <div class="icon-ctn">

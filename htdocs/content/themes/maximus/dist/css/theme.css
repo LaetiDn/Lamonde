@@ -759,7 +759,7 @@ html {
   }
 }
 
-.site-navigation .menu .lang-item:before {
+.site-navigation .menu .lang-item:after {
   display: none;
 }
 

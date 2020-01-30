@@ -944,7 +944,7 @@ acf_add_local_field_group(array(
 							'layout' => 'block',
 							'sub_fields' => array(
 								array(
-									'key' => 'field_5d0bacce3a0d2',
+									'key' => 'field_5d0bavvce3a0d2',
 									'label' => 'Icon',
 									'name' => 'icon',
 									'type' => 'image',
@@ -956,7 +956,7 @@ acf_add_local_field_group(array(
 										'class' => '',
 										'id' => '',
 									),
-									'return_format' => '',
+									'return_format' => 'array',
 									'preview_size' => 'medium',
 									'library' => '',
 									'min_width' => '',
@@ -1016,7 +1016,7 @@ acf_add_local_field_group(array(
 										'class' => '',
 										'id' => '',
 									),
-									'return_format' => '',
+									'return_format' => 'array',
 									'preview_size' => 'medium',
 									'library' => '',
 									'min_width' => '',
