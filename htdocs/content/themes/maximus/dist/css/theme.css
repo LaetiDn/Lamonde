@@ -714,6 +714,7 @@ html {
     position: relative;
     left: auto;
     top: auto;
+    padding-bottom: 6px;
   }
 }
 
@@ -879,7 +880,7 @@ html {
     visibility: hidden;
     opacity: 0;
     left: -15px;
-    top: 48px;
+    top: 74px;
     min-width: 270px;
     padding: 12px 0;
     border-bottom: none;
@@ -893,14 +894,14 @@ html {
   }
 }
 
-.menu .sub-menu .menu-item:before {
+.menu .sub-menu .menu-item:after {
   display: none;
 }
 
 @media (min-width: 992px) {
   .menu .sub-menu .menu-item {
     text-align: left;
-    padding-left: 30px;
+    padding-left: 16px;
     margin: 0;
   }
 }
@@ -2559,6 +2560,7 @@ article .content .link {
 
 .block-icons-text .link-ctn {
   text-align: center;
+  margin-top: 16px;
 }
 
 .block-image-text {

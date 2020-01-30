@@ -1690,7 +1690,7 @@ acf_add_local_field_group(array(
             'label' => 'Content animation for all the site',
             'name' => 'content_animation',
             'type' => 'group',
-            'instructions' => '',
+            'instructions' => 'Set the default animation for all content. Can be overwrite in the block option',
             'required' => 0,
             'conditional_logic' => 0,
             'wrapper' => array(
@@ -1714,6 +1714,7 @@ acf_add_local_field_group(array(
                         'id' => '',
                     ),
                     'choices' => array(
+                        'none' => 'None',
                         'sfb' => 'Slide from bottom',
                         'sft' => 'Slide from top',
                         'sfr' => 'Slide from right',

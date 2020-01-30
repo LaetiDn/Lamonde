@@ -1,8 +1,8 @@
 <section id="{{ get_sub_field('section_id') }}" class="section-content block-discover
-                                                @if(get_sub_field("animation") != 'none'){{ 'animate' }}@endif"
+                                                @if($animation['content_animation'] != 'none' || get_sub_field("animation") != 'gen' ){{ 'animate' }}@endif"
                                                 style="background-color: {{ get_sub_field('bg_color') }}">
 
-    <div class="content text css-animation {!! get_sub_field("animation") !!}">
+    <div class="content text css-animation {{ get_sub_field("animation") != 'gen' ? get_sub_field("animation") : $animation['content_animation']  }}">
         @if(!empty(get_sub_field("logo")))
             <figure class="discover__logo logo-ctn" style="width:{{ get_sub_field("logo_width") }}px">
                 <img src="{{ get_sub_field("logo")["url"] }}" alt="{{ get_sub_field("logo")["alt"] }}" >

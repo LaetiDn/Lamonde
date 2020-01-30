@@ -1,6 +1,6 @@
 
 <section id="{{ get_sub_field('section_id') }}"
-        class="block-image-text @if(get_sub_field("animation") != 'none'){{ 'animate' }}@endif"
+        class="block-image-text @if($animation['content_animation'] != 'none' || get_sub_field("animation") != 'gen' ){{ 'animate' }}@endif"
         style="background-color: {{ get_sub_field('bg_color') }}">
 
     <div class="content  @if(get_sub_field('reverse')) {{ 'reverse' }} @else {{ 'normal' }}@endif {{ get_sub_field('layout') }}" >
@@ -23,7 +23,7 @@
             </div>
         @endif
 
-        <div class="block-image-text__text css-animation {!! get_sub_field("animation")!!}" style="background-color: {{ get_sub_field('text_bg_color') }}">
+        <div class="block-image-text__text css-animation {{ get_sub_field("animation") != 'gen' ? get_sub_field("animation") : $animation['content_animation']  }}" style="background-color: {{ get_sub_field('text_bg_color') }}">
             <div class="txt">
                 {!! get_sub_field('text') !!}
             </div>
