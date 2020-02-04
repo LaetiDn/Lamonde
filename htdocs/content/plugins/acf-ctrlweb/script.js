@@ -78,10 +78,13 @@
               default:
                 // code block
             }
-
-
-
-
         });
+
+        $( "*[data-name='font_family'] select" ).change(function() {
+            var fontFamily = $(this).val();
+            console.log(fontFamily);
+            $('.typo-preview p').css('font-family', fontFamily);
+        });
+
     });
 }(jQuery));

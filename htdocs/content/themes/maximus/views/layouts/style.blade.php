@@ -1,16 +1,22 @@
 @if( get_field('font_family','option')["value"] == "Poppins")
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
-@elseif(get_field('font_family','option')["value"] == "Roboto")
+@elseif(get_field('font_family','option')["label"] == "Roboto")
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
-@elseif(get_field('font_family','option')["value"] == "Lato")
+@elseif(get_field('font_family','option')["label"] == "Lato")
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
-@elseif(get_field('font_family','option')["value"] == "Montserrat")
+@elseif(get_field('font_family','option')["label"] == "Montserrat")
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap" rel="stylesheet">
+@elseif(get_field('font_family','option')["label"] == "PT Sans")
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:300,400,700&display=swap" rel="stylesheet">
+@elseif(get_field('font_family','option')["label"] == "Open Sans")
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
+@elseif(get_field('font_family','option')["label"] == "Merriweather")
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700&display=swap" rel="stylesheet">
 @endif
 
 <style>
     body {
-        font-family: {{ get_field('font_family','option')["value"] }}, sans-serif;
+        font-family: {{ get_field('font_family','option')["value"] }};
     }
     h1 {
         color: {{ get_field('h1_grp','option')['color'] }};
@@ -31,6 +37,7 @@
         color: {{ get_field('paragraph_grp','option')['color'] }};
         font-size: {{ get_field('paragraph_grp','option')['fz_phone'] }}px;
         line-height: {{ get_field('paragraph_grp','option')['lh_phone'] }}px;
+        letter-spacing: {{ get_field('paragraph_grp','option')['lp_phone'] }}px;
     }
     a {
         text-decoration: none;
@@ -58,6 +65,7 @@
         p {
             font-size: {{ get_field('paragraph_grp','option')['fz_desktop'] }}px;
             line-height: {{ get_field('paragraph_grp','option')['lh_desktop'] }}px;
+            letter-spacing: {{ get_field('paragraph_grp','option')['lp_desktop'] }}px;
         }
     }
 
