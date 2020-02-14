@@ -12,6 +12,8 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
 @elseif(get_field('font_family','option')["label"] == "Merriweather")
     <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700&display=swap" rel="stylesheet">
+@elseif(get_field('font_family','option')["label"] == "Questrial")
+    <link href="https://fonts.googleapis.com/css?family=Questrial&display=swap" rel="stylesheet">
 @endif
 
 <style>

@@ -613,6 +613,7 @@ acf_add_local_field_group(array(
                 'PT Sans, sans-serif' => 'PT Sans',
                 'Open Sans, sans-serif' => 'Open Sans',
                 'Merriweather, serif' => 'Merriweather',
+                'Questrial, serif' => 'Questrial',
             ),
             'default_value' => array(
                 0 => 'Poppins',
