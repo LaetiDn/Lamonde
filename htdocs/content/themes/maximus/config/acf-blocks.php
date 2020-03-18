@@ -924,7 +924,7 @@ acf_add_local_field_group(array(
 							'min' => 0,
 							'max' => 0,
 							'layout' => 'table',
-							'button_label' => 'Add event',
+							'button_label' => 'Add an item',
 							'sub_fields' => array(
 								array(
 									'key' => 'field_5e443977777a1',
