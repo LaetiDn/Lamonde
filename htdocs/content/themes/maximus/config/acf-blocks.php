@@ -1322,6 +1322,43 @@ acf_add_local_field_group(array(
 					'label' => 'Counter',
 					'display' => 'block',
 					'sub_fields' => array(
+                        array(
+							'key' => 'field_5d0bfvp6430bbeb',
+							'label' => 'Background : color',
+							'name' => 'bg_color',
+							'type' => 'color_picker',
+							'instructions' => '',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '50',
+								'class' => '',
+								'id' => '',
+							),
+							'default_value' => '',
+						),
+                        array(
+                            'key' => 'field_5e7fcccc3028836e6',
+                            'label' => 'Speed',
+                            'name' => 'speed',
+                            'type' => 'number',
+                            'instructions' => '',
+                            'required' => 0,
+                            'conditional_logic' => 0,
+                            'wrapper' => array(
+                                'width' => '50',
+                                'class' => '',
+                                'id' => '',
+                            ),
+                            'default_value' => '5',
+                            'placeholder' => '',
+                            'prepend' => '',
+                            'append' => '',
+                            'min' => '0',
+                            'max' => '1000',
+                            'step' => '',
+                        ),
+                        
 						array(
 							'key' => 'field_5e72305f836e8',
 							'label' => 'Title',
@@ -1362,7 +1399,7 @@ acf_add_local_field_group(array(
 							'sub_fields' => array(
 								array(
 									'key' => 'field_5e723028836e6',
-									'label' => 'Number of',
+									'label' => 'Number',
 									'name' => 'number_of',
 									'type' => 'number',
 									'instructions' => '',
@@ -1377,7 +1414,7 @@ acf_add_local_field_group(array(
 									'placeholder' => '',
 									'prepend' => '',
 									'append' => '',
-									'min' => '',
+									'min' => '0',
 									'max' => '',
 									'step' => '',
 								),
@@ -1402,7 +1439,7 @@ acf_add_local_field_group(array(
 								),
 
 							),
-        
+
 						),
 					),
 					'min' => '',
