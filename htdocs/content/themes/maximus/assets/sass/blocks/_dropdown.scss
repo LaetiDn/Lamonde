@@ -114,6 +114,10 @@
             }
         }
 
+        &.no-hover {
+            pointer-events: none;
+        }
+
         &.active {
 
             h2 {

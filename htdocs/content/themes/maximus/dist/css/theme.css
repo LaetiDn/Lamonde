@@ -2945,6 +2945,10 @@ article .content .link {
   opacity: 1;
 }
 
+.block-dropdown .event.no-hover {
+  pointer-events: none;
+}
+
 .block-dropdown .event.active h2 {
   opacity: 1;
 }

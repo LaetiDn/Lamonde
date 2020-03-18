@@ -136,10 +136,16 @@ document.querySelectorAll('.event-link').forEach(item => {
         var index = item.dataset.index;
         removeClassFromSiblings(item.parentNode, 'active');
         removeClassFromSiblings(item.parentNode, 'selected');
+
+        addClassFromSiblings(item.parentNode, 'no-hover')
+
         item.parentNode.classList.add('selected');
         setTimeout(function() {
-            item.parentNode.classList.add('active');
+            removeClassFromSiblings(item.parentNode, 'no-hover')
         }, 1000);
+        setTimeout(function() {
+            item.parentNode.classList.add('active');
+        }, 1500);
 
 
         //Il faut remove tous les show-img avant
