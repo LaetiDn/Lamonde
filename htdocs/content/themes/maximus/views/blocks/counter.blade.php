@@ -4,9 +4,15 @@
             <div class="counters">
                 @foreach (get_sub_field('counter_rpt') as $counter)
                     <div class="counter">
-                        
-                        <p class="counter__things" data-number="{{ $counter['number_of'] }}" data-speed="{{ get_sub_field('speed') }}">0</span>
-                        <h3 class="counter__title">{!! $counter['title'] !!}</h2>
+
+                        <p class="counter__things"
+                        data-number="{{ $counter['number_of'] }}"
+                        data-speed="{{ get_sub_field('speed') }}"
+                         style="font-size: {!! get_sub_field('number_font_size') !!}rem"
+                        >
+                        0
+                        </p>
+                        <h3 class="counter__title" style="font-size: {!! get_sub_field('title_font_size') !!}rem; line-height: {!! get_sub_field('title_font_size') !!}rem" >{!! $counter['title'] !!}</h2>
                     </div>
                 @endforeach
 

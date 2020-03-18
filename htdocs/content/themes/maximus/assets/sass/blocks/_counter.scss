@@ -13,15 +13,14 @@
         flex: 0 1 22%;
         text-align: center;
         border-right: 1px solid black;
-        padding:0 1%;
+        padding:2% 1%;
         &:last-of-type {
             border-right: none;
         }
         &__things {
             display: block;
             font-weight: bold;
-            font-size: 5rem;
-            line-height: 7rem;
+            margin-bottom: 2rem;
         }
         &__title {
             display: block;

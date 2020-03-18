@@ -133,7 +133,7 @@ document.querySelectorAll('.counter').forEach(item => {
     var element = item.getElementsByClassName('counter__things')[0];
     var number = element.dataset.number;
     var speed = element.dataset.speed;
-    console.log(speed);
+    
 
     var count = 1;
     var idInterval = setInterval(function() {

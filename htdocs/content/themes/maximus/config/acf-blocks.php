@@ -1346,7 +1346,7 @@ acf_add_local_field_group(array(
                             'required' => 0,
                             'conditional_logic' => 0,
                             'wrapper' => array(
-                                'width' => '50',
+                                'width' => '33',
                                 'class' => '',
                                 'id' => '',
                             ),
@@ -1358,7 +1358,7 @@ acf_add_local_field_group(array(
                             'max' => '1000',
                             'step' => '',
                         ),
-                        
+
 						array(
 							'key' => 'field_5e72305f836e8',
 							'label' => 'Title',
@@ -1378,6 +1378,49 @@ acf_add_local_field_group(array(
 							'append' => '',
 							'maxlength' => '',
 						),
+                        array(
+                            'key' => 'field_5ecfccxx3028836e6',
+                            'label' => 'Counter Number : font-size(rem)',
+                            'name' => 'number_font_size',
+                            'type' => 'number',
+                            'instructions' => '',
+                            'required' => 0,
+                            'conditional_logic' => 0,
+                            'wrapper' => array(
+                                'width' => '50',
+                                'class' => '',
+                                'id' => '',
+                            ),
+                            'default_value' => '3rem',
+                            'placeholder' => '',
+                            'prepend' => '',
+                            'append' => '',
+                            'min' => '0',
+                            'max' => '',
+                            'step' => '',
+						),
+                        array(
+                            'key' => 'field_5e7fccxx3028836e6',
+                            'label' => 'Counter Title : font-size(rem)',
+                            'name' => 'title_font_size',
+                            'type' => 'number',
+                            'instructions' => '',
+                            'required' => 0,
+                            'conditional_logic' => 0,
+                            'wrapper' => array(
+                                'width' => '50',
+                                'class' => '',
+                                'id' => '',
+                            ),
+                            'default_value' => '3rem',
+                            'placeholder' => '',
+                            'prepend' => '',
+                            'append' => '',
+                            'min' => '0',
+                            'max' => '',
+                            'step' => '',
+						),
+
 						array(
 							'key' => 'field_5e723015836e5',
 							'label' => 'Counters',
