@@ -132,7 +132,7 @@
     #footer .footer__info-container{
         border-top-color: {{ get_field('footer_text_color','option') }};
     }
-    #footer p, li, h3, .copyrights span {
+    #footer p, #footer li, #footer h3, .copyrights span {
         color: {{ get_field('footer_text_color','option') }};
     }
 
