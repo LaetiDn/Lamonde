@@ -1,0 +1,31 @@
+.block-counter {
+    .content {
+    text-align: center;
+    }
+    .title {
+        margin-bottom: 6rem;
+    }
+    .counters {
+        display: flex;
+        justify-content: center;
+    }
+    .counter {
+        flex: 0 1 25%;
+        text-align: center;
+        border-right: 1px solid black;
+        &:last-of-type {
+            border-right: none;
+        }
+        &__things {
+            display: block;
+            font-weight: bold;
+            font-size: 5rem;
+            line-height: 7rem;
+        }
+        &__title {
+            display: block;
+
+        }
+    }
+
+}

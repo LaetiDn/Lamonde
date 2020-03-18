@@ -128,6 +128,20 @@
     });
 }(jQuery));
 
+document.querySelectorAll('.counter').forEach(item => {
+
+    var element = item.getElementsByClassName('counter__things')[0];
+    var number = element.dataset.number;
+
+    var count = 1;
+    var idInterval = setInterval(function() {
+    element.innerHTML = ++count;
+    count++;
+    if ( count >= number) {
+      clearInterval(idInterval);
+    }
+  }, 10);
+});
 
 document.querySelectorAll('.event-link').forEach(item => {
     item.addEventListener('click', event => {
@@ -145,8 +159,7 @@ document.querySelectorAll('.event-link').forEach(item => {
         }, 1000);
         setTimeout(function() {
             item.parentNode.classList.add('active');
-        }, 1500);
-
+        }, 1300);
 
         //Il faut remove tous les show-img avant
         var image = document.getElementById('img-' + index);

@@ -2996,3 +2996,37 @@ article .content .link {
   }
 }
 
+.block-counter .content {
+  text-align: center;
+}
+
+.block-counter .title {
+  margin-bottom: 6rem;
+}
+
+.block-counter .counters {
+  display: flex;
+  justify-content: center;
+}
+
+.block-counter .counter {
+  flex: 0 1 25%;
+  text-align: center;
+  border-right: 1px solid black;
+}
+
+.block-counter .counter:last-of-type {
+  border-right: none;
+}
+
+.block-counter .counter__things {
+  display: block;
+  font-weight: bold;
+  font-size: 5rem;
+  line-height: 7rem;
+}
+
+.block-counter .counter__title {
+  display: block;
+}
+
