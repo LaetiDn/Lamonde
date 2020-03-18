@@ -223,6 +223,15 @@
   top:50%;
   transform: translate3d(-50%, -50%, 0);
 }
+
+@mixin cover(){
+    position: absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+}
+
 @mixin placeholders(){
 
 	::-webkit-input-placeholder {

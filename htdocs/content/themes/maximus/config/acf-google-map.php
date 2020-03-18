@@ -28,7 +28,7 @@ acf_add_local_field_group(array(
         array(
             'key' => 'field_5bf5990d718a0',
             'label' => 'Google map : Latitude',
-            'name' => 'footer_latitude',
+            'name' => 'google_map_latitude',
             'type' => 'text',
             'instructions' => '',
             'required' => 0,
@@ -44,10 +44,11 @@ acf_add_local_field_group(array(
             'append' => '',
             'maxlength' => '',
         ),
+        
         array(
             'key' => 'field_5bf598f07189f',
             'label' => 'Google map : Longitude',
-            'name' => 'footer_longitude',
+            'name' => 'google_map_longitude',
             'type' => 'text',
             'instructions' => '',
             'required' => 0,
@@ -66,7 +67,7 @@ acf_add_local_field_group(array(
         array(
             'key' => 'field_5bf59d48488c0',
             'label' => 'Google map : Url',
-            'name' => 'footer_google_map_url',
+            'name' => 'google_map_url',
             'type' => 'text',
             'instructions' => 'Add a link on the map',
             'required' => 0,
@@ -85,7 +86,7 @@ acf_add_local_field_group(array(
         array(
             'key' => 'field_5bf59d48488cf',
             'label' => 'Google map : Style',
-            'name' => 'footer_google_map_style',
+            'name' => 'google_map_style',
             'type' => 'textarea',
             'instructions' => 'Copy the code here source(https://snazzymaps.com/) ',
             'required' => 0,

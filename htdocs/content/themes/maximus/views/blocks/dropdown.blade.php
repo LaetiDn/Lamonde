@@ -1,0 +1,23 @@
+<section class="block-dropdown" style="background-color: {!! get_sub_field('bg_color') !!}">
+    <div class="content-fullwidth">
+        <div class="col-bg">
+            <div class="overlay"></div>
+            @foreach (get_sub_field('events') as $i => $event)
+                <img id="img-{{ $i }}" class="image @if($i == 0) active @endif"  src="{{ $event['image']['url'] }}" alt="{{ $event['image']['alt'] }}">
+            @endforeach
+        </div>
+        <div class="col-txt default-padding">
+            <h1 class="outlined">{!! get_sub_field('title') !!}</h1>
+            @foreach (get_sub_field('events') as $k => $event)
+                <div class="event @if($k == 0) active selected @endif">
+                    <a class="event-link" href="#" data-index="{{ $k }}">
+                        <h2 class="uppercase color-white">{{ $event['name'] }}</h2>
+                    </a>
+                    <div class="text body-text-sm">
+                        {!! $event['description'] !!}
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
+</section>

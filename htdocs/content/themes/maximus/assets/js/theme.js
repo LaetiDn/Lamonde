@@ -128,6 +128,27 @@
     });
 }(jQuery));
 
+
+document.querySelectorAll('.event-link').forEach(item => {
+    item.addEventListener('click', event => {
+        event.preventDefault();
+
+        var index = item.dataset.index;
+        removeClassFromSiblings(item.parentNode, 'active');
+        removeClassFromSiblings(item.parentNode, 'selected');
+        item.parentNode.classList.add('selected');
+        setTimeout(function() {
+            item.parentNode.classList.add('active');
+        }, 1000);
+
+
+        //Il faut remove tous les show-img avant
+        var image = document.getElementById('img-' + index);
+        removeClassFromSiblings(image, 'active');
+        image.classList.add('active');
+    })
+});
+
 const animation = [...document.querySelectorAll('.animate')];
 
 const optionsAnimation = {
@@ -150,3 +171,25 @@ const observerAnimation = new IntersectionObserver(callbackAnimation, optionsAni
 animation.forEach((animation, index) => {
     observerAnimation.observe(animation)
 })
+
+
+//Helpers
+function removeClassFromSiblings(elem, classToRemove) {
+    var sibling = elem.parentNode.firstChild;
+    while (sibling) {
+        if (sibling.nodeType === 1 && sibling !== elem) {
+            sibling.classList.remove(classToRemove);
+        }
+        sibling = sibling.nextSibling
+    }
+};
+
+function addClassFromSiblings(elem, classToRemove) {
+    var sibling = elem.parentNode.firstChild;
+    while (sibling) {
+        if (sibling.nodeType === 1 && sibling !== elem) {
+            sibling.classList.add(classToRemove);
+        }
+        sibling = sibling.nextSibling
+    }
+};

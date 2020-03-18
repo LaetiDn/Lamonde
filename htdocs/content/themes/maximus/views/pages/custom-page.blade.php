@@ -29,6 +29,8 @@
 
                 @elseif( get_row_layout() == 'block_iframe' )
                     @include ("blocks.iframe")
+                @elseif( get_row_layout() == 'block_dropdown' )
+                    @include ("blocks.dropdown")
                 @endif
 
             @endwhile
