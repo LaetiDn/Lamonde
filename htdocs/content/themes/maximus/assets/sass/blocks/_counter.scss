@@ -10,9 +10,10 @@
         justify-content: center;
     }
     .counter {
-        flex: 0 1 25%;
+        flex: 0 1 22%;
         text-align: center;
         border-right: 1px solid black;
+        padding:0 1%;
         &:last-of-type {
             border-right: none;
         }
