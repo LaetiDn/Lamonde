@@ -1,296 +1,136 @@
-.info-outer {
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 35px 0;
 
-  .info-inner {
-    text-align: center;
-    @media (min-width: $screen-lg-min) {
-      //@include flexbox();
-      //@include justify-content(space-between);
-      text-align: left;
-      padding:90px 0 25px;
+  .footer {
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 70px 0 35px 0;
+    &__logo {
+        max-width:180px;
+        margin:0 auto;
     }
-  }
-  .info-ctn {
-    @media (min-width: $screen-lg-min) {
-      //width:33%;
-    }
-  }
-  .info-ctn, .logo-ctn {
-
-    .info, a {
-      position: relative;
-    }
-
-    @media (min-width: $screen-lg-min) {
-      margin:0 25px;
-    }
-  }
-
-  p {
-    line-height: 29px;
-  }
-
-
-  a {
-    line-height:32px;
-  }
-
-  .info .icon, a .icon{
-    margin-right:8px;
-  }
-
-  .info-email {
-    i {
-      left:-25px;
-      top:0;
-    }
-  }
-
-  .phone i {
-    top:2px;
-  }
-
-  .icon {
-    font-size: 18px;
-    @media (min-width: $screen-lg-min) {
-      position: absolute;
-      left:-20px;
-      top:4px;
-    }
-  }
-
-
-  .link-ctn {
-    @include flexbox();
-    @include justify-content(center);
-      max-width:300px;
-      margin:10px auto;
-    @media (min-width: $screen-lg-min) {
-      margin:8px auto;
-      a:not(:last-of-type) {
-        padding: 0 10px;
-        margin-right: 5px;
+    &__info{
+      text-align: center;
+      @include breakpoint(tab-portrait) {
+        display:flex;
+        justify-content: space-between;
       }
+      @include breakpoint(tab-landscape) {
+        text-align: left;
+      }
+    }
+    &__info-container {
+      padding: 30px 0;
+      border-top: 1px solid;
       a {
-        padding: 0 10px;
-        margin-right: 5px;
-        &:last-of-type {
-          margin-right: 0;
-        }
+          display: block;
+          margin-bottom: 8px;
+      }
+      h3 {
+          margin-bottom: 8px;
+      }
+      .opening {
+          margin-bottom: 16px;
+      }
+
+      @include breakpoint(tab-portrait) {
+        margin: 30px 0 45px 0;
+      }
+      @include breakpoint(tab-landscape) {
+          margin: 30px 0;
       }
     }
-
-    .icon {
-      position: relative;
-      left:auto;
-      font-size: 40px;
-      @media (min-width: $screen-lg-min) {
-        font-size:28px;
-      }
-    }
-  }
-
-  .info-ctn:nth-child(2){
-    margin: 30px 0;
-    @media (min-width: $screen-lg-min) {
-      margin: 0 8%;
-    }
-  }
-
-  .logo-ctn {
-    margin: 35px auto 0;
-    width: 180px;
-    @media (min-width: $screen-lg-min) {
-
-    }
-    img {
-      width:100%;
-    }
-  }
-
-  .phone {
-    margin-right: 15px;
-  }
-
-}
-.map-ctn {
-  position: relative;
-
-  .map-link {
-
-    position: absolute;
-    width:100%;
-    height:100%;
-    left:0;
-    top:0;
-    z-index:60;
-  }
-}
-#map {
-  height:475px;
-}
-
-.bottom-nav {
-  position: fixed;
-  left:0;
-  bottom:0;
-  width:100%;
-  z-index: 90;
-  @media (min-width: $screen-lg-min) {
-    display: none;
-  }
-  .menu {
-    @include flexbox();
-    @include justify-content(center);
-  }
-
-  .menu-item {
+//ICI
+  .map-ctn {
     position: relative;
-    list-style: none;
-    width:calc(100%/3);
-    text-align: center;
-  }
-  a {
-    font-size: 14px;
-    text-transform: lowercase;
-    display: block;
-    width:100%;
-    padding: 5px 0px;
-    @media (min-width: $screen-md-min) {
-      padding: 15px 0px;
+
+    .map-link {
+      position: absolute;
+      width:100%;
+      height:100%;
+      left:0;
+      top:0;
+      z-index:60;
     }
   }
-
-  i {
-    display: block;
-    @media (min-width: 400px) {
-      display: inline-block;
-    }
-    font-size: 14px;
+  #map {
+    height:475px;
   }
 
-}
-
-.hastag-title {
-  text-align: center;
-  padding:50px 0;
-  a {
-    font-size: 24px;
-    text-transform: uppercase;
-    @include transition(color 0.25s ease);
-  }
-}
-
-.book-bottom {
-  display: none;
-  @media (min-width: $screen-lg-min) {
-    @include flexbox();
-    @include align-items(center);
-    @include justify-content(center);
+  .bottom-nav {
     position: fixed;
-    width:160px;
-    bottom:-50px;
-    left:50%;
-    transform: translate(-50%);
-    z-index: 100;
-
-    @include transition(bottom 0.6s ease);
-    a {
-      display: block;
-      font-size: 16px;
-      padding: 13px 37px;
-    }
-
-  }
-}
-
-.book-bottom-sticky {
-  bottom:0;
-}
-
-
-.info-top, .info-bottom {
-
-  @media (min-width: $screen-md-min) {
-    @include flexbox();
-  }
-}
-
-.newsletter-ctn {
-  text-align: center;
-  padding:0 20px;
-  margin-top:15px;
-  @media (min-width: $screen-md-min) {
-    margin-top:25px;
-  }
-  @media (min-width: $screen-lg-min) {
-    margin-top:0;
-    text-align: left;
-  }
-  label {
-    display: block;
-    font-size:0.70rem;
-  }
-
-  .mc4wp-form-fields {
-    @media (min-width: $screen-lg-min) {
-      width:250px;
-      margin-left:auto;
-      margin-right: 172px;
-      @include flexbox();
-      @include align-items(flex-end);
-    }
-  }
-
-  input[type="text"], input[type="email"] {
-    -webkit-appearance: none;
-    border:none;
-    width:calc(100% - 10px);
-    //border: 2px solid black;
-    padding:10px 5px;
-    margin:10px 0;
-    font-size: 16px;
-    @media (min-width: $screen-md-min) {
-      width:220px;
-      margin:10px 0 0;
-    }
-  }
-
-  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-    font-size:14px;
-    text-align: center;
-  }
-  ::-moz-placeholder { /* Firefox 19+ */
-    font-size:14px;
-    text-align: center;
-  }
-  :-ms-input-placeholder { /* IE 10+ */
-    font-size:14px;
-    text-align: center;
-  }
-  :-moz-placeholder { /* Firefox 18- */
-    font-size:14px;
-    text-align: center;
-  }
-
-  input[type="submit"] {
-    cursor: pointer;
-    -webkit-appearance: none;
+    left:0;
+    bottom:0;
     width:100%;
-    margin:20px auto 0 auto;
-    padding:10px 5px;
-    @include transition(all 0.25s ease);
-    @media (min-width: $screen-md-min) {
-      width:230px;
+    z-index: 90;
+    @include breakpoint(tab-landscape) {
+      display: none;
     }
-    @media (min-width: $screen-lg-min) {
-      width:200px;
-      margin:0;
-      padding:9px 5px;
+    .menu {
+      display:flex;
+      @include justify-content(center);
+    }
+
+    .menu-item {
+      position: relative;
+      list-style: none;
+      width:50%;
+      text-align: center;
+    }
+    a {
+      font-size: 14px;
+      text-transform: lowercase;
+      display: block;
+      width:100%;
+      padding: 5px 0px;
+      @include breakpoint(tab-portrait) {
+        padding: 15px 0px;
+      }
+    }
+
+    i {
+      display: block;
+      font-size: 14px;
+      margin-right: 8px;
+      @media (min-width: 400px) {
+        display: inline-block;
+      }
+
     }
 
   }
 
+
+  .book-bottom {
+    display: none;
+    @include breakpoint(tab-landscape) {
+      display:flex;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      width:160px;
+      bottom:-50px;
+      left:50%;
+      transform: translate(-50%);
+      z-index: 100;
+
+      transition: bottom 0.6s ease;
+      a {
+        display: block;
+        font-size: 16px;
+        padding: 13px 37px;
+      }
+
+    }
+  }
+
+  .book-bottom-sticky {
+    bottom:0;
+  }
+
+  .copyrights {
+    text-align: center;
+    padding-bottom: 50px;
+    a, span {
+        font-size: 12px;
+    }
+  }
 }

@@ -1,0 +1,84 @@
+
+.sft, .sfr, .sfb, .sfl, .fadein {
+  opacity: 0!important;
+}
+
+
+.do-animation.sft{
+  animation-name: sft;
+}
+.do-animation.sfr{
+  animation-name: sfr;
+}
+.do-animation.sfb{
+  animation-name: sfb;
+}
+.do-animation.sfl{
+  animation-name: sfl;
+}
+
+.do-animation.fadein{
+  animation-name: fadeIn;
+}
+
+@keyframes sfb {
+  from {
+    opacity:0;
+    transform:translate3d(0, 50px, 0);
+  }
+  to {
+    opacity:1;
+    transform:translate3d(0, 0, 0);
+  }
+}
+@keyframes sft {
+  from {
+    opacity:0;
+    transform:translate3d(0, -50px, 0);
+  }
+  to {
+    opacity:1;
+    transform:translate3d(0, 0, 0);
+  }
+}
+
+@keyframes sfr {
+  from {
+    opacity:0;
+    transform:translate3d(50px, 0, 0);
+  }
+  to {
+    opacity:1;
+    transform:translate3d(0, 0, 0);
+  }
+}
+@keyframes sfl {
+  from {
+    opacity:0;
+    transform:translate3d(-50px, 0, 0);
+  }
+  to {
+    opacity:1;
+    transform:translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity:0;
+  }
+  to {
+    opacity:1;
+  }
+}
+
+
+
+@keyframes moveIn {
+  0% {transform:translate3d(0, -500px, 0)}
+  100% {transform:translate3d(0, 0, 0)}
+}
+@keyframes moveOut {
+  0% {transform:translate3d(0, 0, 0)}
+  100% {transform:translate3d(0, -500px, 0)}
+}

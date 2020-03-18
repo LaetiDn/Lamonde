@@ -1,19 +1,19 @@
-<section class="block-open-form section-content" style="background-color: {{ get_sub_field('bg_color') }}">
-    <div class="content-ctn">
-        <div class="wysywyg-ctn">
-            {!! get_sub_field("wysywyg") !!}
+<section class="block-open-form section-content @if($animation['content_animation'] != 'none' || get_sub_field("animation") != 'gen' ){{ 'animate' }}@endif" style="background-color: {{ get_sub_field('bg_color') }}">
+    <div class="content-ctn css-animation {{ get_sub_field("animation") != 'gen' ? get_sub_field("animation") : $animation['content_animation']  }}">
+        <div class="text">
+            {!! get_sub_field("text") !!}
         </div>
         <div class="link-ctn">
             <a class="cta open-form" href="#">{{ get_sub_field("link_text") }}</a>
             @if(!empty( get_sub_field("link")))
-                <a class="cta" href="{{ get_sub_field("link")["url"] }}">{{ get_sub_field("link")["title"] }}</a>
+                <a class="cta" href="{{ get_sub_field("link")["url"] }}" target="{{ get_sub_field("link")["target"] }}">{{ get_sub_field("link")["title"] }}</a>
             @endif
         </div>
     </div>
 </section>
 
-<div class="form-main-ctn lightBox">
-    <a class="close-lightbox" href="#"></a>
+<div id="modal-form" class="form-main-ctn lightBox">
+    <a class="btn-close-form" href="#"></a>
     <div class="form-ctn">
         <div class="close">
             <a class="btn-close-form" href="#">
@@ -27,8 +27,8 @@
         </div>
 
         <?php
-            $form = get_sub_field("form_shortcode");
-            echo do_shortcode( ''.$form.'' );
+        $form = get_sub_field("form_shortcode");
+        echo do_shortcode( ''.$form.'' );
         ?>
     </div>
 </div>

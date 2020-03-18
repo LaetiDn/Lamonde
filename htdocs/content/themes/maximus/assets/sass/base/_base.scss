@@ -1,0 +1,60 @@
+html {
+    box-sizing: border-box;
+}
+
+.site {
+  max-width:1920px;
+  margin:auto;
+  position: relative;
+}
+
+.default-padding {
+    padding-left:6%;
+    padding-right:6%;
+
+}
+
+.section-content {
+  @extend .default-padding;
+  padding-top:45px;
+  padding-bottom:45px;
+
+  @include breakpoint(tab-portrait){
+      padding-top:125px;
+      padding-bottom:150px;
+  }
+}
+
+.content-ctn, .content {
+  max-width:1180px;
+  margin:0 auto;
+}
+
+.content-text {
+
+  max-width:940px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.content-rect-text {
+  text-align: center;
+  padding:30px;
+  width:75%;
+  max-width: 640px;
+  margin:0 auto;
+  @include breakpoint(tab-landscape){
+    padding:50px 40px;
+  }
+}
+
+.is-mobile {
+    .content {
+        background-attachment: scroll!important;
+    }
+
+}
+
+::selection{
+
+}

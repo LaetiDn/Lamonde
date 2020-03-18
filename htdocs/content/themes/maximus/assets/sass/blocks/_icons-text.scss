@@ -1,0 +1,40 @@
+.block-icons-text {
+    position: relative;
+
+    .all-logo-ctn {
+        margin-bottom: 40px;
+        @include breakpoint(tab-portrait) {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 60px;
+        }
+
+        .icon-wrapper {
+            text-align: center;
+            max-width: 100px;
+            margin: auto auto 25px;
+            @include breakpoint(tab-portrait) {
+                flex: 0 1 25%;
+                margin: 0 15% 0 0;
+            }
+
+            &:last-of-type {
+                @include breakpoint(tab-portrait) {
+                    margin-right: 0;
+                }
+            }
+
+            .icon-ctn {
+                display: flex;
+                align-items: center;
+                position: relative;
+                height:100px;
+                margin-bottom: 24px;
+            }
+        }
+    }
+    .link-ctn {
+        text-align: center;
+        margin-top: 16px;
+    }
+}

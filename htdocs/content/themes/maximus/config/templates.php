@@ -9,6 +9,9 @@
  * where your template is available.
  */
 return [
-    'custom-template' => [__('Custom Template', THEME_TD), ['page']],
+    //'custom-template' => [__('Custom Template', THEME_TD), ['page']],
     'post-archive' => [__('Post Archive', THEME_TD), ['page']],
+    'contact' => [__('Contact', THEME_TD), ['page']],
+    'menu' => [__('Menu', THEME_TD), ['page']],
+
 ];

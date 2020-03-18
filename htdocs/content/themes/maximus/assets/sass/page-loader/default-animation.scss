@@ -1,0 +1,17 @@
+//DEFAULT ANIMATION
+.default.loader {
+  animation: hideloader 1s 3.3s forwards ease;
+  .content-wrapper {
+    animation: reveal 2s $easeOutExpo;
+    animation-delay: 0.6s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+  }
+}
+
+
+
+
+
+
+

@@ -1,0 +1,249 @@
+@mixin animate ($animation) {
+  -webkit-animation: $animation;
+  -moz-animation: $animation;
+  -ms-animation: $animation;
+  -o-animation: $animation;
+  animation: $animation;
+}
+
+@mixin transition ($transition) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
+@mixin transform($transforms) {
+  -webkit-transform: $transforms;
+  -moz-transform: $transforms;
+  -ms-transform: $transforms;
+  transform: $transforms;
+}
+
+@mixin transform-origin ($origin) {
+  -webkit-transform-origin: $origin;
+  -moz-transform-origin: $origin;
+  -ms-transform-origin: $origin;
+  transform-origin: $origin;
+}
+
+@mixin rotate ($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+
+@mixin scale($scale) {
+  @include transform(scale($scale));
+}
+
+@mixin translate ($x, $y) {
+  @include transform(translate($x, $y) );
+}
+
+@mixin skew ($x, $y) {
+  @include transform(skew(#{$x}deg, #{$y}deg));
+}
+//****************************//
+//* HOVER EFFECTS : TRANSFORM *//
+//***************************//
+@mixin zoom($start, $end) {
+  @include scale($start);
+  &:hover {
+    @include scale($end);
+  }
+}
+
+@mixin zoom-rotate($zoomStart,$rotateStart, $zoomEnd,  $rotateEnd) {
+  transform: scale($zoomStart) rotate(#{$rotateStart}deg);
+  &:hover {
+    transform: scale($zoomEnd) rotate(#{$rotateEnd}deg);
+  }
+}
+
+//****************************//
+//* HOVER EFFECTS : FILTER *//
+//***************************//
+
+@mixin greyscale($percent){
+  -webkit-filter: grayscale($percent);
+  -moz-filter: grayscale($percent);
+  filter: grayscale($percent);
+}
+
+@mixin sepia($percent) {
+  -webkit-filter: sepia($percent);
+  -moz-filter: sepia($percent);
+  filter: sepia($percent);
+}
+
+@mixin blur($px){
+  -webkit-filter: blur($px);
+  -moz-filter: blur($px);
+  filter: blur($px);
+}
+
+@mixin brightness($percent){
+  -webkit-filter: brightness($percent);
+  -moz-filter: brightness($percent);
+  filter: brightness($percent);
+}
+
+@mixin contrast($percent){
+  -webkit-filter: contrast($percent);
+  -moz-filter: contrast($percent);
+  filter: contrast($percent);
+}
+
+//params: horizontal-shadow | vertical-shadow | blur | color
+@mixin drop-shadow($params){
+  -webkit-filter:drop-shadow($params);
+  -moz-filter:drop-shadow($params);
+  filter:drop-shadow($params);
+}
+
+@mixin hue($deg){
+  -webkit-filter:hue-rotate(#{$deg}deg);
+  -moz-filter:hue-rotate(#{$deg}deg);
+  filter:hue-rotate(#{$deg}deg);
+}
+
+@mixin invert($percent){
+  -webkit-filter:invert($percent);
+  -moz-filter:invert($percent);
+  filter:invert($percent);
+}
+
+@mixin saturate($percent){
+  -webkit-filter:saturate($percent);
+  -moz-filter:saturate($percent);
+  filter:saturate($percent);
+}
+
+
+// Border radius shorthand
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+}
+
+
+
+//@mixin center-img($posX,$posY){
+//  position:absolute;
+//  left:50%;
+//  top: 50%;
+//  transform: translate(-$posX,-$posY);
+//  -webkit-transform: translate(-$posX,-$posY);
+//  -ms-transform: translate(-$posX,-$posY);
+//}
+
+
+/* ELEMENTS */
+
+
+
+// Border radius shorthand
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+}
+
+
+@mixin center-img($posX,$posY){
+  position:absolute;
+  left:50%;
+  top: 50%;
+
+  transform: translate(-$posX,-$posY);
+  -webkit-transform: translate(-$posX,-$posY);
+  -ms-transform: translate(-$posX,-$posY);
+}
+
+@mixin center-element($posX,$posY){
+  position:absolute;
+  left:50%;
+  top: 50%;
+
+  transform: translate(-$posX,-$posY);
+  -webkit-transform: translate(-$posX,-$posY);
+  -ms-transform: translate(-$posX,-$posY);
+}
+
+@mixin linear-gradient-horizontal($firstColor, $secondColor) {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e69758+1,f0d131+100 */
+  background: -moz-linear-gradient(left, $firstColor 1%, $secondColor 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, $firstColor 1%,$secondColor 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, $firstColor 1%,$secondColor 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$firstColor', endColorstr='$secondColor',GradientType=1 ); /* IE6-9 */
+}
+
+@mixin box-shadow($right, $bottom, $blur, $spread, $color){
+  -webkit-box-shadow: $right $bottom $blur $spread $color;
+  -moz-box-shadow: $right $bottom $blur $spread $color;
+  box-shadow: $right $bottom $blur $spread $color;
+}
+
+
+// MEDIA QUERY MANAGER
+
+@mixin breakpoint($breakpoint){
+    @if $breakpoint == phone{
+        @media (min-width: 600px){ @content }; //600px
+    }
+    @if $breakpoint == phone-landscape{
+        @media only screen and (min-device-width: 375px) and
+        (max-device-width: 823px) and
+        (orientation: landscape) { @content };
+    }
+    @if $breakpoint == tab-portrait{
+        @media (min-width: 768px){ @content }; //
+    }
+    @if $breakpoint == tab-landscape{
+        @media (min-width: 992px){ @content }; //
+    }
+    @if $breakpoint == desktop{
+        @media (min-width: 1200px){ @content }; //
+    }
+    @if $breakpoint == desktop-large{
+        @media (min-width: 1440px){ @content }; //
+    }
+    @if $breakpoint == fullwidth{
+        @media (min-width: var(--max-width)){ @content }; //1920
+    }
+}
+
+@mixin centerElement(){
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+@mixin cover(){
+    position: absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+}
+
+@mixin placeholders(){
+
+	::-webkit-input-placeholder {
+		@content
+	}
+	::-moz-placeholder {
+		@content
+	}
+	::-ms-input-placeholder {
+		@content
+	}
+	::-moz-placeholder {
+		@content
+	}
+}

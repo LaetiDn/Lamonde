@@ -8,23 +8,69 @@ if( function_exists('acf_add_local_field_group') ):
         'fields' => array(
 
             array(
-                'key' => 'field_5d13b126921c8',
-                'label' => 'Activate page loader',
-                'name' => 'activate_page_loader',
-                'type' => 'true_false',
+                'key' => 'field_5d496ba40e2bc',
+                'label' => 'Animations',
+                'name' => 'pl_animations',
+                'type' => 'select',
                 'instructions' => '',
                 'required' => 0,
                 'conditional_logic' => 0,
                 'wrapper' => array(
-                    'width' => '',
+                    'width' => '75',
                     'class' => '',
                     'id' => '',
                 ),
-                'message' => '',
-                'default_value' => 1,
+                'choices' => array(
+                    'false' => 'Inactive',
+                    'default' => 'Default',
+                    'split' => 'Split',
+                    // 'text-clip' => 'Text Clip',
+                    // 'fill' => 'Logo fill',
+                ),
+                'default_value' => array(
+                ),
+                'allow_null' => 0,
+                'multiple' => 0,
                 'ui' => 0,
-                'ui_on_text' => '',
-                'ui_off_text' => '',
+                'return_format' => 'value',
+                'ajax' => 0,
+                'placeholder' => '',
+            ),
+            array(
+                'key' => 'field_5d4abe2734208',
+                'label' => 'Preview : Default Animation',
+                'name' => '',
+                'type' => 'message',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => array(
+                    array(
+                        array(
+                            'field' => 'field_5d496ba40e2bc',
+                            'operator' => '==',
+                            'value' => 'default',
+                        ),
+                    ),
+                ),
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => 'preview-animation',
+                    'id' => '',
+                ),
+                'message' => '<button class="play" data-time="5000">Play</button>
+<div class="loader default css-animation-step2" style="background-color: grey;" >
+
+		<div class="logo-wrapper css-animation-step1 ">
+
+				<div class="logo"></div>
+				<div class="txt-ctn">
+						<h1 class="slogan" style="color:blue">Slogan</h1>
+						<p class="subtitle" style="color:blue">Subtitle</p>
+				</div>
+		</div>
+</div>',
+                'new_lines' => 'wpautop',
+                'esc_html' => 0,
             ),
             array(
                 'key' => 'field_5d0bc943d6daa',
@@ -35,11 +81,46 @@ if( function_exists('acf_add_local_field_group') ):
                 'required' => 0,
                 'conditional_logic' => 0,
                 'wrapper' => array(
-                    'width' => '50',
+                    'width' => '33',
                     'class' => '',
                     'id' => '',
                 ),
                 'default_value' => '',
+            ),
+            array(
+                'key' => 'field_5b216f61v9684',
+                'label' => 'Overlay : Color',
+                'name' => 'pl_overlay_color',
+                'type' => 'color_picker',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '33',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+            ),
+            array(
+                'key' => 'field_5b21s030a8e57',
+                'label' => 'Overlay : Opacity',
+                'name' => 'pl_overlay_opacity',
+                'type' => 'range',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '33',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'min' => '0.1',
+                'max' => '0.9',
+                'step' => '.1',
+                'prepend' => '',
+                'append' => '',
             ),
             array(
                 'key' => 'field_5d0bc986d6dab',
@@ -48,7 +129,79 @@ if( function_exists('acf_add_local_field_group') ):
                 'type' => 'image',
                 'instructions' => '',
                 'required' => 0,
-                'conditional_logic' => 0,
+                'conditional_logic' => array(
+                    array(
+                        array(
+                            'field' => 'field_5d496ba40e2bc',
+                            'operator' => '!=',
+                            'value' => 'split',
+                        ),
+                    ),
+                ),
+                'wrapper' => array(
+                    'width' => '33',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'return_format' => 'url',
+                'preview_size' => 'medium',
+                'library' => 'all',
+                'min_width' => '',
+                'min_height' => '',
+                'min_size' => '',
+                'max_width' => '',
+                'max_height' => '',
+                'max_size' => '',
+                'mime_types' => '',
+            ),
+            array(
+                'key' => 'field_5d0bc986dvcab',
+                'label' => 'Background : image[left]',
+                'name' => 'pl_background_image_left',
+                'type' => 'image',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => array(
+                    array(
+                        array(
+                            'field' => 'field_5d496ba40e2bc',
+                            'operator' => '==',
+                            'value' => 'split',
+                        ),
+                    ),
+                ),
+                'wrapper' => array(
+                    'width' => '50',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'return_format' => 'url',
+                'preview_size' => 'medium',
+                'library' => 'all',
+                'min_width' => '',
+                'min_height' => '',
+                'min_size' => '',
+                'max_width' => '',
+                'max_height' => '',
+                'max_size' => '',
+                'mime_types' => '',
+            ),
+            array(
+                'key' => 'field_5d0bc986d6cab',
+                'label' => 'Background : image[right]',
+                'name' => 'pl_background_image_right',
+                'type' => 'image',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => array(
+                    array(
+                        array(
+                            'field' => 'field_5d496ba40e2bc',
+                            'operator' => '==',
+                            'value' => 'split',
+                        ),
+                    ),
+                ),
                 'wrapper' => array(
                     'width' => '50',
                     'class' => '',
@@ -74,7 +227,7 @@ if( function_exists('acf_add_local_field_group') ):
                 'required' => 0,
                 'conditional_logic' => 0,
                 'wrapper' => array(
-                    'width' => '50',
+                    'width' => '33',
                     'class' => '',
                     'id' => '',
                 ),
@@ -89,6 +242,29 @@ if( function_exists('acf_add_local_field_group') ):
                 'max_size' => '',
                 'mime_types' => '',
             ),
+
+            array(
+                'key' => 'field_5bf7265vx6680d',
+                'label' => 'Logo : size',
+                'name' => 'pl_logo_size',
+                'type' => 'number',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '33',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+                'min' => '',
+                'max' => '',
+                'step' => '',
+            ),
+
             array(
                 'key' => 'field_5d0bc9aad6dad',
                 'label' => 'Titre',
@@ -109,24 +285,56 @@ if( function_exists('acf_add_local_field_group') ):
                 'maxlength' => '',
             ),
             array(
-                'key' => 'field_5d0bc9bdd6dae',
-                'label' => 'Subtitle',
-                'name' => 'pl_subtitle',
-                'type' => 'wysiwyg',
+                'key' => 'field_5d0bc94vd6daa',
+                'label' => 'Title : color',
+                'name' => 'pl_title_color',
+                'type' => 'color_picker',
                 'instructions' => '',
                 'required' => 0,
                 'conditional_logic' => 0,
                 'wrapper' => array(
-                    'width' => '',
+                    'width' => '50',
                     'class' => '',
                     'id' => '',
                 ),
                 'default_value' => '',
-                'tabs' => 'all',
-                'toolbar' => 'full',
-                'media_upload' => 0,
-                'delay' => 0,
             ),
+            array(
+                'key' => 'field_5d0bc9bdd6dae',
+                'label' => 'Subtitle',
+                'name' => 'pl_subtitle',
+                'type' => 'text',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '50',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+                'maxlength' => '',
+            ),
+
+            array(
+                'key' => 'field_5d0bc94cd6daa',
+                'label' => 'Subtitle : color',
+                'name' => 'pl_subtitle_color',
+                'type' => 'color_picker',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '50',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+            ),
+
         ),
         'location' => array(
             array(

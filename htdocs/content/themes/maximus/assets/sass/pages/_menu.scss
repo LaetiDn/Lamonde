@@ -1,30 +1,26 @@
 #services-content {
-  background-color: $light-grey;
   padding-top: 40px;
-  @media (min-width: $screen-lg-min) {
+  @include breakpoint(tab-landscape) {
     padding-top: 130px;
   }
   .page-title {
     text-align: center;
     margin-bottom: 25px;
-    @media (min-width: $screen-lg-min) {
+    @include breakpoint(tab-landscape) {
       margin-bottom: 35px;
-    }
-    h1 {
-
     }
   }
 
   .service-inner {
     margin-top: 45px;
 
-    @media (min-width: $screen-md-min) {
+    @include breakpoint(tab-portrait) {
       max-width:640px;
       margin-left:auto;
       margin-right:auto;
     }
-    @media (min-width: $screen-lg-min) {
-      @include flexbox();
+    @include breakpoint(tab-landscape) {
+      display:flex;
       @include justify-content(space-between);
       @include flex-wrap(wrap);
       margin-top: 100px;
@@ -32,8 +28,7 @@
     }
     .service-ctn {
       margin-bottom: 100px;
-      color: $grey;
-      @media (min-width: $screen-lg-min) {
+      @include breakpoint(tab-landscape) {
         @include flex-basis(45%);
       }
       .service-name {
@@ -44,7 +39,7 @@
       .plate-ctn {
         margin-bottom: 25px;
         .top-info {
-          @include flexbox();
+          display:flex;
           @include justify-content(space-between);
           margin-bottom: 10px;
           .dish-price {
@@ -53,15 +48,10 @@
         }
         .bottom-info {
           width:80%;
-
         }
       }
     }
-    .service-ctn:nth-child(2){
-      @media (min-width: $screen-lg-min) {
-        //margin:0 60px;
-      }
-    }
+
   }
 
   .img-ctn {
@@ -69,7 +59,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     height:600px;
-    @media (min-width: $screen-lg-min) {
+    @include breakpoint(tab-landscape) {
       height:600px;
     }
   }

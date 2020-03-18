@@ -1,6 +1,18 @@
 
 /** ACF FIELD & ELEMENTS CUSTOMIZATION **/
 
+/* Handle flexible content*/
+.layout, .layout {
+    border: 2px solid steelblue!important;
+}
+.acf-fc-layout-handle {
+    background-color: steelblue!important;
+    color:white!important;
+}
+
+.acf-postbox > .hndle .acf-hndle-cog, .toggle-indicator  {
+    color:white!important;
+}
 
 /** First row repeater field **/
 /* Corners */
@@ -113,6 +125,10 @@ div.mce-toolbar-grp {
     /*border: 1px solid cornflowerblue!important;*/
 }
 
+.acf-range-wrap input[type="number"]{
+    min-width:3.5rem!important;;
+}
+
 /** WYSYWYG **/
 .acf-input .quicktags-toolbar {
     /*background-color: #0b0b0b;*/
@@ -154,4 +170,97 @@ div.mce-toolbar-grp {
 /* TAB FIELD : Active */
 .active .acf-tab-button {
     /*background: green!important;*/
+}
+
+
+/* CUSTOMIZER ANIMATION  */
+.do-animation {
+    height:200px;
+}
+.do-animation h1{
+    animation-iteration-count: infinite;
+}
+.sfb h1{
+    animation-name:sfb;
+}
+.sft h1{
+    animation-name:sft;
+}
+
+.sfr h1{
+    animation-name:sfr;
+
+}
+.sfl h1{
+    animation-name:sfl;
+}
+
+.fadein h1{
+    animation-name:fadeIn;
+}
+
+
+@keyframes sfb {
+    from {
+        opacity:0;
+        transform:translate3d(0, 50px, 0);
+    }
+    to {
+        opacity:1;
+        transform:translate3d(0, 0, 0);
+    }
+}
+@keyframes sft {
+    from {
+        opacity:0;
+        transform:translate3d(0, -50px, 0);
+    }
+    to {
+        opacity:1;
+        transform:translate3d(0, 0, 0);
+    }
+}
+
+@keyframes sfr {
+    from {
+        opacity:0;
+        transform:translate3d(50px, 0, 0);
+    }
+    to {
+        opacity:1;
+        transform:translate3d(0, 0, 0);
+    }
+}
+@keyframes sfl {
+    from {
+        opacity:0;
+        transform:translate3d(-50px, 0, 0);
+    }
+    to {
+        opacity:1;
+        transform:translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+.button-preview .cta{
+    font-family: 'Lato', sans-serif;
+    text-decoration:none;
+    display: inline-block;
+    width:150px;
+    margin:auto;
+    text-align: center;
+    padding: 10px 20px;
+    border:1px solid black;
+    color: black;
+    transition: all .6s ease;
+
 }
