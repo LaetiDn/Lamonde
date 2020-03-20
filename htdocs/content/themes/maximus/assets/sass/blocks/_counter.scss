@@ -6,14 +6,24 @@
         margin-bottom: 6rem;
     }
     .counters {
-        display: flex;
-        justify-content: center;
+        @include breakpoint(tab-portrait){
+            display: flex;
+            flex-wrap:wrap;
+            justify-content: center;
+        }
+
     }
     .counter {
-        flex: 0 1 22%;
         text-align: center;
-        border-right: 1px solid black;
         padding:2% 1%;
+        margin-bottom: 5rem;
+        @include breakpoint(tab-portrait){
+            flex: 0 1 50%;
+        }
+        @include breakpoint(tab-landscape){
+            flex: 0 1 25%;
+            margin-bottom: 0;            
+        }
         &:last-of-type {
             border-right: none;
         }

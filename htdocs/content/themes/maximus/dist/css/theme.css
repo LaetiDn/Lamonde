@@ -3004,16 +3004,31 @@ article .content .link {
   margin-bottom: 6rem;
 }
 
-.block-counter .counters {
-  display: flex;
-  justify-content: center;
+@media (min-width: 768px) {
+  .block-counter .counters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .block-counter .counter {
-  flex: 0 1 22%;
   text-align: center;
-  border-right: 1px solid black;
   padding: 2% 1%;
+  margin-bottom: 5rem;
+}
+
+@media (min-width: 768px) {
+  .block-counter .counter {
+    flex: 0 1 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .block-counter .counter {
+    flex: 0 1 25%;
+    margin-bottom: 0;
+  }
 }
 
 .block-counter .counter:last-of-type {

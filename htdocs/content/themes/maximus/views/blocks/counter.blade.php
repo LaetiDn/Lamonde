@@ -3,7 +3,7 @@
             <h2 class="title">{!! get_sub_field('title') !!}</h2>
             <div class="counters">
                 @foreach (get_sub_field('counter_rpt') as $counter)
-                    <div class="counter">
+                    <div class="counter" style="border-color: {{ get_field('span_grp','option')['color'] }}">
 
                         <p class="counter__things"
                         data-number="{{ $counter['number_of'] }}"
