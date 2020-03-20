@@ -85,20 +85,11 @@
         }
 
         h1 {
-            // font-size: 32px;
-            // line-height: 38px;
-            // letter-spacing: 2px;
             margin-bottom: 40px;
             @include breakpoint(tab-portrait){
-                // font-size: 20px;
-                // line-height: 24px;
-                // letter-spacing: 2.5px;
                 margin-bottom: 20px;
             }
             @include breakpoint(desktop){
-                // font-size: 40px;
-                // line-height: 47px;
-                // letter-spacing: 5px;
                 margin-bottom: 8px;
             }
         }
@@ -106,7 +97,6 @@
 
     .event {
         transform: translateX(10px);
-        //transition: all var(--duration) var(--ease);
         transition: all .3s ease;
         &:hover {
             transform: translateX(0);
@@ -133,20 +123,11 @@
             transform: translateX(0);
         }
         h2 {
-            //font-size: 16px;
-            //line-height: 22px;
-            //letter-spacing: 2px;
             opacity:.6;
-            //font-weight: 400;
             backface-visibility: hidden;
             transition: opacity .3s ease;
             @include breakpoint(tab-portrait){
                 opacity:.2;
-            }
-            @include breakpoint(desktop){
-                //font-size: 30px;
-                //line-height: 35px;
-                //letter-spacing: 6px;
             }
         }
         h2.active {
@@ -162,8 +143,10 @@
 
             p {
                 padding-top: 5px;
+                padding-top: 12px;
                 @include breakpoint(tab-landscape){
-                    padding-top: 8px;
+                    padding-top: 22px;
+                    padding-bottom: 24px;                    
                 }
             }
         }
