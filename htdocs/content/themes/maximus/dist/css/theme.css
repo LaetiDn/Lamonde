@@ -2893,6 +2893,7 @@ article .content .link {
     transform: none;
     padding-top: 50px;
     padding-bottom: 50px;
+    background-color: transparent;
   }
 }
 
