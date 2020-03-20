@@ -493,7 +493,7 @@ acf_add_local_field_group(array(
 							'required' => 0,
 							'conditional_logic' => 0,
 							'wrapper' => array(
-								'width' => '75',
+								'width' => '50',
 								'class' => '',
 								'id' => '',
 							),
@@ -502,6 +502,29 @@ acf_add_local_field_group(array(
 							'toolbar' => 'full',
 							'media_upload' => 0,
 							'delay' => 0,
+						),
+                        array(
+							'key' => 'field_5d0bsdfade3a0d3b47a4708c',
+							'label' => 'Link',
+							'name' => 'link',
+							'type' => 'link',
+							'instructions' => '',
+							'required' => 0,
+                            'conditional_logic' => array(
+								array(
+									array(
+										'field' => 'field_5d0b96600bbee',
+										'operator' => '==',
+										'value' => 'boxed',
+									),
+								),
+							),
+							'wrapper' => array(
+								'width' => '25',
+								'class' => '',
+								'id' => '',
+							),
+							'return_format' => 'array',
 						),
 						array(
 							'key' => 'field_5e2f42e6e9e8b',
@@ -1377,7 +1400,7 @@ acf_add_local_field_group(array(
 							'prepend' => '',
 							'append' => '',
 							'maxlength' => '',
-						),                                                
+						),
 						array(
 							'key' => 'field_5e723015836e5',
 							'label' => 'Counters',

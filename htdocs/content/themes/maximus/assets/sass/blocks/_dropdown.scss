@@ -1,6 +1,6 @@
 .block-dropdown {
     position: relative;
-    //background-color: rgba(12, 12, 12, 1);
+
     .content-fullwidth {
         @include breakpoint(tab-portrait){
             display: flex;
@@ -37,8 +37,7 @@
             height:100%;
             z-index: -1;
             opacity:0;
-            //transition: opacity var(--duration) var(--ease);
-            transition: opacity 1.2s ease;
+            transition: opacity 2s ease-in;
             &.active {
                 z-index: 2;
                 opacity:1;
@@ -56,8 +55,9 @@
         top:50%;
         transform: translate(-50%, -50%);
         width:90%;
-        z-index: 4;
+        z-index: 2;
 
+        background-color: rgba(12, 12, 12, .8);
 
 
         @include breakpoint(tab-portrait){
@@ -68,6 +68,7 @@
             transform: none;
             padding-top:50px;
             padding-bottom:50px;
+            background-color: transparent;
         }
 
         &.default-padding {

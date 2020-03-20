@@ -33,6 +33,11 @@
                     margin-left: -5%;
                 }
             }
+            .cta-ctn {
+                @include breakpoint(tab-landscape){
+                    text-align: left;    
+                }
+            }
         }
         &.boxed.reverse {
             .block-image-text__text {
