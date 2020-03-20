@@ -26,6 +26,14 @@
         <div class="block-image-text__text css-animation {{ get_sub_field("animation") != 'gen' ? get_sub_field("animation") : $animation['content_animation']  }}" style="background-color: {{ get_sub_field('text_bg_color') }}">
             <div class="txt">
                 {!! get_sub_field('text') !!}
+                @if(!empty(get_sub_field('link')))
+                    <div class="cta-ctn">
+                        <a class="cta" href="{{ get_sub_field('link')['url'] }}" target="{{ get_sub_field('link')['target'] }}">
+                            {{ get_sub_field('link')["title"] }}
+                        </a>        
+                    </div>
+
+                @endif
             </div>
         </div>
 

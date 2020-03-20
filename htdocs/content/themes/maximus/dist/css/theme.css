@@ -2611,6 +2611,12 @@ article .content .link {
 }
 
 @media (min-width: 992px) {
+  .block-image-text .content.boxed .cta-ctn {
+    text-align: left;
+  }
+}
+
+@media (min-width: 992px) {
   .block-image-text .content.boxed.reverse .block-image-text__text {
     margin-right: -5%;
   }
