@@ -31,6 +31,8 @@
                     @include ("blocks.iframe")
                 @elseif( get_row_layout() == 'block_dropdown' )
                     @include ("blocks.dropdown")
+                @elseif( get_row_layout() == 'block_counter' )
+                    @include ("blocks.counter")
                 @endif
 
             @endwhile
