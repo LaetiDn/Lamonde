@@ -2864,7 +2864,7 @@ article .content .link {
   height: 100%;
   z-index: -1;
   opacity: 0;
-  transition: opacity 1.2s ease;
+  transition: opacity 2s ease-in;
 }
 
 .block-dropdown .col-bg .image.active {
