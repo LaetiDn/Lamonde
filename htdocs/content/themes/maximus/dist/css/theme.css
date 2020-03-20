@@ -2612,13 +2612,19 @@ article .content .link {
 
 @media (min-width: 992px) {
   .block-image-text .content.boxed .cta-ctn {
-    text-align: left;
+    text-align: right;
   }
 }
 
 @media (min-width: 992px) {
   .block-image-text .content.boxed.reverse .block-image-text__text {
     margin-right: -5%;
+  }
+}
+
+@media (min-width: 992px) {
+  .block-image-text .content.boxed.reverse .cta-ctn {
+    text-align: left;
   }
 }
 
