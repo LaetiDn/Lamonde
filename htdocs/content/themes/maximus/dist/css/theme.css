@@ -2864,7 +2864,7 @@ article .content .link {
   height: 100%;
   z-index: -1;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 1.2s ease;
 }
 
 .block-dropdown .col-bg .image.active {
@@ -3004,6 +3004,12 @@ article .content .link {
   margin-bottom: 6rem;
 }
 
+.block-counter .counters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 @media (min-width: 768px) {
   .block-counter .counters {
     display: flex;
@@ -3016,6 +3022,7 @@ article .content .link {
   text-align: center;
   padding: 2% 1%;
   margin-bottom: 5rem;
+  flex: 0 1 47%;
 }
 
 @media (min-width: 768px) {
@@ -3039,9 +3046,19 @@ article .content .link {
   display: block;
   font-weight: bold;
   margin-bottom: 2rem;
+  font-size: 3rem;
+}
+
+@media (min-width: 992px) {
+  .block-counter .counter__things {
+    font-size: 5rem;
+    margin-bottom: 3rem;
+  }
 }
 
 .block-counter .counter__title {
   display: block;
+  font-size: 2rem;
+  line-height: 2.3rem;
 }
 
