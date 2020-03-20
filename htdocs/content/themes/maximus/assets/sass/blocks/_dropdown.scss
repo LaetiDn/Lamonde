@@ -55,8 +55,9 @@
         top:50%;
         transform: translate(-50%, -50%);
         width:90%;
-        z-index: 4;
+        z-index: 2;
 
+        background-color: rgba(12, 12, 12, .8);
 
 
         @include breakpoint(tab-portrait){

@@ -1,7 +1,7 @@
 <section class="block-dropdown" style="background-color: {!! get_sub_field('bg_color') !!}">
     <div class="content-fullwidth">
         <div class="col-bg">
-            <div class="overlay"></div>
+            
             @foreach (get_sub_field('events') as $i => $event)
                 <img id="img-{{ $i }}" class="image @if($i == 0) active @endif"  src="{{ $event['image']['url'] }}" alt="{{ $event['image']['alt'] }}">
             @endforeach
