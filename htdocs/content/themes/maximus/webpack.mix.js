@@ -12,8 +12,10 @@ let mix = require('laravel-mix');
  */
 
 mix.setPublicPath('dist');
+
 mix.js('assets/js/theme.js', 'dist/js/theme.min.js')
 mix.sass('assets/sass/style.scss', 'dist/css/theme.css')
+
 //mix.sass('assets/sass/woocommerce.scss', 'dist/css');
 
 mix.browserSync({
@@ -27,7 +29,6 @@ mix.browserSync({
 
 // Autoprefixer
 // Exemple d'ajout de autoprefixer dans webpack.mix : https://laravel-mix.com/docs/5.0/css-preprocessors
-// La bonne pratique est maintenant de le mettre dans le package.json : https://github.com/browserslist/browserslist#readme
 // mix.sass('assets/sass/style.scss', 'dist/css/theme.css')
 //    .options({
 //         autoprefixer: {
@@ -38,3 +39,4 @@ mix.browserSync({
 //             }
 //         }
 //    });
+// La bonne pratique est maintenant de le mettre dans le package.json : https://github.com/browserslist/browserslist#readme
