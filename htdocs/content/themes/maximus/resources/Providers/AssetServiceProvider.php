@@ -27,18 +27,24 @@ class AssetServiceProvider extends ServiceProvider
         //JS
         Asset::add('jquery_js', 'js/jquery.js', [], $theme->getHeader('3.4.1', false))->to('front');
 
+        Asset::add('imageloaded_js', 'js/imagesloaded.pkgd.min.js', ['jquery_js'], $theme->getHeader('1.0'))->to('front');
+        Asset::add('masonry_js', 'js/masonry.pkgd.min.js', ['jquery_js'], $theme->getHeader('1.0'))->to('front');
+        Asset::add('lightbox_js', 'js/lightbox.min.js', ['jquery_js'], $theme->getHeader('1.0'))->to('front');
+
         Asset::add('theme_js', 'js/theme.min.js', ['jquery_js'], $theme->getHeader('1.0'))->to('front');
         Asset::add('slider', 'js/slider.js', ['jquery_js'], '1.0', true)->to();
         Asset::add('slick_js', 'js/slick.min.js', ['jquery_js'], $theme->getHeader('1.0'))->to('front');
         //Asset::add('scrollspy_js', 'js/jquery-scrollspy.min.js', ['jquery_js'], $theme->getHeader('1.0'))->to('front');
         Asset::add('lity_js', 'js/lity.min.js', ['jquery_js'], $theme->getHeader('1.0'))->to('front');
 
+
         //CSS
         Asset::add('theme_styles', 'css/theme.css', [], $theme->getHeader('version'))->to('front');
-
         Asset::add('slick_styles', 'css/slick.css', [], $theme->getHeader('version'))->to('front');
-        Asset::add('slick-theme_styles', 'css/slick-theme.css', [], $theme->getHeader('version'))->to('front');
+        
+        Asset::add('lightbox_styles', 'css/lightbox.min.css', [], $theme->getHeader('version'))->to('front');
 
+        Asset::add('slick-theme_styles', 'css/slick-theme.css', [], $theme->getHeader('version'))->to('front');
         Asset::add('lity_styles', 'css/lity.min.css', [], $theme->getHeader('version'))->to('front');
 
 
