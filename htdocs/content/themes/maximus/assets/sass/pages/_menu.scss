@@ -3,34 +3,40 @@
   @include breakpoint(tab-landscape) {
     padding-top: 130px;
   }
+
   .page-title {
     text-align: center;
     margin-bottom: 25px;
+
     @include breakpoint(tab-landscape) {
       margin-bottom: 35px;
     }
+
   }
 
   .service-inner {
     margin-top: 45px;
 
     @include breakpoint(tab-portrait) {
-      max-width:640px;
-      margin-left:auto;
-      margin-right:auto;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
     }
     @include breakpoint(tab-landscape) {
-      display:flex;
+      display: flex;
       @include justify-content(space-between);
       @include flex-wrap(wrap);
       margin-top: 100px;
-      max-width:1200px;
+      max-width: 1200px;
     }
+
     .service-ctn {
       margin-bottom: 100px;
+
       @include breakpoint(tab-landscape) {
         @include flex-basis(45%);
       }
+
       .service-name {
         font-weight: 700;
         margin-bottom: 20px;
@@ -38,16 +44,19 @@
 
       .plate-ctn {
         margin-bottom: 25px;
+
         .top-info {
-          display:flex;
+          display: flex;
           @include justify-content(space-between);
+
           margin-bottom: 10px;
+          
           .dish-price {
             font-style: italic;
           }
         }
         .bottom-info {
-          width:80%;
+          width: 80%;
         }
       }
     }
@@ -58,9 +67,10 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height:600px;
+    height: 600px;
+
     @include breakpoint(tab-landscape) {
-      height:600px;
+      height: 600px;
     }
   }
 

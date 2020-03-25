@@ -48,7 +48,6 @@
         //     $('.sticky-newsletter').toggleClass('show-newsletter');
         // });
 
-
         $('#menu-btn').on('click', function() {
             $(this).toggleClass('open');
             if ($('.header').hasClass('open')) {
@@ -124,7 +123,28 @@
             $(this).parents('.image-ctn').find('.slide0' + index).addClass('active').siblings().removeClass('active');
         });
 
+
+
+        if($(".portfolio")) {
+            $(".portfolio").imagesLoaded(function () {
+                var $grid = $('.portfolio .item-wrapper').masonry(
+                    {
+                        itemSelector: '.portfolio .item',
+                        transitionDuration: 0,
+                        percentPosition: !0
+                    }
+                )
+            })
+            // .progress( function( instance, image ) {
+            //     console.log(image)
+            // });  
+        }
+
+
     });
+
+
+
 }(jQuery));
 
 
@@ -200,7 +220,6 @@ const observerAnimation = new IntersectionObserver(callbackAnimation, optionsAni
 animation.forEach((animation, index) => {
     observerAnimation.observe(animation)
 })
-
 
 //Helpers
 function removeClassFromSiblings(elem, classToRemove) {

@@ -1,5 +1,6 @@
+
 .hideMe {
-  display:none!important;
+  display: none!important;
 }
 
 .is-parallax {
@@ -10,19 +11,19 @@
 
 .is-overlay {
     position: absolute;
-    left:0;
-    top:0;
+    left: 0;
+    top: 0;
     z-index: 1;
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
 }
 
 .is-fullHeight {
-    height:100%;
+    height: 100%;
 }
 
 .body-no-overflow {
-  overflow:hidden;
+  overflow: hidden;
 }
 
 .alignCenter {
@@ -38,7 +39,7 @@
 }
 
 .centerEle{
-  margin:0 auto;
+  margin: 0 auto;
 }
 
 .reverseMe {
@@ -56,6 +57,7 @@
 
 .tablet {
   display: none;
+
   @include breakpoint(phone){
     display: block;
   }
@@ -63,7 +65,6 @@
 }
 
 .hide-in-desktop {
-
     @include breakpoint(tab-landscape){
       display: none;
     }
@@ -71,13 +72,14 @@
 
 .show-in-desktop {
   display: none;
+
   @include breakpoint(tab-landscape){
     display: block;
   }
 }
 
 .noPadding {
-  padding:0!important;
+  padding: 0!important;
 }
 
 .bgCover {
@@ -86,14 +88,11 @@
   background-position: center;
 }
 
-
-
-
 .full-link {
   position: absolute;
-  width:100%;
-  height:100%;
-  left:0;
-  top:0;
-  z-index:50;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 50;
 }

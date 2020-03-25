@@ -10,17 +10,31 @@ let mix = require('laravel-mix');
  | file for your application, as well as bundling up your JS files.
  |
  */
+
 mix.setPublicPath('dist');
-
 mix.js('assets/js/theme.js', 'dist/js/theme.min.js')
-    .sass('assets/sass/style.scss', 'dist/css/theme.css')
-
-    //.sass('assets/sass/woocommerce.scss', 'dist/css');
+mix.sass('assets/sass/style.scss', 'dist/css/theme.css')
+//mix.sass('assets/sass/woocommerce.scss', 'dist/css');
 
 mix.browserSync({
-    proxy: 'https://maximus.test',
+    proxy: 'http://localhost',
     files: [
         "dist/css/theme.css",
+        "dist/js/theme.min.js",
         //"dist/css/woocommerce.css",
     ]
 });
+
+// Autoprefixer
+// Exemple d'ajout de autoprefixer dans webpack.mix : https://laravel-mix.com/docs/5.0/css-preprocessors
+// La bonne pratique est maintenant de le mettre dans le package.json : https://github.com/browserslist/browserslist#readme
+// mix.sass('assets/sass/style.scss', 'dist/css/theme.css')
+//    .options({
+//         autoprefixer: {
+//             options: {
+//                 browsers: [
+//                     'last 6 versions',
+//                 ]
+//             }
+//         }
+//    });

@@ -136,3 +136,6 @@ $theme->support($theme->config('support', []));
 |
 */
 $theme->templates($theme->config('templates', []));
+
+
+remove_action( 'shutdown', 'wp_ob_end_flush_all', 1 );
