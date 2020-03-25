@@ -13,7 +13,7 @@ let mix = require('laravel-mix');
 
 mix.setPublicPath('dist');
 
-mix.js('assets/js/theme.js', 'dist/js/theme.min.js')
+mix.js('assets/js/app.js', 'dist/js/theme.min.js')
 mix.sass('assets/sass/style.scss', 'dist/css/theme.css')
 
 //mix.sass('assets/sass/woocommerce.scss', 'dist/css');
@@ -39,4 +39,4 @@ mix.browserSync({
 //             }
 //         }
 //    });
-// La bonne pratique est maintenant de le mettre dans le package.json : https://github.com/browserslist/browserslist#readme
+// La bonne pratique est maintenant de le mettre dans package.json : https://github.com/browserslist/browserslist#readme
