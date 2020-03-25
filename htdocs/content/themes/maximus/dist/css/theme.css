@@ -3561,12 +3561,6 @@ article .content .link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   text-align: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -3585,6 +3579,7 @@ article .content .link {
   -o-transition: 0.5s transform cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: 0.5s transform cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: 0.5s transform cubic-bezier(0.215, 0.61, 0.355, 1), 0.5s -webkit-transform cubic-bezier(0.215, 0.61, 0.355, 1);
+  min-height: 100%;
 }
 
 @media (min-width: 768px) {
@@ -3645,6 +3640,7 @@ article .content .link {
           box-shadow: 10px 10px 17px -1px rgba(0, 0, 0, 0);
   padding: 30px 0px;
   border-radius: 10px;
+  height: 100%;
 }
 
 @media (min-width: 992px) {
