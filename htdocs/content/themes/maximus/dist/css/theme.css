@@ -3547,8 +3547,14 @@ article .content .link {
 
 .testimonial .description {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   line-height: 24px;
+}
+
+@media (min-width: 768px) {
+  .testimonial .description {
+    margin-bottom: 70px;
+  }
 }
 
 .testimonial .items {

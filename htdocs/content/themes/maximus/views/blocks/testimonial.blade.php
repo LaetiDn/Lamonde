@@ -1,6 +1,6 @@
 <section class="testimonial section-content">
     <div class="content">
-        <h2>Un super témoignage</h2>
+        <h2>Témoignages</h2>
 
         <p class="description">`
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ex lorem, hendrerit non aliquam eu, elementum lacinia sem. Nam lectus justo, dignissim et ex at, placerat aliquet erat. Aliquam convallis rutrum odio sed vehicula. Nulla commodo mi purus, eget lobortis elit aliquet nec. Ut blandit, lectus sit amet tincidunt aliquet, nunc felis sodales nulla, id tincidunt nunc odio vel eros. Suspendisse ac varius neque. Nam feugiat eu est id luctus. Nullam augue ante, dignissim et dolor eu, posuere malesuada libero. Integer placerat metus eu elementum sollicitudin. 
