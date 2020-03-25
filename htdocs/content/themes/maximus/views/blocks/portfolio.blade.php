@@ -1,4 +1,4 @@
-<section class="portfolio">
+<section class="portfolio section-content">
     
     <h2>Mon portfolio</h2>
     
