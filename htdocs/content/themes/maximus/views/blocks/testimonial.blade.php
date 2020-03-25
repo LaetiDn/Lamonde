@@ -8,22 +8,32 @@
     </div>
     <div class="content items">
         <div class="item">
-            <div class="people" style="background-image: url(https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80)"></div>
-            <h3 class="title">Michel Archembo de la Rouge Gorge</h3>
-            <p class="description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ex lorem, hendrerit non aliquam eu, elementum lacinia sem. Nam lectus justo, dignissim et ex at, placerat aliquet erat.
+            <div class="item-inner">
+                <div class="people" style="background-image: url(https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80)"></div>
+                <h3 class="title">Michel Archembo de la Rouge Gorge</h3>
+                <p class="text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ex lorem, hendrerit non aliquam eu, elementum lacinia sem. Nam lectus justo, dignissim et ex at, placerat aliquet erat.
+                </p>
+            </div>
         </div>
         <div class="item">
-            <div class="people" style="background-image: url(https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80)"></div>
-            <h3 class="title">Michel Archembo de la Rouge Gorge</h3>
-            <p class="description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ex lorem, hendrerit non aliquam eu, elementum lacinia sem. Nam lectus justo, dignissim et ex at, placerat aliquet erat.
+            <div class="item-inner">
+                <div class="people" style="background-image: url(https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80)"></div>
+                <h3 class="title">Michel Archembo de la Rouge Gorge</h3>
+                <p class="text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ex lorem, hendrerit non aliquam eu, elementum lacinia sem. Nam lectus justo, dignissim et ex at, placerat aliquet erat.    
+                </p>
+            </div>
+            
         </div>
         <div class="item">
-            <div class="people" style="background-image: url(https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80)"></div>
-            <h3 class="title">Michel Archembo de la Rouge Gorge</h3>
-            <p class="description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ex lorem, hendrerit non aliquam eu, elementum lacinia sem. Nam lectus justo, dignissim et ex at, placerat aliquet erat.
+            <div class="item-inner">
+                <div class="people" style="background-image: url(https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80)"></div>
+                <h3 class="title">Michel Archembo de la Rouge Gorge</h3>
+                <p class="text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ex lorem, hendrerit non aliquam eu, elementum lacinia sem. Nam lectus justo, dignissim et ex at, placerat aliquet erat.
+                </p>
+            </div>
         </div>
     </div>
 

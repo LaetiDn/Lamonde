@@ -63,5 +63,32 @@
             <div class="line line--right"></div>
             <img src="https://images.unsplash.com/photo-1499028344343-cd173ffc68a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="">
         </a>
+        <a href="https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" 
+            class="item"
+            data-lightbox="gallery1" data-title="My caption">
+            <div class="line line--top"></div>
+            <div class="line line--bottom"></div>
+            <div class="line line--left"></div>
+            <div class="line line--right"></div>
+            <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="">
+        </a>
+        <a href="https://images.unsplash.com/photo-1490818387583-1baba5e638af?ixlib=rb-1.2.1&auto=format&fit=crop&w=931&q=80" 
+            class="item"
+            data-lightbox="gallery1" data-title="My caption">
+            <div class="line line--top"></div>
+            <div class="line line--bottom"></div>
+            <div class="line line--left"></div>
+            <div class="line line--right"></div>
+            <img src="https://images.unsplash.com/photo-1490818387583-1baba5e638af?ixlib=rb-1.2.1&auto=format&fit=crop&w=931&q=80" alt="">
+        </a>
+        <a href="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" 
+            class="item"
+            data-lightbox="gallery1" data-title="My caption">
+            <div class="line line--top"></div>
+            <div class="line line--bottom"></div>
+            <div class="line line--left"></div>
+            <div class="line line--right"></div>
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="">
+        </a>
     </div>
 </section>
