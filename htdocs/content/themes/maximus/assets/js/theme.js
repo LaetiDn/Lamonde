@@ -1,13 +1,4 @@
-const APP = require('./utils/config');
-const Header = require('./components/Header');
-
-APP.DEBUG = true
-
-
 $(document).ready(function() {
-
-    const header = new Header()
-    header.init()
 
     var screenWidth = $(window).width();
     var heroHeight = $('.hero').outerHeight(true);
@@ -130,23 +121,6 @@ $(document).ready(function() {
         $(this).parent().addClass('active').siblings().removeClass('active');
         $(this).parents('.image-ctn').find('.slide0' + index).addClass('active').siblings().removeClass('active');
     });
-
-
-
-    if($(".portfolio")) {
-        $(".portfolio").imagesLoaded(function () {
-            var $grid = $('.portfolio .item-wrapper').masonry(
-                {
-                    itemSelector: '.portfolio .item',
-                    transitionDuration: 0,
-                    percentPosition: !0
-                }
-            )
-        })
-        // .progress( function( instance, image ) {
-        //     console.log(image)
-        // });  
-    }
 });
 
 

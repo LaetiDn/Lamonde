@@ -27,10 +27,6 @@ class AssetServiceProvider extends ServiceProvider
         //JS
         Asset::add('jquery_js', 'js/jquery.js', [], $theme->getHeader('3.4.1', false))->to('front');
 
-        Asset::add('imageloaded_js', 'js/imagesloaded.pkgd.min.js', ['jquery_js'], $theme->getHeader('1.0'))->to('front');
-        Asset::add('masonry_js', 'js/masonry.pkgd.min.js', ['jquery_js'], $theme->getHeader('1.0'))->to('front');
-        Asset::add('lightbox_js', 'js/lightbox.min.js', ['jquery_js'], $theme->getHeader('1.0'))->to('front');
-
         Asset::add('theme_js', 'js/theme.min.js', ['jquery_js'], $theme->getHeader('1.0'))->to('front');
         Asset::add('slider', 'js/slider.js', ['jquery_js'], '1.0', true)->to();
         Asset::add('slick_js', 'js/slick.min.js', ['jquery_js'], $theme->getHeader('1.0'))->to('front');

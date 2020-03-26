@@ -28,10 +28,4 @@
             @endwhile
         @endif
 
-        {{-- Exemple de block portfolio --}}
-        @include ("blocks.portfolio")
-
-        {{-- Exemple de block testimonial --}}
-        @include ("blocks.testimonial")
-
 @endsection

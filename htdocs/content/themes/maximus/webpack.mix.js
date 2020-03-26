@@ -13,16 +13,15 @@ let mix = require('laravel-mix');
 
 mix.setPublicPath('dist')
 
-mix.js('assets/js/app.js', 'dist/js/theme.min.js')
+mix.js('assets/js/theme.js', 'dist/js/theme.min.js')
 mix.sass('assets/sass/style.scss', 'dist/css/theme.css')
-
+ 
 //mix.sass('assets/sass/woocommerce.scss', 'dist/css');
 
 mix.browserSync({
     proxy: 'http://localhost',
     files: [
         "dist/css/theme.css",
-        "dist/js/app.js",
         //"dist/css/woocommerce.css",
     ]
 })
