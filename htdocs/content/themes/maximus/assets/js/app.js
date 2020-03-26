@@ -4,10 +4,9 @@ const Portfolio = require('./components/Portfolio')
 
 APP.DEBUG = true
 
+
 $(document).ready(function() {
-
     const header = new Header().init()
-
     if($(".portfolio")) {
         $(".portfolio").each((index) => {
             const portfolio = new Portfolio($(".portfolio").eq(index)).init()

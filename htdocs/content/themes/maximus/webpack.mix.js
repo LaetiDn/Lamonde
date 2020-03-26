@@ -11,7 +11,7 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.setPublicPath('dist');
+mix.setPublicPath('dist')
 
 mix.js('assets/js/app.js', 'dist/js/theme.min.js')
 mix.sass('assets/sass/style.scss', 'dist/css/theme.css')
@@ -22,10 +22,10 @@ mix.browserSync({
     proxy: 'http://localhost',
     files: [
         "dist/css/theme.css",
-        "dist/js/theme.min.js",
+        "dist/js/app.js",
         //"dist/css/woocommerce.css",
     ]
-});
+})
 
 // Autoprefixer
 // Exemple d'ajout de autoprefixer dans webpack.mix : https://laravel-mix.com/docs/5.0/css-preprocessors

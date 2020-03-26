@@ -2547,7 +2547,6 @@ article .content .link {
   height: 100%;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
 }
 
 .block-background__title {

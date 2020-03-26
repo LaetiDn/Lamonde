@@ -7,12 +7,12 @@ const Header = function() {
     }
 
     this.registerEvents = () => { 
-        window.addEventListener('scroll', onScroll);
+        window.addEventListener('scroll', onScroll)
     }
 
     onScroll = () => {
-        let currentScrollPos = window.pageYOffset;
-        
+        let currentScrollPos = window.pageYOffset
+
         if (currentScrollPos > 300) {
 
             if (prevScrollpos > currentScrollPos) {
@@ -21,7 +21,7 @@ const Header = function() {
                 this.root.classList.add("retract")
             }
 
-            prevScrollpos = currentScrollPos;
+            prevScrollpos = currentScrollPos
         }
     }
 
