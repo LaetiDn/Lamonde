@@ -1,3 +1,5 @@
+// const $ = require("jquery");
+
 const APP = require('./utils/config')
 const Header = require('./components/Header')
 const Portfolio = require('./components/Portfolio')
