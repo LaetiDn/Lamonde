@@ -1,13 +1,21 @@
 const APP = require('./utils/config')
 const Header = require('./components/Header')
 const Portfolio = require('./components/Portfolio')
+const SliderSlick = require('./components/SliderSlick')
 
 APP.DEBUG = true
 
 $(document).ready(function() {
 
+    //cp to clip board
+    $('#instruction-main-ctn input').on('click', function () {
+        $temp = $(this).select();
+        $copy = $temp.select().val();
+        document.execCommand('copy');
+    });
+    
     const header = new Header().init()
-
+    
     if($(".portfolio")) {
         $(".portfolio").each((index) => {
             const portfolio = new Portfolio($(".portfolio").eq(index)).init()

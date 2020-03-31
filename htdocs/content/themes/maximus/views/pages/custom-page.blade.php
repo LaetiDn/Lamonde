@@ -23,15 +23,13 @@
                     @include ("blocks.dropdown")
                 @elseif( get_row_layout() == 'block_counter' )
                     @include ("blocks.counter")
+                @elseif( get_row_layout() == 'block_gallery' )
+                    @include ("blocks.gallery")
+                @elseif( get_row_layout() == 'block_testimonial' )
+                    @include ("blocks.testimonial")
                 @endif
 
             @endwhile
         @endif
-
-        {{-- Exemple de block portfolio --}}
-        @include ("blocks.portfolio")
-
-        {{-- Exemple de block testimonial --}}
-        @include ("blocks.testimonial")
 
 @endsection

@@ -1,44 +1,27 @@
 <section class="testimonial section-content">
     <div class="content">
-        <h2>Témoignages</h2>
+        @if( get_sub_field('title') != "") 
+            <h2>{{ get_sub_field('title') }}</h2>
+        @endif
 
-        <p class="description">`
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ex lorem, hendrerit non aliquam eu, elementum lacinia sem. Nam lectus justo, dignissim et ex at, placerat aliquet erat. Aliquam convallis rutrum odio sed vehicula. Nulla commodo mi purus, eget lobortis elit aliquet nec. Ut blandit, lectus sit amet tincidunt aliquet, nunc felis sodales nulla, id tincidunt nunc odio vel eros. Suspendisse ac varius neque. Nam feugiat eu est id luctus. Nullam augue ante, dignissim et dolor eu, posuere malesuada libero. Integer placerat metus eu elementum sollicitudin. 
-        </p>
+        @if( get_sub_field('description') != "") 
+            <p class="description">
+                {{ get_sub_field('description') }}
+            </p>
+        @endif
     </div>
     <div class="content items">
-        <div class="item">
-            <div class="item-inner">
-                <div class="people" style="background-image: url(https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80)"></div>
-                <h3 class="title">Michel Archembo de la Rouge Gorge</h3>
-                <p class="text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ex lorem, hendrerit non aliquam eu, elementum lacinia sem. Nam lectus justo, dignissim et ex at, placerat aliquet erat.
-                </p>
+        @foreach (get_sub_field('items') as $item)
+            <div class="item">
+                <div class="item-inner">
+                    <div class="people" style="background-image: url({{$item['people']}})"></div>
+                    <h3 class="title">{{$item['name']}}</h3>
+                    <p class="text">
+                        {{$item['quote']}}
+                    </p>
+                </div>
             </div>
-        </div>
-        <div class="item">
-            <div class="item-inner">
-                <div class="people" style="background-image: url(https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80)"></div>
-                <h3 class="title">Michel Archembo de la Rouge Gorge</h3>
-                <p class="text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ex lorem, hendrerit non aliquam eu, elementum lacinia sem. Nam lectus justo, dignissim et ex at, placerat aliquet erat.    
-                </p>
-            </div>
-            
-        </div>
-        <div class="item">
-            <div class="item-inner">
-                <div class="people" style="background-image: url(https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80)"></div>
-                <h3 class="title">Michel Archembo de la Rouge Gorge</h3>
-                <p class="text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ex lorem, hendrerit non aliquam eu, elementum lacinia sem. Nam lectus justo, dignissim et ex at, placerat aliquet erat.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <div class="content text-center">
-        <a class="cta" href="#">En savoir plus </a>
+        @endforeach
     </div>
 
 </section>

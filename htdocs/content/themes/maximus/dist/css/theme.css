@@ -3576,6 +3576,9 @@ article .content .link {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-bottom: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .testimonial .items .item {
