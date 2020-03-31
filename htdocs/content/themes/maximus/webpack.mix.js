@@ -35,6 +35,7 @@ mix.browserSync({
     files: [
         "dist/css/theme.css",
         "dist/js/app.min.js",
+        "views/**/*.blade.php",
         //"dist/css/woocommerce.css",
     ]
 });

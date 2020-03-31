@@ -1,13 +1,17 @@
-// const $ = require("jquery");
-
 const APP = require('./utils/config')
 const Header = require('./components/Header')
 const Portfolio = require('./components/Portfolio')
 const SliderSlick = require('./components/SliderSlick')
 
-APP.DEBUG = true
-
 $(document).ready(function() {
+    const header = new Header()
+    header.init() 
+
+    if($(".portfolio")) {
+        $(".portfolio").each((index) => {
+            new Portfolio($(".portfolio").eq(index)).init()
+        })
+    }
 
     //cp to clip board
     $('#instruction-main-ctn input').on('click', function () {
@@ -15,14 +19,6 @@ $(document).ready(function() {
         $copy = $temp.select().val();
         document.execCommand('copy');
     });
-    
-    const header = new Header().init()
-    
-    if($(".portfolio")) {
-        $(".portfolio").each((index) => {
-            const portfolio = new Portfolio($(".portfolio").eq(index)).init()
-        })
-    }
     
     var screenWidth = $(window).width();
     var heroHeight = $('.hero').outerHeight(true);
@@ -149,16 +145,12 @@ $(document).ready(function() {
 
 });
 
-
-
-
 function triggerCounter() {
     document.querySelectorAll('.counter').forEach(item => {
 
         var element = item.getElementsByClassName('counter__things')[0];
         var number = element.dataset.number;
         var speed = element.dataset.speed;
-
 
         var count = 1;
         var idInterval = setInterval(function() {

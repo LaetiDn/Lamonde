@@ -1,13 +1,14 @@
 const Header = function() {
     this.root = document.querySelector("header.header")
-    let prevScrollpos = window.pageYOffset
 
+    let prevScrollpos = window.pageYOffset
+    
     this.init = () => { 
         this.registerEvents()
     }
 
     this.registerEvents = () => { 
-        window.addEventListener('scroll', onScroll);
+        window.addEventListener('scroll', onScroll)
     }
 
     onScroll = () => {

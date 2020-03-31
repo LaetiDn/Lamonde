@@ -7,7 +7,7 @@ $(document).ready(function() {
         tick,
         percentTime;
         
-    if($('.header-slider').length){
+    if($('.header-slider').length) {
         
         $slick = $('.header-slider');
         $slick.slick({
