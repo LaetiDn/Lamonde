@@ -24,16 +24,12 @@ class AssetServiceProvider extends ServiceProvider
         /** @var ThemeManager $theme */
         $theme = $this->app->make('wp.theme');
 
-        //JS
-        Asset::add('jquery_js', 'js/jquery.js', [], $theme->getHeader('3.4.1', false))->to('front');
-
-        Asset::add('theme_js', 'js/theme.min.js', ['jquery_js'], $theme->getHeader('1.0'))->to('front');
-        Asset::add('slider', 'js/slider.js', ['jquery_js'], '1.0', true)->to();
-        Asset::add('slick_js', 'js/slick.min.js', ['jquery_js'], $theme->getHeader('1.0'))->to('front');
-        //Asset::add('scrollspy_js', 'js/jquery-scrollspy.min.js', ['jquery_js'], $theme->getHeader('1.0'))->to('front');
-        Asset::add('lity_js', 'js/lity.min.js', ['jquery_js'], $theme->getHeader('1.0'))->to('front');
-
-
+        //VENDORS JS
+        Asset::add('vendor_js', 'js/vendors.min.js', [], $theme->getHeader('1.0'))->to('front');
+        
+        //APP JS
+        Asset::add('theme_js', 'js/app.min.js', ['vendor_js'], $theme->getHeader('1.0'))->to('front');
+        
         //CSS
         Asset::add('theme_styles', 'css/theme.css', [], $theme->getHeader('version'))->to('front');
         Asset::add('slick_styles', 'css/slick.css', [], $theme->getHeader('version'))->to('front');

@@ -27,3 +27,4 @@ node_modules/
 .env
 
 htdocs/content/themes/themosis
+webpack.mix.js

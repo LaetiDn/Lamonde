@@ -1,6 +1,6 @@
 <?php
 // if( function_exists('acf_add_local_field_group') ):
-//
+
 // acf_add_local_field_group(array(
 // 	'key' => 'group_5e2f40d7f2970',
 // 	'title' => 'Animations',
@@ -67,7 +67,7 @@
 // 	'active' => true,
 // 	'description' => '',
 // ));
-//
+
 // acf_add_local_field_group(array(
 // 	'key' => 'group_5bf2b42e0d67d',
 // 	'title' => 'Blocks',
@@ -1415,5 +1415,5 @@
 // 	'active' => true,
 // 	'description' => '',
 // ));
-//
+
 // endif;

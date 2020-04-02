@@ -1,7 +1,6 @@
 <?php
-
 // if( function_exists('acf_add_local_field_group') ):
-//
+
 // acf_add_local_field_group(array(
 // 	'key' => 'group_5bf2b42e0d67d',
 // 	'title' => 'Blocks',
@@ -708,7 +707,7 @@
 // 					'min' => '',
 // 					'max' => '',
 // 				),
-//
+
 // 				'layout_5bf484d7350f3' => array(
 // 					'key' => 'layout_5bf484d7350f3',
 // 					'name' => 'block_open_form',
@@ -1339,7 +1338,7 @@
 // 					'min' => '',
 // 					'max' => '',
 // 				),
-//
+
 //                 'layout_5e72300c836e4' => array(
 // 					'key' => 'layout_5e72300c836e4',
 // 					'name' => 'block_counter',
@@ -1382,7 +1381,7 @@
 //                             'max' => '1000',
 //                             'step' => '',
 //                         ),
-//
+
 // 						array(
 // 							'key' => 'field_5e72305f836e8',
 // 							'label' => 'Title',
@@ -1461,15 +1460,15 @@
 // 									'append' => '',
 // 									'maxlength' => '',
 // 								),
-//
+
 // 							),
-//
+
 // 						),
 // 					),
 // 					'min' => '',
 // 					'max' => '',
 // 				),
-//
+
 // 				'layout_5d362094c40ea' => array(
 // 					'key' => 'layout_5d362094c40ea',
 // 					'name' => 'block_iframe',
@@ -1548,4 +1547,4 @@
 // 	'description' => '',
 // ));
 
-//endif;
+// endif;

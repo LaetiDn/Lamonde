@@ -11,20 +11,34 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.setPublicPath('dist')
+mix.setPublicPath('dist');
 
-mix.js('assets/js/theme.js', 'dist/js/theme.min.js')
+//Vendors
+mix.scripts([
+    'node_modules/jquery/dist/jquery.min.js',
+    'node_modules/imagesloaded/imagesloaded.pkgd.min.js',
+    'node_modules/lightbox2/dist/js/lightbox.min.js',
+    'node_modules/masonry-layout/dist/masonry.pkgd.min.js',
+    'node_modules/slick-carousel/slick/slick.min.js'
+
+], 'dist/js/vendors.min.js');
+
+//APP JS
+mix.js('assets/js/app.js', 'dist/js/app.min.js')
+
 mix.sass('assets/sass/style.scss', 'dist/css/theme.css')
- 
+
 //mix.sass('assets/sass/woocommerce.scss', 'dist/css');
 
 mix.browserSync({
     proxy: 'http://localhost',
     files: [
         "dist/css/theme.css",
+        "dist/js/app.min.js",
+        "views/**/*.blade.php",
         //"dist/css/woocommerce.css",
     ]
-})
+});
 
 // Autoprefixer
 // Exemple d'ajout de autoprefixer dans webpack.mix : https://laravel-mix.com/docs/5.0/css-preprocessors

@@ -1,14 +1,25 @@
-const APP = require('./utils/config');
-const Header = require('./components/Header');
-
-APP.DEBUG = true
-
+const APP = require('./utils/config')
+const Header = require('./components/Header')
+const Portfolio = require('./components/Portfolio')
+const SliderSlick = require('./components/SliderSlick')
 
 $(document).ready(function() {
-
     const header = new Header()
-    header.init()
+    header.init() 
 
+    if($(".portfolio")) {
+        $(".portfolio").each((index) => {
+            new Portfolio($(".portfolio").eq(index)).init()
+        })
+    }
+
+    //cp to clip board
+    $('#instruction-main-ctn input').on('click', function () {
+        $temp = $(this).select();
+        $copy = $temp.select().val();
+        document.execCommand('copy');
+    });
+    
     var screenWidth = $(window).width();
     var heroHeight = $('.hero').outerHeight(true);
 
@@ -93,6 +104,7 @@ $(document).ready(function() {
     });
 
     var $window = $(window);
+
     $window.scroll(function() {
         if ($window.scrollTop() >= heroHeight) {
             $('.main-nav-outer').addClass('sticky');
@@ -131,26 +143,7 @@ $(document).ready(function() {
         $(this).parents('.image-ctn').find('.slide0' + index).addClass('active').siblings().removeClass('active');
     });
 
-
-
-    if($(".portfolio")) {
-        $(".portfolio").imagesLoaded(function () {
-            var $grid = $('.portfolio .item-wrapper').masonry(
-                {
-                    itemSelector: '.portfolio .item',
-                    transitionDuration: 0,
-                    percentPosition: !0
-                }
-            )
-        })
-        // .progress( function( instance, image ) {
-        //     console.log(image)
-        // });  
-    }
 });
-
-
-
 
 function triggerCounter() {
     document.querySelectorAll('.counter').forEach(item => {
@@ -158,7 +151,6 @@ function triggerCounter() {
         var element = item.getElementsByClassName('counter__things')[0];
         var number = element.dataset.number;
         var speed = element.dataset.speed;
-
 
         var count = 1;
         var idInterval = setInterval(function() {
