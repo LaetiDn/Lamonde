@@ -1361,6 +1361,33 @@ acf_add_local_field_group(array(
                     'esc_html' => 0,
                 ),
                 array(
+					'key' => 'field_5e8c7ba925687',
+					'label' => 'Style',
+					'name' => 'style',
+					'type' => 'select',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'choices' => array(
+						'transition' => 'Simple',
+						'shadow' => 'Shadow',
+						'arrow' => 'Arrow',
+					),
+					'default_value' => array(
+					),
+					'allow_null' => 0,
+					'multiple' => 0,
+					'ui' => 0,
+					'return_format' => 'value',
+					'ajax' => 0,
+					'placeholder' => '',
+				),
+                array(
                     'key' => 'field_5c07d71c1611a',
                     'label' => 'Text : Color',
                     'name' => 'text_color',

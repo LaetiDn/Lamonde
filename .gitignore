@@ -28,3 +28,4 @@ node_modules/
 
 htdocs/content/themes/themosis
 webpack.mix.js
+htdocs/content/themes/maximus/webpack.mix.js

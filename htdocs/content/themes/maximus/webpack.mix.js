@@ -31,7 +31,7 @@ mix.sass('assets/sass/style.scss', 'dist/css/theme.css')
 //mix.sass('assets/sass/woocommerce.scss', 'dist/css');
 
 mix.browserSync({
-    proxy: 'http://localhost',
+    proxy: 'https://maximus.test',
     files: [
         "dist/css/theme.css",
         "dist/js/app.min.js",
