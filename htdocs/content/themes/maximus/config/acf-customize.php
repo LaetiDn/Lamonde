@@ -1330,21 +1330,25 @@ acf_add_local_field_group(array(
             'layout' => 'block',
             'sub_fields' => array(
                 array(
-                    'key' => 'field_5d42x113e8d43',
-                    'label' => 'Preview',
-                    'name' => '',
-                    'type' => 'message',
-                    'instructions' => '',
-                    'required' => 0,
-                    'wrapper' => array(
-                        'width' => '',
-                        'class' => 'button-preview',
-                        'id' => '',
-                    ),
-                    'message' => '<a href="#" class="cta default">Button</a> <a href="#" class="cta hover">Button : hover</a>',
-                    'new_lines' => 'wpautop',
-                    'esc_html' => 0,
-                ),
+					'key' => 'field_5e975bfdb0c59',
+					'label' => 'Preview',
+					'name' => '',
+					'type' => 'message',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => 'button-preview',
+						'id' => '',
+					),
+					'message' => '<div>Normal state</div>
+<a href="#" class="cta default">Button <i class="icon fa fa-arrow-right" aria-hidden="true"></i></a>
+<div>Hover state</div>
+<a href="#" class="cta hover">Button	<i class="icon fa fa-arrow-right" aria-hidden="true"></i></a>',
+					'new_lines' => 'wpautop',
+					'esc_html' => 0,
+				),
                 array(
 					'key' => 'field_5e8c7ba925687',
 					'label' => 'Style',
