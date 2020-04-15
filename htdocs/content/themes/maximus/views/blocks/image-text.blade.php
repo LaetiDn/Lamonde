@@ -1,6 +1,6 @@
 
 <section id="{{ get_sub_field('section_id') }}"
-        class="block-image-text @if($animation['content_animation'] != 'none' || get_sub_field("animation") != 'gen' ){{ 'animate' }}@endif"
+        class="block-image-text {{ get_sub_field('section_class') }} @if($animation['content_animation'] != 'none' || get_sub_field("animation") != 'gen' ){{ 'animate' }}@endif"
         style="background-color: {{ get_sub_field('bg_color') }}">
 
     <div class="content  @if(get_sub_field('reverse')) {{ 'reverse' }} @else {{ 'normal' }}@endif {{ get_sub_field('layout') }}" >
@@ -30,7 +30,7 @@
                     <div class="cta-ctn">
                         <a class="cta" href="{{ get_sub_field('link')['url'] }}" target="{{ get_sub_field('link')['target'] }}">
                             {{ get_sub_field('link')["title"] }}
-                        </a>        
+                        </a>
                     </div>
 
                 @endif

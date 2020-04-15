@@ -1,10 +1,10 @@
-<section class="testimonial section-content">
+<section id="{{ get_sub_field('section_id') }}" class="testimonial section-content {{ get_sub_field('section_class') }}">
     <div class="content">
-        @if( get_sub_field('title') != "") 
+        @if( get_sub_field('title') != "")
             <h2>{{ get_sub_field('title') }}</h2>
         @endif
 
-        @if( get_sub_field('description') != "") 
+        @if( get_sub_field('description') != "")
             <p class="description">
                 {{ get_sub_field('description') }}
             </p>

@@ -1,4 +1,4 @@
-<section class="block-open-form section-content @if($animation['content_animation'] != 'none' || get_sub_field("animation") != 'gen' ){{ 'animate' }}@endif" style="background-color: {{ get_sub_field('bg_color') }}">
+<section id="{{ get_sub_field('section_id') }}" class="block-open-form section-content {{ get_sub_field('section_class') }} @if($animation['content_animation'] != 'none' || get_sub_field("animation") != 'gen' ){{ 'animate' }}@endif" style="background-color: {{ get_sub_field('bg_color') }}">
     <div class="content-ctn css-animation {{ get_sub_field("animation") != 'gen' ? get_sub_field("animation") : $animation['content_animation']  }}">
         <div class="text">
             {!! get_sub_field("text") !!}
