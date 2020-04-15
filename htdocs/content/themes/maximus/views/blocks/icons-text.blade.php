@@ -42,7 +42,6 @@
         @endif
         @if(!empty( get_sub_field("cta")))
         <div class="link-ctn">
-            
             @include('components.button', [
                 'url' => get_sub_field('cta')['url'],
                 'target' => get_sub_field('cta')['target'],

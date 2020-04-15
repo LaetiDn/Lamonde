@@ -8,106 +8,113 @@
   --duration: 1s;
 }
 
-.cta,
-.btn {
-  display: inline-block;
-  text-decoration: none;
+.btn, .cta {
+    display: inline-block;
+    text-decoration: none;
 
-  padding: 15px 25px;
-  margin: 25px 10px;
-  text-align: center;
-  position: relative;
-  width:150px;
-
-
-
-    //COLOR TRANSITION
-    
-    .transition {
-        transition: background-color .6s ease, color .6s ease, border .6s ease;
-    }
-    .shadow {
-        transition: all .6s ease;
-    }
-
-    //SHADOW
-    .shadow:before {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      left: 0;
-      top: 0;
-      box-shadow: 3px 3px 3px rgba(0, 0, 0, 0);
-    }
-    .shadow:hover {
-      box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
-    }
-
-    i.icon {
-        display: none;
-    }
-    //ARROW 1
-    .arrow i {
-      position: relative;
-      margin-left: 15px;
-      right: 5px;
-      transition: right 0.6s ease !important;
-    }
-    .arrow:hover i {
-      right: -5px;
-    }
+    padding: 15px 25px;
+    margin: 25px 10px;
+    text-align: center;
+    position: relative;
+    width:150px;
 }
 
-//ARROW 2
-.btn-cta {
-padding: 17px 25px;
-  border: none;
-  box-shadow: inset 0px 0px 0px 2px var(--grey);
-  transition: box-shadow var(--duration) var(--ease);
+//COLOR TRANSITION
+.transition {
+    transition: background-color .6s ease, color .6s ease, border .6s ease;
+}
+.shadow {
+    transition: all .6s ease;
+}
 
-  .label {
-    position: relative;
-    z-index: 2;
+//SHADOW
+.shadow:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0);
+}
+.shadow:hover {
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+//ARROW 1
+i.icon {
+    display: none;
+}
+.arrow-anim  {
+  position: relative;
+  margin-left: 15px;
+  right: 5px;
+  transition: all 0.6s ease;
+  .icon {
+      position: relative;
+      display: inline-block;
+      right: -5px;
+      transition: right 0.6s ease;
   }
-  .overlay {
-    opacity: 0;
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 1;
-    width: 0;
-    height: 100%;
-    border: 2px solid transparent;
-    border: none;
-    background: var(--orange);
-    transition: all 0.3s var(--ease), opacity 0.3s var(--ease);
-  }
-  .arrow {
-        position: absolute;
-        font-size: 20px;
-        right:16px;
-        top:50%;
-        transform: translateY(-50%);
-        z-index: 2;
-        opacity:0;
-        color: var(--white);
-        transition: opacity var(--duration) var(--ease) .3s;
-    }
 
   &:hover {
-    box-shadow: inset 0px 0px 0px 2px var(--orange);
-    .label {
-      color: var(--white);
-    }
-    .overlay {
-      opacity: 1;
-      width: 130%;
-    }
-    .arrow {
-      opacity: 1;
-    }
+      .icon {
+        right: -15px;
+      }
   }
 }
+
+
+
+//ARROW 2
+// .btn-cta {
+// padding: 17px 25px;
+//   border: none;
+//   box-shadow: inset 0px 0px 0px 2px var(--grey);
+//   transition: box-shadow var(--duration) var(--ease);
+//
+//   .label {
+//     position: relative;
+//     z-index: 2;
+//   }
+//   .overlay {
+//     opacity: 0;
+//     display: block;
+//     position: absolute;
+//     left: 0;
+//     top: 0;
+//     z-index: 1;
+//     width: 0;
+//     height: 100%;
+//     border: 2px solid transparent;
+//     border: none;
+//     background: var(--orange);
+//     transition: all 0.3s var(--ease), opacity 0.3s var(--ease);
+//   }
+//   .arrow {
+//         position: absolute;
+//         font-size: 20px;
+//         right:16px;
+//         top:50%;
+//         transform: translateY(-50%);
+//         z-index: 2;
+//         opacity:0;
+//         color: var(--white);
+//         transition: opacity var(--duration) var(--ease) .3s;
+//     }
+//
+//   &:hover {
+//     box-shadow: inset 0px 0px 0px 2px var(--orange);
+//     .label {
+//       color: var(--white);
+//     }
+//     .overlay {
+//       opacity: 1;
+//       width: 130%;
+//     }
+//     .arrow {
+//       opacity: 1;
+//     }
+//   }
+// }
