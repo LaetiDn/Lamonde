@@ -1,4 +1,7 @@
-<section id="{{ get_sub_field('gallery_name') }}" class="portfolio section-content {{ get_sub_field('section_class') }}">
+<?php $slug = str_slug(get_sub_field('gallery_name').rand(0, 1000000), "-") ?>
+
+
+<section id="{{ $slug }}" class="portfolio section-content {{ get_sub_field('section_class') }}">
 
     @if( get_sub_field('title') != "")
         <h2>{{ get_sub_field('title') }}</h2>
@@ -16,7 +19,7 @@
         @foreach (get_sub_field('items') as $item)
             <a href="{{$item['image']}}"
                 class="item"
-                data-lightbox="{{ get_sub_field('gallery_name') }}" data-title="{{$item['caption']}}">
+                data-lightbox="{{ $slug }}" data-title="{{$item['caption']}}">
                 <div class="line line--top"></div>
                 <div class="line line--bottom"></div>
                 <div class="line line--left"></div>
