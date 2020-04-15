@@ -11,9 +11,10 @@
 namespace Google\Site_Kit\Core\Admin;
 
 use Google\Site_Kit\Context;
-use Google\Site_Kit\Core\Authentication\Authentication;
-use Google\Site_Kit\Core\Permissions\Permissions;
 use Google\Site_Kit\Core\Assets\Assets;
+use Google\Site_Kit\Core\Authentication\Authentication;
+use Google\Site_Kit\Core\Modules\Modules;
+use Google\Site_Kit\Core\Permissions\Permissions;
 
 /**
  * Class managing admin screens.
@@ -43,6 +44,14 @@ final class Screens {
 	private $assets;
 
 	/**
+	 * Modules instance.
+	 *
+	 * @since 1.7.0
+	 * @var Modules
+	 */
+	private $modules;
+
+	/**
 	 * Associative array of $hook_suffix => $screen pairs.
 	 *
 	 * @since 1.0.0
@@ -57,14 +66,16 @@ final class Screens {
 	 *
 	 * @param Context $context Plugin context.
 	 * @param Assets  $assets  Optional. Assets API instance. Default is a new instance.
+	 * @param Modules $modules Optional. Modules instance. Default is a new instance.
 	 */
-	public function __construct( Context $context, Assets $assets = null ) {
+	public function __construct(
+		Context $context,
+		Assets $assets = null,
+		Modules $modules = null
+	) {
 		$this->context = $context;
-
-		if ( ! $assets ) {
-			$assets = new Assets( $this->context );
-		}
-		$this->assets = $assets;
+		$this->assets  = $assets ?: new Assets( $this->context );
+		$this->modules = $modules ?: new Modules( $this->context );
 	}
 
 	/**
@@ -192,13 +203,7 @@ final class Screens {
 		}
 
 		$this->screens[ $hook_suffix ]->enqueue_assets( $this->assets );
-
-		/**
-		 * Fires when assets are enqueued for a Site Kit admin screen.
-		 *
-		 * @since 1.0.0
-		 */
-		do_action( 'googlesitekit_enqueue_screen_assets' );
+		$this->modules->enqueue_assets();
 	}
 
 	/**
@@ -217,39 +222,21 @@ final class Screens {
 					'capability'       => Permissions::VIEW_DASHBOARD,
 					'enqueue_callback' => function( Assets $assets ) {
 						if ( $this->context->input()->filter( INPUT_GET, 'permaLink' ) ) {
-							$assets->enqueue_asset( 'googlesitekit_dashboard_details' );
+							$assets->enqueue_asset( 'googlesitekit-dashboard-details' );
 						} else {
-							$assets->enqueue_asset( 'googlesitekit_dashboard' );
+							$assets->enqueue_asset( 'googlesitekit-dashboard' );
 						}
 					},
 					'render_callback'  => function( Context $context ) {
-						?>
-						<div class="googlesitekit-plugin">
-							<?php
-							if ( $context->input()->filter( INPUT_GET, 'permaLink' ) ) {
-								/**
-								 * Fires before the Dashboard Details App wrapper is rendered.
-								 *
-								 * @since 1.0.0
-								 */
-								do_action( 'googlesitekit_above_dashboard_details_app' );
-								?>
-								<div id="js-googlesitekit-dashboard-details" class="googlesitekit-page"></div>
-								<?php
-							} else {
-								/**
-								 * Fires before the Dashboard App wrapper is rendered.
-								 *
-								 * @since 1.0.0
-								 */
-								do_action( 'googlesitekit_above_dashboard_app' );
-								?>
-								<div id="js-googlesitekit-dashboard" class="googlesitekit-page"></div>
-								<?php
-							}
+						if ( $context->input()->filter( INPUT_GET, 'permaLink' ) ) {
 							?>
-						</div>
-						<?php
+							<div id="js-googlesitekit-dashboard-details" class="googlesitekit-page"></div>
+							<?php
+						} else {
+							?>
+							<div id="js-googlesitekit-dashboard" class="googlesitekit-page"></div>
+							<?php
+						}
 					},
 				)
 			),
@@ -277,21 +264,13 @@ final class Screens {
 				'title'            => __( 'Settings', 'google-site-kit' ),
 				'capability'       => Permissions::MANAGE_OPTIONS,
 				'enqueue_callback' => function( Assets $assets ) {
-					$assets->enqueue_asset( 'googlesitekit_settings' );
+					$assets->enqueue_asset( 'googlesitekit-settings' );
 				},
 				'render_callback'  => function( Context $context ) {
 					?>
-					<div class="googlesitekit-plugin">
-						<?php
-						/**
-						 * Fires before the Settings App wrapper is rendered.
-						 *
-						 * @since 1.0.0
-						 */
-						do_action( 'googlesitekit_above_settings_app' );
-						?>
-						<div id="googlesitekit-settings-wrapper" class="googlesitekit-page"></div>
-					</div>
+
+					<div id="googlesitekit-settings-wrapper" class="googlesitekit-page"></div>
+
 					<?php
 				},
 			)
@@ -344,21 +323,13 @@ final class Screens {
 					exit;
 				},
 				'enqueue_callback'    => function( Assets $assets ) {
-					$assets->enqueue_asset( 'googlesitekit_dashboard_splash' );
+					$assets->enqueue_asset( 'googlesitekit-dashboard-splash' );
 				},
 				'render_callback'     => function( Context $context ) {
 					?>
-					<div class="googlesitekit-plugin">
-						<?php
-						/**
-						 * Fires before the Dashboard Splash App wrapper is rendered.
-						 *
-						 * @since 1.0.0
-						 */
-						do_action( 'googlesitekit_above_dashboard_splash_app' );
-						?>
-						<div id="js-googlesitekit-dashboard-splash" class="googlesitekit-page"></div>
-					</div>
+
+					<div id="js-googlesitekit-dashboard-splash" class="googlesitekit-page"></div>
+
 					<?php
 				},
 			)

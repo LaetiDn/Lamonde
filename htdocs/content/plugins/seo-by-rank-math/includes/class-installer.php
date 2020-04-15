@@ -127,6 +127,9 @@ class Installer {
 	 * Runs on activation of the plugin.
 	 */
 	private function activate() {
+		// Init to use the common filters.
+		new \RankMath\Defaults;
+
 		$current_version    = get_option( 'rank_math_version', null );
 		$current_db_version = get_option( 'rank_math_db_version', null );
 
@@ -142,6 +145,11 @@ class Installer {
 		// Update to latest version.
 		update_option( 'rank_math_version', rank_math()->version );
 		update_option( 'rank_math_db_version', rank_math()->db_version );
+
+		// Clear rollback option if necessary.
+		if ( rank_math()->version !== get_option( 'rank_math_rollback_version' ) ) {
+			delete_option( 'rank_math_rollback_version' );
+		}
 
 		// Save install date.
 		if ( false === boolval( get_option( 'rank_math_install_date' ) ) ) {
@@ -318,7 +326,7 @@ class Installer {
 			'nofollow_image_links'                => 'off',
 			'new_window_external_links'           => 'on',
 			'add_img_alt'                         => 'off',
-			'img_alt_format'                      => '%title% %count(alt)%',
+			'img_alt_format'                      => ' %filename%',
 			'add_img_title'                       => 'off',
 			'img_title_format'                    => '%title% %count(title)%',
 			'breadcrumbs'                         => 'off',
@@ -463,9 +471,10 @@ class Installer {
 	 */
 	private function get_post_type_defaults( $post_type ) {
 		$rich_snippets = [
-			'post'    => 'article',
-			'page'    => 'article',
-			'product' => 'product',
+			'post'     => 'article',
+			'page'     => 'article',
+			'product'  => 'product',
+			'download' => 'product',
 		];
 
 		$defaults = [
@@ -509,6 +518,7 @@ class Installer {
 			$titles[ 'tax_' . $taxonomy . '_robots' ]        = $defaults['robots'];
 			$titles[ 'tax_' . $taxonomy . '_add_meta_box' ]  = $defaults['metabox'];
 			$titles[ 'tax_' . $taxonomy . '_custom_robots' ] = $defaults['is_custom'];
+			$titles[ 'tax_' . $taxonomy . '_description' ]   = '%term_description%';
 
 			$sitemap[ 'tax_' . $taxonomy . '_sitemap' ] = 'category' === $taxonomy ? 'on' : 'off';
 		}

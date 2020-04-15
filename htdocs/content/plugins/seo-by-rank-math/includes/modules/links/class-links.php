@@ -34,7 +34,7 @@ class Links {
 			$this->action( 'rank_math_seo_details', 'post_column_content' );
 		}
 
-		$this->action( 'rank_math/links/count_internal_links', 'cron_job' );
+		$this->action( 'rank_math/links/internal_links', 'cron_job' );
 	}
 
 	/**
@@ -57,6 +57,10 @@ class Links {
 	 * @param int $post_id The post ID.
 	 */
 	public function delete_post( $post_id ) {
+		if ( ! $this->is_processable( get_post( $post_id ) ) ) {
+			return;
+		}
+
 		$processor = new ContentProcessor;
 
 		// Get links to update linked objects.
@@ -117,7 +121,7 @@ class Links {
 
 		// Early Bail.
 		if ( empty( $posts ) ) {
-			wp_clear_scheduled_hook( 'rank_math/links/count_internal_links' );
+			wp_clear_scheduled_hook( 'rank_math/links/internal_links' );
 			return;
 		}
 

@@ -52,6 +52,8 @@ class Taxonomy_Screen implements IScreen {
 			$this->description_field_editor();
 			remove_filter( 'pre_term_description', 'wp_filter_kses' );
 			remove_filter( 'term_description', 'wp_kses_data' );
+			add_filter( 'pre_term_description', 'wp_kses_post' );
+			add_filter( 'term_description', 'wp_kses_post' );
 		}
 
 		return $object_types;
@@ -60,10 +62,7 @@ class Taxonomy_Screen implements IScreen {
 	/**
 	 * Enqueue Styles and Scripts required for screen.
 	 */
-	public function enqueue() {
-		$js = rank_math()->plugin_url() . 'assets/admin/js/';
-		wp_enqueue_script( 'rank-math-term-metabox', $js . 'term-metabox.js', [ 'wp-hooks', 'rank-math-common', 'rank-math-analyzer', 'jquery-tag-editor' ], rank_math()->version, true );
-	}
+	public function enqueue() {}
 
 	/**
 	 * Get analysis to run.
@@ -129,11 +128,10 @@ class Taxonomy_Screen implements IScreen {
 				<?php
 				wp_editor(
 					html_entity_decode( $term->description, ENT_QUOTES, 'UTF-8' ),
-					'rank_math_description',
+					'rank_math_description_editor',
 					[
 						'textarea_name' => 'description',
 						'textarea_rows' => 5,
-						'quicktags'     => false,
 					]
 				);
 				?>

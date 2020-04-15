@@ -41,7 +41,7 @@ class Serp_Preview {
 		$desktop_preview = isset( $snippet_preview['desktop'] ) ? $snippet_preview['desktop'] : '';
 		$mobile_preview  = isset( $snippet_preview['mobile'] ) ? $snippet_preview['mobile'] : '';
 		?>
-		<div class="serp-preview desktop-preview">
+		<div class="serp-preview desktop-preview serp-<?php echo esc_attr( $snippet_type ); ?>">
 
 			<div class="serp-preview-title" data-title="<?php esc_attr_e( 'Preview', 'rank-math' ); ?>" data-desktop="<?php esc_attr_e( 'Desktop Preview', 'rank-math' ); ?>" data-mobile="<?php esc_attr_e( 'Mobile Preview', 'rank-math' ); ?>">
 				<div class="alignright">
@@ -184,12 +184,25 @@ class Serp_Preview {
 			$termlink         = $this->get_termlink( $termlink, $term->taxonomy );
 			$slugs[]          = '%postname%';
 			$termlink         = str_replace( "%$term->taxonomy%", implode( '/', $slugs ), $termlink );
-			$permalink_format = home_url( user_trailingslashit( $termlink, 'category' ) );
+			$permalink_format = $this->get_home_url() . user_trailingslashit( $termlink, 'category' );
 		}
 
 		$url = untrailingslashit( esc_url( $permalink ) );
 
 		return compact( 'title_format', 'desc_format', 'url', 'permalink', 'permalink_format' );
+	}
+
+	/**
+	 * Get Home URL based on the language if Polylang plugin is active.
+	 *
+	 * @return string
+	 */
+	private function get_home_url() {
+		if ( ! function_exists( 'pll_home_url' ) ) {
+			return home_url();
+		}
+
+		return untrailingslashit( pll_home_url() );
 	}
 
 	/**
