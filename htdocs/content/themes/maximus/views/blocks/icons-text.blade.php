@@ -42,7 +42,12 @@
         @endif
         @if(!empty( get_sub_field("cta")))
         <div class="link-ctn">
-            <a class="cta" href="{{ get_sub_field("cta")["url"] }}" target="{{ get_sub_field("cta")["target"] }}">{{ get_sub_field("cta")["title"] }}</a>
+            
+            @include('components.button', [
+                'url' => get_sub_field('cta')['url'],
+                'target' => get_sub_field('cta')['target'],
+                'text' => get_sub_field('cta')["title"],
+            ])
         </div>
         @endif
     </div>

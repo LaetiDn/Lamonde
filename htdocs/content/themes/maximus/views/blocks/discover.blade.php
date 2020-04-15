@@ -16,16 +16,18 @@
                 <h3 class="bold">{{ pll__('discover') }} :</h3>
                 <div class="link-ctn">
                     @if(!empty(get_sub_field('link_left')))
-                    <a class="cta" href="{!! get_sub_field('link_left')['url'] !!}" target="{{ get_sub_field('link_left')['target'] }}">
-                        {{ get_sub_field('link_left')["title"] }}
-                        <i class="icon fa fa-arrow-right" aria-hidden="true"></i>
-                    </a>
+                        @include('components.button', [
+                            'url' => get_sub_field('link_left')['url'],
+                            'target' => get_sub_field('link_left')['target'],
+                            'text' => get_sub_field('link_left')["title"],
+                        ])
                     @endif
                     @if(!empty(get_sub_field('link_right')))
-                    <a class="cta" href="{{ get_sub_field('link_right')['url'] }}" target="{{ get_sub_field('link_right')['target'] }}">
-                        {{ get_sub_field('link_right')["title"] }}
-                        <i class="icon fa fa-arrow-right" aria-hidden="true"></i>
-                    </a>
+                        @include('components.button', [
+                            'url' => get_sub_field('link_right')['url'],
+                            'target' => get_sub_field('link_right')['target'],
+                            'text' => get_sub_field('link_right')["title"],
+                        ])
                     @endif
                 </div>
             </div>
