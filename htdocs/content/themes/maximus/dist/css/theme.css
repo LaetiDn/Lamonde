@@ -3669,7 +3669,6 @@ article .content .link {
   background-position: center;
   margin: 0 auto;
   border-radius: 50%;
-  margin-bottom: 5px;
   overflow: hidden;
   -webkit-filter: grayscale(0.3);
           filter: grayscale(0.3);
@@ -3678,6 +3677,7 @@ article .content .link {
   -o-transition: 0.3s filter Linear;
   transition: 0.3s filter Linear;
   transition: 0.3s filter Linear, 0.3s -webkit-filter Linear;
+  margin-bottom: 15px;
 }
 
 .testimonial .items .item .item-inner .people:before {
