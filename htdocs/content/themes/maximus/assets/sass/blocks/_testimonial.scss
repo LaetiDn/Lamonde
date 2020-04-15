@@ -78,10 +78,10 @@
           background-position: center;
           margin: 0 auto;
           border-radius: 50%;
-          margin-bottom: 5px;
           overflow: hidden;
           filter: grayscale(0.3);
           transition: 0.3s filter Linear;
+          margin-bottom: 15px;
 
           &:before {
             content: "";
