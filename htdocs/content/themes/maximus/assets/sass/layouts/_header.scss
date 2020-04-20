@@ -138,6 +138,11 @@
             }
 
             a {
+                
+                position: absolute;
+                left:50%;
+                top:50%;
+                transform: translate(-50%, -50%);
                 padding: 0;
                 display: block;
                 height: 100%;
@@ -269,7 +274,7 @@
             &:after {
                 display: none;
             }
-            
+
             @include breakpoint(tab-landscape) {
                 text-align: left;
                 padding-left: 16px;
