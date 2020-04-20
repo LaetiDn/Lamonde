@@ -7,10 +7,11 @@
             <a class="cta open-form" href="#">{{ get_sub_field("link_text") }}</a>
             @if(!empty( get_sub_field("link")))
                 @include('components.button', [
+                    'style' => get_field('button_grp', 'option')['style'],
                     'url' => get_sub_field('link')['url'],
                     'target' => get_sub_field('link')['target'],
                     'text' => get_sub_field('link')["title"],
-                ])                
+                ])
             @endif
         </div>
     </div>

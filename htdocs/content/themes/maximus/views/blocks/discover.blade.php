@@ -17,6 +17,7 @@
                 <div class="link-ctn">
                     @if(!empty(get_sub_field('link_left')))
                         @include('components.button', [
+                            'style' => get_field('button_grp', 'option')['style'],
                             'url' => get_sub_field('link_left')['url'],
                             'target' => get_sub_field('link_left')['target'],
                             'text' => get_sub_field('link_left')["title"],
@@ -24,6 +25,7 @@
                     @endif
                     @if(!empty(get_sub_field('link_right')))
                         @include('components.button', [
+                            'style' => get_field('button_grp', 'option')['style'],
                             'url' => get_sub_field('link_right')['url'],
                             'target' => get_sub_field('link_right')['target'],
                             'text' => get_sub_field('link_right')["title"],

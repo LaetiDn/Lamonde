@@ -43,6 +43,7 @@
         @if(!empty( get_sub_field("cta")))
         <div class="link-ctn">
             @include('components.button', [
+                'style' => get_field('button_grp', 'option')['style'],
                 'url' => get_sub_field('cta')['url'],
                 'target' => get_sub_field('cta')['target'],
                 'text' => get_sub_field('cta')["title"],
