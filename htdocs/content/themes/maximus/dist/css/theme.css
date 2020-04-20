@@ -917,9 +917,9 @@ html {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  padding: 0;
+  padding: 10px;
   display: block;
-  height: 100%;
+  margin-top: 0;
 }
 
 .site-navigation .menu-item {
