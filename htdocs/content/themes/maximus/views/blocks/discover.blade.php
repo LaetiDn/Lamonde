@@ -15,14 +15,14 @@
             <div class="links-ctn">
                 <h3 class="bold">{{ pll__('discover') }} :</h3>
                 <div class="link-ctn">
-                    @if(!empty(get_sub_field('link_left')['url']))
+                    @if(!empty(get_sub_field('link_left')))
                         @include('components.button', [
                             'url' => get_sub_field('link_left')['url'],
                             'target' => get_sub_field('link_left')['target'],
                             'text' => get_sub_field('link_left')["title"],
                         ])
                     @endif
-                    @if(!empty(get_sub_field('link_right')['url']))
+                    @if(!empty(get_sub_field('link_right')))
                         @include('components.button', [
                             'url' => get_sub_field('link_right')['url'],
                             'target' => get_sub_field('link_right')['target'],
