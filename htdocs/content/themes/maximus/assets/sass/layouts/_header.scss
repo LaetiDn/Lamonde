@@ -213,7 +213,7 @@
         position: relative;
 
         & a:after {
-            content: "+";
+            content: "";
             position: absolute;
             right: -40px;
             border-radius: 50%;
@@ -225,6 +225,25 @@
                 width: 35px;
                 height: 35px;
                 padding-top: 0;
+            }
+
+            @include breakpoint(tab-landscape) {
+                display: none!important;
+            }
+        }
+        & a:before {
+            content: "+";
+            position: absolute;
+            right: -33px;
+            top:18px;
+            width: 10px;
+            height: 10px;
+            font-size: 16px;
+
+            @include breakpoint(tab-portrait){
+                right: -26px;
+                top:31px;
+                font-size: 18px;
             }
 
             @include breakpoint(tab-landscape) {
@@ -265,11 +284,12 @@
             @include breakpoint(tab-landscape) {
                 visibility: visible!important;
                 opacity: 1!important;
-                //max-height: 100px!important;
+
             }
         }
 
         .menu-item {
+            padding:0;
             &:after {
                 display: none;
             }
@@ -287,8 +307,6 @@
             a {
                 padding: 10px;
                 border-bottom: none;
-
-
                 &:after {
                     display: none!important;
                 }
@@ -319,7 +337,7 @@
     opacity: 1!important;
     visibility: visible!important;
     margin-top: 15px;
-
+    transition: all .6s linear;
     .menu-item {
         opacity: 1!important;
     }
