@@ -1,4 +1,4 @@
-<section class="block-open-form section-content @if($animation['content_animation'] != 'none' || get_sub_field("animation") != 'gen' ){{ 'animate' }}@endif" style="background-color: {{ get_sub_field('bg_color') }}">
+<section id="{{ get_sub_field('section_id') }}" class="block-open-form section-content {{ get_sub_field('section_class') }} @if($animation['content_animation'] != 'none' || get_sub_field("animation") != 'gen' ){{ 'animate' }}@endif" style="background-color: {{ get_sub_field('bg_color') }}">
     <div class="content-ctn css-animation {{ get_sub_field("animation") != 'gen' ? get_sub_field("animation") : $animation['content_animation']  }}">
         <div class="text">
             {!! get_sub_field("text") !!}
@@ -6,7 +6,11 @@
         <div class="link-ctn">
             <a class="cta open-form" href="#">{{ get_sub_field("link_text") }}</a>
             @if(!empty( get_sub_field("link")))
-                <a class="cta" href="{{ get_sub_field("link")["url"] }}" target="{{ get_sub_field("link")["target"] }}">{{ get_sub_field("link")["title"] }}</a>
+                @include('components.button', [
+                    'url' => get_sub_field('link')['url'],
+                    'target' => get_sub_field('link')['target'],
+                    'text' => get_sub_field('link')["title"],
+                ])                
             @endif
         </div>
     </div>

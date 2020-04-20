@@ -1,15 +1,16 @@
 //CONTACT
 .form-ctn {
-  margin:50px auto;
-  width:80%;
+  margin: 50px auto;
+  width: 80%;
+
   @include breakpoint(tab-landscape) {
     width:52%;
   }
+
   input[type="text"], input[type="email"] {
     -webkit-appearance: none;
     //border:none;
     width:calc(100% - 16px);
-
     border-width: 2px;
     border-style: solid;
     padding:10px 5px;
@@ -21,7 +22,7 @@
     margin-top:10px;
     padding:10px 5px;
     -webkit-appearance: none;
-    //border:2px solid black;
+    //border: 2px solid black;
     width:calc(100% - 16px);
     //resize: none;
     border-width: 2px;
@@ -30,7 +31,7 @@
   }
 
   label {
-    //color:$dark-grey;
+    //color: $dark-grey;
   }
 
   input[type="submit"] {
@@ -38,14 +39,13 @@
     -webkit-appearance: none;
 
 
-    width:100%;
-    margin:20px auto 0 auto;
-
-    padding:10px 5px;
-
+    width: 100%;
+    margin: 20px auto 0 auto;
+    padding: 10px 5px;
     font-size: 18px;
 
     @include transition(all 0.25s ease);
+
     &:hover {
       border-color: transparent;
 
@@ -54,11 +54,11 @@
   }
 
   .opt-in span.wpcf7-list-item {
-    margin:0;
+    margin: 0;
   }
 
   iframe {
-    margin:10px 0;
+    margin: 10px 0;
   }
 
 }
@@ -74,10 +74,10 @@
 
   position: fixed;
 
-  width:100%;
-  height:100vh;
-  left:0;
-  top:0;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  top: 0;
   background-color: rgba(0,0,0,1);
   z-index: 1000;
   overflow: auto;
@@ -86,49 +86,56 @@
   .form-ctn {
     position: relative;
     z-index: 10;
-    width:90%;
-    margin:auto;
+    width: 90%;
+    margin: auto;
     margin-top: 45px;
     background-color: black;
+
     @media (min-width: 768px) {
-      display:flex;
+      display: flex;
+
       @include justify-content(center);
       margin-top: 65px;
     }
+
     @include breakpoint(tab-landscape) {
-      width:55%;
+      width: 55%;
     }
 
     .wpcf7 {
-
       margin-bottom: 100px;
-      @media (min-width:768px){
+
+      @media (min-width:768px) {
         margin-bottom: 0;
-        width:680px;
-        padding:50px 0;
+        width: 680px;
+        padding: 50px 0;
       }
     }
 
-    .btn-close-form{
+    .btn-close-form {
       position: absolute;
-      right:0;
-      top:-25px;
-      @media (min-width:768px){
+      right: 0;
+      top: -25px;
+
+      @media (min-width:768px) {
         top:0;
       }
+
       img {
-        width:25px;
+        width: 25px;
         @media (min-width:768px){
-          width:35px;
+          width: 35px;
         }
       }
     }
+
     label {
       color:white;
     }
+
     p {
-      padding:0;
-      margin:0;
+      padding: 0;
+      margin: 0;
     }
 
     ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -150,10 +157,9 @@
 
 
     .input-ctn {
+      @media (min-width:768px) {
+        display: flex;
 
-
-      @media (min-width:768px){
-        display:flex;
         @include justify-content(space-between);
         margin-bottom: 30px;
       }
@@ -161,25 +167,27 @@
 
       .form-input {
 
-        padding-left:10px;
-        padding-bottom:20px;
-        margin-bottom:25px;
+        padding-left: 10px;
+        padding-bottom: 20px;
+        margin-bottom: 25px;
+
         @media (min-width:768px){
-          width:275px;
-          margin-bottom:0;
+          width: 275px;
+          margin-bottom: 0;
         }
+
       }
 
       input, select{
         background-color: transparent;
-        border:none;
-        width:100%;
+        border: none;
+        width: 100%;
         font-size: 16px;
         //color:white;
       }
 
       .form-input.input-radio {
-        display:flex;
+        display: flex;
         @include align-items(center);
         border-bottom: none;
         padding: 20px 0 20px 10px;
@@ -216,15 +224,11 @@
         background: transparent;
       }
 
-
-
       [type="checkbox"]:checked + .wpcf7-list-item-label:after,
       [type="checkbox"]:not(:checked) + .wpcf7-list-item-label:after {
         content: '';
         width: 8px;
         height: 8px;
-
-
         position: absolute;
         top: 6px;
         //left: 51px;
@@ -233,8 +237,6 @@
         -webkit-transition: all 0.2s ease;
         transition: all 0.2s ease;
       }
-
-
 
       [type="checkbox"]:not(:checked) + .wpcf7-list-item-label:after {
         opacity: 0;
@@ -248,7 +250,7 @@
       }
 
       .wpcf7-list-item {
-        margin:0;
+        margin: 0;
       }
 
       select {
@@ -256,16 +258,15 @@
         background-repeat: no-repeat;
         background-position: 95% 50%;
         background-size: 21px 11px;
-        appearance:none;
-        -moz-appearance:none; /* Firefox */
-        -webkit-appearance:none; /* Safari and Chrome */
+        appearance: none;
+        -moz-appearance: none; /* Firefox */
+        -webkit-appearance: none; /* Safari and Chrome */
 
       }
 
-      .form-input.input-room{
+      .form-input.input-room {
         border-bottom: none!important;
-
-        padding-left:0;
+        padding-left: 0;
 
         select {
           border-radius: 0;
@@ -279,46 +280,38 @@
         }
       }
 
-      .form-input.full-width{
-        width:100%;
+      .form-input.full-width {
+        width: 100%;
       }
 
       .msg {
-        width:100%;
-
+        width: 100%;
         border-bottom: 1px solid;
-
       }
 
       textarea {
-        margin-top:25px;
-        width:100%;
+        margin-top: 25px;
+        width: 100%;
         background-color: transparent;
-        border:none;
+        border: none;
         color:white;
-        resize:none;
-
+        resize: none;
       }
     }
-
-
 
     .submit-ctn {
       margin-top: 50px;
     }
-
-
-
   }
 
 
-  .close-lightbox{
+  .close-lightbox {
     cursor: default;
     position: absolute;
-    left:0;
-    top:0;
-    width:100%;
-    height:100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
     z-index: 5;
   }
 

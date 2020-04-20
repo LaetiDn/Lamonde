@@ -1,20 +1,18 @@
 #galerie-content {
 
  .albums-main-ctn  {
+    margin: 150px 0 100px 0;
 
-
-    margin:150px 0 100px 0;
-   @include breakpoint(tab-portrait) {
-     display:flex;
-     @include justify-content(space-between);
-     @include flex-wrap(wrap);
-   }
+    @include breakpoint(tab-portrait) {
+      display: flex;
+      @include justify-content(space-between);
+      @include flex-wrap(wrap);
+    }
 
    .album-ctn {
-
-     margin:15px 0;
-     width:100%;
-     height:300px;
+     margin: 15px 0;
+     width: 100%;
+     height: 300px;
      background-size: cover;
      background-position: center;
      background-repeat: no-repeat;
@@ -28,8 +26,8 @@
 
      .album-inner-ctn {
        position: relative;
-       width:100%;
-       height:100%;
+       width: 100%;
+       height: 100%;
        background-repeat: no-repeat;
        background-size: cover;
 
@@ -45,20 +43,20 @@
 
        @include center-img(50%, 50%);
        color:white;
-       width:60%;
-       padding:20px 15px;
+       width: 60%;
+       padding: 20px 15px;
        text-align: center;
-       border-top:1px solid $yellow;
-       border-bottom:1px solid $yellow;
+       border-top: 1px solid $yellow;
+       border-bottom: 1px solid $yellow;
        font-size: 20px;
-        z-index: 60;
+       z-index: 60;
+
        @include breakpoint(tab-portrait) {
          font-size: 30px;
        }
 
      }
    }
-
   }
 
 
@@ -68,33 +66,34 @@
     display: none;
     position: fixed;
     overflow: auto;
-    width:100%;
-    height:100%;
-    left:0;
-    top:0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
     background-color: rgba(0,0,0,1);
     z-index: 10000;
   }
 
   .album-lightbox-inner-ctn {
-
-    display:flex;
+    display: flex;
     @include flex-direction(column);
     @include justify-content(center);
     @include align-items(center);
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
   }
 
   .carrousel-main-ctn {
-    width:94%;
+    width: 94%;
     position: relative;
     z-index: 10;
+
     .arrow {
-      width:30px;
+      width: 30px;
       position: absolute;
       top: 85%;
       z-index: 20000;
+
       @include breakpoint(tab-portrait) {
         width:40px;
       }
@@ -104,35 +103,36 @@
 
     }
     .arrow-left {
-      left:2px;
+      left: 2px;
     }
     .arrow-right {
-      right:2px;
+      right: 2px;
     }
 
   }
   .carrousel-inner-ctn {
     position: relative;
-    margin:auto;
+    margin: auto;
     overflow: hidden;
-    width:100%;
-    height:480px;
+    width: 100%;
+    height: 480px;
 
     @include breakpoint(tab-portrait) {
-      width:90%;
-      height:740px;
+      width: 90%;
+      height: 740px;
     }
 
     .album-title {
-      margin-top:15px;
+      margin-top: 15px;
       text-align: center;
       color:white;
-      width:100%;
-      padding:10px 0;
-      border-top:1px solid $yellow;
-      border-bottom:1px solid $yellow;
+      width: 100%;
+      padding: 10px 0;
+      border-top: 1px solid $yellow;
+      border-bottom: 1px solid $yellow;
       font-size: 20px;
       z-index: 60;
+
       @include breakpoint(tab-portrait) {
         font-size: 30px;
       }
@@ -140,40 +140,37 @@
 
     .photo-ctn {
       display: none;
-      width:100%;
-      height:100%;
+      width: 100%;
+      height: 100%;
       position: relative;
 
       .a-photo {
         @include center-img(50%, 60%);
         width: 100%;
-
-
         opacity: 0;
         transition: opacity 0.25s ease;
       }
 
       .photo {
         text-align: center;
-        .galery-photo {
 
-          max-height:300px;
+        .galery-photo {
+          max-height: 300px;
 
           @include breakpoint(tab-portrait) {
-            max-height:630px;
+            max-height: 630px;
           }
         }
       }
 
       .photo-desc-ctn {
-        display:flex;
+        display: flex;
         @include justify-content(flex-end);
         @include align-items(center);
-        padding:0 2%;
-        height:50px;
+        padding: 0 2%;
+        height: 50px;
         color:white;
         //background-color: $icon;
-
       }
     }
 
@@ -188,24 +185,24 @@
   }
 
   .close-ctn {
-    width:100%;
-    height:20px;
+    width: 100%;
+    height: 20px;
     position: relative;
     z-index: 999;
     @include breakpoint(tab-portrait) {
       position: absolute;
-      top:15px;
+      top: 15px;
 
     }
     .close-carrousel {
       position: absolute;
-      right:15px;
+      right: 15px;
      // top:15px;
       width: 20px;
       z-index: 10;
       @include breakpoint(tab-portrait) {
-        right:30px;
-        top:10px;
+        right: 30px;
+        top: 10px;
         width: 30px;
       }
     }
@@ -216,16 +213,17 @@
 .close-lightbox{
   cursor: default;
   position: absolute;
-  left:0;
-  top:0;
-  width:100%;
-  height:100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
   z-index: 5;
 }
 
 
 #galerie-video {
-  margin-top:100px;
+  margin-top: 100px;
+
   iframe {
     margin: 0;
   }

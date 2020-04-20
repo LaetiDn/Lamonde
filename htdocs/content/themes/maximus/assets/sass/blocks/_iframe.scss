@@ -3,13 +3,16 @@
 
   .content-ctn {
     position: relative;
+    
     .iframe-ctn {
       padding: 25px 0;
+
       @include breakpoint(tab-landscape) {
         padding: 50px 0;
       }
+
       iframe {
-        height:100%;
+        height: 100%;
         overflow: visible;
       }
     }

@@ -1,8 +1,9 @@
 <section id="{{ get_sub_field('section_id') }}"
-        class="block-background {{ get_sub_field('block_options') }}
+        class="block-background {{ get_sub_field('block_options') }} {{ get_sub_field('section_class') }}
         @if( ($animation['content_animation'] != 'none' && get_sub_field('block_options') != 'bg-only')
             || (get_sub_field("animation") != 'gen' && get_sub_field('block_options') != 'bg-only') )
-            {{ 'animate' }}@endif"
+            {{ 'animate' }}@endif
+            "
         style="height: {{ get_sub_field('height') }}vh">
 
     <div class="block-background__background @if(get_sub_field('parallax')){{ 'is-parallax' }}@endif" style="background-image: url('{{ get_sub_field('background')['url'] }}'); background-color: {{ get_sub_field('background_color') }}">

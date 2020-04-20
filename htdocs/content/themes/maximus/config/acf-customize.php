@@ -625,22 +625,7 @@ acf_add_local_field_group(array(
             'ajax' => 0,
             'placeholder' => '',
         ),
-        // array(
-        //     'key' => 'field_5d42xdsfsdf3e8d43',
-        //     'label' => 'Preview',
-        //     'name' => '',
-        //     'type' => 'message',
-        //     'instructions' => '',
-        //     'required' => 0,
-        //     'wrapper' => array(
-        //         'width' => '75',
-        //         'class' => 'typo-preview',
-        //         'id' => '',
-        //     ),
-        //     'message' => '<p style="font-size:16px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut lacus purus. Pellentesque ultricies imperdiet elit vel suscipit. Nulla facilisi. Donec augue enim, eleifend et massa non, aliquet lobortis sem. Aliquam eu mi ipsum.<p>',
-        //     'new_lines' => 'wpautop',
-        //     'esc_html' => 0,
-        // ),
+
         array(
             'key' => 'field_5bf47709d7db7',
             'label' => 'H1',
@@ -1345,21 +1330,52 @@ acf_add_local_field_group(array(
             'layout' => 'block',
             'sub_fields' => array(
                 array(
-                    'key' => 'field_5d42x113e8d43',
-                    'label' => 'Preview',
-                    'name' => '',
-                    'type' => 'message',
-                    'instructions' => '',
-                    'required' => 0,
-                    'wrapper' => array(
-                        'width' => '',
-                        'class' => 'button-preview',
-                        'id' => '',
-                    ),
-                    'message' => '<a href="#" class="cta default">Button</a> <a href="#" class="cta hover">Button : hover</a>',
-                    'new_lines' => 'wpautop',
-                    'esc_html' => 0,
-                ),
+					'key' => 'field_5e975bfdb0c59',
+					'label' => 'Preview',
+					'name' => '',
+					'type' => 'message',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => 'button-preview',
+						'id' => '',
+					),
+					'message' => '<div>Normal state</div>
+<a href="#" class="cta default">Button <i class="icon fa fa-arrow-right" aria-hidden="true"></i></a>
+<div>Hover state</div>
+<a href="#" class="cta hover">Button	<i class="icon fa fa-arrow-right" aria-hidden="true"></i></a>',
+					'new_lines' => 'wpautop',
+					'esc_html' => 0,
+				),
+                array(
+					'key' => 'field_5e8c7ba925687',
+					'label' => 'Style',
+					'name' => 'style',
+					'type' => 'select',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'choices' => array(
+						'transition' => 'Simple',
+						'shadow' => 'Shadow',
+						'arrow-anim' => 'Arrow',
+					),
+					'default_value' => array(
+					),
+					'allow_null' => 0,
+					'multiple' => 0,
+					'ui' => 0,
+					'return_format' => 'value',
+					'ajax' => 0,
+					'placeholder' => '',
+				),
                 array(
                     'key' => 'field_5c07d71c1611a',
                     'label' => 'Text : Color',

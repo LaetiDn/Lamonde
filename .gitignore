@@ -27,3 +27,5 @@ node_modules/
 .env
 
 htdocs/content/themes/themosis
+webpack.mix.js
+htdocs/content/themes/maximus/webpack.mix.js

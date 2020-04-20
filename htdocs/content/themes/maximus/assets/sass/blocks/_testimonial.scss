@@ -1,0 +1,112 @@
+.testimonial {
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .description {
+    text-align: center;
+    margin-bottom: 40px;
+    line-height: 24px;
+
+    @include breakpoint(tab-portrait) {
+      margin-bottom: 70px;
+    }
+
+  }
+  
+  .items {
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    justify-content: center;
+
+    .item {
+      position: relative;
+      flex-basis: 100%;
+      padding: 0 10px;
+      transform: translate3d(0, 0, 0);
+      transition: 0.5s transform $easeOutCubic;
+      min-height: 100%;
+
+      @include breakpoint(tab-portrait) {
+        flex-basis: calc(100% / 3);
+        padding: 0px 15px;
+      }
+
+      @include breakpoint(desktop) {
+        &:hover {
+          transform: translate3d(0, -10px, 0);
+          transition: 0.6s transform $easeOutCubic;
+
+          .item-inner {
+            background: #efefef;
+            transition: 0.3s background-color $easeOutCubic, 0.2s box-shadow Linear;
+            box-shadow: 10px 10px 17px -1px rgba(0,0,0,0.1);
+            
+            .people {
+              filter: grayscale(0);
+              transition: 0.3s filter Linear;
+
+              &:before {
+                left: 110%;
+                transition: 0.4s left $easeOutExpo;
+              }
+            }
+          }
+        }
+      }
+
+      .item-inner {
+        transition: 0.3s background-color $easeOutCubic, 0.5s box-shadow Linear;
+        box-shadow: 10px 10px 17px -1px rgba(0,0,0,0);
+        padding: 30px 0px;
+        border-radius: 10px;
+        height: 100%;
+        
+        @include breakpoint(tab-landscape) {
+          padding: 40px 25px; 
+        }
+        
+        .people {
+          position: relative;
+          height: 120px;
+          width: 120px;
+          background-size: cover;
+          background-position: center;
+          margin: 0 auto;
+          border-radius: 50%;
+          overflow: hidden;
+          filter: grayscale(0.3);
+          transition: 0.3s filter Linear;
+          margin-bottom: 15px;
+
+          &:before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 4px;
+            top: 0;
+            left: -15%;
+            background: linear-gradient(363deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+            transform: rotate(35deg) translate3d(-0%, 0%, 0);
+            opacity: 0.2;
+          }
+
+        }
+
+        .title {
+          font-size: 24px;
+          width: 80%;
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 10px;
+        }
+      }
+      
+    }
+  }
+
+}

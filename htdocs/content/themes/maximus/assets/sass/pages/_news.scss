@@ -1,19 +1,23 @@
 .news-inner {
   position: relative;
+  
   .all-news-ctn {
-    margin:50px 0;
-    @include breakpoint(tab-portrait) {
-      max-width:1200px;
-      margin:auto;
-    }
-    @include breakpoint(tab-landscape) {
-      margin:100px auto;
-    }
-    .news-ctn {
+    margin: 50px 0;
 
-      padding:25px 15px;
+    @include breakpoint(tab-portrait) {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    @include breakpoint(tab-landscape) {
+      margin: 100px auto;
+    }
+
+    .news-ctn {
+      padding: 25px 15px;
+
       @include breakpoint(tab-portrait) {
-        display:flex;
+        display: flex;
         @include justify-content(space-between);
       }
 
@@ -23,41 +27,42 @@
         }
         .date {
           font-size: 0.7rem;
-          font-weight:700;
+          font-weight: 700;
         }
         h2 {
-          margin:10px 0 15px;
+          margin: 10px 0 15px;
         }
         a {
-          font-weight:700;
+          font-weight: 700;
         }
 
         .excerpt {
           font-size: 1rem;
-          margin-bottom:10px;
+          margin-bottom: 10px;
           line-height: 1.2rem;
         }
 
         .link {
-          font-size:0.8rem;
+          font-size: 0.8rem;
         }
       }
       .thumbnail-ctn {
         display: none;
+
         @include breakpoint(tab-portrait) {
           display: block;
+
           @include flex-basis(30%);
           text-align: center;
+
           .img-ctn {
               position: relative;
               border-radius: 50%;
-              width:190px;
-              height:190px;
+              width: 190px;
+              height: 190px;
               overflow: hidden;
               background-size: cover;
-              background-position:center;
-
-
+              background-position: center;
           }
 
         }

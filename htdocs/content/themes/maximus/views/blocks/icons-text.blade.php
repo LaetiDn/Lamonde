@@ -1,5 +1,5 @@
 
-<section id="{{ get_sub_field('section_id') }}" class="block-icons-text section-content @if($animation['content_animation'] != 'none' || get_sub_field("animation") != 'gen' ){{ 'animate' }}@endif"  style="background-color: {{ get_sub_field('bg_color') }}">
+<section id="{{ get_sub_field('section_id') }}" class="block-icons-text {{ get_sub_field('section_class') }} section-content @if($animation['content_animation'] != 'none' || get_sub_field("animation") != 'gen' ){{ 'animate' }}@endif"  style="background-color: {{ get_sub_field('bg_color') }}">
     <div class="content css-animation {{ get_sub_field("animation") != 'gen' ? get_sub_field("animation") : $animation['content_animation']  }}">
         <div class="all-logo-ctn">
             @if(!empty(get_sub_field("icon01_grp")))
@@ -42,7 +42,11 @@
         @endif
         @if(!empty( get_sub_field("cta")))
         <div class="link-ctn">
-            <a class="cta" href="{{ get_sub_field("cta")["url"] }}" target="{{ get_sub_field("cta")["target"] }}">{{ get_sub_field("cta")["title"] }}</a>
+            @include('components.button', [
+                'url' => get_sub_field('cta')['url'],
+                'target' => get_sub_field('cta')['target'],
+                'text' => get_sub_field('cta')["title"],
+            ])
         </div>
         @endif
     </div>

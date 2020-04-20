@@ -13,6 +13,7 @@ namespace RankMath\Admin\Metabox;
 use RankMath\KB;
 use RankMath\Helper;
 use RankMath\Traits\Hooker;
+use RankMath\Helpers\Editor;
 use RankMath\Frontend_SEO_Score;
 use RankMath\Admin\Admin_Helper;
 use MyThemeShop\Helpers\Str;
@@ -34,6 +35,13 @@ class Post_Screen implements IScreen {
 	 * @var object
 	 */
 	private $primary_taxonomy = null;
+
+	/**
+	 * Class construct
+	 */
+	public function __construct() {
+		$this->filter( 'rank_math/researches/tests', 'remove_tests', 10, 2 );
+	}
 
 	/**
 	 * Get object id
@@ -68,8 +76,8 @@ class Post_Screen implements IScreen {
 	 * Enqueue Styles and Scripts required for screen.
 	 */
 	public function enqueue() {
-		$is_block_editor = Helper::is_block_editor() && \rank_math_is_gutenberg();
 		$is_elementor    = Helper::is_elementor_editor();
+		$is_block_editor = Helper::is_block_editor() && \rank_math_is_gutenberg();
 
 		if ( ! $is_elementor ) {
 			$this->enqueue_custom_fields();
@@ -85,9 +93,10 @@ class Post_Screen implements IScreen {
 
 		if ( $is_block_editor || $is_elementor ) {
 			$this->enqueue_commons();
+			Helper::add_json( 'postType', get_post_type() );
 		}
 
-		if ( $is_block_editor && ! $is_elementor ) {
+		if ( $is_block_editor && ! $is_elementor && Editor::can_add_editor() ) {
 			$this->enqueue_for_gutenberg();
 			return;
 		}
@@ -101,8 +110,6 @@ class Post_Screen implements IScreen {
 			wp_enqueue_script( 'rank-math-formats' );
 			wp_enqueue_script( 'rank-math-primary-term', rank_math()->plugin_url() . 'assets/admin/js/gutenberg-primary-term.js', [], rank_math()->version, true );
 		}
-
-		wp_enqueue_script( 'rank-math-post-metabox', rank_math()->plugin_url() . 'assets/admin/js/post-metabox.js', [ 'clipboard', 'wp-hooks', 'rank-math-common', 'rank-math-analyzer', 'jquery-tag-editor', 'rank-math-validate' ], rank_math()->version, true );
 	}
 
 	/**
@@ -111,7 +118,7 @@ class Post_Screen implements IScreen {
 	 * @return array
 	 */
 	public function get_values() {
-		$screen = get_current_screen();
+		$post_type = $this->get_current_post_type();
 		return [
 			'homeUrl'                => home_url(),
 			'parentDomain'           => Url::get_domain( home_url() ),
@@ -121,8 +128,8 @@ class Post_Screen implements IScreen {
 			'featuredImageNotice'    => esc_html__( 'The featured image should be at least 200 by 200 pixels to be picked up by Facebook and other social media sites.', 'rank-math' ),
 			'pluginReviewed'         => $this->plugin_reviewed(),
 			'postSettings'           => [
-				'linkSuggestions' => Helper::get_settings( 'titles.pt_' . $screen->post_type . '_link_suggestions' ),
-				'useFocusKeyword' => 'focus_keywords' === Helper::get_settings( 'titles.pt_' . $screen->post_type . '_ls_use_fk' ),
+				'linkSuggestions' => Helper::get_settings( 'titles.pt_' . $post_type . '_link_suggestions' ),
+				'useFocusKeyword' => 'focus_keywords' === Helper::get_settings( 'titles.pt_' . $post_type . '_ls_use_fk' ),
 			],
 			'siteFavIcon'            => $this->get_site_icon(),
 			'frontEndScore'          => Frontend_SEO_Score::show_on(),
@@ -165,7 +172,7 @@ class Post_Screen implements IScreen {
 	 * @return array
 	 */
 	public function get_analysis() {
-		return [
+		$tests = [
 			'contentHasTOC'             => true,
 			'contentHasShortParagraphs' => true,
 			'contentHasAssets'          => true,
@@ -188,6 +195,35 @@ class Post_Screen implements IScreen {
 			'titleHasPowerWords'        => true,
 			'titleHasNumber'            => true,
 		];
+
+		return $tests;
+	}
+
+	/**
+	 * Remove few tests on static Homepage.
+	 *
+	 * @since 1.0.42
+	 *
+	 * @param array  $tests Array of tests with score.
+	 * @param string $type  Object type. Can be post, user or term.
+	 */
+	public function remove_tests( $tests, $type ) {
+		if ( ! Admin_Helper::is_home_page() ) {
+			return $tests;
+		}
+
+		$remove = [
+			'contentHasTOC'        => true,
+			'keywordInPermalink'   => true,
+			'lengthPermalink'      => true,
+			'linksHasExternals'    => true,
+			'linksNotAllExternals' => true,
+			'titleSentiment'       => true,
+			'titleHasPowerWords'   => true,
+			'titleHasNumber'       => true,
+		];
+
+		return array_diff_assoc( $tests, $remove );
 	}
 
 	/**
@@ -206,7 +242,6 @@ class Post_Screen implements IScreen {
 	 */
 	private function enqueue_commons() {
 		wp_register_style( 'rank-math-post-metabox', rank_math()->plugin_url() . 'assets/admin/css/sidebar.css', [], rank_math()->version );
-		wp_register_script( 'rank-math-analyzer', rank_math()->plugin_url() . 'assets/admin/js/analyzer.js', [ 'lodash' ], rank_math()->version, true );
 	}
 
 	/**
@@ -222,7 +257,7 @@ class Post_Screen implements IScreen {
 
 		$file = Helper::is_block_editor() ? 'glue-custom-fields.js' : 'custom-fields.js';
 
-		wp_enqueue_script( 'rank-math-custom-fields', rank_math()->plugin_url() . 'assets/admin/js/' . $file, [ 'wp-hooks' ], rank_math()->version, true );
+		wp_enqueue_script( 'rank-math-custom-fields', rank_math()->plugin_url() . 'assets/admin/js/' . $file, [ 'wp-hooks', 'rank-math-analyzer' ], rank_math()->version, true );
 		Helper::add_json( 'analyzeFields', $custom_fields );
 	}
 
@@ -251,12 +286,6 @@ class Post_Screen implements IScreen {
 			rank_math()->version,
 			true
 		);
-
-		if ( function_exists( 'wp_set_script_translations' ) ) {
-			$this->filter( 'load_script_translation_file', 'load_script_translation_file', 10, 3 );
-			wp_set_script_translations( 'rank-math-analyzer', 'rank-math', rank_math()->plugin_dir() . 'languages/' );
-			wp_set_script_translations( 'rank-math-gutenberg', 'rank-math', rank_math()->plugin_dir() . 'languages/' );
-		}
 	}
 
 	/**
@@ -278,6 +307,20 @@ class Post_Screen implements IScreen {
 	}
 
 	/**
+	 * Get current post type.
+	 *
+	 * @return string
+	 */
+	private function get_current_post_type() {
+		if ( function_exists( 'get_current_screen' ) ) {
+			$screen = get_current_screen();
+			return $screen->post_type;
+		}
+
+		return get_post_type();
+	}
+
+	/**
 	 * Check if any TOC plugin detected
 	 *
 	 * @return bool
@@ -295,10 +338,13 @@ class Post_Screen implements IScreen {
 		 *
 		 * @param array TOC plugins.
 		 */
-		$toc_plugins = $this->do_filter( 'researches/toc_plugins', [
-			'wp-shortcode/wp-shortcode.php'         => 'WP Shortcode by MyThemeShop',
-			'wp-shortcode-pro/wp-shortcode-pro.php' => 'WP Shortcode Pro by MyThemeShop',
-		] );
+		$toc_plugins = $this->do_filter(
+			'researches/toc_plugins',
+			[
+				'wp-shortcode/wp-shortcode.php'         => 'WP Shortcode by MyThemeShop',
+				'wp-shortcode-pro/wp-shortcode-pro.php' => 'WP Shortcode Pro by MyThemeShop',
+			]
+		);
 
 		foreach ( $toc_plugins as $plugin_slug => $plugin_name ) {
 			if ( in_array( $plugin_slug, $active_plugins, true ) !== false ) {
@@ -328,16 +374,16 @@ class Post_Screen implements IScreen {
 			return $this->primary_taxonomy;
 		}
 
-		$taxonomy = false;
-		$screen   = get_current_screen();
+		$taxonomy  = false;
+		$post_type = $this->get_current_post_type();
 
 		/**
 		 * Allow disabling the primary term feature.
 		 *
 		 * @param bool $return True to disable.
 		 */
-		if ( false === apply_filters( 'rank_math/primary_term', false ) ) {
-			$taxonomy = Helper::get_settings( 'titles.pt_' . $screen->post_type . '_primary_taxonomy', false );
+		if ( false === $this->do_filter( 'primary_term', false ) ) {
+			$taxonomy = Helper::get_settings( 'titles.pt_' . $post_type . '_primary_taxonomy', false );
 		}
 
 		if ( ! $taxonomy ) {

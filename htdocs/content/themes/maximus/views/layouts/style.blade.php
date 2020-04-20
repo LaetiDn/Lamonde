@@ -136,13 +136,13 @@
         color: {{ get_field('footer_text_color','option') }};
     }
 
-    .cta{
+    .cta, .btn{
         color: {{ get_field('button_grp', 'option')['text_color'] }};
         background-color: {{ get_field('button_grp', 'option')['bg_color'] }};
         border: 1px solid {{ get_field('button_grp', 'option')['border_color'] }};
-        transition: all 0.6s ease;
+        /* transition: all 0.6s ease; */
     }
-    .cta:hover{
+    .cta:hover, .btn:hover{
         color: {{ get_field('button_grp', 'option')['text_color_transition'] }};
         background-color: {{ get_field('button_grp', 'option')['bg_color_transition'] }};
         border: 1px solid {{ get_field('button_grp', 'option')['border_color_transition'] }};
@@ -323,13 +323,13 @@
         transition-timing-function: {{ get_field('animation_props', 'option')['easing'] }};
     }
 
-    .block-discover .cta i{
+    /* .block-discover .cta i{
         color: {{ get_field('button_grp', 'option')['text_color'] }};
         transition: all 0.6s ease;
     }
     .block-discover .cta:hover i{
         color: {{ get_field('button_grp', 'option')['text_color_transition'] }};
-    }
+    } */
 
 
 

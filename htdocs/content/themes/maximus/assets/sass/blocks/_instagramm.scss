@@ -1,9 +1,11 @@
 .block-instagram {
+  
   .hashtag-title {
-    padding-top:12px;
+    padding-top: 12px;
     padding-bottom: 8px;
+
     @include breakpoint(tab-landscape) {
-      padding-top:24px;
+      padding-top: 24px;
       padding-bottom: 16px;
     }
   }
@@ -11,7 +13,7 @@
 
 
 #wdi_feed_0 {
-  background-color:transparent!important;
+  background-color: transparent!important;
 
 }
 
