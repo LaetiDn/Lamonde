@@ -4,10 +4,11 @@
             {!! get_sub_field("text") !!}
         </div>
         <div class="link-ctn">
-            <a class="cta open-form" href="#">{{ get_sub_field("link_text") }}</a>
+
+            <a class="cta open-form {{get_field('button_grp', 'option')['style']}}" href="#">{{ get_sub_field("link_text") }}</a>
             @if(!empty( get_sub_field("link")))
                 @include('components.button', [
-                    // 'style' => get_field('button_grp', 'option')['style'],
+                    'style' => get_field('button_grp', 'option')['style'],
                     'url' => get_sub_field('link')['url'],
                     'target' => get_sub_field('link')['target'],
                     'text' => get_sub_field('link')["title"],

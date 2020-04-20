@@ -16,8 +16,11 @@
     margin: 25px 10px;
     text-align: center;
     position: relative;
-    width:150px;
+    min-width:200px;
     transition: all .6s ease;
+    @include breakpoint(desktop){
+        min-width:250px;
+    }
 }
 
 //COLOR TRANSITION

@@ -2,7 +2,7 @@
     position: relative;
 
     .content-ctn {
-        @include breakpoint(tab-portrait) {
+        @include breakpoint(tab-landscape) {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -11,10 +11,11 @@
 
     .text {
         margin-bottom: 25px;
-        
-        @include breakpoint(tab-portrait) {
+
+        @include breakpoint(tab-landscape) {
             margin-bottom: 0;
-            margin-right: 8%;
+            margin-right: 4%;
+            flex:0 1 70%;
         }
     }
 
@@ -26,6 +27,7 @@
         padding: 15px 40px;
         @include breakpoint(tab-landscape) {
             margin: 0;
+            flex:0 1 30%;
         }
 
         &:last-of-type {
