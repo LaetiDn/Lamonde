@@ -1236,6 +1236,10 @@ html {
   background-repeat: no-repeat;
 }
 
+.hero.page .bg-img .overlay {
+  z-index: 1;
+}
+
 .hero.page .bg-img h1 {
   position: absolute;
   left: 50%;
@@ -1243,6 +1247,7 @@ html {
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
+  z-index: 2;
 }
 
 .slider-progress {

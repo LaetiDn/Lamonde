@@ -28,8 +28,9 @@
 
 @if(!is_single())
 <div id="hero" class="hero @if(!get_field("use_a_slider", get_the_ID())){{ 'page' }} @endif">
-    <div class="overlay"></div>
+
     @if(get_field("use_a_slider", get_the_ID()))
+        <div class="overlay"></div>
         <div class="logo-ctn">
             <img class="big-logo" src="{{ get_field("header_logo", get_the_ID())["url"] }}" alt="logo">
         </div>
@@ -45,6 +46,7 @@
         </div>
     @else
         <div class="bg-img" style="background-image: url('{{ get_field("header_image_background")["url"] }}')">
+            <div class="overlay"></div>
             <h1>{{ get_field("header_image_title"), get_the_ID() }}</h1>
         </div>
     @endif

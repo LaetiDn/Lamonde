@@ -57,10 +57,11 @@
 }
 
 .hero.page {
-  //height: 60vh;
+  ;
   @include breakpoint(tab-landscape) {
       min-height: 500px;
   }
+
   .bg-img {
 
     position: relative;
@@ -70,9 +71,13 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
+    .overlay {
+        z-index: 1;
+    }
     h1 {
+
       @include center-img(50%, 50%);
+      z-index: 2;
     }
   }
 }
