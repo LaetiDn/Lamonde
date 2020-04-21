@@ -17,7 +17,7 @@
 
     @include breakpoint(tab-landscape) {
       width: 50%;
-      @include flex-basis(50%);
+      @include flex-basis(45%);
       margin-top: 50px;
     }
 
@@ -32,8 +32,16 @@
   .form-ctn {
     @include breakpoint(tab-landscape) {
       width: 50%;
-      @include flex-basis(50%);
+      @include flex-basis(45%);
     }
+
+    input[type="submit"] {
+        display: block;
+        max-width:200px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
   }
 
 }

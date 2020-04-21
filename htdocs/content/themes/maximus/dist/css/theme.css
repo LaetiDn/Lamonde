@@ -2039,8 +2039,8 @@ html {
 @media (min-width: 992px) {
   #contact-content .form-title {
     width: 50%;
-    -ms-flex-preferred-size: 50%;
-    flex-basis: 50%;
+    -ms-flex-preferred-size: 45%;
+    flex-basis: 45%;
     margin-top: 50px;
   }
 }
@@ -2058,9 +2058,16 @@ html {
 @media (min-width: 992px) {
   #contact-content .form-ctn {
     width: 50%;
-    -ms-flex-preferred-size: 50%;
-    flex-basis: 50%;
+    -ms-flex-preferred-size: 45%;
+    flex-basis: 45%;
   }
+}
+
+#contact-content .form-ctn input[type=submit] {
+  display: block;
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .news-inner {
