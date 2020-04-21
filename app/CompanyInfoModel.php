@@ -30,8 +30,8 @@ class CompanyInfoModel extends Model
 
             'postal_code' => get_field('contact_postal_code','option'),
 
-            'opening_list_fr' => get_field('cw_contact_opening_list_fr','option'),
-            'opening_list_en' => get_field('cw_contact_opening_list_en','option'),
+            'opening_list_fr' => get_field('contact_opening_list_fr','option'),
+            'opening_list_en' => get_field('contact_opening_list_en','option'),
 
 
         ];

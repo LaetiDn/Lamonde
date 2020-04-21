@@ -19,7 +19,7 @@
                 <h3 class="info bold">{{ pll__("_opening-hours") }}</h3>
                 <ul class="opening-list">
                 @foreach($contact['opening_list_' . $lang] as $day)
-                    <li class="opening-list__item">{{ $day['day'] }}&nbsp;&nbsp;{{ $day['time'] }}</li>
+                    <li class="opening-list__item">@if($day['day'] != ""){{ $day['day'] }}&nbsp;&nbsp;@endif{{ $day['time'] }}</li>
                 @endforeach
                 </ul>
             </div>
