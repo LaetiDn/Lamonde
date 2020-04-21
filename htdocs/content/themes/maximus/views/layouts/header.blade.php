@@ -1,4 +1,5 @@
-<header id="header" class="header" style="background-color: {{ get_field("menu_grp", "option")["top_bar_color"] }}; opacity: {{ get_field("menu_grp", "option")["top_bar_opacity"] }}">
+<header id="header" class="header">
+    <div class="header__background" style="background-color: {{ get_field("menu_grp", "option")["top_bar_color"] }}; opacity: {{ get_field("menu_grp", "option")["top_bar_opacity"] }}"></div>
     <div class="header__top-bar default-padding" >
         <a class="header__logo" href="{{ $home_url }}" style="width: {{ get_field("menu_grp", "option")["logo_width"] }}px">
             <img class="logo black" src="{{ get_field("menu_grp", "option")["logo"]["url"]  }}" alt="logo">
