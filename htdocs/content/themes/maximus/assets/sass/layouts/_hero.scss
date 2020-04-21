@@ -17,8 +17,8 @@
     z-index: 11;
 
     @include breakpoint(tab-portrait) {
-      width: 34%;
-      max-width: 550px;
+     width: auto;
+      //max-width: 550px;
     }
   }
   .slide {
@@ -57,7 +57,7 @@
 }
 
 .hero.page {
-  ;
+
   @include breakpoint(tab-landscape) {
       min-height: 500px;
   }
