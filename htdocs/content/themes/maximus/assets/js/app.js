@@ -5,7 +5,7 @@ const SliderSlick = require('./components/SliderSlick')
 
 $(document).ready(function() {
     const header = new Header()
-    header.init() 
+    header.init()
 
     if($(".portfolio")) {
         $(".portfolio").each((index) => {
@@ -19,7 +19,7 @@ $(document).ready(function() {
         $copy = $temp.select().val();
         document.execCommand('copy');
     });
-    
+
     var screenWidth = $(window).width();
     var heroHeight = $('.hero').outerHeight(true);
 
@@ -201,7 +201,14 @@ const callbackAnimation = (entries) => {
                 var animation = entry.target.dataset.animation;
             }
             if (animation === 'js-counter') {
-                triggerCounter();
+                if(entry.target.classList.contains('triggered')){
+                    return;
+                }else{
+                    entry.target.classList.add('triggered');
+                    triggerCounter();
+                }
+
+
             } else {
                 entry.target.querySelector('.css-animation').classList.add('do-animation');
 
