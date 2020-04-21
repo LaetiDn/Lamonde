@@ -1350,7 +1350,7 @@ acf_add_local_field_group(array(
 							'required' => 0,
 							'conditional_logic' => 0,
 							'wrapper' => array(
-								'width' => '',
+								'width' => '50',
 								'class' => '',
 								'id' => '',
 							),
@@ -1359,6 +1359,21 @@ acf_add_local_field_group(array(
 							'prepend' => '',
 							'append' => '',
 							'maxlength' => '',
+						),
+                        array(
+							'key' => 'field_5e9f2249775c9',
+							'label' => 'Background : color',
+							'name' => 'bg_color',
+							'type' => 'color_picker',
+							'instructions' => '',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '50',
+								'class' => '',
+								'id' => '',
+							),
+							'default_value' => '',
 						),
 						array(
 							'key' => 'field_5e723015836e5',
@@ -1585,6 +1600,21 @@ acf_add_local_field_group(array(
 					'label' => 'Testimonial',
 					'display' => 'block',
 					'sub_fields' => array(
+                        array(
+							'key' => 'field_5e9f2349e2bd1',
+							'label' => 'Background : color',
+							'name' => 'bg_color',
+							'type' => 'color_picker',
+							'instructions' => '',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => '',
+							),
+							'default_value' => '',
+						),
 						array(
 							'key' => 'field_5e83694e13649',
 							'label' => 'Title',
