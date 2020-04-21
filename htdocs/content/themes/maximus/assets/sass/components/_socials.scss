@@ -6,6 +6,9 @@
     &__wrapper {
         display: flex;
         justify-content: center;
+        @include breakpoint(tab-landscape){
+            justify-content: flex-start;
+        }
     }
     &__link {
         padding: 5px 10px;
