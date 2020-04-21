@@ -1,7 +1,6 @@
 <?php
 if( function_exists('acf_add_local_field_group') ):
 
-
 acf_add_local_field_group(array(
 	'key' => 'group_5e2f40d7f2970',
 	'title' => 'Animations',
@@ -102,6 +101,21 @@ acf_add_local_field_group(array(
 			'prepend' => '',
 			'append' => '',
 			'maxlength' => '',
+		),
+		array(
+			'key' => 'field_5e9f1f18a9a47',
+			'label' => 'Background : Color',
+			'name' => 'backround_color',
+			'type' => 'color_picker',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
 		),
 	),
 	'location' => array(
