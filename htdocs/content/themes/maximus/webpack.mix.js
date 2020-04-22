@@ -19,7 +19,9 @@ mix.scripts([
     'node_modules/imagesloaded/imagesloaded.pkgd.min.js',
     'node_modules/lightbox2/dist/js/lightbox.min.js',
     'node_modules/masonry-layout/dist/masonry.pkgd.min.js',
-    'node_modules/slick-carousel/slick/slick.min.js'
+    'node_modules/slick-carousel/slick/slick.min.js',
+    'node_modules/intersection-observer/intersection-observer.js',
+    'node_modules/smoothscroll-polyfill/dist/smoothscroll.min.js',
 
 ], 'dist/js/vendors.min.js');
 
