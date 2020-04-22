@@ -24,16 +24,17 @@ class AssetServiceProvider extends ServiceProvider
         /** @var ThemeManager $theme */
         $theme = $this->app->make('wp.theme');
 
+        
         //VENDORS JS
         Asset::add('vendor_js', 'js/vendors.min.js', [], $theme->getHeader('1.0'))->to('front');
-        
+
         //APP JS
         Asset::add('theme_js', 'js/app.min.js', ['vendor_js'], $theme->getHeader('1.0'))->to('front');
-        
+
         //CSS
         Asset::add('theme_styles', 'css/theme.css', [], $theme->getHeader('version'))->to('front');
         Asset::add('slick_styles', 'css/slick.css', [], $theme->getHeader('version'))->to('front');
-        
+
         Asset::add('lightbox_styles', 'css/lightbox.min.css', [], $theme->getHeader('version'))->to('front');
 
         Asset::add('slick-theme_styles', 'css/slick-theme.css', [], $theme->getHeader('version'))->to('front');

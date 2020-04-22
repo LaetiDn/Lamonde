@@ -191,14 +191,16 @@ const animation = [...document.querySelectorAll('.animate')];
 
 const optionsAnimation = {
     rootMargin: '0px',
-    threshold: 0.50
+    threshold: 0.40
 }
 
 const callbackAnimation = (entries) => {
     entries.forEach((entry) => {
         if (entry.intersectionRatio >= optionsAnimation.threshold) {
+
             if (entry.target.hasAttribute("data-animation")) {
                 var animation = entry.target.dataset.animation;
+
             }
             if (animation === 'js-counter') {
                 if(entry.target.classList.contains('triggered')){
@@ -207,9 +209,8 @@ const callbackAnimation = (entries) => {
                     entry.target.classList.add('triggered');
                     triggerCounter();
                 }
-
-
             } else {
+
                 entry.target.querySelector('.css-animation').classList.add('do-animation');
 
             }

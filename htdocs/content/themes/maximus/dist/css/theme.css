@@ -532,7 +532,7 @@ html {
 .sfb,
 .sfl,
 .fadein {
-  opacity: 0 !important;
+  opacity: 0;
 }
 
 .do-animation.sft {
@@ -2963,7 +2963,6 @@ article .content .link {
 
 @media (min-width: 992px) {
   .block-image-text .content.boxed .block-image-text__text {
-    opacity: 0.9;
     z-index: 2;
     margin-left: -5%;
   }

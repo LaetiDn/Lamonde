@@ -27,8 +27,7 @@
 
             .block-image-text__text {
 
-                @include breakpoint(tab-landscape){
-                    opacity:.9;
+                @include breakpoint(tab-landscape){                    
                     z-index: 2;
                     margin-left: -5%;
                 }

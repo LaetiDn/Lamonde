@@ -303,7 +303,7 @@
         animation-duration: {{ $animation['prop_duration'] }}s;
         animation-timing-function: {{ $animation['prop_easing'] }};
 
-        animation-fill-mode: forwards;
+        animation-fill-mode: both;
 
     }
 

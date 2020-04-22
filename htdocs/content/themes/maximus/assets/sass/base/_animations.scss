@@ -1,12 +1,12 @@
 
 .sft, .sfr, .sfb, .sfl, .fadein {
-  opacity: 0!important;
+  opacity: 0;
 }
-
 
 .do-animation.sft {
   animation-name: sft;
 }
+
 .do-animation.sfr {
   animation-name: sfr;
 }
