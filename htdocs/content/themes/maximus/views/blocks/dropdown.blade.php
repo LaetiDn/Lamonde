@@ -8,7 +8,8 @@
             @endif
         </div>
         <div class="col-txt default-padding">
-            <h1 class="outlined">{!! get_sub_field('title') !!}</h1>
+            <div class="overlay" style="background-color: {!! get_sub_field('overlay_bg_color') !!}; opacity: {!! get_sub_field('overlay_bg_opacity') !!}"></div>
+            <h1 class="">{!! get_sub_field('title') !!}</h1>
             @if(!empty(get_sub_field('events')))
                 @foreach (get_sub_field('events') as $k => $event)
                     <div class="event @if($k == 0) active selected @endif">

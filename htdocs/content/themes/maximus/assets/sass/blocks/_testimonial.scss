@@ -42,7 +42,7 @@
           transition: 0.6s transform $easeOutCubic;
 
           .item-inner {
-            
+            //background: #efefef;
             transition: 0.3s background-color $easeOutCubic, 0.2s box-shadow Linear;
             box-shadow: 10px 10px 17px -1px rgba(0,0,0,0.1);
 
