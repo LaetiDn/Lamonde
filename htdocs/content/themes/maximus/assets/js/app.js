@@ -151,7 +151,8 @@ $(document).ready(function() {
 document.addEventListener("DOMContentLoaded", function(event) {
 
     smoothscroll.polyfill();
-    
+
+
 
     document.querySelectorAll('.scroll-to').forEach(item => {
         item.addEventListener('click', event => {

@@ -16,6 +16,7 @@
     @endif
 
     <div class="item-wrapper">
+        @if(!empty(get_sub_field('items')))
         @foreach (get_sub_field('items') as $item)
             <a href="{{$item['url']}}"
                 class="item"
@@ -27,5 +28,6 @@
                 <img src="{{$item['url']}}">
             </a>
         @endforeach
+        @endif
     </div>
 </section>
