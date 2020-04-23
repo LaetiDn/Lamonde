@@ -1418,7 +1418,7 @@ acf_add_local_field_group(array(
 							'sub_fields' => array(
 								array(
 									'key' => 'field_5e723028836e6',
-									'label' => 'Number of',
+									'label' => 'Number',
 									'name' => 'number_of',
 									'type' => 'number',
 									'instructions' => '',
