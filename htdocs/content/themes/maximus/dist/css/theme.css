@@ -3467,7 +3467,6 @@ article .content .link {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border: 1px solid red;
 }
 
 @media (min-width: 768px) {

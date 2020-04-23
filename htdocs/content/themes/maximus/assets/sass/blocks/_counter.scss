@@ -11,10 +11,10 @@
         justify-content: center;
         @include breakpoint(tab-portrait){
             display: flex;
-            //flex-wrap:wrap;
+        
             justify-content: center;
         }
-        border:1px solid red;
+
     }
     .counter {
         text-align: center;
