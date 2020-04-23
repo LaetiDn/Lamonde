@@ -3759,7 +3759,6 @@ article .content .link {
   }
 
   .testimonial .items .item:hover .item-inner {
-    background: #efefef;
     -webkit-transition: 0.3s background-color cubic-bezier(0.215, 0.61, 0.355, 1), 0.2s -webkit-box-shadow Linear;
     transition: 0.3s background-color cubic-bezier(0.215, 0.61, 0.355, 1), 0.2s -webkit-box-shadow Linear;
     -o-transition: 0.3s background-color cubic-bezier(0.215, 0.61, 0.355, 1), 0.2s box-shadow Linear;
@@ -3840,7 +3839,6 @@ article .content .link {
 }
 
 .testimonial .items .item .item-inner .title {
-  font-size: 24px;
   width: 80%;
   margin-left: auto;
   margin-right: auto;

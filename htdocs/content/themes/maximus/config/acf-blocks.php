@@ -1631,6 +1631,21 @@ acf_add_local_field_group(array(
 							'rows' => '',
 							'new_lines' => 'br',
 						),
+                        array(
+							'key' => 'field_5ea186bccfaef',
+							'label' => 'Item background color',
+							'name' => 'item_bg_color',
+							'type' => 'color_picker',
+							'instructions' => '',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => '',
+							),
+							'default_value' => '',
+						),
 						array(
 							'key' => 'field_5e8369611364b',
 							'label' => 'Items',

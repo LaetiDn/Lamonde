@@ -3,6 +3,9 @@ const Header = require('./components/Header')
 const Portfolio = require('./components/Portfolio')
 const SliderSlick = require('./components/SliderSlick')
 
+import smoothscroll from 'smoothscroll-polyfill';
+
+
 $(document).ready(function() {
     const header = new Header()
     header.init()
@@ -145,101 +148,122 @@ $(document).ready(function() {
 
 });
 
-function triggerCounter() {
-    document.querySelectorAll('.counter').forEach(item => {
+document.addEventListener("DOMContentLoaded", function(event) {
 
-        var element = item.getElementsByClassName('counter__things')[0];
-        var number = element.dataset.number;
-        var speed = element.dataset.speed;
+    smoothscroll.polyfill();
+    
 
-        var count = 1;
-        var idInterval = setInterval(function() {
-            element.innerHTML = ++count;
-            count++;
-            if (count >= number) {
-                clearInterval(idInterval);
+    document.querySelectorAll('.scroll-to').forEach(item => {
+        item.addEventListener('click', event => {
+            event.preventDefault();
+            var target = document.getElementById(item.querySelector('a').href.split('#')[1]);
+            if (target) {
+                target.scrollIntoView({
+                    block: 'end',
+                    behavior: 'smooth'
+                });
             }
-        }, speed);
+
+        })
     });
-}
-document.querySelectorAll('.event-link').forEach(item => {
-    item.addEventListener('click', event => {
-        event.preventDefault();
 
-        var index = item.dataset.index;
-        removeClassFromSiblings(item.parentNode, 'active');
-        removeClassFromSiblings(item.parentNode, 'selected');
+    function triggerCounter() {
+        document.querySelectorAll('.counter').forEach(item => {
 
-        addClassFromSiblings(item.parentNode, 'no-hover')
+            var element = item.getElementsByClassName('counter__things')[0];
+            var number = element.dataset.number;
+            var speed = element.dataset.speed;
 
-        item.parentNode.classList.add('selected');
-        setTimeout(function() {
-            removeClassFromSiblings(item.parentNode, 'no-hover')
-        }, 1000);
-        setTimeout(function() {
-            item.parentNode.classList.add('active');
-        }, 1300);
-
-        //Il faut remove tous les show-img avant
-        var image = document.getElementById('img-' + index);
-        removeClassFromSiblings(image, 'active');
-        image.classList.add('active');
-    })
-});
-
-const animation = [...document.querySelectorAll('.animate')];
-
-const optionsAnimation = {
-    rootMargin: '0px',
-    threshold: 0.40
-}
-
-const callbackAnimation = (entries) => {
-    entries.forEach((entry) => {
-        if (entry.intersectionRatio >= optionsAnimation.threshold) {
-
-            if (entry.target.hasAttribute("data-animation")) {
-                var animation = entry.target.dataset.animation;
-
-            }
-            if (animation === 'js-counter') {
-                if(entry.target.classList.contains('triggered')){
-                    return;
-                }else{
-                    entry.target.classList.add('triggered');
-                    triggerCounter();
+            var count = 1;
+            var idInterval = setInterval(function() {
+                element.innerHTML = ++count;
+                count++;
+                if (count >= number) {
+                    clearInterval(idInterval);
                 }
-            } else {
+            }, speed);
+        });
+    }
+    document.querySelectorAll('.event-link').forEach(item => {
+        item.addEventListener('click', event => {
+            event.preventDefault();
 
-                entry.target.querySelector('.css-animation').classList.add('do-animation');
+            var index = item.dataset.index;
+            removeClassFromSiblings(item.parentNode, 'active');
+            removeClassFromSiblings(item.parentNode, 'selected');
 
+            addClassFromSiblings(item.parentNode, 'no-hover')
+
+            item.parentNode.classList.add('selected');
+            setTimeout(function() {
+                removeClassFromSiblings(item.parentNode, 'no-hover')
+            }, 1000);
+            setTimeout(function() {
+                item.parentNode.classList.add('active');
+            }, 1300);
+
+            //Il faut remove tous les show-img avant
+            var image = document.getElementById('img-' + index);
+            removeClassFromSiblings(image, 'active');
+            image.classList.add('active');
+        })
+    });
+
+    const animation = [...document.querySelectorAll('.animate')];
+
+    const optionsAnimation = {
+        rootMargin: '0px',
+        threshold: 0.40
+    }
+
+    const callbackAnimation = (entries) => {
+        entries.forEach((entry) => {
+            if (entry.intersectionRatio >= optionsAnimation.threshold) {
+
+                if (entry.target.hasAttribute("data-animation")) {
+                    var animation = entry.target.dataset.animation;
+
+                }
+                if (animation === 'js-counter') {
+                    if(entry.target.classList.contains('triggered')){
+                        return;
+                    }else{
+                        entry.target.classList.add('triggered');
+                        triggerCounter();
+                    }
+                } else {
+
+                    entry.target.querySelector('.css-animation').classList.add('do-animation');
+
+                }
             }
-        }
+        })
+    }
+
+    const observerAnimation = new IntersectionObserver(callbackAnimation, optionsAnimation)
+    animation.forEach((animation, index) => {
+        observerAnimation.observe(animation)
     })
-}
 
-const observerAnimation = new IntersectionObserver(callbackAnimation, optionsAnimation)
-animation.forEach((animation, index) => {
-    observerAnimation.observe(animation)
-})
-
-//Helpers
-function removeClassFromSiblings(elem, classToRemove) {
-    var sibling = elem.parentNode.firstChild;
-    while (sibling) {
-        if (sibling.nodeType === 1 && sibling !== elem) {
-            sibling.classList.remove(classToRemove);
+    //Helpers
+    function removeClassFromSiblings(elem, classToRemove) {
+        var sibling = elem.parentNode.firstChild;
+        while (sibling) {
+            if (sibling.nodeType === 1 && sibling !== elem) {
+                sibling.classList.remove(classToRemove);
+            }
+            sibling = sibling.nextSibling
         }
-        sibling = sibling.nextSibling
-    }
-};
+    };
 
-function addClassFromSiblings(elem, classToRemove) {
-    var sibling = elem.parentNode.firstChild;
-    while (sibling) {
-        if (sibling.nodeType === 1 && sibling !== elem) {
-            sibling.classList.add(classToRemove);
+    function addClassFromSiblings(elem, classToRemove) {
+        var sibling = elem.parentNode.firstChild;
+        while (sibling) {
+            if (sibling.nodeType === 1 && sibling !== elem) {
+                sibling.classList.add(classToRemove);
+            }
+            sibling = sibling.nextSibling
         }
-        sibling = sibling.nextSibling
-    }
-};
+    };
+
+});

@@ -14,7 +14,9 @@
         @if(!empty(get_sub_field('items')))
         @foreach (get_sub_field('items') as $item)
             <div class="item">
-                <div class="item-inner">
+                <div class="item-inner"
+                onMouseOver="this.style.backgroundColor='{!! get_sub_field('item_bg_color') !!}'"
+                onMouseOut="this.style.backgroundColor='{!! get_sub_field('bg_color') !!}'">
                     <div class="people" style="background-image: url({{$item['people']}})"></div>
                     <h3 class="title">{{$item['name']}}</h3>
                     <p class="text">

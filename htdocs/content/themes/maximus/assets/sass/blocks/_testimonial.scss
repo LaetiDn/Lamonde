@@ -1,5 +1,5 @@
 .testimonial {
-  
+
   h2 {
     text-align: center;
     margin-bottom: 30px;
@@ -15,7 +15,7 @@
     }
 
   }
-  
+
   .items {
     display: flex;
     text-align: center;
@@ -42,10 +42,10 @@
           transition: 0.6s transform $easeOutCubic;
 
           .item-inner {
-            background: #efefef;
+            
             transition: 0.3s background-color $easeOutCubic, 0.2s box-shadow Linear;
             box-shadow: 10px 10px 17px -1px rgba(0,0,0,0.1);
-            
+
             .people {
               filter: grayscale(0);
               transition: 0.3s filter Linear;
@@ -65,11 +65,11 @@
         padding: 30px 0px;
         border-radius: 10px;
         height: 100%;
-        
+
         @include breakpoint(tab-landscape) {
-          padding: 40px 25px; 
+          padding: 40px 25px;
         }
-        
+
         .people {
           position: relative;
           height: 120px;
@@ -98,14 +98,14 @@
         }
 
         .title {
-          font-size: 24px;
+          //font-size: 24px;
           width: 80%;
           margin-left: auto;
           margin-right: auto;
           margin-bottom: 10px;
         }
       }
-      
+
     }
   }
 

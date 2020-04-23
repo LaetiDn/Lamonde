@@ -21,7 +21,7 @@ mix.scripts([
     'node_modules/masonry-layout/dist/masonry.pkgd.min.js',
     'node_modules/slick-carousel/slick/slick.min.js',
     'node_modules/intersection-observer/intersection-observer.js',
-    'node_modules/smoothscroll-polyfill/dist/smoothscroll.min.js',
+    //ne semble pas fonctionner ici, a été import dans app.js 'node_modules/smoothscroll-polyfill/dist/smoothscroll.js',
 
 ], 'dist/js/vendors.min.js');
 
