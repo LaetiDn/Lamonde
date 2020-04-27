@@ -6,7 +6,7 @@
 
 ?>
 <div class="map-ctn">
-
+    
     <div id="map">
 
         <script>

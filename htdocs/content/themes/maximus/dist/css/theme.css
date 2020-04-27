@@ -1366,10 +1366,6 @@ html {
   z-index: 60;
 }
 
-.footer #map {
-  height: 475px;
-}
-
 .footer .bottom-nav {
   position: fixed;
   left: 0;
@@ -1474,6 +1470,10 @@ html {
 .footer .copyrights a,
 .footer .copyrights span {
   font-size: 12px;
+}
+
+#map {
+  height: 475px;
 }
 
 .form-ctn {
