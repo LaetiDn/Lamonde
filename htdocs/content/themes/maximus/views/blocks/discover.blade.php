@@ -1,4 +1,4 @@
-<section id="{{ get_sub_field('section_id') }}" class="section-content block-discover {{ get_sub_field('section_class') }}
+<section id="{{ str_slug(get_sub_field('section_id')) }}" class="section-content block-discover {{ get_sub_field('section_class') }}
                                                 @if($animation['content_animation'] != 'none' || get_sub_field("animation") != 'gen' ){{ 'animate' }}@endif"
                                                 style="background-color: {{ get_sub_field('bg_color') }}">
 

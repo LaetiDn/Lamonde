@@ -1,4 +1,4 @@
-<section id="{{ get_sub_field('section_id') }}"
+<section id="{{ str_slug(get_sub_field('section_id')) }}"
         class="block-background {{ get_sub_field('block_options') }} {{ get_sub_field('section_class') }}
         @if( ($animation['content_animation'] != 'none' && get_sub_field('block_options') != 'bg-only')
             || (get_sub_field("animation") != 'gen' && get_sub_field('block_options') != 'bg-only') )

@@ -1,4 +1,4 @@
-<section id="{{ get_sub_field('section_id') }}" class="block-instagram {{ get_sub_field('section_class') }} @if(get_sub_field("animation") != 'none'){{ 'animate' }}@endif">
+<section id="{{ str_slug(get_sub_field('section_id')) }}" class="block-instagram {{ get_sub_field('section_class') }} @if(get_sub_field("animation") != 'none'){{ 'animate' }}@endif">
     <div class="hashtag-title" style="text-align:center;">
         <h2>
             @if(!empty($social['instagram']))

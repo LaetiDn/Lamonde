@@ -1,4 +1,4 @@
-<section id="{{ get_sub_field('section_id') }}" class="block-dropdown {{ get_sub_field('section_class') }}" style="background-color: {!! get_sub_field('bg_color') !!}">
+<section id="{{ str_slug(get_sub_field('section_id')) }}" class="block-dropdown {{ get_sub_field('section_class') }}" style="background-color: {!! get_sub_field('bg_color') !!}">
     <div class="content-fullwidth">
         <div class="col-bg">
             @if(!empty(get_sub_field('events')))

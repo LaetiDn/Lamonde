@@ -1,4 +1,4 @@
-<section id="{{ get_sub_field('section_id') }}" class="block-counter section-content animate {{ get_sub_field('section_class') }}" data-animation="js-counter" style="background-color: {!! get_sub_field('bg_color') !!}">
+<section id="{{ str_slug(get_sub_field('section_id')) }}" class="block-counter section-content animate {{ get_sub_field('section_class') }}" data-animation="js-counter" style="background-color: {!! get_sub_field('bg_color') !!}">
     <div class="content">
         <h2 class="title">{!! get_sub_field('title') !!}</h2>
         <div class="counters">

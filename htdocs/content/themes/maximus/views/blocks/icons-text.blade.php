@@ -1,5 +1,5 @@
 
-<section id="{{ get_sub_field('section_id') }}" class="block-icons-text {{ get_sub_field('section_class') }} section-content @if($animation['content_animation'] != 'none' || get_sub_field("animation") != 'gen' ){{ 'animate' }}@endif"  style="background-color: {{ get_sub_field('bg_color') }}">
+<section id="{{ str_slug(get_sub_field('section_id')) }}" class="block-icons-text {{ get_sub_field('section_class') }} section-content @if($animation['content_animation'] != 'none' || get_sub_field("animation") != 'gen' ){{ 'animate' }}@endif"  style="background-color: {{ get_sub_field('bg_color') }}">
     <div class="content css-animation {{ get_sub_field("animation") != 'gen' ? get_sub_field("animation") : $animation['content_animation']  }}">
         <div class="all-logo-ctn">
             @if(!empty(get_sub_field("icon01_grp")))

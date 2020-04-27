@@ -1594,13 +1594,29 @@ acf_add_local_field_group(array(
 					'min' => '',
 					'max' => '',
 				),
-				'layout_5e836711fce40' => array(
+                'layout_5e836711fce40' => array(
 					'key' => 'layout_5e836711fce40',
 					'name' => 'block_testimonial',
 					'label' => 'Testimonial',
 					'display' => 'block',
 					'sub_fields' => array(
-                        array(
+						array(
+							'key' => 'field_5ea6fa2827a34',
+							'label' => 'Content',
+							'name' => '',
+							'type' => 'tab',
+							'instructions' => '',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => '',
+							),
+							'placement' => 'top',
+							'endpoint' => 0,
+						),
+						array(
 							'key' => 'field_5e9f2349e2bd1',
 							'label' => 'Background : color',
 							'name' => 'bg_color',
@@ -1653,7 +1669,7 @@ acf_add_local_field_group(array(
 							'rows' => '',
 							'new_lines' => 'br',
 						),
-                        array(
+						array(
 							'key' => 'field_5ea186bccfaef',
 							'label' => 'Item background color',
 							'name' => 'item_bg_color',
@@ -1751,16 +1767,56 @@ acf_add_local_field_group(array(
 								),
 							),
 						),
+						array(
+							'key' => 'field_5e9f1fc4f7a3b',
+							'label' => 'Animate',
+							'name' => 'animate',
+							'type' => 'clone',
+							'instructions' => '',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => '',
+							),
+							'clone' => array(
+								0 => 'field_5e9737e0cde0b',
+								1 => 'field_5e973803cde0c',
+								2 => 'field_5e97380fcde0d',
+								
+							),
+							'display' => 'seamless',
+							'layout' => 'block',
+							'prefix_label' => 0,
+							'prefix_name' => 0,
+						),
 					),
 					'min' => '',
 					'max' => '3',
 				),
-				'layout_5e9df630299bc' => array(
+                'layout_5e9df630299bc' => array(
 					'key' => 'layout_5e9df630299bc',
 					'name' => 'block_dropdown',
 					'label' => 'Dropdown',
 					'display' => 'block',
 					'sub_fields' => array(
+						array(
+							'key' => 'field_5ea6fa4327a35',
+							'label' => 'Content',
+							'name' => '',
+							'type' => 'tab',
+							'instructions' => '',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => '',
+							),
+							'placement' => 'top',
+							'endpoint' => 0,
+						),
 						array(
 							'key' => 'field_5e9df643299bd',
 							'label' => 'Background : color',
@@ -1770,13 +1826,13 @@ acf_add_local_field_group(array(
 							'required' => 0,
 							'conditional_logic' => 0,
 							'wrapper' => array(
-								'width' => '33',
+								'width' => '',
 								'class' => '',
 								'id' => '',
 							),
 							'default_value' => '',
 						),
-                        array(
+						array(
 							'key' => 'field_5ea18ca547286',
 							'label' => 'Overlay background color',
 							'name' => 'overlay_bg_color',
@@ -1785,7 +1841,7 @@ acf_add_local_field_group(array(
 							'required' => 0,
 							'conditional_logic' => 0,
 							'wrapper' => array(
-								'width' => '33',
+								'width' => '',
 								'class' => '',
 								'id' => '',
 							),
@@ -1800,7 +1856,7 @@ acf_add_local_field_group(array(
 							'required' => 0,
 							'conditional_logic' => 0,
 							'wrapper' => array(
-								'width' => '33',
+								'width' => '',
 								'class' => '',
 								'id' => '',
 							),
@@ -1913,10 +1969,35 @@ acf_add_local_field_group(array(
 								),
 							),
 						),
+						array(
+							'key' => 'field_5e9f2024f7a3c',
+							'label' => 'Animate',
+							'name' => 'animate',
+							'type' => 'clone',
+							'instructions' => '',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => '',
+							),
+							'clone' => array(
+								0 => 'field_5e9737e0cde0b',
+								1 => 'field_5e973803cde0c',
+								2 => 'field_5e97380fcde0d',
+
+							),
+							'display' => 'seamless',
+							'layout' => 'block',
+							'prefix_label' => 0,
+							'prefix_name' => 0,
+						),
 					),
 					'min' => '',
 					'max' => '',
 				),
+
 			),
 			'button_label' => 'Add a block',
 			'min' => '',
