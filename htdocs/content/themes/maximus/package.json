@@ -25,7 +25,7 @@
     "sass-loader": "7.*",
     "vue-template-compiler": "^2.6.10",
     "imagesloaded": "^4.1.4",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "lightbox2": "^2.11.1",
     "masonry-layout": "^4.2.2",
     "slick-carousel": "^1.8.1"
