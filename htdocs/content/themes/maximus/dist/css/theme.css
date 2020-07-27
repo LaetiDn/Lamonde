@@ -3248,42 +3248,51 @@ article .content .link {
 }
 
 .block-dropdown .col-bg {
-  position: relative;
-  height: 100vh;
-}
-
-.block-dropdown .col-bg .overlay {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-  z-index: 3;
+  display: none;
 }
 
 @media (min-width: 768px) {
+  .block-dropdown .col-bg {
+    display: block;
+    position: relative;
+    height: 100vh;
+  }
+
+  .block-dropdown .col-bg .overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 3;
+  }
+}
+
+@media (min-width: 768px) and (min-width: 768px) {
   .block-dropdown .col-bg .overlay {
     display: none;
   }
 }
 
-.block-dropdown .col-bg .image {
-  position: absolute;
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  opacity: 0;
-  -webkit-transition: opacity 2s ease-in;
-  -o-transition: opacity 2s ease-in;
-  transition: opacity 2s ease-in;
-}
+@media (min-width: 768px) {
+  .block-dropdown .col-bg .image {
+    position: absolute;
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0;
+    -webkit-transition: opacity 2s ease-in;
+    -o-transition: opacity 2s ease-in;
+    transition: opacity 2s ease-in;
+  }
 
-.block-dropdown .col-bg .image.active {
-  z-index: 2;
-  opacity: 1;
+  .block-dropdown .col-bg .image.active {
+    z-index: 2;
+    opacity: 1;
+  }
 }
 
 .block-dropdown .col-txt {
@@ -3310,6 +3319,7 @@ article .content .link {
   .block-dropdown .col-txt.default-padding,
   .block-dropdown .col-txt.section-content {
     padding: 0 5%;
+    margin: 50px 0;
   }
 }
 
@@ -3317,23 +3327,27 @@ article .content .link {
   .block-dropdown .col-txt.default-padding,
   .block-dropdown .col-txt.section-content {
     padding: 0 6.5%;
+    margin: 60px 0;
   }
 }
 
-.block-dropdown .col-txt h1 {
+.block-dropdown .col-txt .title-faq {
   position: relative;
   z-index: 2;
   margin-bottom: 40px;
+  font-size: 34px;
+  line-height: 34px;
+  color: #EE2c35;
 }
 
 @media (min-width: 768px) {
-  .block-dropdown .col-txt h1 {
+  .block-dropdown .col-txt .title-faq {
     margin-bottom: 20px;
   }
 }
 
 @media (min-width: 1200px) {
-  .block-dropdown .col-txt h1 {
+  .block-dropdown .col-txt .title-faq {
     margin-bottom: 8px;
   }
 }
@@ -3362,12 +3376,14 @@ article .content .link {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  margin: 40px 0;
 }
 
 .block-dropdown .event:hover {
   -webkit-transform: translateX(0);
       -ms-transform: translateX(0);
           transform: translateX(0);
+  color: #EE2c35;
 }
 
 .block-dropdown .event:hover h2 {
@@ -3404,9 +3420,12 @@ article .content .link {
 
 @media (min-width: 768px) {
   .block-dropdown .event h2 {
-    color: inherit;
-    opacity: 0.2;
+    color: #262728;
   }
+}
+
+.block-dropdown .event h2:hover {
+  color: #EE2c35 !important;
 }
 
 .block-dropdown .event h2.active {

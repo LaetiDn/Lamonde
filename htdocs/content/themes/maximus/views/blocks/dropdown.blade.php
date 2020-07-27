@@ -9,12 +9,12 @@
         </div>
         <div class="col-txt default-padding">
             <div class="overlay" style="background-color: {!! get_sub_field('overlay_bg_color') !!}; opacity: {!! get_sub_field('overlay_bg_opacity') !!}"></div>
-            <h1 class="">{!! get_sub_field('title') !!}</h1>
+            <h2 class="title-faq">{!! get_sub_field('title') !!}</h2>
             @if(!empty(get_sub_field('events')))
                 @foreach (get_sub_field('events') as $k => $event)
                     <div class="event @if($k == 0) active selected @endif">
                         <a class="event-link" href="#" data-index="{{ $k }}">
-                            <h2 class="uppercase color-white">{{ $event['name'] }}</h2>
+                            <h2 class="uppercase color-faq-question color-white">{{ $event['name'] }}</h2>
                         </a>
                         <div class="text body-text-sm">
                             {!! $event['description'] !!}

@@ -19,13 +19,17 @@
     }
 
     .col-bg {
-        position: relative;
-        height: 100vh;
+        display: none;
 
-        .overlay {
-            @include cover();
-            background-color: rgba(0,0,0, .3);
-            z-index: 3;
+        @include breakpoint(tab-portrait){
+            display: block;
+            position: relative;
+            height: 100vh;
+
+                .overlay {
+                    @include cover();
+                    background-color: rgba(0,0,0, .3);
+                    z-index: 3;
 
             @include breakpoint(tab-portrait){
                 display: none;
@@ -45,10 +49,24 @@
                 opacity:1;
             }
         }
+
+        }
     }
 
     .col-txt {
+        // position: absolute;
+        // padding-top: 25px;
+        // padding-bottom: 25px;
+        // left: 50%;
+        // top: 50%;
+        // transform: translate(-50%, -50%);
+        // width: 90%;
+        // z-index: 2;
 
+        //background-color: rgba(12, 12, 12, .8);
+
+
+        // @include breakpoint(tab-portrait){
             position: relative;
             width: 100%;
             left: auto;
@@ -57,7 +75,7 @@
             padding-top: 50px;
             padding-bottom: 50px;
             background-color: transparent!important;
-     }
+        // }
 
         &.default-padding {
 
@@ -66,16 +84,21 @@
             }
             @include breakpoint(tab-landscape){
                 padding:0 5%;
+                margin: 50px 0;
             }
             @include breakpoint(desktop){
                 padding:0 6.5%;
+                margin: 60px 0;
             }
         }
 
-        h1 {
+    .title-faq{          
             position: relative;
             z-index: 2;
             margin-bottom: 40px;
+            font-size: 34px;
+            line-height: 34px;
+            color: #EE2c35;
             @include breakpoint(tab-portrait){
                 margin-bottom: 20px;
             }
@@ -103,8 +126,12 @@
         z-index: 2;
         transform: translateX(10px);
         transition: all .3s ease;
+        margin: 40px 0;
+
+
         &:hover {
             transform: translateX(0);
+            color: #EE2c35;
             h2{
                 opacity:1;
             }
@@ -133,8 +160,11 @@
             transition: opacity .3s ease;
 
             @include breakpoint(tab-portrait){
-                color: inherit;
-                opacity:.2;
+                color: #262728;
+                //opacity:.2;
+            }
+            &:hover {
+                color: #EE2c35!important;
             }
         }
         h2.active {
