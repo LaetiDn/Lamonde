@@ -3287,31 +3287,16 @@ article .content .link {
 }
 
 .block-dropdown .col-txt {
-  position: absolute;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 90%;
-  z-index: 2;
-}
-
-@media (min-width: 768px) {
-  .block-dropdown .col-txt {
-    position: relative;
-    width: 100%;
-    left: auto;
-    top: auto;
-    -webkit-transform: none;
-        -ms-transform: none;
-            transform: none;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    background-color: transparent !important;
-  }
+  position: relative;
+  width: 100%;
+  left: auto;
+  top: auto;
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: transparent !important;
 }
 
 @media (min-width: 768px) {
