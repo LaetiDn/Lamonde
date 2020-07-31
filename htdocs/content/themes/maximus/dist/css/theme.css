@@ -3394,10 +3394,6 @@ article .content .link {
   pointer-events: none;
 }
 
-.block-dropdown .event.active h2 {
-  opacity: 1;
-}
-
 .block-dropdown .event.active .text {
   max-height: 500px;
   opacity: 1;
@@ -3410,12 +3406,12 @@ article .content .link {
 }
 
 .block-dropdown .event h2 {
-  opacity: 0.6;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   -webkit-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
+  color: #262728;
 }
 
 @media (min-width: 768px) {

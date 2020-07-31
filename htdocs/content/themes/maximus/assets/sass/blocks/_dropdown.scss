@@ -144,7 +144,7 @@
         &.active {
 
             h2 {
-                opacity:1;
+              //  opacity:1;
             }
             .text {
                 max-height: 500px;
@@ -155,9 +155,10 @@
             transform: translateX(0);
         }
         h2 {
-            opacity:.6;
+            //opacity:.6;
             backface-visibility: hidden;
             transition: opacity .3s ease;
+            color: #262728;
 
             @include breakpoint(tab-portrait){
                 color: #262728;
