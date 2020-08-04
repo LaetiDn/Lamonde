@@ -2,6 +2,10 @@ html {
     box-sizing: border-box;
 }
 
+.grecaptcha-badge {
+  display: none!important;
+}
+
 .site {
   //max-width: 1920px;
   margin: auto;
