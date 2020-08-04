@@ -1,3 +1,10 @@
+@php
+// $form = get_sub_field("form_shortcode");    
+// var_dump($form);
+// die();
+
+@endphp
+
 <section id="{{ str_slug(get_sub_field('section_id')) }}" class="block-open-form section-content {{ get_sub_field('section_class') }} @if($animation['content_animation'] != 'none' || get_sub_field("animation") != 'gen' ){{ 'animate' }}@endif" style="background-color: {{ get_sub_field('bg_color') }}">
     <div class="content-ctn css-animation {{ get_sub_field("animation") != 'gen' ? get_sub_field("animation") : $animation['content_animation']  }}">
         <div class="text">
@@ -5,7 +12,7 @@
         </div>
         <div class="link-ctn">
 
-            <a class="cta open-form {{get_field('button_grp', 'option')['style']}}" href="#">{{ get_sub_field("link_text") }}</a>
+        <a data-id="{{ str_slug(get_sub_field('section_id')) }}" class="cta open-form {{get_field('button_grp', 'option')['style']}}" href="#">{{ get_sub_field("link_text") }} </a>
             @if(!empty( get_sub_field("link")))
                 @include('components.button', [
                     'style' => get_field('button_grp', 'option')['style'],
@@ -18,7 +25,7 @@
     </div>
 </section>
 
-<div id="modal-form" class="form-main-ctn lightBox">
+<div id="modal-form-{{ str_slug(get_sub_field('section_id')) }}" class="form-main-ctn lightBox">
     <a class="btn-close-form" href="#"></a>
     <div class="form-ctn">
         <div class="close">

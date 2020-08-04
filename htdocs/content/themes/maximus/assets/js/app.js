@@ -135,9 +135,11 @@ $(document).ready(function() {
         e.preventDefault();
         $('.form-main-ctn').fadeOut(600);
     });
-    $("body").on("click", ".open-form", function(e) {
+    $(".open-form").on("click touch", function(e) {
+        var open_form = $(this).data("id");
+        console.log(open_form);
         e.preventDefault();
-        $('.form-main-ctn').fadeIn(600);
+        $('#modal-form-'+ open_form).fadeIn(600);
     });
 
     $("body").on("click", ".carrousel-nav__button", function(e) {
