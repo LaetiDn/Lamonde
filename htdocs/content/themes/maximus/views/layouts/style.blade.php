@@ -81,9 +81,15 @@
         font-size: {{ get_field('link_grp','option')['fz_phone'] }}px;
     }
 
-    .site-navigation .menu-item a {
+    .site-navigation .menu-item a {   
+        color: #262728!important;
+        }
+    @media(min-width: 768px){
+            .site-navigation .menu-item a {   
         color: {{ get_field('menu_grp','option')['color'] }}!important;
+        }
     }
+    
 
     .site-navigation .menu-item:hover > a,  a:not(.cta):focus, a:not(.cta):hover {
         color: {{ get_field('menu_grp','option')['color_hover'] }}!important;
