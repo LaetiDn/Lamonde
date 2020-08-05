@@ -7,7 +7,7 @@
     width:52%;
   }
 
-  input[type="text"], input[type="email"] {
+  input[type="text"], input[type="email"], input[type="submit"] {
     -webkit-appearance: none;
     //border:none;
     width:calc(100% - 16px);
@@ -16,6 +16,7 @@
     padding:10px 5px;
     margin:10px 0;
     font-size: 18px;
+    border-color: black;
   }
 
   textarea {
@@ -28,6 +29,7 @@
     border-width: 2px;
     border-style: solid;
     font-size: 18px;
+    border-color: black;
   }
 
   label {
@@ -78,7 +80,8 @@
   height: 100vh;
   left: 0;
   top: 0;
-  background-color: rgba(0,0,0,1);
+  background-color:#e2e7f3;
+;
   z-index: 1000;
   overflow: auto;
 
@@ -89,7 +92,7 @@
     width: 90%;
     margin: auto;
     margin-top: 45px;
-    background-color: black;
+    background-color: #e2e7f3;
 
     @media (min-width: 768px) {
       display: flex;
@@ -130,7 +133,8 @@
     }
 
     label {
-      color:white;
+      color: #a21e39;
+      ;
     }
 
     p {
@@ -317,5 +321,10 @@
 
   .wpcf7-form-control-wrap {width:100%;}
   span.wpcf7-list-item { display: block; padding:10px 0;}
+
+  .form-ctn input[type="submit"] {
+    background-color: #a21e39;
+    width: calc(100% - 16px);
+  }
 
 }
