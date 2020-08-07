@@ -3417,7 +3417,7 @@ article .content .link {
           transform: translateX(0);
 }
 
-.block-dropdown .event h2 {
+.block-dropdown .event h3 {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   -webkit-transition: opacity 0.3s ease;
@@ -3427,17 +3427,13 @@ article .content .link {
 }
 
 @media (min-width: 768px) {
-  .block-dropdown .event h2 {
+  .block-dropdown .event h3 {
     color: #262728;
   }
 }
 
-.block-dropdown .event h2:hover {
+.block-dropdown .event h3:hover {
   color: #EE2c35 !important;
-}
-
-.block-dropdown .event h2.active {
-  opacity: 1;
 }
 
 .block-dropdown .event .text {

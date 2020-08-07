@@ -84,11 +84,27 @@
     .site-navigation .menu-item a {   
         color: #262728!important;
         }
-    @media(min-width: 768px){
+    @media(min-width: 1200px){
             .site-navigation .menu-item a {   
         color: {{ get_field('menu_grp','option')['color'] }}!important;
         }
     }
+
+    @media(max-width: 992px){
+        .header__logo {
+            width: 170px!important;
+            transform: translateY(-10%)!important;
+        }    
+    }
+        
+
+    @media(min-width: 768px) and (max-width: 992px){
+        .header__logo {
+            width: 200px!important;
+            transform: translateY(0%)!important;
+        }    
+    }
+    
     
 
     .site-navigation .menu-item:hover > a,  a:not(.cta):focus, a:not(.cta):hover {

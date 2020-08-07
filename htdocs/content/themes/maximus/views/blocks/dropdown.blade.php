@@ -14,7 +14,7 @@
                 @foreach (get_sub_field('events') as $k => $event)
                     <div class="event @if($k == 0) active selected @endif">
                         <a class="event-link" href="#" data-index="{{ $k }}">
-                            <h2 class="uppercase color-faq-question color-white">{{ $event['name'] }}</h2>
+                            <h3 class="uppercase color-faq-question color-white">{{ $event['name'] }}</h3>
                         </a>
                         <div class="text body-text-sm">
                             {!! $event['description'] !!}

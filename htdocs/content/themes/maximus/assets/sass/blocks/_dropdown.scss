@@ -154,7 +154,7 @@
         &.selected {
             transform: translateX(0);
         }
-        h2 {
+        h3 {
             //opacity:.6;
             backface-visibility: hidden;
             transition: opacity .3s ease;
@@ -168,8 +168,8 @@
                 color: #EE2c35!important;
             }
         }
-        h2.active {
-            opacity:1;
+        h3.active {
+            // opacity:1;
         }
 
         .text {
