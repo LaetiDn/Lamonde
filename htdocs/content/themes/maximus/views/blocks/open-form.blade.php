@@ -33,7 +33,7 @@
                 <svg id="Calque_1" style="width:25px; height:25px;" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.71 15.71">
                     <title>close</title>
                     <g id="Calque_2" data-name="Calque 2">
-                        <g id="icon"><line x1="0.35" y1="15.35" x2="15.35" y2="0.35" style="fill:none;stroke:#ffffff;stroke-miterlimit:10"/><line x1="0.35" y1="0.35" x2="15.35" y2="15.35" style="fill:none;stroke:#ffffff;stroke-miterlimit:10"/></g>
+                        <g id="icon"><line x1="0.35" y1="15.35" x2="15.35" y2="0.35" style="fill:none;stroke:#a21e39;stroke-miterlimit:10"/><line x1="0.35" y1="0.35" x2="15.35" y2="15.35" style="fill:none;stroke:#a21e39;stroke-miterlimit:10"/></g>
                     </g>
                 </svg>
             </a>
