@@ -1,4 +1,31 @@
 .block-discover {
+
+    .icons-ctn {
+        
+        @include breakpoint(tab-portrait) {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: baseline;
+        }      
+
+        a {
+            text-align: center;
+            display: inline-block;
+            margin: 20px 0;
+            
+            @include breakpoint(tab-portrait) {       
+                margin:0 20px;
+                font-size: 22px;
+                width:300px;
+        }
+
+        img {
+            margin: 15px 0;
+        }
+    }
+}
+
     .logo-ctn {
         position: relative;
         margin: auto;
@@ -11,6 +38,21 @@
         max-width: 940px;
         margin: 0 auto;
         text-align: center;
+    }
+
+    &#no-margin-section {
+
+        .text,
+        .wysywyg-ctn {
+            max-width: 1440px;
+            margin: 0 auto;
+            text-align: center;
+        } 
+
+        @include breakpoint(tab-portrait) {       
+           padding-top: 25px;
+            padding-bottom: 50px;
+        }
     }
 
     .links-ctn {

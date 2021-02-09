@@ -2769,6 +2769,39 @@ article .content .link {
           box-shadow: 6px 6px 13px -5px rgba(0, 0, 0, 0.75);
 }
 
+@media (min-width: 768px) {
+  .block-discover .icons-ctn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+}
+
+.block-discover .icons-ctn a {
+  text-align: center;
+  display: inline-block;
+  margin: 20px 0;
+}
+
+@media (min-width: 768px) {
+  .block-discover .icons-ctn a {
+    margin: 0 20px;
+    font-size: 22px;
+    width: 300px;
+  }
+}
+
+.block-discover .icons-ctn a img {
+  margin: 15px 0;
+}
+
 .block-discover .logo-ctn {
   position: relative;
   margin: auto;
@@ -2781,6 +2814,20 @@ article .content .link {
   max-width: 940px;
   margin: 0 auto;
   text-align: center;
+}
+
+.block-discover#no-margin-section .text,
+.block-discover#no-margin-section .wysywyg-ctn {
+  max-width: 1440px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .block-discover#no-margin-section {
+    padding-top: 25px;
+    padding-bottom: 50px;
+  }
 }
 
 .block-discover .links-ctn {
