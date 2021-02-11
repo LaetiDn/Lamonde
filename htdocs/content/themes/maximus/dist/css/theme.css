@@ -2816,15 +2816,15 @@ article .content .link {
   text-align: center;
 }
 
-.block-discover#no-margin-section .text,
-.block-discover#no-margin-section .wysywyg-ctn {
+.block-discover.no-margin-section .text,
+.block-discover.no-margin-section .wysywyg-ctn {
   max-width: 1440px;
   margin: 0 auto;
   text-align: center;
 }
 
 @media (min-width: 768px) {
-  .block-discover#no-margin-section {
+  .block-discover.no-margin-section {
     padding-top: 25px;
     padding-bottom: 50px;
   }
